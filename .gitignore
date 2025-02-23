@@ -73,3 +73,5 @@ Nox/[Aa]ssets/[Ss]treamingAssets/aa.meta
 Nox/[Aa]ssets/[Ss]treamingAssets/aa/*
 
 *.bundle
+FirebaseCppApp-*.so
+
