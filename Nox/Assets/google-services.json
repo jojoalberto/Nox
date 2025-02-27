@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "969512164735",
+    "firebase_url": "https://group5nox-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "group5nox",
     "storage_bucket": "group5nox.firebasestorage.app"
   },
