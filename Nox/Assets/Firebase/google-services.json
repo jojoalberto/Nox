@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969512164735",
+    "project_id": "group5nox",
+    "storage_bucket": "group5nox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969512164735:android:272a46479c9b871494ce4a",
+        "android_client_info": {
+          "package_name": "com.UnityTechnologies.com.unity.template.urpblank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApuIGQVGd9TjO9dYy4p_A_4otQrIVZRxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
