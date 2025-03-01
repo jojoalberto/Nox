@@ -4,6 +4,9 @@ using Firebase.Auth;
 using TMPro;
 using Photon.Pun;
 using Firebase.Database;
+using System.Collections;
+using UnityEngine.Events;
+using System.Threading.Tasks;
 
 
 public class FirebaseManagerScript : MonoBehaviour
@@ -13,11 +16,23 @@ public class FirebaseManagerScript : MonoBehaviour
     private DatabaseReference dbReference;
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
+    public TMP_InputField emailSignupInput;
+    public TMP_InputField passwordSignupInput;
     public TMP_InputField nicknameInput;
     public TextMeshProUGUI statusText;
+
+    private UnityEvent loggin = new UnityEvent();
+
+    [SerializeField]
+    private GameObject lobbyGameObject;
+    [SerializeField]
+    private GameObject LoginGameObject;
+    private bool isLoggin = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        loggin.AddListener(UserisLogIn);
         auth = FirebaseAuth.DefaultInstance;
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
         Debug.Log("Firebase App Name: " + FirebaseApp.DefaultInstance.Name);
@@ -27,12 +42,18 @@ public class FirebaseManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
+    private void UserisLogIn()
+    {
+        Debug.Log("lobby opened");
+        lobbyGameObject.SetActive(true);
+        LoginGameObject.SetActive(false);
+        isLoggin = false;
+    }
     public void Register()
     {
-        auth.CreateUserWithEmailAndPasswordAsync(emailInput.text, passwordInput.text).ContinueWith(task =>
+        auth.CreateUserWithEmailAndPasswordAsync(emailSignupInput.text, passwordSignupInput.text).ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
                 statusText.text = "Registration Failed!";
@@ -47,11 +68,11 @@ public class FirebaseManagerScript : MonoBehaviour
 
     public void Login()
     {
-        if (string.IsNullOrEmpty(nicknameInput.text))
-        {
-            statusText.text = "Please enter a nickname!";
-            return;
-        }
+        //if (string.IsNullOrEmpty(nicknameInput.text))
+        //{
+        //    statusText.text = "Please enter a nickname!";
+        //    return;
+        //}
         auth.SignInWithEmailAndPasswordAsync(emailInput.text, passwordInput.text).ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
@@ -60,9 +81,17 @@ public class FirebaseManagerScript : MonoBehaviour
             {
                 statusText.text = "Login Successful!";
                 FirebaseUser loggedInUser = auth.CurrentUser;
+                Debug.Log("loggedInUser added ");
                 GetNicknameFromFirebase(loggedInUser.UserId);
+                Debug.Log("got nickname ");
+                Debug.Log("lobby opened");
+                loggin.Invoke();
+
+
             }
-        });
+        }, TaskScheduler.FromCurrentSynchronizationContext());
+
+
     }
 
     private void SaveNicknameToFirebase(string userId, string nickname)
