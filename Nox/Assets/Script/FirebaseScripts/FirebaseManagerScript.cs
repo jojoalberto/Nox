@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 public class FirebaseManagerScript : MonoBehaviour
 {
-
+    public PlayerData playerData;
     private FirebaseAuth auth;
     private DatabaseReference dbReference;
     public TMP_InputField emailInput;
@@ -83,6 +83,7 @@ public class FirebaseManagerScript : MonoBehaviour
                 FirebaseUser loggedInUser = auth.CurrentUser;
                 Debug.Log("loggedInUser added ");
                 GetNicknameFromFirebase(loggedInUser.UserId);
+                playerData.userId = loggedInUser.UserId;
                 Debug.Log("got nickname ");
                 Debug.Log("lobby opened");
                 loggin.Invoke();
@@ -116,12 +117,13 @@ public class FirebaseManagerScript : MonoBehaviour
     private void PhotonConnect(string nickname)
     {
         PhotonNetwork.NickName = nickname;
+        playerData.nickname = nickname;
         PhotonNetwork.ConnectUsingSettings();
     }
 
     public void SetNickname(GameObject player)
     {
         
-        player.GetComponent<PlayerIGN>().SetNickname(PhotonNetwork.NickName);
+        player.GetComponent<PlayerIGN>().SetNickname(playerData.name);
     }
 }
