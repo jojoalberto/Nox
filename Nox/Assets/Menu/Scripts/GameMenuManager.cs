@@ -144,7 +144,10 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
         else
         {
-            PhotonNetwork.Instantiate(player.name, new Vector3(12f, 4.5f, 0f), Quaternion.identity, 0);
+            GameObject tempPlayer = PhotonNetwork.Instantiate(player.name, new Vector3(-1f, 4f, -16f), Quaternion.identity, 0);
+            firebaseManagerScript.SetNickname(tempPlayer);
+
+            Debug.Log(tempPlayer.GetComponent<PlayerIGN>().GetNickname());
         }
     }
 

@@ -22,9 +22,6 @@ public class JoinLobby : MonoBehaviour
 
     public void JoinRoom()
     {
-        
-        //playerNameInput = GameObject.Find("PlayerNameInput").gameObject;
-        PhotonNetwork.NickName = "HELLO";
 
         PhotonNetwork.JoinRoom(roomName);
 
