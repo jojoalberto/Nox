@@ -691,7 +691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &243967484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,7 +3138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a55da8d89311c4cba42054a7326397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   emailInput: {fileID: 867073441}
   passwordInput: {fileID: 862054791}
   emailSignupInput: {fileID: 830052565}
@@ -5995,6 +5995,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 390146572859018501, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9254902
+      objectReference: {fileID: 0}
     - target: {fileID: 1092573929968978248, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
       propertyPath: m_Name
       value: LobbyMenu
@@ -6002,6 +6006,30 @@ PrefabInstance:
     - target: {fileID: 1092573929968978248, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648314287746234203, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_text
+      value: Empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648314287746234203, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349686452000815046, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_text
+      value: Empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349686452000815046, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978281413535339418, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_text
+      value: Empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978281413535339418, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_fontSize
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8713335144189007686, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
       propertyPath: m_Pivot.x
@@ -6082,6 +6110,14 @@ PrefabInstance:
     - target: {fileID: 8713335144189007686, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746132909806027400, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_text
+      value: Empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746132909806027400, guid: 7cad274ab4aca4442aa8a96f73d06039, type: 3}
+      propertyPath: m_fontSize
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

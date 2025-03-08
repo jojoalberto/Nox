@@ -25,6 +25,6 @@ public class JoinLobby : MonoBehaviour
 
         PhotonNetwork.JoinRoom(roomName);
 
-        GameObject.Find("MenuManager").GetComponent<GameManager>().JoinRoom();
+        GameObject.Find("PhotonManager").GetComponent<GameManager>().JoinRoom();
     }
 }
