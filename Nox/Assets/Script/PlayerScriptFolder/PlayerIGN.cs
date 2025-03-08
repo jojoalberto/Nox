@@ -13,6 +13,11 @@ public class PlayerIGN : MonoBehaviourPun
         iGNText.text = nickname;
     }
 
+    public string GetNickname()
+    {
+        return iGNText.text;
+    }
+
     private void Start()
     {
         if (photonView.IsMine)

@@ -3231,7 +3231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1448078765}
-  - component: {fileID: 1448078766}
   - component: {fileID: 1448078767}
   m_Layer: 0
   m_Name: PhotonManager
@@ -3255,19 +3254,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1937789813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1448078766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448078764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4433564e76b1940028e7e531f171050d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 7911323217924822332, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
 --- !u!114 &1448078767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3283,9 +3269,10 @@ MonoBehaviour:
   menu: {fileID: 1866965003447161142}
   status: {fileID: 6783244018205013347}
   roomNameInput: {fileID: 8984433363278162120}
-  scrollList: {fileID: 1511860071243805079}
+  scrollList: {fileID: 1868484310155340565}
   room: {fileID: 4374767613384479480, guid: e85688d960d544246a2111c31fdb74ef, type: 3}
   player: {fileID: 7911323217924822332, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+  firebaseManagerScript: {fileID: 1421878255}
 --- !u!1 &1482737588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,8 +4883,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00080790895}
-  m_SizeDelta: {x: 1100.5, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0.00057356607}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1902212512894158176
 GameObject:
@@ -5298,8 +5285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.9, y: -2.5}
-  m_SizeDelta: {x: 1100.5, y: 378.5}
+  m_AnchoredPosition: {x: 0.00069427, y: 0}
+  m_SizeDelta: {x: 1066.7, y: 319.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4056722293292155413
 MonoBehaviour:
@@ -6139,7 +6126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!1 &8984098376658964002
 GameObject:
@@ -6195,7 +6182,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

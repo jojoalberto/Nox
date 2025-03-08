@@ -28,6 +28,6 @@ public class JoinLobby : MonoBehaviour
 
         PhotonNetwork.JoinRoom(roomName);
 
-        GameObject.Find("Manager").GetComponent<GameManager>().JoinRoom();
+        GameObject.Find("MenuManager").GetComponent<GameManager>().JoinRoom();
     }
 }

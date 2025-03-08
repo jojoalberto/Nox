@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public GameObject status;
     public GameObject roomNameInput;
 
-    public GameObject scrollList;
+    public Transform scrollList;
     public GameObject room;
 
     List<RoomInfo> createdRooms = new List<RoomInfo>();
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     bool joiningRoom = false;
 
     public GameObject player;
+    public FirebaseManagerScript firebaseManagerScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,11 +52,38 @@ public class GameManager : MonoBehaviourPunCallbacks
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         Debug.Log("We received the room list");
-        createdRooms = roomList;
+        if (createdRooms.Count <= 0)
+        {
+            createdRooms = roomList;
+        }
+        else
+        {
+            foreach (var room in roomList)
+            {
+                for (int i = 0; i < createdRooms.Count; i++)
+                {
+                    if (createdRooms[i].Name == room.Name)
+                    {
+                        List<RoomInfo> newList = createdRooms;
+
+                        if (room.RemovedFromList)
+                        {
+                            newList.Remove(newList[i]);
+                        }
+                        else
+                        {
+                            newList[i] = room;
+                        }
+
+                        createdRooms = newList;
+                    }
+                }
+            }
+        }
+        RefreshRooms();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateUI()
     {
 
     }
@@ -79,9 +107,10 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void RefreshRooms()
     {
-        if (PhotonNetwork.IsConnected)
-        {
-            PhotonNetwork.JoinLobby(TypedLobby.Default);
+            foreach(Transform roomItem in scrollList)
+            {
+                Destroy(roomItem.gameObject);
+            }
 
             for (int i = 0; i < createdRooms.Count; i++)
             {
@@ -91,17 +120,9 @@ public class GameManager : MonoBehaviourPunCallbacks
                 room.transform.Find("JoinButton").GetComponent<JoinLobby>().roomName = createdRooms[i].Name;
 
                 var instantiated = Instantiate(room);
-                instantiated.transform.SetParent(scrollList.transform);
+                instantiated.transform.SetParent(scrollList);
 
             }
-
-
-
-        }
-        else
-        {
-            PhotonNetwork.ConnectUsingSettings();
-        }
     }
 
     public override void OnJoinedLobby()
@@ -116,7 +137,10 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.CurrentRoom.PlayerCount < 2)
         {
             //Player 1
-            PhotonNetwork.Instantiate(player.name, new Vector3(-1f, 4f, -16f), Quaternion.identity, 0);
+            GameObject tempPlayer = PhotonNetwork.Instantiate(player.name, new Vector3(-1f, 4f, -16f), Quaternion.identity, 0);
+            firebaseManagerScript.SetNickname(tempPlayer);
+
+            Debug.Log(tempPlayer.GetComponent<PlayerIGN>().GetNickname());
         }
         else
         {

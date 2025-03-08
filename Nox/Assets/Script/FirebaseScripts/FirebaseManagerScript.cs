@@ -119,8 +119,9 @@ public class FirebaseManagerScript : MonoBehaviour
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    public void GetNickname(GameObject player)
+    public void SetNickname(GameObject player)
     {
+        
         player.GetComponent<PlayerIGN>().SetNickname(PhotonNetwork.NickName);
     }
 }
