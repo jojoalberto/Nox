@@ -116,8 +116,8 @@ public class FirebaseManagerScript : MonoBehaviour
     }
     private void PhotonConnect(string nickname)
     {
-        PhotonNetwork.NickName = nickname;
         playerData.nickname = nickname;
+        PhotonNetwork.NickName = playerData.nickname;
         PhotonNetwork.ConnectUsingSettings();
     }
 
