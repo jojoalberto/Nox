@@ -24,6 +24,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     public GameObject player;
     public FirebaseManagerScript firebaseManagerScript;
 
+    public GameObject lobbyMenu;
+    public LobbyRoom lobbyRoom;
+
+    public PlayerData playerData;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -101,7 +106,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             roomOptions.MaxPlayers = (byte)4;
 
             PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
-            menu.SetActive(false);
+
         }
     }
 
@@ -134,21 +139,11 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to room");
 
-        if (PhotonNetwork.CurrentRoom.PlayerCount < 2)
-        {
-            //Player 1
-            GameObject tempPlayer = PhotonNetwork.Instantiate(player.name, new Vector3(-1f, 4f, -16f), Quaternion.identity, 0);
-            firebaseManagerScript.SetNickname(tempPlayer);
+        int playerIndex = PhotonNetwork.CurrentRoom.PlayerCount - 1;
+        lobbyRoom.UpdatePlayerName(playerIndex, playerData.GetNickname());
 
-            Debug.Log(tempPlayer.GetComponent<PlayerIGN>().GetNickname());
-        }
-        else
-        {
-            GameObject tempPlayer = PhotonNetwork.Instantiate(player.name, new Vector3(-1f, 4f, -16f), Quaternion.identity, 0);
-            firebaseManagerScript.SetNickname(tempPlayer);
-
-            Debug.Log(tempPlayer.GetComponent<PlayerIGN>().GetNickname());
-        }
+        lobbyMenu.SetActive(true);
+        menu.SetActive(false);
     }
 
     public void JoinRoom()
