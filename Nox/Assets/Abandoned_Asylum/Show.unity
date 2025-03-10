@@ -908,6 +908,10 @@ MonoBehaviour:
   scrollList: {fileID: 620344320}
   room: {fileID: 4374767613384479480, guid: e85688d960d544246a2111c31fdb74ef, type: 3}
   player: {fileID: 7911323217924822332, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+  firebaseManagerScript: {fileID: 0}
+  lobbyMenu: {fileID: 0}
+  lobbyRoom: {fileID: 0}
+  playerData: {fileID: 0}
 --- !u!4 &296806598
 Transform:
   m_ObjectHideFlags: 0
