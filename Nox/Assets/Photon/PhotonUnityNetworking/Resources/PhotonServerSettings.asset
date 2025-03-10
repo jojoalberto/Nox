@@ -46,6 +46,8 @@ MonoBehaviour:
   - changeScore
   - setPlayerNames
   - SetPlayerNames
+  - UpdateSelectedClasses
+  - SetPlayerClasses
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
