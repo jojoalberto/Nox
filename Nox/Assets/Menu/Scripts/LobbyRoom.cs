@@ -46,8 +46,6 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
             buttonGameObjects[1] = lobbyPlayersHeading.GetChild(1).GetChild(2).gameObject;
             buttonGameObjects[2] = lobbyPlayersHeading.GetChild(1).GetChild(3).gameObject;
             buttonGameObjects[3] = lobbyPlayersHeading.GetChild(1).GetChild(4).gameObject;
-
-
         }
         else if(currentActor == 3)
         {
@@ -96,8 +94,9 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         if (photonView.IsMine)
         {
             UpdatePlayerName(index, name);
-            getButtonList();
+            
         }
+        getButtonList();
     }
 
     private void UpdatePlayerUI()
