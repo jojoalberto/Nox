@@ -11,6 +11,6 @@ public class PlayerSpawner : MonoBehaviour
     private void Start()
     {
         GameObject player = PhotonNetwork.Instantiate(playerGameObject.name, Vector3.zero, Quaternion.identity);
-        firebaseManagerScript.SetNickname(player);
+        //firebaseManagerScript.SetNickname(player);
     }
 }

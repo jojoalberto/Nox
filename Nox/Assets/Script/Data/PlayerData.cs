@@ -5,6 +5,7 @@ public class PlayerData : ScriptableObject
 {
     public string userId;
     public string nickname;
+    public string classSelected;
 
     public string GetUserId()
     { 
@@ -13,6 +14,16 @@ public class PlayerData : ScriptableObject
     public string GetNickname() 
     { 
         return nickname; 
+    }
+
+    public string getClassSelected()
+    {
+        return classSelected;
+    }
+
+    public void Setclass(string className)
+    {
+        classSelected = className;
     }
 
 }
