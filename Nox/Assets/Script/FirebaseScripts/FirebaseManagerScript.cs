@@ -8,6 +8,7 @@ using System.Collections;
 using UnityEngine.Events;
 using System.Threading.Tasks;
 
+
 public class FirebaseManagerScript : MonoBehaviour
 {
     public PlayerData playerData;
@@ -27,24 +28,29 @@ public class FirebaseManagerScript : MonoBehaviour
     [SerializeField]
     private GameObject LoginGameObject;
     private bool isLoggin = false;
-    private string currentUserId;
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         loggin.AddListener(UserisLogIn);
         auth = FirebaseAuth.DefaultInstance;
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
-        ResetUserStatusOnAppStart(currentUserId);
+        Debug.Log("Firebase App Name: " + FirebaseApp.DefaultInstance.Name);
+        Debug.Log("Database URL: " + FirebaseApp.DefaultInstance.Options.DatabaseUrl);
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
     private void UserisLogIn()
     {
-        Debug.Log("Lobby opened");
+        Debug.Log("lobby opened");
         lobbyGameObject.SetActive(true);
         LoginGameObject.SetActive(false);
         isLoggin = false;
     }
-
     public void Register()
     {
         auth.CreateUserWithEmailAndPasswordAsync(emailSignupInput.text, passwordSignupInput.text).ContinueWith(task =>
@@ -62,64 +68,37 @@ public class FirebaseManagerScript : MonoBehaviour
 
     public void Login()
     {
+        //if (string.IsNullOrEmpty(nicknameInput.text))
+        //{
+        //    statusText.text = "Please enter a nickname!";
+        //    return;
+        //}
         auth.SignInWithEmailAndPasswordAsync(emailInput.text, passwordInput.text).ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
-            {
                 statusText.text = "Login Failed!";
-                return;
-            }
-
-            FirebaseUser loggedInUser = auth.CurrentUser;
-            CheckIfUserAlreadyLoggedIn(loggedInUser.UserId);
-        }, TaskScheduler.FromCurrentSynchronizationContext());
-    }
-
-    private void CheckIfUserAlreadyLoggedIn(string userId)
-    {
-        dbReference.Child("users").Child(userId).Child("isLoggedIn").GetValueAsync().ContinueWith(task =>
-        {
-            if (task.IsFaulted || task.IsCanceled)
-            {
-                statusText.text = "Error checking login status!";
-                return;
-            }
-
-            if (task.Result.Exists && (bool)task.Result.Value)
-            {
-                statusText.text = "User already logged in!";
-            }
             else
             {
-                SetUserLoggedIn(userId);
-            }
-        });
-    }
+                statusText.text = "Login Successful!";
+                FirebaseUser loggedInUser = auth.CurrentUser;
+                Debug.Log("loggedInUser added ");
+                GetNicknameFromFirebase(loggedInUser.UserId);
+                playerData.userId = loggedInUser.UserId;
+                Debug.Log("got nickname ");
+                Debug.Log("lobby opened");
+                loggin.Invoke();
 
-    private void SetUserLoggedIn(string userId)
-    {
-        dbReference.Child("users").Child(userId).Child("isLoggedIn").SetValueAsync(true).ContinueWith(task =>
-        {
-            if (task.IsFaulted || task.IsCanceled)
-            {
-                statusText.text = "Error setting login status!";
-                return;
-            }
 
-            FirebaseUser loggedInUser = auth.CurrentUser;
-            statusText.text = "Login Successful!";
-            GetNicknameFromFirebase(loggedInUser.UserId);
-            playerData.userId = loggedInUser.UserId;
-            SetupAutoLogoutOnDisconnect(userId);
-            loggin.Invoke();
-        });
+            }
+        }, TaskScheduler.FromCurrentSynchronizationContext());
+
+
     }
 
     private void SaveNicknameToFirebase(string userId, string nickname)
     {
         dbReference.Child("users").Child(userId).Child("nickname").SetValueAsync(nickname);
     }
-
     private void GetNicknameFromFirebase(string userId)
     {
         dbReference.Child("users").Child(userId).Child("nickname").GetValueAsync().ContinueWith(task =>
@@ -127,17 +106,14 @@ public class FirebaseManagerScript : MonoBehaviour
             if (task.IsFaulted || task.IsCanceled)
             {
                 statusText.text = "Failed to get nickname!";
-                return;
             }
-
-            if (task.Result.Exists)
+            else if (task.Result.Exists)
             {
                 string nickname = task.Result.Value.ToString();
                 PhotonConnect(nickname);
             }
         });
     }
-
     private void PhotonConnect(string nickname)
     {
         playerData.nickname = nickname;
@@ -145,31 +121,9 @@ public class FirebaseManagerScript : MonoBehaviour
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    public void Logout()
+    public void SetNickname(GameObject player)
     {
-        if (auth.CurrentUser != null)
-        {
-            string userId = auth.CurrentUser.UserId;
-            dbReference.Child("users").Child(userId).Child("isLoggedIn").SetValueAsync(false).ContinueWith(task =>
-            {
-                if (task.IsCompleted)
-                {
-                    auth.SignOut();
-                    lobbyGameObject.SetActive(false);
-                    LoginGameObject.SetActive(true);
-                    statusText.text = "Logged out!";
-                }
-            });
-        }
+        
+        player.GetComponent<PlayerIGN>().SetNickname(playerData.name);
     }
-    private void SetupAutoLogoutOnDisconnect(string userId)
-    {
-        // If player disconnects (crash, close game), set `isLoggedIn` to false
-        dbReference.Child("users").Child(userId).Child("isLoggedIn").OnDisconnect().SetValue(false);
-    }
-    private void ResetUserStatusOnAppStart(string userId)
-    {
-        dbReference.Child("users").Child(userId).Child("isLoggedIn").SetValueAsync(false);
-    }
-
 }
