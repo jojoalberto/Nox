@@ -29,9 +29,16 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (playerCamera == null)
         {
-            TryInteract();
+            return;
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                TryInteract();
+            }
         }
     }
 }
