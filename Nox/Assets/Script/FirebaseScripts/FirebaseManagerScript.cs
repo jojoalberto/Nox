@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 public class FirebaseManagerScript : MonoBehaviour
 {
+    public static FirebaseManagerScript Instance;
+
     public PlayerData playerData;
     private FirebaseAuth auth;
     private DatabaseReference dbReference;
@@ -29,12 +31,25 @@ public class FirebaseManagerScript : MonoBehaviour
     private bool isLoggin = false;
     private string currentUserId;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            auth = FirebaseAuth.DefaultInstance;
+            DontDestroyOnLoad(this.gameObject);
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     void Start()
     {
         loggin.AddListener(UserisLogIn);
-        auth = FirebaseAuth.DefaultInstance;
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
-        ResetUserStatusOnAppStart(currentUserId);
+        //ResetUserStatusOnAppStart(currentUserId);
     }
 
     private void UserisLogIn()

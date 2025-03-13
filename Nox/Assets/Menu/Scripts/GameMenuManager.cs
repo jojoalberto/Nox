@@ -1,3 +1,4 @@
+using Firebase.Auth;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
+    public static GameManager Instance;
     string gameVersion = "0.1";
 
     public GameObject menu;
@@ -30,6 +32,20 @@ public class GameManager : MonoBehaviourPunCallbacks
     public PlayerData playerData;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     void Start()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
