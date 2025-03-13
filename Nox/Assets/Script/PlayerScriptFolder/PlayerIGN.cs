@@ -41,7 +41,7 @@ public class PlayerIGN : MonoBehaviourPun
         mainCamera = (Camera) FindAnyObjectByType(typeof(Camera));
         if(mainCamera)
         {
-            transform.LookAt(mainCamera.transform.position);   
+            textObject.transform.LookAt(mainCamera.transform.position);   
         }
 
     }
