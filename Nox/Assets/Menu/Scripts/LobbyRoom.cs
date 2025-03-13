@@ -162,9 +162,17 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
 
         photonView.RPC("SetPlayerClasses", RpcTarget.Others, receivedSelectedClasses);
 
-        if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
+        
+    }
+
+    [PunRPC]
+    public void SetPlayerClasses(string[] receivedSelectedClasses)
+    {
+        selectedClasses = receivedSelectedClasses;
+
+        if (PhotonNetwork.IsMasterClient)
         {
-            if(CheckSelectedClasses())
+            if (CheckSelectedClasses())
             {
                 startButton.interactable = false;
             }
@@ -173,12 +181,6 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
                 startButton.interactable = true;
             }
         }
-    }
-
-    [PunRPC]
-    public void SetPlayerClasses(string[] receivedSelectedClasses)
-    {
-        selectedClasses = receivedSelectedClasses;
     }
 
     private bool CheckSelectedClasses()
@@ -192,5 +194,13 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
                 return true;
         }
         return false;
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.CurrentRoom.IsOpen = false;
+        PhotonNetwork.CurrentRoom.IsVisible = false;
+        PhotonNetwork.LoadLevel(1);
+            
     }
 }
