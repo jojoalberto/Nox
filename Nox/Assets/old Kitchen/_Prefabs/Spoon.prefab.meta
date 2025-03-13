@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f04c05793d726924298a4ceb031510c4
+timeCreated: 1473596560
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 71374
+  packageName: old Kitchen Assets
+  packageVersion: 1.0
+  assetPath: Assets/old Kitchen/_Prefabs/Spoon.prefab
+  uploadId: 136645

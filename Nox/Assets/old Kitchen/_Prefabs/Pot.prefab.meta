@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b53a6f42b18874e41b5848addda1acdc
+timeCreated: 1473596479
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 71374
+  packageName: old Kitchen Assets
+  packageVersion: 1.0
+  assetPath: Assets/old Kitchen/_Prefabs/Pot.prefab
+  uploadId: 136645
