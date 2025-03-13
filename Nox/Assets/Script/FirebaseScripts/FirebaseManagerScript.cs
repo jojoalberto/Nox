@@ -171,5 +171,10 @@ public class FirebaseManagerScript : MonoBehaviour
     {
         dbReference.Child("users").Child(userId).Child("isLoggedIn").SetValueAsync(false);
     }
+    void OnApplicationQuit()
+    {
+        Logout();
+        PhotonNetwork.Disconnect(); 
 
+    }
 }
