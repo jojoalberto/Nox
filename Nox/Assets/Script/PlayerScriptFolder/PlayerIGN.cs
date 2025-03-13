@@ -27,7 +27,7 @@ public class PlayerIGN : MonoBehaviourPun
         }
         else
         {
-            playerCamera.SetActive(false);
+            GameObject.Destroy(playerCamera);
         }
     }
 }
