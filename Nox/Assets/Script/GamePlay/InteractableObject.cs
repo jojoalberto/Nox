@@ -1,15 +1,32 @@
 using Photon.Pun;
 using UnityEngine;
+using TMPro;
 
 public class InteractableObject : MonoBehaviourPunCallbacks
 {
+    public string dialogueMessage;
+    [SerializeField]
+    private DialogueUI dialogueUI;
+
+
     public void Interact()
     {
-        Debug.Log("player interact12 " + gameObject);
+       
         if (photonView.IsMine || !PhotonNetwork.IsConnected) 
         {
-            Debug.Log("player interact " + gameObject);
-            photonView.RPC("OnInteract", RpcTarget.All);
+            if(gameObject.tag == "Clue" || !dialogueUI.gameObject.activeSelf)
+            {
+                Debug.Log("player interact Clue" + gameObject);
+                photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage);
+                dialogueUI.gameObject.SetActive(true);
+
+            }
+            else
+            {
+                Debug.Log("player interact the object " + gameObject);
+                photonView.RPC("OnInteract", RpcTarget.All);
+            }
+
         }
     }
 
@@ -18,5 +35,14 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     {
         Debug.Log($"{gameObject.name} interacted with!");
        
+    }
+
+    [PunRPC]
+    void ShowDialogueRPC(string message)
+    {
+        if (dialogueUI != null)
+        {
+            dialogueUI.ShowDialogue(message);
+        }
     }
 }

@@ -19,8 +19,6 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.green, 0.5f);
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
         {
-            
-
             if (hit.collider.TryGetComponent(out InteractableObject interactable))
             {
                 Debug.Log("player interacts " + hit.collider.name);
