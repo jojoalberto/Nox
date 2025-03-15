@@ -5,9 +5,11 @@ public class PlayerInteraction : MonoBehaviour
     public float interactDistance;
     public Camera playerCamera;
     public LayerMask interactableLayer;
+    public GameObject interactionUI; 
 
     void Update()
     {
+        CheckForInteractable();
         Interact();
     }
 
@@ -37,8 +39,23 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                TryInteract();
+                TryInteract();               
             }
         }
     }
+
+    private void CheckForInteractable()
+    {
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
+        {
+            if (hit.collider.TryGetComponent(out InteractableObject interactable))
+            {
+                interactionUI.SetActive(true); 
+                return;
+            }
+        }
+        interactionUI.SetActive(false);
+    }
+
 }

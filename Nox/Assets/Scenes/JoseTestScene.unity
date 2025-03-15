@@ -1996,6 +1996,18 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0856981
+      objectReference: {fileID: 0}
+    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5733488
+      objectReference: {fileID: 0}
+    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.451
+      objectReference: {fileID: 0}
     - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2658,6 +2670,7 @@ GameObject:
   - component: {fileID: 2019783252}
   - component: {fileID: 2019783251}
   - component: {fileID: 2019783255}
+  - component: {fileID: 2019783256}
   m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
@@ -2766,6 +2779,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2019783256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019783250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 3
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2063500350
 GameObject:
   m_ObjectHideFlags: 0
