@@ -78981,7 +78981,6 @@ Transform:
   - {fileID: 8610770165221815362}
   - {fileID: 8610610490163247910}
   - {fileID: 8610692164056373278}
-  - {fileID: 8602100076043117862}
   - {fileID: 8610513225742531368}
   - {fileID: 8602165937353658812}
   - {fileID: 8610667162809790638}
@@ -119535,6 +119534,7 @@ Transform:
   - {fileID: 8610468785816841240}
   - {fileID: 8610805306956972242}
   - {fileID: 8610836963606242214}
+  - {fileID: 1817219201441464580}
   m_Father: {fileID: 8602318167981392520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8581425483427781174
@@ -148095,67 +148095,67 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &7747258412465273207
+--- !u!1001 &2678658709842244511
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8602318167981392520}
+    m_TransformParent: {fileID: 8610692164056373278}
     m_Modifications:
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
+    - target: {fileID: 194094335792064510, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
+      propertyPath: m_Name
+      value: Dinning Room
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -74.74
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000003774895
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
+    - target: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2082983707910343211, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
-      propertyPath: m_Name
-      value: DiningRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
---- !u!4 &8602100076043117862 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
+--- !u!4 &1817219201441464580 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2081514100324506705, guid: 32db543b4b9f7e84ab18dda883eaf544, type: 3}
-  m_PrefabInstance: {fileID: 7747258412465273207}
+  m_CorrespondingSourceObject: {fileID: 4329242216789127835, guid: 9106bbb142d79ad4a9dc99812b5071ec, type: 3}
+  m_PrefabInstance: {fileID: 2678658709842244511}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8606311149853411758
 PrefabInstance:
