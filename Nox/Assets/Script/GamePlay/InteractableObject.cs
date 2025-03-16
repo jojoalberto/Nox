@@ -7,7 +7,12 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     public string dialogueMessage;
     [SerializeField]
     private DialogueUI dialogueUI;
+    public ClueItemSO clueItem;
 
+    private void Awake()
+    {
+        gameObject.AddComponent<PhotonTransformView>();
+    }
 
     public void Interact()
     {
@@ -18,6 +23,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             {
                 Debug.Log("player interact Clue" + gameObject);
                 photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage);
+
                 dialogueUI.gameObject.SetActive(true);
 
             }

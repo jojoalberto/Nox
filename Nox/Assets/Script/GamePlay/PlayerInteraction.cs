@@ -5,12 +5,20 @@ public class PlayerInteraction : MonoBehaviour
     public float interactDistance;
     public Camera playerCamera;
     public LayerMask interactableLayer;
-    public GameObject interactionUI; 
+    public LayerMask pickableLayer;
+    public GameObject interactionUI;
+
+    private PickableObject currentItem;
 
     void Update()
     {
         CheckForInteractable();
-        Interact();
+        if (Input.GetKeyDown(KeyCode.E) && currentItem != null)
+        {
+            Debug.Log("player trying to pick up the item");
+            Interact();
+        }
+
     }
 
     private void TryInteract()
@@ -24,6 +32,17 @@ public class PlayerInteraction : MonoBehaviour
                 Debug.Log("player interacts " + hit.collider.name);
                 interactable.Interact();
             }
+
+        }
+        else if (Physics.Raycast(ray, out hit, interactDistance, pickableLayer))
+        {
+
+            if (hit.collider.TryGetComponent(out currentItem))
+            {
+                Debug.Log("player pickup " + hit.collider.name);
+                currentItem.Interact();
+            }
+
         }
     }
 
@@ -35,10 +54,8 @@ public class PlayerInteraction : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                TryInteract();               
-            }
+            Debug.Log("player picking up the item");
+            TryInteract();
         }
     }
 
@@ -52,8 +69,19 @@ public class PlayerInteraction : MonoBehaviour
                 interactionUI.SetActive(true); 
                 return;
             }
+
         }
-        interactionUI.SetActive(false);
+        else if(Physics.Raycast(ray, out hit, interactDistance, pickableLayer))
+        {
+            if (hit.collider.TryGetComponent(out PickableObject pickableObject))
+            {
+                currentItem = pickableObject;
+                interactionUI.SetActive(true);
+                return;
+            }
+        }
+            interactionUI.SetActive(false);
+        currentItem = null;
     }
 
 }
