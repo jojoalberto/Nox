@@ -5,7 +5,13 @@ using TMPro;
 
 public class PlayerIGN : MonoBehaviourPun
 {
+
+    public GameObject textObject;
     public TextMeshProUGUI iGNText;
+    public GameObject playerCamera;
+    public Camera mainCamera;
+
+
 
     [PunRPC]
     public void SetNickname(string nickname)
@@ -24,5 +30,19 @@ public class PlayerIGN : MonoBehaviourPun
         {
             photonView.RPC("SetNickname", RpcTarget.AllBuffered, PhotonNetwork.NickName);
         }
+        else
+        {
+            GameObject.Destroy(playerCamera);
+        }
+    }
+
+    private void Update()
+    {
+        mainCamera = (Camera) FindAnyObjectByType(typeof(Camera));
+        if(mainCamera)
+        {
+            textObject.transform.LookAt(mainCamera.transform.position);   
+        }
+
     }
 }
