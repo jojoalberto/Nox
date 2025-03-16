@@ -37287,7 +37287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage: Clue Found
   dialogueUI: {fileID: 269601934}
-  clueItem: {fileID: 0}
 --- !u!65 &436606850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37396,7 +37395,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 1
+  sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &437403969
@@ -104101,7 +104100,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.083333336
+  m_VoxelSize: 0.11666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 9b7d88fd3878c5c4088630ab6503694f, type: 2}
   m_BuildHeightMesh: 0
@@ -183488,7 +183487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage: You got Torch Light
   dialogueUI: {fileID: 269601934}
-  clueItem: {fileID: 11400000, guid: f044dbeb7303b6842b306abf252e7a80, type: 2}
 --- !u!65 &33949273962862384
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     public string dialogueMessage;
     [SerializeField]
     private DialogueUI dialogueUI;
-    public ClueItemSO clueItem;
 
     private void Awake()
     {
