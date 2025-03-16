@@ -4,6 +4,9 @@ using System.Linq;
 using System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine.Rendering;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using Photon.Realtime;
 
 public class DemonTargetAI1 : MonoBehaviour
 {
@@ -12,7 +15,7 @@ public class DemonTargetAI1 : MonoBehaviour
     private Animator animator;
     public float[] targetWeights;
     public int currentTargetIndex = -1;
-    public Transform player;
+    public List<Transform> players = new List<Transform>();
 
     public bool isChasingPlayer = false;
     public float defaultSpeed = 3f;
@@ -27,29 +30,35 @@ public class DemonTargetAI1 : MonoBehaviour
     public string[] debugMessages = { "", "", "" };
     [SerializeField] private LayerMask lineOfSightLayers;
 
+    public Transform currentTarget;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         targetWeights = Enumerable.Repeat(1f, targetLocations.Length).ToArray();
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        // Find all players with the "Player" tag
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+        players.AddRange(playerObjects.Select(go => go.transform));
+
         PickNewTarget();
     }
 
     void Update()
     {
-        debugMessages[0] = Vector3.Distance(transform.position, player.position).ToString();
+        SetClosestPlayer();
+        debugMessages[0] = "Closest: " + currentTarget.name;
 
-        if (!isChasingPlayer && HasLineOfSight())
+        if (!isChasingPlayer && HasLineOfSightToPlayer(currentTarget))
         {
-            if (chaseCoroutine == null)
+            if (currentTarget != null)
             {
-                chaseCoroutine = StartCoroutine(ChasePlayer());
+                if (chaseCoroutine == null)
+                {
+                    chaseCoroutine = StartCoroutine(ChasePlayer());
+                }
             }
-        }
-        else if (isChasingPlayer)
-        {
-            navMeshAgent.SetDestination(player.position);
         }
 
         if (!isChasingPlayer && !navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)
@@ -90,7 +99,7 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         if (index >= 0 && index < targetWeights.Length)
         {
-            targetWeights[index] *= 0.5f; 
+            targetWeights[index] *= 0.5f;
         }
 
         ResetWeightsIfNeeded();
@@ -98,7 +107,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void ResetWeightsIfNeeded()
     {
-        if (targetWeights.All(w => w < 0.2f)) 
+        if (targetWeights.All(w => w < 0.2f))
         {
             for (int i = 0; i < targetWeights.Length; i++)
             {
@@ -117,45 +126,44 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator ChasePlayer()
     {
-        debugMessages[1] = "Player";
         isChasingPlayer = true;
         navMeshAgent.speed = chaseSpeed;
-        float chaseTime = interestDuration;
+        float chaseTimer = interestDuration;
+        float currentGracePeriod = gracePeriod;
 
-        while (chaseTime > 0f)
+        while (chaseTimer > 0f)
         {
+            SetClosestPlayer();
+            debugMessages[1] = "Chasing: " + currentTarget.name;
+            navMeshAgent.SetDestination(currentTarget.position);
 
-            navMeshAgent.SetDestination(player.position);
-            chaseTime -= Time.deltaTime;
+            chaseTimer -= Time.deltaTime;
             yield return null;
         }
 
-        // Check if player is still visible for extended chase
-        if (HasLineOfSight())
+        if (currentTarget != null)
         {
             navMeshAgent.speed = tiredSpeed;
-            chaseTime = extendedChaseDuration;
-            float grace = gracePeriod;
+            chaseTimer = extendedChaseDuration;
 
-            // Extended chase phase with grace period
-            while (chaseTime > 0f || grace > 0f)
+            while (chaseTimer > 0f || currentGracePeriod > 0f)
             {
-                bool hasSight = HasLineOfSight();
-                if (hasSight)
+                SetClosestPlayer();
+                if (HasLineOfSightToPlayer(currentTarget))
                 {
-                    grace = 5f;
-                    chaseTime -= Time.deltaTime;
+                    currentGracePeriod = 5f;
+                    chaseTimer -= Time.deltaTime;
                 }
                 else
                 {
-                    if (grace > 0f)
+                    if (currentGracePeriod > 0f)
                     {
-                        grace -= Time.deltaTime;
+                        currentGracePeriod -= Time.deltaTime;
                     }
-                    chaseTime -= Time.deltaTime;
+                    chaseTimer -= Time.deltaTime;
                 }
 
-                navMeshAgent.SetDestination(player.position);
+                navMeshAgent.SetDestination(currentTarget.position);
                 yield return null;
             }
         }
@@ -170,26 +178,21 @@ public class DemonTargetAI1 : MonoBehaviour
 
 
 
-    bool HasLineOfSight()
+    bool HasLineOfSightToPlayer(Transform player)
     {
         if (player == null) return false;
 
-        // Adjust for eye level to avoid ground hits
         Vector3 aiEyePosition = transform.position + Vector3.up * 1.5f;
         Vector3 playerEyePosition = player.position + Vector3.up * 1.5f;
 
-        // Calculate distance and direction
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         Vector3 directionToPlayer = (playerEyePosition - aiEyePosition).normalized;
 
-        // Check if player is within chase distance or in front
         bool isInFront = Vector3.Angle(transform.forward, directionToPlayer) <= 90f;
         bool isCloseEnough = distanceToPlayer <= chaseDistance;
 
-        // Demon can only see behind if player is within 10 units
         if (!isCloseEnough && !isInFront) return false;
 
-        // Visual debug line
         Debug.DrawLine(aiEyePosition, playerEyePosition, Color.red, 1f);
 
         RaycastHit hit;
@@ -199,5 +202,45 @@ public class DemonTargetAI1 : MonoBehaviour
             return hit.collider.CompareTag("Player");
         }
         return false;
+    }
+
+    Transform GetClosestVisiblePlayer()
+    {
+        Transform closestPlayer = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Transform player in players)
+        {
+            if (player == null) continue;
+
+            if (HasLineOfSightToPlayer(player))
+            {
+                float distance = Vector3.Distance(transform.position, player.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestPlayer = player;
+                }
+            }
+        }
+
+        return closestPlayer;
+    }
+
+    public void SetClosestPlayer()
+    {
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Transform player in players)
+        {
+            if (player == null) continue;
+
+            float distance = Vector3.Distance(transform.position, player.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                currentTarget = player;
+            }
+        }
     }
 }

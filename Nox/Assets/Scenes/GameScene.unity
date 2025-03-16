@@ -37382,6 +37382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage: Clue Found
   dialogueUI: {fileID: 269601934}
+  clueItem: {fileID: 0}
 --- !u!65 &436606850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46029,7 +46030,7 @@ MonoBehaviour:
   - {fileID: 1033375407}
   targetWeights: []
   currentTargetIndex: -1
-  player: {fileID: 0}
+  players: []
   isChasingPlayer: 0
   defaultSpeed: 3
   tiredSpeed: 4
@@ -46043,6 +46044,7 @@ MonoBehaviour:
   lineOfSightLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  currentTarget: {fileID: 0}
 --- !u!195 &566123428
 NavMeshAgent:
   m_ObjectHideFlags: 0
