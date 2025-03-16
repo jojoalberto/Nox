@@ -170,7 +170,7 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     {
         selectedClasses = receivedSelectedClasses;
 
-        if (PhotonNetwork.IsMasterClient)
+        if (PhotonNetwork.LocalPlayer.ActorNumber ==1)
         {
             if (CheckSelectedClasses())
             {
