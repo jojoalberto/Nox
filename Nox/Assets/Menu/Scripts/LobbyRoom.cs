@@ -120,46 +120,70 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
 
     public void ClassSelectionProtector()
     {
-
-        playerData.Setclass("Protector");
-        
-
-        int currentActor = PhotonNetwork.LocalPlayer.ActorNumber;
-        selectedClasses[currentActor - 1] = playerData.getClassSelected();
-        UpdateSelectedClasses(selectedClasses);
+        string selectedClass = "Protector";
+        playerData.Setclass(selectedClass);
+        ReportClassSelection(selectedClass);
     }
 
     public void ClassSelectionOccultist()
     {
-        playerData.Setclass("Occultist");
-
-        int currentActor = PhotonNetwork.LocalPlayer.ActorNumber;
-        selectedClasses[currentActor - 1] = playerData.getClassSelected();
-        UpdateSelectedClasses(selectedClasses);
+        string selectedClass = "Occultist";
+        playerData.Setclass(selectedClass);
+        ReportClassSelection(selectedClass);
     }
 
     public void ClassSelectionDrifter()
     {
-        playerData.Setclass("Drifter");
-
-        int currentActor = PhotonNetwork.LocalPlayer.ActorNumber;
-        selectedClasses[currentActor - 1] = playerData.getClassSelected();
-        UpdateSelectedClasses(selectedClasses);
+        string selectedClass = "Drifter";
+        playerData.Setclass(selectedClass);
+        ReportClassSelection(selectedClass);
     }
 
     public void ClassSelectionTrapper()
     {
-        playerData.Setclass("Trapper");
+        string selectedClass = "Trapper";
+        playerData.Setclass(selectedClass);
+        ReportClassSelection(selectedClass);
+    }
 
-        int currentActor = PhotonNetwork.LocalPlayer.ActorNumber;
-        selectedClasses[currentActor - 1] = playerData.getClassSelected();
-        UpdateSelectedClasses(selectedClasses);
+    private void ReportClassSelection(string className)
+    {
+        int actorNumber = PhotonNetwork.LocalPlayer.ActorNumber;
+        photonView.RPC("ReportClassToMaster", RpcTarget.MasterClient, actorNumber, className);
+    }
+
+    [PunRPC]
+    private void ReportClassToMaster(int actorNumber, string className)
+    {
+        int index = actorNumber - 1;
+        selectedClasses[index] = className;
+        photonView.RPC("SyncSelectedClasses", RpcTarget.All, selectedClasses);
+    }
+
+    [PunRPC]
+    private void SyncSelectedClasses(string[] updatedClasses)
+    {
+        selectedClasses = updatedClasses;
+        UpdateClassSelectionUI();
+        ValidateClassSelections();
+    }
+    private void UpdateClassSelectionUI()
+    {
+        // Add any UI update logic here if needed
+    }
+
+    private void ValidateClassSelections()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            startButton.interactable = !CheckSelectedClasses();
+        }
     }
 
     public void UpdateSelectedClasses(string[] receivedSelectedClasses)
     {
         
-
+        
         photonView.RPC("SetPlayerClasses", RpcTarget.Others, receivedSelectedClasses);
 
         
@@ -168,9 +192,10 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SetPlayerClasses(string[] receivedSelectedClasses)
     {
+
         selectedClasses = receivedSelectedClasses;
 
-        if (PhotonNetwork.LocalPlayer.ActorNumber ==1)
+        if (PhotonNetwork.IsMasterClient)
         {
             if (CheckSelectedClasses())
             {

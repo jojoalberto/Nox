@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Photon.Realtime;
+using Photon.Pun;
 
 public class DemonTargetAI1 : MonoBehaviour
 {
@@ -43,11 +44,12 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void Start()
     {
+
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         targetWeights = Enumerable.Repeat(1f, targetLocations.Length).ToArray();
 
-        
+
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
         players.AddRange(playerObjects.Select(go => go.transform));
 
@@ -56,6 +58,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void Update()
     {
+
         SetClosestPlayer();
         debugMessages[0] = "Closest: " + (currentTarget != null ? currentTarget.name : "None");
 
@@ -89,6 +92,7 @@ public class DemonTargetAI1 : MonoBehaviour
         }
 
         UpdateAnimation();
+
     }
 
     void PickNewTarget()
