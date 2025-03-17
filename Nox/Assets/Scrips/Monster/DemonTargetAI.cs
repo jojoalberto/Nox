@@ -10,6 +10,7 @@ using Photon.Realtime;
 
 public class DemonTargetAI1 : MonoBehaviour
 {
+    [Header("General Settings")]
     public Transform[] targetLocations;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -17,7 +18,7 @@ public class DemonTargetAI1 : MonoBehaviour
     public int currentTargetIndex = -1;
     public List<Transform> players = new List<Transform>();
 
-    public bool isChasingPlayer = false;
+    [Header("Chase Settings")]
     public float defaultSpeed = 3f;
     public float tiredSpeed = 5f;
     public float chaseSpeed = 5.5f;
@@ -26,11 +27,21 @@ public class DemonTargetAI1 : MonoBehaviour
     public float gracePeriod = 5f;
     public float chaseDistance = 10f;
     private Coroutine chaseCoroutine;
-
-    public string[] debugMessages = { "", "", "" };
     [SerializeField] private LayerMask lineOfSightLayers;
-
     public Transform currentTarget;
+
+    [Header("Debug Settings")]
+    public string[] debugMessages = { "", "", "" };
+
+    [Header("States")]
+    public bool isChasingPlayer = false;
+    public bool isAttacking = false;
+
+    [Header("Attack Settings")]
+    public float attackRange = 5f;
+    public int damageAmount = 1;
+    public float postAttackIdleTime = 4f;
+
 
     void Start()
     {
@@ -38,7 +49,7 @@ public class DemonTargetAI1 : MonoBehaviour
         animator = GetComponent<Animator>();
         targetWeights = Enumerable.Repeat(1f, targetLocations.Length).ToArray();
 
-        // Find all players with the "Player" tag
+        
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
         players.AddRange(playerObjects.Select(go => go.transform));
 
@@ -48,16 +59,28 @@ public class DemonTargetAI1 : MonoBehaviour
     void Update()
     {
         SetClosestPlayer();
-        debugMessages[0] = "Closest: " + currentTarget.name;
+        debugMessages[0] = "Closest: " + (currentTarget != null ? currentTarget.name : "None");
 
-        if (!isChasingPlayer && HasLineOfSightToPlayer(currentTarget))
+        if (!isChasingPlayer && currentTarget != null && HasLineOfSightToPlayer(currentTarget))
         {
-            if (currentTarget != null)
+            if (chaseCoroutine == null)
             {
-                if (chaseCoroutine == null)
+                chaseCoroutine = StartCoroutine(ChasePlayer());
+            }
+        }
+
+        if (isChasingPlayer && !isAttacking && currentTarget != null)
+        {
+            float distanceToPlayer = Vector3.Distance(transform.position, currentTarget.position);
+            if (distanceToPlayer <= attackRange)
+            {
+                // Stop chasing when attacking starts
+                if (chaseCoroutine != null)
                 {
-                    chaseCoroutine = StartCoroutine(ChasePlayer());
+                    StopCoroutine(chaseCoroutine);
+                    chaseCoroutine = null;
                 }
+                StartCoroutine(AttackPlayer());
             }
         }
 
@@ -134,6 +157,10 @@ public class DemonTargetAI1 : MonoBehaviour
         while (chaseTimer > 0f)
         {
             SetClosestPlayer();
+            if (currentTarget == null)
+            {
+                break; // Exit chase if no target
+            }
             debugMessages[1] = "Chasing: " + currentTarget.name;
             navMeshAgent.SetDestination(currentTarget.position);
 
@@ -149,9 +176,14 @@ public class DemonTargetAI1 : MonoBehaviour
             while (chaseTimer > 0f || currentGracePeriod > 0f)
             {
                 SetClosestPlayer();
+                if (currentTarget == null)
+                {
+                    break; // Exit if no target
+                }
+
                 if (HasLineOfSightToPlayer(currentTarget))
                 {
-                    currentGracePeriod = 5f;
+                    currentGracePeriod = gracePeriod;
                     chaseTimer -= Time.deltaTime;
                 }
                 else
@@ -174,9 +206,6 @@ public class DemonTargetAI1 : MonoBehaviour
         chaseCoroutine = null;
         PickNewTarget();
     }
-
-
-
 
     bool HasLineOfSightToPlayer(Transform player)
     {
@@ -204,36 +233,17 @@ public class DemonTargetAI1 : MonoBehaviour
         return false;
     }
 
-    Transform GetClosestVisiblePlayer()
-    {
-        Transform closestPlayer = null;
-        float closestDistance = Mathf.Infinity;
-
-        foreach (Transform player in players)
-        {
-            if (player == null) continue;
-
-            if (HasLineOfSightToPlayer(player))
-            {
-                float distance = Vector3.Distance(transform.position, player.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closestPlayer = player;
-                }
-            }
-        }
-
-        return closestPlayer;
-    }
-
     public void SetClosestPlayer()
     {
         float closestDistance = Mathf.Infinity;
+        currentTarget = null; // Reset current target
 
         foreach (Transform player in players)
         {
             if (player == null) continue;
+
+            PlayerHealth health = player.GetComponent<PlayerHealth>();
+            if (health != null && health.currentHealth <= 0) continue;
 
             float distance = Vector3.Distance(transform.position, player.position);
             if (distance < closestDistance)
@@ -241,6 +251,72 @@ public class DemonTargetAI1 : MonoBehaviour
                 closestDistance = distance;
                 currentTarget = player;
             }
+        }
+    }
+
+    IEnumerator AttackPlayer()
+    {
+        isAttacking = true;
+
+        // Stop any active chasing when attacking starts
+        if (chaseCoroutine != null)
+        {
+            StopCoroutine(chaseCoroutine);
+            chaseCoroutine = null;
+        }
+
+        float originalSpeed = navMeshAgent.speed;
+        int originalDamage = damageAmount;
+
+        if (currentTarget != null)
+        {
+            PlayerHealth playerHealth = currentTarget.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
+
+                // Check if target died after attack
+                if (playerHealth.currentHealth <= 0)
+                {
+                    players.Remove(currentTarget);
+                    currentTarget = null;
+                }
+            }
+        }
+
+        // Post-attack idle state
+        navMeshAgent.speed = 0;
+        damageAmount = 0;
+
+        // Play attack animation
+        animator.SetTrigger("Attack");
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Play post-attack animation
+        animator.SetTrigger("PostAttack");
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+
+        // Restore movement and damage
+        navMeshAgent.speed = originalSpeed;
+        damageAmount = originalDamage;
+
+        isAttacking = false;
+
+        // Update target status after animations complete
+        SetClosestPlayer();
+
+        if (currentTarget != null && HasLineOfSightToPlayer(currentTarget))
+        {
+            // Start new chase if valid target exists
+            chaseCoroutine = StartCoroutine(ChasePlayer());
+        }
+        else
+        {
+            // Return to patrolling if no valid target
+            isChasingPlayer = false;
+            PickNewTarget();
         }
     }
 }
