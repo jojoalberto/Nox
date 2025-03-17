@@ -46324,7 +46324,7 @@ MonoBehaviour:
   - 
   isChasingPlayer: 0
   isAttacking: 0
-  attackRange: 5
+  attackRange: 4
   damageAmount: 1
   postAttackIdleTime: 4
 --- !u!195 &566123428
@@ -91738,7 +91738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 290884568573657152, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 290884568573959264, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
       propertyPath: m_LocalScale.x
@@ -91796,6 +91796,22 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2574039114717356863, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'targetLocations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 80850846}
+    - target: {fileID: 2574039114717356863, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'targetLocations.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2058306659}
+    - target: {fileID: 2574039114717356863, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'targetLocations.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1033375407}
+    - target: {fileID: 2574039114717356863, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'targetLocations.Array.data[3]'
+      value: 
+      objectReference: {fileID: 689136649}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
