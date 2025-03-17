@@ -27,6 +27,8 @@ public class InventoryManager : MonoBehaviour
         //UpdateInventoryUI();
     }
 
+
+
     //void UpdateInventoryUI()
     //{
     //    foreach (Transform child in inventoryUIParent)

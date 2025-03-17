@@ -13,7 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         CheckForInteractable();
-        if (Input.GetKeyDown(KeyCode.E) && currentItem != null)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("player trying to pick up the item");
             Interact();
@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
             }
 
         }
-        else if (Physics.Raycast(ray, out hit, interactDistance, pickableLayer))
+        else if (Physics.Raycast(ray, out hit, interactDistance, pickableLayer) && currentItem != null)
         {
 
             if (hit.collider.TryGetComponent(out currentItem))

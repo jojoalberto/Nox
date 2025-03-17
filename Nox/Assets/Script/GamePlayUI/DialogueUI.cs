@@ -16,8 +16,10 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogue(string message)
     {
+        Debug.Log("showing Dialogue");
         dialoguePanel.SetActive(true);
         dialogueText.text = message;
+        Canvas.ForceUpdateCanvases();
         StartCoroutine(StartCloseDialogue());
     }
 

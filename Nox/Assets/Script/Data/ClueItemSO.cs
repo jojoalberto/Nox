@@ -5,4 +5,5 @@ public class ClueItemSO : ScriptableObject
 {
     public string itemName;
     public string description;
+    public bool isFlashlight;
 }

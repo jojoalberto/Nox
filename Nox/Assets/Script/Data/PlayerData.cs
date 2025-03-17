@@ -6,6 +6,7 @@ public class PlayerData : ScriptableObject
     public string userId;
     public string nickname;
     public string classSelected;
+    public bool hasFlashlight;
 
     public string GetUserId()
     { 
@@ -24,6 +25,17 @@ public class PlayerData : ScriptableObject
     public void Setclass(string className)
     {
         classSelected = className;
+    }
+
+    public void setFlashlight(bool flashlight)
+    {
+        hasFlashlight = flashlight;
+    }
+
+    public bool getFlashlight()
+    {
+        return hasFlashlight;
+
     }
 
 }

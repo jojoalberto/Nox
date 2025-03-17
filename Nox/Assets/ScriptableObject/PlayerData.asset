@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbd5d7a61e1e564faae984855327c1d, type: 3}
   m_Name: playerTest
   m_EditorClassIdentifier: 
-  userId: kn5qCTkRK2WjRkG3UGy497hagXY2
-  nickname: 
+  userId: fwnCgS9kO0gd9IMTuvMuVvJIqWs2
+  nickname: testerJ
+  classSelected: 
+  hasFlashlight: 1

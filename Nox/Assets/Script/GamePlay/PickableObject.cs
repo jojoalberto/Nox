@@ -3,7 +3,9 @@ using Photon.Pun;
 
 public class PickableObject : MonoBehaviourPun
 {
-    public ClueItemSO itemData; 
+    public ClueItemSO itemData;
+    [SerializeField]
+    private PlayerData playerData;
 
     public void Interact()
     {
@@ -18,6 +20,10 @@ public class PickableObject : MonoBehaviourPun
     {
         if (InventoryManager.Instance != null)
         {
+            if(playerData != null && itemData.isFlashlight)
+            {
+                playerData.setFlashlight(true);
+            }
             InventoryManager.Instance.AddItem(itemData);
             Destroy(gameObject); 
         }
