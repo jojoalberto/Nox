@@ -1,5 +1,6 @@
 using System;
 using JetBrains.Annotations;
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -11,10 +12,13 @@ public class PlayerHealth : MonoBehaviour
     public bool invulnerability = false;
     
     public Transform purgatoryLocation;
+    public PhotonView photonView;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
+
         if(playerData != null)
         {
             if (playerData.getClassSelected() == "Protector")
@@ -62,8 +66,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void goToPurgatory()
     {
+
+        photonView.RPC("GoToPurgatory", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void GoToPurgatory()
+    {
         purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory").transform;
         transform.position = purgatoryLocation.position;
-        playerObject.SetActive(false);
     }
+
 }

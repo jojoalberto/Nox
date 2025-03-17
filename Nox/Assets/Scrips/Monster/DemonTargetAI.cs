@@ -41,23 +41,47 @@ public class DemonTargetAI1 : MonoBehaviour
     public int damageAmount = 1;
     public float postAttackIdleTime = 4f;
 
+    private PhotonView photonView;
 
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
 
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         targetWeights = Enumerable.Repeat(1f, targetLocations.Length).ToArray();
 
+        if (PhotonNetwork.IsMasterClient)
+        {
+            StartCoroutine(WaitForPlayersToInstantiate());
+        }
+    }
 
-        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
-        players.AddRange(playerObjects.Select(go => go.transform));
+    IEnumerator WaitForPlayersToInstantiate()
+    {
+        while (players.Count < PhotonNetwork.PlayerList.Length)
+        {
+            UpdatePlayerList();
+            yield return new WaitForSeconds(0.5f);
+        }
 
         PickNewTarget();
     }
 
+    void UpdatePlayerList()
+    {
+        players.Clear();
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+        players.AddRange(playerObjects.Select(go => go.transform));
+        SetClosestPlayer();
+    }
+
     void Update()
     {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            return;
+        }
 
         SetClosestPlayer();
         debugMessages[0] = "Closest: " + (currentTarget != null ? currentTarget.name : "None");
@@ -145,8 +169,20 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         if (animator != null)
         {
-            animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
+            float speed = navMeshAgent.velocity.magnitude;
+
+            // Only MasterClient should send the RPC
+            if (PhotonNetwork.IsMasterClient)
+            {
+                photonView.RPC("SyncAnimation", RpcTarget.All, speed);
+            }
         }
+    }
+
+    [PunRPC]
+    void SyncAnimation(float speed)
+    {
+        animator.SetFloat("Speed", speed);
     }
 
     IEnumerator ChasePlayer()
@@ -291,14 +327,18 @@ public class DemonTargetAI1 : MonoBehaviour
         damageAmount = 0;
 
         // Play attack animation
-        animator.SetTrigger("Attack");
+        // Stop movement and play attack animation on all clients
+        photonView.RPC("PlayAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         // Play post-attack animation
-        animator.SetTrigger("PostAttack");
+        photonView.RPC("PlayAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+
+        // Reset animation to movement
+        photonView.RPC("ResetAnimation", RpcTarget.All);
 
         // Restore movement and damage
         navMeshAgent.speed = originalSpeed;
@@ -321,4 +361,23 @@ public class DemonTargetAI1 : MonoBehaviour
             PickNewTarget();
         }
     }
+
+    [PunRPC]
+    void PlayAttackAnimation()
+    {
+        animator.SetTrigger("Attack");
+    }
+
+    [PunRPC]
+    void PlayPostAttackAnimation()
+    {
+        animator.SetTrigger("PostAttack");
+    }
+
+    [PunRPC]
+    void ResetAnimation()
+    {
+        animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
+    }
+
 }

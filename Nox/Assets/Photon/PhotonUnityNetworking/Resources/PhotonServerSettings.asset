@@ -55,6 +55,12 @@ MonoBehaviour:
   - GetSelectedClasses
   - ReportClassToMaster
   - SyncSelectedClasses
+  - GoToPurgatory
+  - PlayAttackAnimation
+  - PlayPostAttackAnimation
+  - ResetAnimation
+  - SyncAnimation
+  - SyncFlashlightState
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
