@@ -64,5 +64,6 @@ public class PlayerHealth : MonoBehaviour
     {
         purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory").transform;
         transform.position = purgatoryLocation.position;
+        playerObject.SetActive(false);
     }
 }
