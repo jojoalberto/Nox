@@ -21,13 +21,12 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Start()
     {
-        playerLayerMask = 1 << gameObject.layer; // Get the player's layer
+        playerLayerMask = 1 << gameObject.layer; 
 
         if (playerData != null)
         {
             classSelected = playerData.classSelected;
 
-            // Determine appropriate pickable layer based on class
             if (classSelected == "Trapper")
             {
                 currentPickableMask = pickableLayer | trapperPickableLayer;
@@ -55,7 +54,6 @@ public class PlayerInteraction : MonoBehaviour
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.green, 0.5f);
 
-        // Calculate masks excluding player layer
         int interactableMask = interactableLayer.value & ~playerLayerMask;
         int pickableMask = currentPickableMask.value & ~playerLayerMask;
 
@@ -91,7 +89,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
 
-        // Calculate masks excluding player layer
         int interactableMask = interactableLayer.value & ~playerLayerMask;
         int pickableMask = currentPickableMask.value & ~playerLayerMask;
 

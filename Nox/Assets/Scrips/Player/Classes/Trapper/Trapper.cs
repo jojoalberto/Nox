@@ -4,17 +4,41 @@ public class Trapper : MonoBehaviour
 {
     [SerializeField] private int pickups = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Camera mainCamera;
+    private int originalCullingMask;
+    private int trapperLayer;
+
     void Start()
     {
-        
+        mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            originalCullingMask = mainCamera.cullingMask;
+            trapperLayer = LayerMask.NameToLayer("TrapperPickup");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
+    void OnEnable()
+    {
+        if (mainCamera != null)
+        {
+            mainCamera.cullingMask |= (1 << trapperLayer);
+        }
+    }
+
+    void OnDisable()
+    {
+        if (mainCamera != null)
+        {
+            mainCamera.cullingMask = originalCullingMask;
+        }
+    }
+
 
     public void IncrementPickup()
     {

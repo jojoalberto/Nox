@@ -296,7 +296,6 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         isAttacking = true;
 
-        // Stop any active chasing when attacking starts
         if (chaseCoroutine != null)
         {
             StopCoroutine(chaseCoroutine);
@@ -312,8 +311,6 @@ public class DemonTargetAI1 : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount);
-
-                // Check if target died after attack
                 if (playerHealth.currentHealth <= 0)
                 {
                     players.Remove(currentTarget);
@@ -322,41 +319,32 @@ public class DemonTargetAI1 : MonoBehaviour
             }
         }
 
-        // Post-attack idle state
         navMeshAgent.speed = 0;
         damageAmount = 0;
 
-        // Play attack animation
-        // Stop movement and play attack animation on all clients
         photonView.RPC("PlayAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Play post-attack animation
-        photonView.RPC("PlayAttackAnimation", RpcTarget.All);
+        photonView.RPC("PlayPostAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
 
-        // Reset animation to movement
-        photonView.RPC("ResetAnimation", RpcTarget.All);
+        
 
-        // Restore movement and damage
         navMeshAgent.speed = originalSpeed;
         damageAmount = originalDamage;
 
         isAttacking = false;
 
-        // Update target status after animations complete
         SetClosestPlayer();
 
         if (currentTarget != null && HasLineOfSightToPlayer(currentTarget))
         {
-            // Start new chase if valid target exists
             chaseCoroutine = StartCoroutine(ChasePlayer());
         }
         else
         {
-            // Return to patrolling if no valid target
             isChasingPlayer = false;
             PickNewTarget();
         }
@@ -372,12 +360,6 @@ public class DemonTargetAI1 : MonoBehaviour
     void PlayPostAttackAnimation()
     {
         animator.SetTrigger("PostAttack");
-    }
-
-    [PunRPC]
-    void ResetAnimation()
-    {
-        animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
     }
 
 }
