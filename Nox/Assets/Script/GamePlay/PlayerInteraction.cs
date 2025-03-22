@@ -9,52 +9,80 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionUI;
 
     private PickableObject currentItem;
+    private int playerLayerMask; // Stores the player's layer to exclude from raycasts
+
+    public PlayerData playerData;
+    public string classSelected;
+
+    public Trapper trapper;
+    public LayerMask trapperPickableLayer;
+
+    private LayerMask currentPickableMask;
+
+    private void Start()
+    {
+        playerLayerMask = 1 << gameObject.layer; // Get the player's layer
+
+        if (playerData != null)
+        {
+            classSelected = playerData.classSelected;
+
+            // Determine appropriate pickable layer based on class
+            if (classSelected == "Trapper")
+            {
+                currentPickableMask = pickableLayer | trapperPickableLayer;
+                if (trapper != null) trapper.enabled = true;
+            }
+            else
+            {
+                currentPickableMask = pickableLayer;
+                if (trapper != null) trapper.enabled = false;
+            }
+        }
+    }
 
     void Update()
     {
         CheckForInteractable();
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("player trying to pick up the item");
             Interact();
         }
-
     }
 
     private void TryInteract()
     {
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.green, 0.5f);
-        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
+
+        // Calculate masks excluding player layer
+        int interactableMask = interactableLayer.value & ~playerLayerMask;
+        int pickableMask = currentPickableMask.value & ~playerLayerMask;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableMask))
         {
             if (hit.collider.TryGetComponent(out InteractableObject interactable))
             {
-                Debug.Log("player interacts " + hit.collider.name);
                 interactable.Interact();
             }
-
         }
-        else if (Physics.Raycast(ray, out hit, interactDistance, pickableLayer) && currentItem != null)
+        else if (Physics.Raycast(ray, out hit, interactDistance, pickableMask))
         {
-
-            if (hit.collider.TryGetComponent(out currentItem))
+            if (hit.collider.TryGetComponent(out PickableObject pickable))
             {
-                Debug.Log("player pickup " + hit.collider.name);
-                currentItem.Interact();
+                if (pickable.gameObject.layer == 10 && trapper != null)
+                {
+                    trapper.IncrementPickup();
+                }
+                pickable.Interact();
             }
-
         }
     }
 
     public void Interact()
     {
-        if (playerCamera == null)
+        if (playerCamera != null)
         {
-            return;
-        }
-        else
-        {
-            Debug.Log("player picking up the item");
             TryInteract();
         }
     }
@@ -62,26 +90,31 @@ public class PlayerInteraction : MonoBehaviour
     private void CheckForInteractable()
     {
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableLayer))
+
+        // Calculate masks excluding player layer
+        int interactableMask = interactableLayer.value & ~playerLayerMask;
+        int pickableMask = currentPickableMask.value & ~playerLayerMask;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactableMask))
         {
             if (hit.collider.TryGetComponent(out InteractableObject interactable))
             {
-                interactionUI.SetActive(true); 
-                return;
-            }
-
-        }
-        else if(Physics.Raycast(ray, out hit, interactDistance, pickableLayer))
-        {
-            if (hit.collider.TryGetComponent(out PickableObject pickableObject))
-            {
-                currentItem = pickableObject;
                 interactionUI.SetActive(true);
                 return;
             }
         }
-            interactionUI.SetActive(false);
+
+        if (Physics.Raycast(ray, out hit, interactDistance, pickableMask))
+        {
+            if (hit.collider.TryGetComponent(out PickableObject pickable))
+            {
+                currentItem = pickable;
+                interactionUI.SetActive(true);
+                return;
+            }
+        }
+
+        interactionUI.SetActive(false);
         currentItem = null;
     }
-
 }

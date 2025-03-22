@@ -4,8 +4,10 @@ using NUnit.Framework;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using TMPro;
+using Unity.Android.Gradle;
 using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +23,10 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     public Button startButton;
 
     public string[] selectedClasses = { "None", "None", "None", "None" };
-   
+    public Image[] playerImages;
+    public Sprite[] spriteList;
+    public Sprite noneSprite;
+
 
     void Start()
     {
@@ -71,6 +76,11 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         buttonGameObjects[1].GetComponent<Button>().onClick.AddListener(ClassSelectionOccultist);
         buttonGameObjects[2].GetComponent<Button>().onClick.AddListener(ClassSelectionDrifter);
         buttonGameObjects[3].GetComponent<Button>().onClick.AddListener(ClassSelectionTrapper);
+
+        foreach (GameObject obj in buttonGameObjects)
+        {
+            obj.SetActive(true);
+        }
     }
 
     public void UpdatePlayerNamesOnJoin()
@@ -169,7 +179,47 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     }
     private void UpdateClassSelectionUI()
     {
-        // Add any UI update logic here if needed
+        for(int i =0; i< selectedClasses.Length; i++)
+        {
+            if (playerImages.Length > i)  // Prevent index out of range
+            {
+                // Set the sprite based on the class
+                switch (selectedClasses[i])
+                {
+                    case "Protector":
+                        playerImages[i].sprite = spriteList[0];
+                        SetAlpha(playerImages[i], 1f);
+                        break;
+
+                    case "Occultist":
+                        playerImages[i].sprite = spriteList[1];
+                        SetAlpha(playerImages[i], 1f);
+                        break;
+
+                    case "Drifter":
+                        playerImages[i].sprite = spriteList[2];
+                        SetAlpha(playerImages[i], 1f);
+                        break;
+
+                    case "Trapper":
+                        playerImages[i].sprite = spriteList[3];
+                        SetAlpha(playerImages[i], 1f);
+                        break;
+
+                    default:
+                        playerImages[i].sprite = noneSprite;
+                        SetAlpha(playerImages[i], 0f);
+                        break;
+                }
+            }
+        }
+    }
+
+    private void SetAlpha(Image img, float alpha)
+    {
+        Color color = img.color;
+        color.a = alpha;
+        img.color = color;
     }
 
     private void ValidateClassSelections()

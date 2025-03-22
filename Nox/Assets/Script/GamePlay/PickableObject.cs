@@ -9,6 +9,11 @@ public class PickableObject : MonoBehaviourPun
 
     public void Interact()
     {
+        Debug.Log("GameObject in layer :" + gameObject.layer);
+        if (gameObject.layer == 10)
+        {
+            CollectTrapperPickup();
+        }
         if (photonView.IsMine || !PhotonNetwork.IsConnected)
         {
             photonView.RPC("CollectItem", RpcTarget.All);
@@ -27,5 +32,10 @@ public class PickableObject : MonoBehaviourPun
             InventoryManager.Instance.AddItem(itemData);
             Destroy(gameObject); 
         }
+    }
+
+    void CollectTrapperPickup()
+    {
+        Destroy(gameObject);
     }
 }

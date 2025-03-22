@@ -21,34 +21,22 @@ public class PlayerHealth : MonoBehaviour
 
         if(playerData != null)
         {
-            if (playerData.getClassSelected() == "Protector")
-            {
-                totalHealth = 4;
-                currentHealth = 4;
-            }
-            else if(playerData.getClassSelected() == "Occultist")
-            {
-                totalHealth = 2;
-                currentHealth = 2;
-            }
-            else if (playerData.getClassSelected() == "Drifter")
-            {
-                totalHealth = 2;
-                currentHealth = 2;
-            }
-            else if (playerData.getClassSelected() == "Trapper")
-            {
-                totalHealth = 2;
-                currentHealth = 2;
-            }
+            setPlayerHealth();
         }
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    private void setPlayerHealth()
+    {
+        totalHealth = playerData.GetTotalHealth();
+        currentHealth = totalHealth;
+    }
+
+    
 
     public void TakeDamage(int damageAmount)
     {
