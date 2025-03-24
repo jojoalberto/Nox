@@ -16,10 +16,18 @@ public class FlashlightScript : MonoBehaviourPun
 
     private void Update()
     {
-        if (playerData.hasFlashlight && Input.GetKeyDown(KeyCode.F))
+        UseFlashlight();
+    }
+
+    public void UseFlashlight()
+    {
+        if (photonView.IsMine || !PhotonNetwork.IsConnected)
         {
-            flashlight.SetActive(!flashlight.activeSelf); 
-            photonView.RPC("SyncFlashlightState", RpcTarget.Others, flashlight.activeSelf);
+            if (playerData.hasFlashlight && Input.GetKeyDown(KeyCode.F))
+            {
+                flashlight.SetActive(!flashlight.activeSelf);
+                photonView.RPC("SyncFlashlightState", RpcTarget.Others, flashlight.activeSelf);
+            }
         }
     }
 
