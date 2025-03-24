@@ -10,6 +10,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [SerializeField]
     private DialogueUI dialogueUI;
     public List<GameObject> disableObject;
+    public List<GameObject> enableObject;
     //public PhotonView photonView;
 
     private void Awake()
@@ -58,7 +59,14 @@ public class InteractableObject : MonoBehaviourPunCallbacks
         {
             if (disableObject[i]!=null)
             {
-                disableObject[i].SetActive(false);
+                disableObject[i].SetActive(false);                
+            }
+        }
+        for (int i = 0; i < enableObject.Count; i++)
+        {
+            if (enableObject[i] != null)
+            {
+                enableObject[i].SetActive(true);
             }
         }
     }
@@ -74,6 +82,13 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 if (disableObject[i] != null)
                 {
                     disableObject[i].SetActive(false);
+                }
+            }
+            for (int i = 0; i < enableObject.Count; i++)
+            {
+                if (enableObject[i] != null)
+                {
+                    enableObject[i].SetActive(true);
                 }
             }
         }
