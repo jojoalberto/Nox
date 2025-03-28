@@ -48881,7 +48881,7 @@ GameObject:
   - component: {fileID: 672984508}
   - component: {fileID: 672984507}
   m_Layer: 0
-  m_Name: Candle03 (3)
+  m_Name: CandleClue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48896,13 +48896,13 @@ Transform:
   m_GameObject: {fileID: 672984505}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.422, y: 0.7992, z: -2.268}
+  m_LocalPosition: {x: 14.402872, y: 1.283, z: -13.161209}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 123685262}
   - {fileID: 1648187110}
-  m_Father: {fileID: 1021488467}
+  m_Father: {fileID: 1696153375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &672984507
 MeshRenderer:
@@ -84502,7 +84502,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1091344352}
-  - {fileID: 672984506}
   - {fileID: 897220911}
   - {fileID: 408549686}
   - {fileID: 1198496580}
@@ -154608,6 +154607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 672984506}
   - {fileID: 1387611218}
   - {fileID: 967024346}
   - {fileID: 1293644056}
@@ -245977,7 +245977,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 51771b35c5705ed429f56bd872cd2c8c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265093,7 +265092,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 51771b35c5705ed429f56bd872cd2c8c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
