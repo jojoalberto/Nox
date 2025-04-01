@@ -30,7 +30,7 @@ public class PickableObject : MonoBehaviourPun
                 playerData.setFlashlight(true);
             }
             InventoryManager.Instance.AddItem(itemData);
-            Destroy(gameObject); 
+            //Destroy(gameObject); 
         }
     }
 

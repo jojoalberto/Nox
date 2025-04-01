@@ -55,13 +55,6 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     void OnInteract()
     {
         Debug.Log($"{gameObject.name} interacted with!");
-        for (int i = 0; i < disableObject.Count; i++)
-        {
-            if (disableObject[i]!=null)
-            {
-                disableObject[i].SetActive(false);                
-            }
-        }
         for (int i = 0; i < enableObject.Count; i++)
         {
             if (enableObject[i] != null)
@@ -69,6 +62,14 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 enableObject[i].SetActive(true);
             }
         }
+        for (int i = 0; i < disableObject.Count; i++)
+        {
+            if (disableObject[i]!=null)
+            {
+                disableObject[i].SetActive(false);                
+            }
+        }
+
     }
 
     [PunRPC]
