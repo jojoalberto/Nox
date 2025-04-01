@@ -20,11 +20,11 @@ public class PickableObject : MonoBehaviourPun
         {
             CollectTrapperPickup();
         }
-        if (photonView.IsMine || !PhotonNetwork.IsConnected)
-        {
-            Debug.Log("collectiong Item");
-            photonView.RPC("CollectItem", RpcTarget.All);
-        }
+        //if (photonView.IsMine || !PhotonNetwork.IsConnected)
+        //{
+        Debug.Log("collectiong Item");
+        photonView.RPC("CollectItem", RpcTarget.All);
+        //}
     }
 
     [PunRPC]
