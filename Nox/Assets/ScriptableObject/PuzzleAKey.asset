@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdbd5d7a61e1e564faae984855327c1d, type: 3}
-  m_Name: playerTest
+  m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
+  m_Name: PuzzleAKey
   m_EditorClassIdentifier: 
-  userId: fwnCgS9kO0gd9IMTuvMuVvJIqWs2
-  nickname: testerJ
-  classSelected: Protector
-  hasFlashlight: 1
-  totalHealth: 4
+  itemName: Key
+  description: key for Puzzle A chest
+  isFlashlight: 0
+  isCandle: 0
