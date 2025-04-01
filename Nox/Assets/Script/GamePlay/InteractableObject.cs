@@ -33,8 +33,8 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     public void Interact()
     {
        
-        if (photonView.IsMine || !PhotonNetwork.IsConnected) 
-        {
+        //if (photonView.IsMine || !PhotonNetwork.IsConnected) 
+        //{
             if(gameObject.tag == "Clue" || !dialogueUI.gameObject.activeSelf)
             {
                 Debug.Log("player interact Clue" + gameObject);
@@ -50,7 +50,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 //photonView.RPC("OnInteract", RpcTarget.All);
             }
 
-        }
+        //}
     }
 
     [PunRPC]
