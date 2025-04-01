@@ -970,12 +970,26 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1655547893240518412}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 492160832062886508}
   m_SourcePrefab: {fileID: 100100000, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
 --- !u!4 &1588660854051004809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5504259220806075269, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
   m_PrefabInstance: {fileID: 6516427426440405516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1588660854051004813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5504259220806075265, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2309164442572235219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
@@ -1140,6 +1154,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickups: 0
+--- !u!114 &492160832062886508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a6d5600beccbe4daa2af43256916d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  totalStamina: 1
+  currentStamina: 1
+  staminaRegen: 2.5
+  staminaDelay: 2.5
+  infiniteStamina: 0
+  runConsumption: 1
+  thirdPersonController: {fileID: 1588660854051004813}
 --- !u!4 &6030818222411006575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711222397081296995, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}

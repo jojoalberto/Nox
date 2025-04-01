@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(playerData != null)
         {
-            setPlayerHealth();
+            SetPlayerHealth();
         }
     }
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    private void setPlayerHealth()
+    private void SetPlayerHealth()
     {
         totalHealth = playerData.GetTotalHealth();
         currentHealth = totalHealth;
@@ -54,8 +54,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void goToPurgatory()
     {
-
-        photonView.RPC("GoToPurgatory", RpcTarget.All);
+        purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory").transform;
+        transform.position = purgatoryLocation.position;
+        photonView.RPC("GoToPurgatory", RpcTarget.Others);
     }
 
     [PunRPC]

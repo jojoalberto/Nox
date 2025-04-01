@@ -9,7 +9,10 @@ public class PlayerData : ScriptableObject
     public string classSelected;
     public bool hasFlashlight;
 
-    public float totalHealth = 1;
+    public float totalHealth = 100;
+    public float totalStamina = 100;
+    public float staminaRegen = 2.5f;
+    public float staminaDelay = 2.5f;
 
     public string GetUserId()
     { 
@@ -45,24 +48,42 @@ public class PlayerData : ScriptableObject
     {
         if (getClassSelected() == "Protector")
         {
-            totalHealth = 4;
+            totalHealth = 150;
+            totalStamina = 150;
         }
         else if (getClassSelected() == "Occultist")
         {
-            totalHealth = 2;
+            totalHealth = 100;
+            totalStamina = 100;
         }
         else if (getClassSelected() == "Drifter")
         {
-            totalHealth = 2;
+            totalHealth = 100;
+            totalStamina = 100;
         }
         else if (getClassSelected() == "Trapper")
         {
-            totalHealth = 2;
+            totalHealth = 100;
+            totalStamina = 100;
         }
     }
 
-    internal float GetTotalHealth()
+    public float GetTotalHealth()
     {
         return totalHealth; 
+    }
+    public float GetTotalStamina()
+    {
+        return totalStamina;
+    }
+
+    public float GetStaminaRegen()
+    {
+        return staminaRegen;
+    }
+
+    public float GetStaminaDelay()
+    {
+        return staminaDelay;
     }
 }
