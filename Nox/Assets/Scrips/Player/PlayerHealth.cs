@@ -1,6 +1,7 @@
 using System;
 using JetBrains.Annotations;
 using Photon.Pun;
+using Unity.Mathematics.Geometry;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -66,4 +67,14 @@ public class PlayerHealth : MonoBehaviour
         transform.position = purgatoryLocation.position;
     }
 
+    public void RestoreHealthPercent(float value)
+    {
+        
+        currentHealth += totalHealth * value;
+        if (currentHealth > totalHealth)
+        {
+            currentHealth = totalHealth;
+        }
+        
+    }
 }

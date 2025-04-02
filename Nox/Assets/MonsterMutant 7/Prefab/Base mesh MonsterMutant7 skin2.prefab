@@ -1019,11 +1019,11 @@ GameObject:
   m_Component:
   - component: {fileID: 290884568573959264}
   - component: {fileID: 290884568580928384}
-  - component: {fileID: 404312134418848709}
-  - component: {fileID: 2574039114717356863}
   - component: {fileID: 1948911211703079202}
   - component: {fileID: 469986242383320619}
   - component: {fileID: 1637270285793860818}
+  - component: {fileID: 1547247723460608105}
+  - component: {fileID: 3850548172548749433}
   m_Layer: 0
   m_Name: Base mesh MonsterMutant7 skin2
   m_TagString: Untagged
@@ -1071,66 +1071,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!195 &404312134418848709
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290884568573657152}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 2
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &2574039114717356863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290884568573657152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533fe6d567a28444ca3ca0905a14ce3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetWeights: []
-  currentTargetIndex: -1
-  players: []
-  defaultSpeed: 3
-  tiredSpeed: 4
-  chaseSpeed: 6
-  gracePeriod: 5
-  chaseDistance: 10
-  lineOfSightLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  currentTarget: {fileID: 0}
-  debugMessages:
-  - 
-  - 
-  - 
-  isChasingPlayer: 0
-  isAttacking: 0
-  attackRange: 5
-  damageAmount: 1
-  postAttackIdleTime: 4
 --- !u!114 &1948911211703079202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1138,66 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
+--- !u!195 &1547247723460608105
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290884568573657152}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &3850548172548749433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290884568573657152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533fe6d567a28444ca3ca0905a14ce3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  targetWeights: []
+  currentTargetIndex: -1
+  players: []
+  defaultSpeed: 3
+  tiredSpeed: 4
+  chaseSpeed: 6
+  gracePeriod: 5
+  chaseDistance: 10
+  lineOfSightLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  currentTarget: {fileID: 0}
+  debugMessages:
+  - 
+  - 
+  - 
+  isChasingPlayer: 0
+  isAttacking: 0
+  attackRange: 4
+  damageAmount: 20
+  postAttackIdleTime: 4
 --- !u!1 &290884568573657154
 GameObject:
   m_ObjectHideFlags: 0

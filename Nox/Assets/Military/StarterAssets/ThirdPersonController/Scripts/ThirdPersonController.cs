@@ -21,6 +21,8 @@ namespace StarterAssets
         [Tooltip("Sprint speed of the character in m/s")]
         public float SprintSpeed = 5.335f;
 
+        private float speedMultiplier = 1f;
+
         [Tooltip("How fast the character turns to face movement direction")]
         [Range(0.0f, 0.3f)]
         public float RotationSmoothTime = 0.12f;
@@ -216,7 +218,7 @@ namespace StarterAssets
         private void Move()
         {
             // Only allow sprinting if SprintAllowed is true
-            float targetSpeed = (_input.sprint && SprintAllowed) ? SprintSpeed : MoveSpeed;
+            float targetSpeed = (_input.sprint && SprintAllowed) ? SprintSpeed * speedMultiplier : MoveSpeed * speedMultiplier;
 
             if (_input.move == Vector2.zero) targetSpeed = 0.0f;
 
@@ -365,6 +367,15 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void SetSpeedMultiplier(float multiplier)
+        {
+            speedMultiplier = multiplier;
+        }
+        public void ResetSpeedMultiplier()
+        {
+            speedMultiplier = 1f;
         }
     }
 }

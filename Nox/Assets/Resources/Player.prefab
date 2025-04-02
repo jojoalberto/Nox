@@ -612,7 +612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911323217924822332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
@@ -947,6 +947,9 @@ PrefabInstance:
       addedObject: {fileID: 3914971610713394597}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 4090338442048484595}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6731244504116558929}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
@@ -969,10 +972,19 @@ PrefabInstance:
       addedObject: {fileID: 9036687969454709197}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 492160832062886508}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6117700120783235675}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1655547893240518412}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 492160832062886508}
+      addedObject: {fileID: 3161394040208994571}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1481441408572852225}
   m_SourcePrefab: {fileID: 100100000, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
 --- !u!4 &1588660854051004809 stripped
 Transform:
@@ -995,6 +1007,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
   m_PrefabInstance: {fileID: 6516427426440405516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4090338442048484595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &6731244504116558929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,19 +1171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   flashlight: {fileID: 5721236003213993890}
---- !u!114 &1655547893240518412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309164442572235219}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d129620dce1724396e78c5d5627918, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickups: 0
 --- !u!114 &492160832062886508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,6 +1191,76 @@ MonoBehaviour:
   infiniteStamina: 0
   runConsumption: 1
   thirdPersonController: {fileID: 1588660854051004813}
+--- !u!114 &6117700120783235675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ef4a00c7a6c874eafa15a3980fcbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  trapper: {fileID: 1655547893240518412}
+  occultist: {fileID: 3161394040208994571}
+--- !u!114 &1655547893240518412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d129620dce1724396e78c5d5627918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups: 0
+--- !u!114 &3161394040208994571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778b769915449742bf46f33e45f7336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  occultistCam: {fileID: 1481441408572852225}
+  thirdPersonController: {fileID: 1588660854051004813}
+  playerCamera: {fileID: 6129125867121193388}
+  maxRaycastDistance: 20
+  occultistAbility1Name: Auget Agilitas
+  occultistAbility1Description: Increases Movement Speed of Allies
+  occultistAbility1Value: 1.5
+  occultistAbility1CD: 10
+  occultistAbility1Duration: 2
+  Ability1Ready: 1
+  occultistAbility2Name: Sanatio Tenebris
+  occultistAbility2Description: Restores Health To Allies
+  occultistAbility2Value: 0.25
+  occultistAbility2CD: 10
+  Ability2Ready: 1
+--- !u!114 &1481441408572852225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c349670e4ebdfcd4584eedcd2ea09524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHighlightFeature: {fileID: -1694685464812187752, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+  passiveSeeThroughCD: 5
+  passiveSeeThroughDuration: 5
 --- !u!4 &6030818222411006575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711222397081296995, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
