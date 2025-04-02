@@ -64,6 +64,8 @@ MonoBehaviour:
   - UnlockChestRPC
   - ShowChestDialogueRPC
   - ForceDisableAndEnableObjectsRPC
+  - RPC_ActivateAbility1
+  - RPC_ActivateAbility2
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

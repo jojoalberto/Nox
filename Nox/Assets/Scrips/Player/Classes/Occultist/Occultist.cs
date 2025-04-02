@@ -1,4 +1,5 @@
 using System.Collections;
+using Photon.Pun;
 using StarterAssets;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class Occultist : MonoBehaviour
     public Camera playerCamera;
     public float maxRaycastDistance = 20f;
     private ThirdPersonController lastHighlightedPlayer;
+
+    public PhotonView photonView;
 
     [Header("Ability 1 (Auget Agilitas)")]
     public string occultistAbility1Name = "Auget Agilitas";
@@ -31,6 +34,7 @@ public class Occultist : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
         occultistCam.enabled = true;
     }
 
@@ -52,16 +56,16 @@ public class Occultist : MonoBehaviour
                 StartCoroutine(ActivateAbility1(thirdPersonController));
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability1Ready)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
         {
             StartCoroutine(ResetCooldownAbility2());
             if (targetPlayer != null)
             {
-                ActivateAbility2(targetPlayer);
+                UseAbility2(targetPlayer);  
             }
             else
             {
-                ActivateAbility2(thirdPersonController);
+                UseAbility2(thirdPersonController);  
             }
         }
     }
@@ -80,6 +84,15 @@ public class Occultist : MonoBehaviour
         Ability2Ready = true;
     }
 
+    [PunRPC]
+    void RPC_ActivateAbility1(int targetPlayerID)
+    {
+        GameObject targetObject = PhotonView.Find(targetPlayerID).gameObject;
+        ThirdPersonController target = targetObject.GetComponent<ThirdPersonController>();
+
+        StartCoroutine(ActivateAbility1(target));
+    }
+
     IEnumerator ActivateAbility1(ThirdPersonController target)
     {
         target.SetSpeedMultiplier(occultistAbility1Value);
@@ -87,17 +100,44 @@ public class Occultist : MonoBehaviour
         target.SetSpeedMultiplier(1f);
     }
 
-    private void ActivateAbility2(ThirdPersonController target)
+    void UseAbility1(ThirdPersonController target)
     {
-        target.GetComponent<PlayerHealth>().RestoreHealthPercent(occultistAbility2Value);
+        photonView.RPC("RPC_ActivateAbility1", RpcTarget.All, target.GetComponent<PhotonView>().ViewID);
     }
+
+    [PunRPC]
+    void RPC_ActivateAbility2(int targetPlayerID)
+    {
+        GameObject targetObject = PhotonView.Find(targetPlayerID)?.gameObject;
+        if (targetObject == null) return;
+
+        PlayerHealth targetHealth = targetObject.GetComponent<PlayerHealth>();
+        if (targetHealth != null)
+        {
+            targetHealth.photonView.RPC("RPC_RestoreHealthPercent", RpcTarget.All, occultistAbility2Value);
+        }
+    }
+
+    void UseAbility2(ThirdPersonController target)
+    {
+        if (target == null) return;
+
+        PhotonView targetPhotonView = target.GetComponent<PhotonView>();
+        if (targetPhotonView != null)
+        {
+            photonView.RPC("RPC_ActivateAbility2", RpcTarget.All, targetPhotonView.ViewID);
+        }
+    }
+
 
     ThirdPersonController GetPlayerInSight()
     {
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        RaycastHit hit;
+        if (!photonView.IsMine) return null;
 
-        if (Physics.Raycast(ray, out hit, maxRaycastDistance))
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        RaycastHit[] hits = Physics.RaycastAll(ray, maxRaycastDistance);
+
+        foreach (RaycastHit hit in hits)
         {
             ThirdPersonController targetPlayer = hit.collider.GetComponent<ThirdPersonController>();
             if (targetPlayer != null && targetPlayer != thirdPersonController)
@@ -108,6 +148,8 @@ public class Occultist : MonoBehaviour
 
         return null;
     }
+
+
 
     void HandlePlayerHighlight(ThirdPersonController targetPlayer)
     {

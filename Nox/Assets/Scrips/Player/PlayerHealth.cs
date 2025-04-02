@@ -1,34 +1,22 @@
-using System;
-using JetBrains.Annotations;
 using Photon.Pun;
-using Unity.Mathematics.Geometry;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviourPun
 {
     public GameObject playerObject;
     public PlayerData playerData;
     public float totalHealth = 1;
     public float currentHealth = 1;
     public bool invulnerability = false;
-    
-    public Transform purgatoryLocation;
-    public PhotonView photonView;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Transform purgatoryLocation;
+
     void Start()
     {
-        photonView = GetComponent<PhotonView>();
-
-        if(playerData != null)
+        if (playerData != null)
         {
             SetPlayerHealth();
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void SetPlayerHealth()
@@ -37,44 +25,34 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = totalHealth;
     }
 
-    
-
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount;
-        if (currentHealth <= 0) 
-        {
-            goToPurgatory();
-        }
-    }
+        if (!photonView.IsMine || invulnerability) return;
 
-    public float GetCurrentHealth()
-    {
-        return currentHealth;
-    }
-
-    private void goToPurgatory()
-    {
-        purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory").transform;
-        transform.position = purgatoryLocation.position;
-        photonView.RPC("GoToPurgatory", RpcTarget.Others);
+        photonView.RPC("RPC_TakeDamage", RpcTarget.All, damageAmount);
     }
 
     [PunRPC]
-    public void GoToPurgatory()
+    private void RPC_TakeDamage(int damageAmount)
     {
-        purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory").transform;
-        transform.position = purgatoryLocation.position;
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0) GoToPurgatory();
     }
 
-    public void RestoreHealthPercent(float value)
+    [PunRPC]
+    public void RPC_RestoreHealthPercent(float value)
     {
-        
         currentHealth += totalHealth * value;
-        if (currentHealth > totalHealth)
-        {
-            currentHealth = totalHealth;
-        }
-        
+        currentHealth = Mathf.Min(currentHealth, totalHealth);
+    }
+
+    [PunRPC]
+    private void GoToPurgatory()
+    {
+        if (purgatoryLocation == null)
+            purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory")?.transform;
+
+        if (purgatoryLocation != null)
+            transform.position = purgatoryLocation.position;
     }
 }
