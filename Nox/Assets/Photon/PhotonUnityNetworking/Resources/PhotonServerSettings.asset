@@ -68,6 +68,13 @@ MonoBehaviour:
   - RPC_ActivateAbility2
   - RPC_RestoreHealthPercent
   - RPC_TakeDamage
+  - SetClassSelected
+  - RPC_SetClassSelected
+  - RPC_ToggleInvisibility
+  - BindDemon
+  - RPC_BindDemon
+  - RPC_ResetCooldownAbility1
+  - RPC_ResetCooldownAbility2
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

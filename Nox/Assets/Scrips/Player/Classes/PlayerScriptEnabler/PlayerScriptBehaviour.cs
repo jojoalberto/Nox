@@ -9,41 +9,64 @@ public class PlayerScriptBehaviour : MonoBehaviour
     public Occultist occultist;
     public Drifter drifter;
 
+    public string globalClassSelected;
+    public PhotonView photonView;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+       photonView = GetComponent<PhotonView>();
 
-
-        if(playerData == null)
+        if(photonView.IsMine)
         {
-            Debug.Log("No player data script found");
-        }
-        else
-        {
-            string classSelected = playerData.getClassSelected();
-            if (classSelected != null)
+            if (playerData == null)
             {
-                if(classSelected == "Drifter")
+                Debug.Log("No player data script found");
+            }
+            else
+            {
+                globalClassSelected = playerData.getClassSelected();
+                if (globalClassSelected != null)
                 {
-                    drifter.enabled = true;
-                }
-                if(classSelected == "Occultist")
-                {
-                    occultist.enabled = true;
-                }
-                else if(classSelected == "Trapper")
-                {
-                    trapper.enabled = true;
+                    photonView.RPC("RPC_SetClassSelected", RpcTarget.All, globalClassSelected);
                 }
             }
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    [PunRPC]
+    void RPC_SetClassSelected(string classSelected)
+    {
+        globalClassSelected = classSelected;
+
+        SetBools();
+
+    }
+
+    private void SetBools()
+    {
+        if (globalClassSelected == "Protector")
+        {
+            return;
+        }
+        if (globalClassSelected == "Occultist") 
+        {
+            occultist.isOccultist = true;
+        }
+        else if (globalClassSelected == "Drifter")
+        {
+            drifter.isDrifter = true;
+        }
+        else if (globalClassSelected == "Trapper")
+        {
+            return;
+        }
     }
 }

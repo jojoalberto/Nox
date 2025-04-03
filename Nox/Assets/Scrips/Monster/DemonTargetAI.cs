@@ -293,28 +293,51 @@ public class DemonTargetAI1 : MonoBehaviour
     public void SetClosestPlayer()
     {
         float closestDistance = Mathf.Infinity;
-        currentTarget = null;
+        Transform bestTargetInLos = null;
+        Transform closestTarget = null;
 
         foreach (Transform player in players)
         {
             if (player == null) continue;
 
-            // If the player has a Drifter component and is currently invisible, skip this player.
             Drifter drifter = player.GetComponent<Drifter>();
             if (drifter != null && drifter.isInvisible)
-                continue;
+                continue; // Ignore invisible players
 
             PlayerHealth health = player.GetComponent<PlayerHealth>();
             if (health != null && health.currentHealth <= 0) continue;
 
             float distance = Vector3.Distance(transform.position, player.position);
+
+            if (HasLineOfSightToPlayer(player))
+            {
+                // Prioritize the closest visible player
+                if (bestTargetInLos == null || distance < Vector3.Distance(transform.position, bestTargetInLos.position))
+                {
+                    bestTargetInLos = player;
+                }
+            }
+
+            // Keep track of the closest target in case no one is in LoS
             if (distance < closestDistance)
             {
                 closestDistance = distance;
-                currentTarget = player;
+                closestTarget = player;
             }
         }
+
+        // Prefer a target in LoS, otherwise fallback to the closest one
+        if (bestTargetInLos != null)
+        {
+            currentTarget = bestTargetInLos;
+        }
+        else
+        {
+            currentTarget = closestTarget;
+        }
     }
+
+
 
     IEnumerator AttackPlayer()
     {
@@ -352,7 +375,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         photonView.RPC("PlayPostAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.75f);
 
         
 
@@ -361,17 +384,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         isAttacking = false;
 
-        SetClosestPlayer();
-
-        if (currentTarget != null && HasLineOfSightToPlayer(currentTarget))
-        {
-            chaseCoroutine = StartCoroutine(ChasePlayer());
-        }
-        else
-        {
-            isChasingPlayer = false;
-            PickNewTarget();
-        }
+        isChasingPlayer = false;
     }
 
     [PunRPC]
@@ -384,6 +397,17 @@ public class DemonTargetAI1 : MonoBehaviour
     void PlayPostAttackAnimation()
     {
         animator.SetTrigger("PostAttack");
+    }
+
+    public void BindDemon(float duration)
+    {
+        photonView.RPC("RPC_BindDemon", RpcTarget.MasterClient, duration);
+    }
+
+    [PunRPC]
+    void RPC_BindDemon(float duration)
+    {
+        StartCoroutine(BindEffect(duration));
     }
 
     public IEnumerator BindEffect(float duration)

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Photon.Pun;
 using StarterAssets;
 using UnityEngine;
@@ -7,6 +8,11 @@ using static Unity.Burst.Intrinsics.Arm;
 public class Drifter : MonoBehaviour
 {
     public PhotonView photonView;
+    public bool isDrifter = false;
+
+    public List<SkinnedMeshMaterials> skinnedMeshMaterials;
+
+
     private ThirdPersonController thirdPersonController;
     public Camera playerCamera;
     public float maxRaycastDistance = 20f;
@@ -19,10 +25,8 @@ public class Drifter : MonoBehaviour
     public float drifterAbility1CD = 30f;
     public float drifterAbility1Duration = 10f;
     public bool Ability1Ready = true;
-
     public bool isInvisible = false;
-    private Renderer myRenderer;
-    private Color originalColor;
+
 
     [Header("Ability 2 (Aethereus Vinculum)")]
     public string drifterAbility2Name = "Aethereus Vinculum";
@@ -41,23 +45,35 @@ public class Drifter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(photonView.IsMine )
+        if(photonView.IsMine && isDrifter)
         {
             DemonTargetAI1 targetDemon = GetDemonInSight();
             HandleDemonHighlight(targetDemon);
 
             if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
-                StartCoroutine(ResetCooldownAbility1());
+                photonView.RPC("RPC_ResetCooldownAbility1", RpcTarget.All);
                 StartCoroutine(ActivateAbility1());
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && targetDemon != null)
             {
-                StartCoroutine(ResetCooldownAbility2());
+                photonView.RPC("RPC_ResetCooldownAbility1", RpcTarget.All);
                 StartCoroutine(ActivateAbility2(targetDemon));
             }
         }
         
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownAbility1()
+    {
+        StartCoroutine(ResetCooldownAbility1());
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownAbility2()
+    {
+        StartCoroutine(ResetCooldownAbility1());
     }
 
     IEnumerator ResetCooldownAbility1()
@@ -76,9 +92,26 @@ public class Drifter : MonoBehaviour
 
     IEnumerator ActivateAbility1()
     {
-        isInvisible = true;
+        photonView.RPC("RPC_ToggleInvisibility", RpcTarget.All, true);
+
         yield return new WaitForSeconds(drifterAbility1Duration);
-        isInvisible = false;
+
+        photonView.RPC("RPC_ToggleInvisibility", RpcTarget.All, false);
+    }
+
+    [PunRPC]
+    void RPC_ToggleInvisibility(bool invisibile)
+    {
+        isInvisible = invisibile;
+
+        for (int i = 0; i < skinnedMeshMaterials.Count; i++)
+        {
+            if (skinnedMeshMaterials[i].renderer != null)
+            {
+                // Switch between invisibility materials and original materials
+                skinnedMeshMaterials[i].renderer.materials = isInvisible ? skinnedMeshMaterials[i].invisMaterials : skinnedMeshMaterials[i].originalMaterials;
+            }
+        }
     }
 
     IEnumerator ActivateAbility2(DemonTargetAI1 targetDemon)
@@ -87,7 +120,8 @@ public class Drifter : MonoBehaviour
         {
             thirdPersonController.enabled = false;
         }
-        targetDemon.StartCoroutine(targetDemon.BindEffect(drifterAbility2Duration));
+
+        targetDemon.BindDemon(drifterAbility2Duration);
 
         yield return new WaitForSeconds(drifterAbility2Duration);
 

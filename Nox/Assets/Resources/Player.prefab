@@ -2525,8 +2525,8 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.6698113, g: 0.6540139, b: 0.6540139, a: 1}
-  m_Intensity: 5
-  m_Range: 10
+  m_Intensity: 500
+  m_Range: 100
   m_SpotAngle: 91.86139
   m_InnerSpotAngle: 18.255991
   m_CookieSize: 10
@@ -4120,6 +4120,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8819399281361443694, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       propertyPath: m_Name
       value: PlayerArmature
@@ -4184,16 +4188,16 @@ PrefabInstance:
       addedObject: {fileID: 6117700120783235675}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1655547893240518412}
+      addedObject: {fileID: 1481441408572852225}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3161394040208994571}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1481441408572852225}
+      addedObject: {fileID: 4377658587688228129}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4377658587688228129}
+      addedObject: {fileID: 1655547893240518412}
   m_SourcePrefab: {fileID: 100100000, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
 --- !u!4 &1588660854051004809 stripped
 Transform:
@@ -4211,6 +4215,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!137 &2309164440709138119 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399280222102731, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164440871093733 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399280382060521, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164441136036587 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399280599472359, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164441984678242 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399281361443694, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164442107829268 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399281570692632, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164442131052894 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399281476164434, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164442269228288 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399281614814988, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2309164442442263915 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8819399281768927079, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+  m_PrefabInstance: {fileID: 6516427426440405516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2309164442572235219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
@@ -4416,7 +4460,9 @@ MonoBehaviour:
   trapper: {fileID: 1655547893240518412}
   occultist: {fileID: 3161394040208994571}
   drifter: {fileID: 4377658587688228129}
---- !u!114 &1655547893240518412
+  globalClassSelected: 
+  photonView: {fileID: 0}
+--- !u!114 &1481441408572852225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4425,10 +4471,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2309164442572235219}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d129620dce1724396e78c5d5627918, type: 3}
+  m_Script: {fileID: 11500000, guid: c349670e4ebdfcd4584eedcd2ea09524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickups: 0
+  enemyHighlightFeature: {fileID: -1694685464812187752, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+  passiveSeeThroughCD: 5
+  passiveSeeThroughDuration: 5
 --- !u!114 &3161394040208994571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4436,11 +4484,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2309164442572235219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1778b769915449742bf46f33e45f7336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOccultist: 0
   occultistCam: {fileID: 1481441408572852225}
   thirdPersonController: {fileID: 1588660854051004813}
   playerCamera: {fileID: 6129125867121193388}
@@ -4457,21 +4506,6 @@ MonoBehaviour:
   occultistAbility2Value: 0.25
   occultistAbility2CD: 10
   Ability2Ready: 1
---- !u!114 &1481441408572852225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309164442572235219}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c349670e4ebdfcd4584eedcd2ea09524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHighlightFeature: {fileID: -1694685464812187752, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
-  passiveSeeThroughCD: 5
-  passiveSeeThroughDuration: 5
 --- !u!114 &4377658587688228129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,12 +4513,58 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2309164442572235219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71b08831f3997e64c97bedf1e6964199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 0}
+  isDrifter: 0
+  skinnedMeshMaterials:
+  - renderer: {fileID: 2309164441136036587}
+    originalMaterials:
+    - {fileID: 2100000, guid: 3c18a64b693f2fc45a7f092ddf46cbce, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: a20cf0052b6a983499dd45b90dbbbcc9, type: 2}
+  - renderer: {fileID: 2309164442131052894}
+    originalMaterials:
+    - {fileID: 2100000, guid: 2c89187d4215b9f4c83dcefb5456897d, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 31e7e2bd5813d6b4fa665c640f79dde8, type: 2}
+  - renderer: {fileID: 2309164440709138119}
+    originalMaterials:
+    - {fileID: 2100000, guid: 96a5b189e0fdcb74b970135d97057d9a, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 3fa81d272c052c7498fa54ea2731f330, type: 2}
+  - renderer: {fileID: 2309164441984678242}
+    originalMaterials:
+    - {fileID: 2100000, guid: 01e354ee2a262cf40a7b08040b6236fe, type: 2}
+    - {fileID: 2100000, guid: 38b71884de7d2094587df9ab6c870d4b, type: 2}
+    invisMaterials: []
+  - renderer: {fileID: 2309164442442263915}
+    originalMaterials:
+    - {fileID: 2100000, guid: 7e5e6c8eb72897145ac408f805ab3a7a, type: 2}
+    - {fileID: 2100000, guid: a4f3038e85335ab4eb10f074fda8b6ad, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 111df6a1851def04fb18084039e023de, type: 2}
+    - {fileID: 2100000, guid: 68ad7f31c7b58c3469a00ab9c8621399, type: 2}
+  - renderer: {fileID: 2309164442269228288}
+    originalMaterials:
+    - {fileID: 2100000, guid: 91e1bfddab2e07149a6e37f1c74aa6e0, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 4b2cbfe0922568c40840eb980d7f279e, type: 2}
+  - renderer: {fileID: 2309164440871093733}
+    originalMaterials:
+    - {fileID: 2100000, guid: 8f39a9a3bee8af04889e87c953c40533, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 22f71fe2b200bb04cb5057c8a08fd83f, type: 2}
+  - renderer: {fileID: 2309164442107829268}
+    originalMaterials:
+    - {fileID: 2100000, guid: 0965979b013b68345a68889b01fdc0e8, type: 2}
+    - {fileID: 2100000, guid: c4ebab701bd8b4244a7201e9c2ee70ec, type: 2}
+    invisMaterials:
+    - {fileID: 2100000, guid: 322ca3002231b8c4fa8c30cd78cadb19, type: 2}
+    - {fileID: 2100000, guid: 7eb81ba6be8a6fe44b198db271bfb155, type: 2}
   playerCamera: {fileID: 6129125867121193388}
   maxRaycastDistance: 20
   drifterAbility1Name: Umbra Fugitiva
@@ -4499,6 +4579,19 @@ MonoBehaviour:
   drifterAbility2CD: 15
   drifterAbility2Duration: 2
   Ability2Ready: 1
+--- !u!114 &1655547893240518412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d129620dce1724396e78c5d5627918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups: 0
 --- !u!4 &6030818222411006575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711222397081296995, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Occultist : MonoBehaviour
 {
+    public bool isOccultist = false;
     public OccultistCam occultistCam;
 
     public ThirdPersonController thirdPersonController;
@@ -35,13 +36,17 @@ public class Occultist : MonoBehaviour
     void Start()
     {
         photonView = GetComponent<PhotonView>();
-        occultistCam.enabled = true;
+        if(photonView.IsMine && isOccultist)
+        {
+            occultistCam.enabled = true;
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine && isOccultist)
         {
             ThirdPersonController targetPlayer = GetPlayerInSight();
             HandlePlayerHighlight(targetPlayer);
