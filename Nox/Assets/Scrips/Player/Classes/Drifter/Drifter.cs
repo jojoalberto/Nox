@@ -41,19 +41,23 @@ public class Drifter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DemonTargetAI1 targetDemon = GetDemonInSight();
-        HandleDemonHighlight(targetDemon);
+        if(photonView.IsMine )
+        {
+            DemonTargetAI1 targetDemon = GetDemonInSight();
+            HandleDemonHighlight(targetDemon);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
-        {
-            StartCoroutine(ResetCooldownAbility1());
-            StartCoroutine(ActivateAbility1());
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
+            {
+                StartCoroutine(ResetCooldownAbility1());
+                StartCoroutine(ActivateAbility1());
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && targetDemon != null)
+            {
+                StartCoroutine(ResetCooldownAbility2());
+                StartCoroutine(ActivateAbility2(targetDemon));
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && targetDemon != null)
-        {
-            StartCoroutine(ResetCooldownAbility2());
-            StartCoroutine(ActivateAbility2(targetDemon));
-        }
+        
     }
 
     IEnumerator ResetCooldownAbility1()

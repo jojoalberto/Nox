@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerScriptBehaviour : MonoBehaviour
@@ -8,9 +9,13 @@ public class PlayerScriptBehaviour : MonoBehaviour
     public Occultist occultist;
     public Drifter drifter;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+       
+
+
         if(playerData == null)
         {
             Debug.Log("No player data script found");

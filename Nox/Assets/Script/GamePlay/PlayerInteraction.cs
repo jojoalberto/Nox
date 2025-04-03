@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -19,8 +20,11 @@ public class PlayerInteraction : MonoBehaviour
 
     private LayerMask currentPickableMask;
 
+    public PhotonView photonView;
+
     private void Start()
     {
+        photonView = GetComponent<PhotonView>();
         playerLayerMask = 1 << gameObject.layer; 
 
         if (playerData != null)
@@ -42,6 +46,10 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
         CheckForInteractable();
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -87,6 +95,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void CheckForInteractable()
     {
+
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
 
         int interactableMask = interactableLayer.value & ~playerLayerMask;

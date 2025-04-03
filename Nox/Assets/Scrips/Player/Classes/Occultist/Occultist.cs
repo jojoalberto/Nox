@@ -41,33 +41,38 @@ public class Occultist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ThirdPersonController targetPlayer = GetPlayerInSight();
-        HandlePlayerHighlight(targetPlayer);
+        if (photonView.IsMine)
+        {
+            ThirdPersonController targetPlayer = GetPlayerInSight();
+            HandlePlayerHighlight(targetPlayer);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
-        {
-            StartCoroutine(ResetCooldownAbility1());
-            if (targetPlayer != null)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
-                StartCoroutine(ActivateAbility1(targetPlayer));
+                StartCoroutine(ResetCooldownAbility1());
+                if (targetPlayer != null)
+                {
+                    StartCoroutine(ActivateAbility1(targetPlayer));
+                }
+                else
+                {
+                    StartCoroutine(ActivateAbility1(thirdPersonController));
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
             {
-                StartCoroutine(ActivateAbility1(thirdPersonController));
+                StartCoroutine(ResetCooldownAbility2());
+                if (targetPlayer != null)
+                {
+                    ActivateAbility2(targetPlayer);
+                }
+                else
+                {
+                    ActivateAbility2(thirdPersonController);
+                }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
-        {
-            StartCoroutine(ResetCooldownAbility2());
-            if (targetPlayer != null)
-            {
-                UseAbility2(targetPlayer);  
-            }
-            else
-            {
-                UseAbility2(thirdPersonController);  
-            }
-        }
+
+        
     }
 
     IEnumerator ResetCooldownAbility1()
@@ -114,19 +119,17 @@ public class Occultist : MonoBehaviour
         PlayerHealth targetHealth = targetObject.GetComponent<PlayerHealth>();
         if (targetHealth != null)
         {
-            targetHealth.photonView.RPC("RPC_RestoreHealthPercent", RpcTarget.All, occultistAbility2Value);
+            targetHealth.photonView.RPC("RPC_RestoreHealthPercent", RpcTarget.MasterClient, occultistAbility2Value);
         }
     }
 
-    void UseAbility2(ThirdPersonController target)
+    void ActivateAbility2(ThirdPersonController target)
     {
         if (target == null) return;
 
-        PhotonView targetPhotonView = target.GetComponent<PhotonView>();
-        if (targetPhotonView != null)
-        {
-            photonView.RPC("RPC_ActivateAbility2", RpcTarget.All, targetPhotonView.ViewID);
-        }
+        PlayerHealth playerhealth = target.GetComponent<PlayerHealth>();
+
+        playerhealth.RestoreHealing(occultistAbility2Value);
     }
 
 
