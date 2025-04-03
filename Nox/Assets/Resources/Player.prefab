@@ -4414,7 +4414,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   trapper: {fileID: 1655547893240518412}
   occultist: {fileID: 3161394040208994571}
-  drifter: {fileID: 0}
+  drifter: {fileID: 4377658587688228129}
 --- !u!114 &1655547893240518412
 MonoBehaviour:
   m_ObjectHideFlags: 0
