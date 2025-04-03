@@ -9,7 +9,7 @@ public class Occultist : MonoBehaviour
 
     public ThirdPersonController thirdPersonController;
     public Camera playerCamera;
-    public float maxRaycastDistance = 20f;
+    public float maxRaycastDistance = 8f;
     private ThirdPersonController lastHighlightedPlayer;
 
     public PhotonView photonView;

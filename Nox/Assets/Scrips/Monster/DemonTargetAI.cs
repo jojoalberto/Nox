@@ -43,6 +43,8 @@ public class DemonTargetAI1 : MonoBehaviour
 
     private PhotonView photonView;
 
+    public bool isBound = false;
+
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -78,6 +80,12 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void Update()
     {
+        if (isBound)
+        {
+            // Optionally update idle animation here.
+            return;
+        }
+
         if (!PhotonNetwork.IsMasterClient)
         {
             return;
@@ -85,6 +93,17 @@ public class DemonTargetAI1 : MonoBehaviour
 
         SetClosestPlayer();
         debugMessages[0] = "Closest: " + (currentTarget != null ? currentTarget.name : "None");
+
+        //Check if current target is drifter in invisibility state
+        if (currentTarget != null)
+        {
+            Drifter drifter = currentTarget.GetComponent<Drifter>();
+            if (drifter != null && drifter.isInvisible)
+            {
+                currentTarget = null;
+                SetClosestPlayer();
+            }
+        }
 
         if (!isChasingPlayer && currentTarget != null && HasLineOfSightToPlayer(currentTarget))
         {
@@ -274,11 +293,16 @@ public class DemonTargetAI1 : MonoBehaviour
     public void SetClosestPlayer()
     {
         float closestDistance = Mathf.Infinity;
-        currentTarget = null; // Reset current target
+        currentTarget = null;
 
         foreach (Transform player in players)
         {
             if (player == null) continue;
+
+            // If the player has a Drifter component and is currently invisible, skip this player.
+            Drifter drifter = player.GetComponent<Drifter>();
+            if (drifter != null && drifter.isInvisible)
+                continue;
 
             PlayerHealth health = player.GetComponent<PlayerHealth>();
             if (health != null && health.currentHealth <= 0) continue;
@@ -362,4 +386,23 @@ public class DemonTargetAI1 : MonoBehaviour
         animator.SetTrigger("PostAttack");
     }
 
+    public IEnumerator BindEffect(float duration)
+    {
+        // Set the demon as bound.
+        isBound = true;
+        
+        navMeshAgent.isStopped = true;
+
+        
+        yield return new WaitForSeconds(duration);
+
+        
+        isBound = false;
+        navMeshAgent.isStopped = false;
+
+        SetClosestPlayer();
+
+        StartCoroutine(ChasePlayer());
+        yield return null;
+    }
 }
