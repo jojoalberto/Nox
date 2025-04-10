@@ -74,4 +74,6 @@ Nox/[Aa]ssets/[Ss]treamingAssets/aa/*
 
 *.bundle
 FirebaseCppApp-*.so
+**/PhotonServerSettings.asset
+
 

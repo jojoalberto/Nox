@@ -36,6 +36,7 @@ public class CandlePuzzle : MonoBehaviourPun
         candleCount++;
         tempCandleCount = candleCount;
         Debug.Log("candle count " + candleCount);
+        UpdateCandleCount();
     }
     [PunRPC]
     private void UpdateCandleCount()
