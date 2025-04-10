@@ -52,12 +52,12 @@ public class Drifter : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
-                photonView.RPC("RPC_ResetCooldownAbility1", RpcTarget.All);
+                photonView.RPC("RPC_ResetCooldownDrifterAbility1", RpcTarget.All);
                 StartCoroutine(ActivateAbility1());
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && targetDemon != null)
             {
-                photonView.RPC("RPC_ResetCooldownAbility1", RpcTarget.All);
+                photonView.RPC("RPC_ResetCooldownDrifterAbility2", RpcTarget.All);
                 StartCoroutine(ActivateAbility2(targetDemon));
             }
         }
@@ -65,15 +65,15 @@ public class Drifter : MonoBehaviour
     }
 
     [PunRPC]
-    void RPC_ResetCooldownAbility1()
+    void RPC_ResetCooldownDrifterAbility1()
     {
         StartCoroutine(ResetCooldownAbility1());
     }
 
     [PunRPC]
-    void RPC_ResetCooldownAbility2()
+    void RPC_ResetCooldownDrifterAbility2()
     {
-        StartCoroutine(ResetCooldownAbility1());
+        StartCoroutine(ResetCooldownAbility2());
     }
 
     IEnumerator ResetCooldownAbility1()

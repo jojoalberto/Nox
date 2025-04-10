@@ -1,3 +1,4 @@
+using System.Collections;
 using Photon.Pun;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class PlayerHealth : MonoBehaviourPun
     public PlayerData playerData;
     public float totalHealth = 1;
     public float currentHealth = 1;
+    public float temporaryHealth = 0;
+    public float temporaryHealthDecay = 1f;
     public bool invulnerability = false;
 
     public Transform purgatoryLocation;
@@ -40,6 +43,13 @@ public class PlayerHealth : MonoBehaviourPun
     [PunRPC]
     private void RPC_TakeDamage(int damageAmount)
     {
+        if (temporaryHealth > 0)
+        {
+            int tempAbsorbed = Mathf.Min(damageAmount, (int)temporaryHealth);
+            temporaryHealth -= tempAbsorbed;
+            damageAmount -= tempAbsorbed;
+        }
+
         currentHealth -= damageAmount;
         if (currentHealth <= 0) GoToPurgatory();
     }
@@ -49,6 +59,24 @@ public class PlayerHealth : MonoBehaviourPun
     {
         currentHealth += totalHealth * value;
         currentHealth = Mathf.Min(currentHealth, totalHealth);
+    }
+
+    [PunRPC]
+    public void RPC_AddTemporaryHealth(float value)
+    {
+        temporaryHealth += value;
+        StartCoroutine(DecayTemporaryHealth());
+    }
+
+    private IEnumerator DecayTemporaryHealth()
+    {
+        while (temporaryHealth > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            temporaryHealth -= temporaryHealthDecay;
+        }
+
+        temporaryHealth = 0;
     }
 
     [PunRPC]

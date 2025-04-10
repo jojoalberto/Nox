@@ -9,6 +9,9 @@ using Photon.Pun;
 
 public class DemonTargetAI1 : MonoBehaviour
 {
+    private Coroutine tauntCoroutine;
+
+
     [Header("General Settings")]
     public Transform[] targetLocations;
     private NavMeshAgent navMeshAgent;
@@ -377,7 +380,7 @@ public class DemonTargetAI1 : MonoBehaviour
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.75f);
 
-        
+
 
         navMeshAgent.speed = originalSpeed;
         damageAmount = originalDamage;
@@ -414,13 +417,13 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         // Set the demon as bound.
         isBound = true;
-        
+
         navMeshAgent.isStopped = true;
 
-        
+
         yield return new WaitForSeconds(duration);
 
-        
+
         isBound = false;
         navMeshAgent.isStopped = false;
 
@@ -428,5 +431,50 @@ public class DemonTargetAI1 : MonoBehaviour
 
         StartCoroutine(ChasePlayer());
         yield return null;
+    }
+
+    [PunRPC]
+    public void RPC_Taunt(int protectorViewID, float tauntDuration)
+    {
+        if (!PhotonNetwork.IsMasterClient) return;
+
+        GameObject protectorObj = PhotonView.Find(protectorViewID)?.gameObject;
+        if (protectorObj == null) return;
+
+        if (tauntCoroutine != null)
+        {
+            StopCoroutine(tauntCoroutine);
+        }
+
+        tauntCoroutine = StartCoroutine(ForcedChaseProtector(protectorObj.transform, tauntDuration));
+    }
+
+    IEnumerator ForcedChaseProtector(Transform protector, float duration)
+    {
+        if (chaseCoroutine != null)
+        {
+            StopCoroutine(chaseCoroutine);
+            chaseCoroutine = null;
+        }
+
+        isChasingPlayer = true;
+        navMeshAgent.speed = chaseSpeed;
+        currentTarget = protector;
+
+        float timer = duration;
+        while (timer > 0f)
+        {
+            if (protector == null) break;
+
+            navMeshAgent.SetDestination(protector.position);
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        isChasingPlayer = false;
+        tauntCoroutine = null;
+
+        SetClosestPlayer();
+        chaseCoroutine = StartCoroutine(ChasePlayer());
     }
 }

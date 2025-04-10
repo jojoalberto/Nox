@@ -5,9 +5,10 @@ public class PlayerScriptBehaviour : MonoBehaviour
 {
 
     public PlayerData playerData;
-    public Trapper trapper;
+    public Protector protector;
     public Occultist occultist;
     public Drifter drifter;
+    public Trapper trapper;
 
     public string globalClassSelected;
     public PhotonView photonView;
@@ -54,7 +55,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
     {
         if (globalClassSelected == "Protector")
         {
-            return;
+            protector.isProtector = true;
         }
         if (globalClassSelected == "Occultist") 
         {
@@ -66,7 +67,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
         }
         else if (globalClassSelected == "Trapper")
         {
-            return;
+            trapper.isTrapper = true;
         }
     }
 }

@@ -1,0 +1,119 @@
+using System.Collections;
+using Photon.Pun;
+using UnityEngine;
+
+public class Protector : MonoBehaviour
+{
+
+    public PhotonView photonView;
+    public bool isProtector = false;
+
+    [Header("Ability 1 (Salus Brevis)")]
+    public string protectorAbility1Name = "Salus Brevis";
+    public string protectorAbility1Description = "Give nearby characters temporary health";
+    public float ability1Radius = 20f;
+    public float protectorAbility1Value = 10f;
+    public float protectorAbility1CD = 15f;
+    public float protectorAbility1Duration = 10f;
+    public bool Ability1Ready = true;
+
+    [Header("Ability 2 (Audacia Mortalis)")]
+    public string protectorAbility2Name = "Audacia Mortalis";
+    public string protectorAbility2Description = "Taunts nearby enemy";
+    public float ability2Radius = 20f;
+    public float protectorAbility2CD = 15f;
+    public float protectorAbility2Duration = 10f;
+    public bool Ability2Ready = true;
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(photonView.IsMine && isProtector)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
+            {
+                photonView.RPC("RPC_ResetCooldownProtectorAbility1", RpcTarget.All);
+                StartCoroutine(ActivateAbility1());
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
+            {
+                photonView.RPC("RPC_ResetCooldownProtectorAbility2", RpcTarget.All);
+                StartCoroutine(ActivateAbility2());
+            }
+        }
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownProtectorAbility1()
+    {
+        StartCoroutine(ResetCooldownAbility1());
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownProtectorAbility2()
+    {
+        StartCoroutine(ResetCooldownAbility2());
+    }
+
+    IEnumerator ResetCooldownAbility1()
+    {
+        Ability1Ready = false;
+        yield return new WaitForSeconds(protectorAbility1CD);
+        Ability1Ready = true;
+    }
+
+    IEnumerator ResetCooldownAbility2()
+    {
+        Ability2Ready = false;
+        yield return new WaitForSeconds(protectorAbility2CD);
+        Ability2Ready = true;
+    }
+
+    IEnumerator ActivateAbility1()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
+        foreach (Collider hit in hitColliders)
+        {
+            GameObject target = hit.gameObject;
+            if (target.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
+                PhotonView targetPhotonView = target.GetComponent<PhotonView>();
+
+                if (playerHealth != null && targetPhotonView != null)
+                {
+                    targetPhotonView.RPC("RPC_AddTemporaryHealth", RpcTarget.All, protectorAbility1Value);
+                }
+            }
+        }
+
+        yield return null;
+    }
+
+    IEnumerator ActivateAbility2()
+    {
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
+        foreach (Collider hit in hitColliders)
+        {
+            GameObject target = hit.gameObject;
+            if (target.CompareTag("Enemy"))
+            {
+                PhotonView demonPV = target.GetComponent<PhotonView>();
+                if (demonPV != null)
+                {
+                    demonPV.RPC("RPC_Taunt", RpcTarget.MasterClient, transform.GetComponent<PhotonView>().ViewID, protectorAbility2Duration);
+                }
+            }
+        }
+        yield return null;
+    }
+
+}

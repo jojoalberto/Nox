@@ -53,7 +53,7 @@ public class Occultist : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
-                StartCoroutine(ResetCooldownAbility1());
+                photonView.RPC("RPC_ResetCooldownOccultistAbility1", RpcTarget.All);
                 if (targetPlayer != null)
                 {
                     StartCoroutine(ActivateAbility1(targetPlayer));
@@ -65,7 +65,7 @@ public class Occultist : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
             {
-                StartCoroutine(ResetCooldownAbility2());
+                photonView.RPC("RPC_ResetCooldownOccultistAbility2", RpcTarget.All);
                 if (targetPlayer != null)
                 {
                     ActivateAbility2(targetPlayer);
@@ -78,6 +78,18 @@ public class Occultist : MonoBehaviour
         }
 
         
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownOccultistAbility1()
+    {
+        StartCoroutine(ResetCooldownAbility1());
+    }
+
+    [PunRPC]
+    void RPC_ResetCooldownOccultistAbility2()
+    {
+        StartCoroutine(ResetCooldownAbility2());
     }
 
     IEnumerator ResetCooldownAbility1()

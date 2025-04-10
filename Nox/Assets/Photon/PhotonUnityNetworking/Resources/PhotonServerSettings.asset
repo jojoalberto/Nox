@@ -75,6 +75,17 @@ MonoBehaviour:
   - RPC_BindDemon
   - RPC_ResetCooldownAbility1
   - RPC_ResetCooldownAbility2
+  - RPC_AddTemporaryHealth
+  - RPC_Taunt
+  - RPC_ResetCooldownProtectorAbility1
+  - RPC_ResetCooldownProtectorAbility2
+  - RPC_ResetCooldownDrifterAbility1
+  - RPC_ResetCooldownDrifterAbility2
+  - RPC_ResetCooldownOccultistAbility1
+  - RPC_ResetCooldownOccultistAbility2
+  - RPC_ResetCooldownTrapperAbility1
+  - RPC_ResetCooldownTrapperAbility2
+  - ToggleTrapperGrenadeActive
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
