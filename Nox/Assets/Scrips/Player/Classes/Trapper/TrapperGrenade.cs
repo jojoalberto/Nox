@@ -42,19 +42,18 @@ public class TrapperGrenade : MonoBehaviour
             }
         }
 
-        StartCoroutine(DestroyAfterDelay());
+        photonView.RPC("DestroySelf", RpcTarget.All);
     }
 
-    // Optional: visualize explosion radius in editor
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 
-    IEnumerator DestroyAfterDelay()
+    [PunRPC]
+    void DestroySelf()
     {
-        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }

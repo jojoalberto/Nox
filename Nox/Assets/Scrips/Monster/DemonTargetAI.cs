@@ -507,7 +507,6 @@ public class DemonTargetAI1 : MonoBehaviour
     [PunRPC]
     public void ApplySlow(float slowAmount, float duration)
     {
-        if (!PhotonNetwork.IsMasterClient) return;
         if (slowCoroutine != null)
             StopCoroutine(slowCoroutine);
 
