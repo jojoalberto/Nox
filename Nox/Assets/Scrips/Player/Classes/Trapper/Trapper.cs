@@ -23,18 +23,17 @@ public class Trapper : MonoBehaviour
     public float trapperAbility1RadiusValue = 15f;
     public float trapperAbility1DurationValue = 2f;
     public float trapperAbility1CD = 10f;
+    public int trapperAbility1Cost = 1;
     public bool Ability1Ready = true;
 
     [Header("References For Grenade")]
     public Transform cam;
-    public Transform attackPoint;
-    public GameObject objectToThrow;
+    public Transform grenadeSpawnPosition;
+    public GameObject grenade;
 
     [Header("Throwing For Grenade")]
     public float throwForce;
     public float throwUpwardForce;
-
-    bool readyToThrow;
 
 
     [Header("Ability 2 (Gelu Immobilis)")]
@@ -42,6 +41,7 @@ public class Trapper : MonoBehaviour
     public string trapperAbility2Description = "Place a trap that freezes the enemy for a few seconds";
     public float trapperAbility2CD = 10f;
     public float trapperAbility2Duration = 2f;
+    public int trapperAbility2Cost = 3;
     public bool Ability2Ready = true;
 
 
@@ -62,17 +62,17 @@ public class Trapper : MonoBehaviour
 
     void Update()
     {
-        if (photonView.IsMine && isTrapper && (pickups > 0))
+        if (photonView.IsMine && isTrapper && (pickups >= trapperAbility1Cost))
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
                 photonView.RPC("RPC_ResetCooldownTrapperAbility1", RpcTarget.All);
                 ActivateAbility1();
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && (pickups > 2))
+            else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && (pickups >= trapperAbility2Cost))
             {
                 photonView.RPC("RPC_ResetCooldownTrapperAbility2", RpcTarget.All);
-                StartCoroutine(ActivateAbility2());
+                ActivateAbility2();
             }
         }
     }
@@ -95,7 +95,19 @@ public class Trapper : MonoBehaviour
 
     public void IncrementPickup()
     {
+        photonView.RPC("RPC_IncrementPickup", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void RPC_IncrementPickup()
+    {
         pickups++;
+    }
+
+    [PunRPC]
+    void RPC_DecrementPickup(int amount)
+    {
+        pickups = pickups - amount;
     }
 
     [PunRPC]
@@ -126,36 +138,30 @@ public class Trapper : MonoBehaviour
 
     private void ActivateAbility1()
     {
-        pickups--;
-        GameObject grenade = PhotonNetwork.Instantiate(objectToThrow.name, attackPoint.position, cam.rotation);
+        photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility1Cost);
+        GameObject instantiatedGrenade = PhotonNetwork.Instantiate(grenade.name, grenadeSpawnPosition.position, cam.rotation);
 
-        Rigidbody rb = grenade.GetComponent<Rigidbody>();
+        Rigidbody rb = instantiatedGrenade.GetComponent<Rigidbody>();
 
         Vector3 forceDirection = cam.transform.forward;
         if (Physics.Raycast(cam.position, cam.forward, out RaycastHit hit, 500f))
         {
-            forceDirection = (hit.point - attackPoint.position).normalized;
+            forceDirection = (hit.point - grenadeSpawnPosition.position).normalized;
         }
 
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
         rb.AddForce(forceToAdd, ForceMode.Impulse);
 
-        TrapperGrenade trapperGrenade = grenade.GetComponent<TrapperGrenade>();
+        TrapperGrenade trapperGrenade = instantiatedGrenade.GetComponent<TrapperGrenade>();
         trapperGrenade.explosionRadius = trapperAbility1RadiusValue;
         trapperGrenade.slowAmount = trapperAbility1SlowValue;
         trapperGrenade.slowDuration = trapperAbility1DurationValue;
     }
 
-
-    [PunRPC]
-    private void ToggleTrapperGrenadeActive(GameObject grenade)
+    private void ActivateAbility2()
     {
-        grenade.SetActive(!grenade.activeSelf);
-    }
+        photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility2Cost);
 
-    IEnumerator ActivateAbility2()
-    {
-        pickups = pickups - 3;
-        yield return null;
+
     }
 }

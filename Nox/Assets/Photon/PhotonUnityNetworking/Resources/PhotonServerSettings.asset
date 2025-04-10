@@ -86,6 +86,9 @@ MonoBehaviour:
   - RPC_ResetCooldownTrapperAbility1
   - RPC_ResetCooldownTrapperAbility2
   - ToggleTrapperGrenadeActive
+  - RPC_IncrementPickup
+  - RPC_DecrementPickup
+  - ApplySlow
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -37,7 +37,8 @@ public class TrapperGrenade : MonoBehaviour
             DemonTargetAI1 demonTargetAI1 = enemy.GetComponent<DemonTargetAI1>();
             if (demonTargetAI1 != null)
             {
-                Debug.Log("ENEMY HIT");
+                demonTargetAI1.ApplySlow(slowAmount, slowDuration);
+                Debug.Log("ENEMY HIT AND SLOWED");
             }
         }
 
@@ -53,7 +54,7 @@ public class TrapperGrenade : MonoBehaviour
 
     IEnumerator DestroyAfterDelay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }

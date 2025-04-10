@@ -10,6 +10,8 @@ using Photon.Pun;
 public class DemonTargetAI1 : MonoBehaviour
 {
     private Coroutine tauntCoroutine;
+    private enum SpeedState { Idle, ChasingFresh, ChasingTired }
+    private SpeedState currentSpeedState = SpeedState.Idle;
 
 
     [Header("General Settings")]
@@ -47,6 +49,10 @@ public class DemonTargetAI1 : MonoBehaviour
     private PhotonView photonView;
 
     public bool isBound = false;
+    private bool isSlowed = false;
+
+    private Coroutine slowCoroutine;
+    private float slowMultiplier = 1f;
 
     void Start()
     {
@@ -210,17 +216,18 @@ public class DemonTargetAI1 : MonoBehaviour
     IEnumerator ChasePlayer()
     {
         isChasingPlayer = true;
-        navMeshAgent.speed = chaseSpeed;
+
+        currentSpeedState = SpeedState.ChasingFresh;
+        UpdateNavMeshSpeed();
+
         float chaseTimer = interestDuration;
         float currentGracePeriod = gracePeriod;
 
         while (chaseTimer > 0f)
         {
             SetClosestPlayer();
-            if (currentTarget == null)
-            {
-                break; // Exit chase if no target
-            }
+            if (currentTarget == null) break;
+
             debugMessages[1] = "Chasing: " + currentTarget.name;
             navMeshAgent.SetDestination(currentTarget.position);
 
@@ -230,16 +237,15 @@ public class DemonTargetAI1 : MonoBehaviour
 
         if (currentTarget != null)
         {
-            navMeshAgent.speed = tiredSpeed;
+            currentSpeedState = SpeedState.ChasingTired;
+            UpdateNavMeshSpeed();
+
             chaseTimer = extendedChaseDuration;
 
             while (chaseTimer > 0f || currentGracePeriod > 0f)
             {
                 SetClosestPlayer();
-                if (currentTarget == null)
-                {
-                    break; // Exit if no target
-                }
+                if (currentTarget == null) break;
 
                 if (HasLineOfSightToPlayer(currentTarget))
                 {
@@ -249,9 +255,8 @@ public class DemonTargetAI1 : MonoBehaviour
                 else
                 {
                     if (currentGracePeriod > 0f)
-                    {
                         currentGracePeriod -= Time.deltaTime;
-                    }
+
                     chaseTimer -= Time.deltaTime;
                 }
 
@@ -260,12 +265,14 @@ public class DemonTargetAI1 : MonoBehaviour
             }
         }
 
-        // Resume normal behavior
         isChasingPlayer = false;
-        navMeshAgent.speed = defaultSpeed;
+        currentSpeedState = SpeedState.Idle;
+        UpdateNavMeshSpeed();
+
         chaseCoroutine = null;
         PickNewTarget();
     }
+
 
     bool HasLineOfSightToPlayer(Transform player)
     {
@@ -352,7 +359,7 @@ public class DemonTargetAI1 : MonoBehaviour
             chaseCoroutine = null;
         }
 
-        float originalSpeed = navMeshAgent.speed;
+        UpdateNavMeshSpeed();
         int originalDamage = damageAmount;
 
         if (currentTarget != null)
@@ -369,7 +376,6 @@ public class DemonTargetAI1 : MonoBehaviour
             }
         }
 
-        navMeshAgent.speed = 0;
         damageAmount = 0;
 
         photonView.RPC("PlayAttackAnimation", RpcTarget.All);
@@ -381,13 +387,28 @@ public class DemonTargetAI1 : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.75f);
 
 
-
-        navMeshAgent.speed = originalSpeed;
-        damageAmount = originalDamage;
-
         isAttacking = false;
 
-        isChasingPlayer = false;
+        UpdateNavMeshSpeed();
+        damageAmount = originalDamage;
+
+        if (currentTarget != null && HasLineOfSightToPlayer(currentTarget))
+        {
+            currentSpeedState = SpeedState.ChasingTired;
+            isChasingPlayer = true;
+
+            chaseCoroutine = StartCoroutine(ChasePlayer());
+        }
+        else
+        {
+            currentSpeedState = SpeedState.Idle;
+            isChasingPlayer = false;
+
+            PickNewTarget();
+        }
+        UpdateNavMeshSpeed();
+
+
     }
 
     [PunRPC]
@@ -458,7 +479,7 @@ public class DemonTargetAI1 : MonoBehaviour
         }
 
         isChasingPlayer = true;
-        navMeshAgent.speed = chaseSpeed;
+        UpdateNavMeshSpeed();
         currentTarget = protector;
 
         float timer = duration;
@@ -477,4 +498,71 @@ public class DemonTargetAI1 : MonoBehaviour
         SetClosestPlayer();
         chaseCoroutine = StartCoroutine(ChasePlayer());
     }
+
+    public void RequestSlow(float slowAmount, float duration)
+    {
+        photonView.RPC("RPC_ApplySlow", RpcTarget.MasterClient, slowAmount, duration);
+    }
+
+    [PunRPC]
+    public void ApplySlow(float slowAmount, float duration)
+    {
+        if (!PhotonNetwork.IsMasterClient) return;
+        if (slowCoroutine != null)
+            StopCoroutine(slowCoroutine);
+
+        slowCoroutine = StartCoroutine(SlowEffect(slowAmount, duration));
+    }
+
+    private IEnumerator SlowEffect(float slowAmount, float duration)
+    {
+        isSlowed = true;
+        slowMultiplier = slowAmount;
+
+        UpdateNavMeshSpeed();
+
+        yield return new WaitForSeconds(duration);
+
+        isSlowed = false;
+        slowMultiplier = 1f;
+
+        UpdateNavMeshSpeed();
+
+        slowCoroutine = null;
+    }
+
+    private void UpdateNavMeshSpeed()
+    {
+        if (isBound || isAttacking)
+        {
+            navMeshAgent.speed = 0;
+            return;
+        }
+
+        float baseSpeed = defaultSpeed;
+
+        switch (currentSpeedState)
+        {
+            case SpeedState.ChasingFresh:
+                baseSpeed = chaseSpeed;
+                break;
+            case SpeedState.ChasingTired:
+                baseSpeed = tiredSpeed;
+                break;
+            case SpeedState.Idle:
+            default:
+                baseSpeed = defaultSpeed;
+                break;
+        }
+
+        if (isSlowed)
+        {
+            navMeshAgent.speed = Mathf.Max(0.1f, baseSpeed * slowMultiplier);
+        }
+        else
+        {
+            navMeshAgent.speed = baseSpeed;
+        }
+    }
+
 }

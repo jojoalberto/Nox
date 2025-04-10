@@ -5286,16 +5286,18 @@ MonoBehaviour:
   trapperAbility1RadiusValue: 15
   trapperAbility1DurationValue: 2
   trapperAbility1CD: 10
+  trapperAbility1Cost: 1
   Ability1Ready: 1
   cam: {fileID: 6030818222411006575}
-  attackPoint: {fileID: 6773697685327748327}
-  objectToThrow: {fileID: 4884791129526128574, guid: 5dc3aa28201b51449a13f3a6e59c9f6e, type: 3}
+  grenadeSpawnPosition: {fileID: 6773697685327748327}
+  grenade: {fileID: 4884791129526128574, guid: 5dc3aa28201b51449a13f3a6e59c9f6e, type: 3}
   throwForce: 30
   throwUpwardForce: 12
   trapperAbility2Name: Gelu Immobilis
   trapperAbility2Description: Place a trap that freezes the enemy for a few seconds
   trapperAbility2CD: 10
   trapperAbility2Duration: 2
+  trapperAbility2Cost: 3
   Ability2Ready: 1
 --- !u!4 &6030818222411006575 stripped
 Transform:
