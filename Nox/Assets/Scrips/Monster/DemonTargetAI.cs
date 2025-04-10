@@ -505,7 +505,7 @@ public class DemonTargetAI1 : MonoBehaviour
     }
 
     [PunRPC]
-    public void ApplySlow(float slowAmount, float duration)
+    public void RPC_ApplySlow(float slowAmount, float duration)
     {
         if (slowCoroutine != null)
             StopCoroutine(slowCoroutine);

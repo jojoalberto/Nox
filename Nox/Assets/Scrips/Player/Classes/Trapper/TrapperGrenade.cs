@@ -37,7 +37,7 @@ public class TrapperGrenade : MonoBehaviour
             DemonTargetAI1 demonTargetAI1 = enemy.GetComponent<DemonTargetAI1>();
             if (demonTargetAI1 != null)
             {
-                demonTargetAI1.ApplySlow(slowAmount, slowDuration);
+                demonTargetAI1.RequestSlow(slowAmount, slowDuration);
                 Debug.Log("ENEMY HIT AND SLOWED");
             }
         }
