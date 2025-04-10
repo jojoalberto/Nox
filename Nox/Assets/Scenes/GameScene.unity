@@ -197,11 +197,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7858983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0063a0b3c04872740920c0f7c32bf798, type: 3}
+  m_Script: {fileID: 11500000, guid: 427bf335a8cacdc46a9d69fe45017727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1327331496}
-  dialoguePanel: {fileID: 242309965}
+  dialoguePanel: {fileID: 269601932}
+  onDialogueEnds:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9600458
 GameObject:
   m_ObjectHideFlags: 0
@@ -27523,6 +27526,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
 --- !u!65 &221159970
@@ -28485,7 +28491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &242309966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54451,6 +54457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!114 &672984511
@@ -66635,6 +66644,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760028589}
   m_Mesh: {fileID: -6553035424356706157, guid: 3f567369409017542950fb64f611c283, type: 3}
+--- !u!1 &760439658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760439659}
+  - component: {fileID: 760439660}
+  m_Layer: 0
+  m_Name: PuzzleA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760439659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760439658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141717994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760439660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760439658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cc27d685262ef479dfbd82c5bdeb09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candle:
+  - {fileID: 1238432485}
+  onQuestComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueMessage: {fileID: 1021488471}
 --- !u!1 &769608020
 GameObject:
   m_ObjectHideFlags: 0
@@ -104746,7 +104805,6 @@ GameObject:
   - component: {fileID: 1021488467}
   - component: {fileID: 1021488470}
   - component: {fileID: 1021488469}
-  - component: {fileID: 1021488475}
   - component: {fileID: 1021488474}
   - component: {fileID: 1021488473}
   - component: {fileID: 1021488472}
@@ -104844,6 +104902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Four candles placed, chest surrounded, key will glow, prize unbounded
+  - Got it, let us try to open the chest now
 --- !u!114 &1021488472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104857,7 +104916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 7858985}
-  disableObject: []
+  disableObject:
+  - {fileID: 1021488466}
   enableObject:
   - {fileID: 2091276771}
   - {fileID: 1042093147}
@@ -104906,23 +104966,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.55067813, y: 1.4835385, z: 0.3078466}
   m_Center: {x: 0.0009342283, y: 0.74176925, z: -0.048266627}
---- !u!114 &1021488475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021488466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13cc27d685262ef479dfbd82c5bdeb09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candle:
-  - {fileID: 408549685}
-  - {fileID: 1198496579}
-  - {fileID: 1730951899}
-  - {fileID: 172631099}
 --- !u!1 &1022283906
 GameObject:
   m_ObjectHideFlags: 0
@@ -105604,6 +105647,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!114 &1042093151
@@ -113840,6 +113886,7 @@ Transform:
   - {fileID: 78164167}
   - {fileID: 36981975}
   - {fileID: 7858984}
+  - {fileID: 760439659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143666468
@@ -175900,6 +175947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!114 &1658294511
@@ -205249,7 +205299,6 @@ GameObject:
   - component: {fileID: 2071249548}
   - component: {fileID: 2071249552}
   - component: {fileID: 2071249551}
-  - component: {fileID: 2071249550}
   - component: {fileID: 2071249549}
   m_Layer: 7
   m_Name: Stone_Pillar_Sqr_b_col
@@ -205295,22 +205344,6 @@ MonoBehaviour:
   sceneViewId: 4
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2071249550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071249547}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
-  disableObject:
-  - {fileID: 0}
-  enableObject: []
 --- !u!65 &2071249551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -205942,6 +205975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!114 &2091276775
@@ -273431,6 +273467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: d6076faf1ded392468997d6b99ccc5f0, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!65 &5634532463163987678

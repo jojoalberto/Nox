@@ -8,7 +8,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 {
     private DialogueMessage dialogueMessage;
     [SerializeField]
-    private DialogueUI dialogueUI;
+    private DialogueManager dialogueUI;
     public List<GameObject> disableObject;
     public List<GameObject> enableObject;
     //public PhotonView photonView;

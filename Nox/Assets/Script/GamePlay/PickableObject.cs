@@ -1,8 +1,10 @@
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.Events;
 
 public class PickableObject : MonoBehaviourPun
 {
+    public UnityEvent onPickup;
     public ClueItemSO itemData;
     [SerializeField]
     private PlayerData playerData;
@@ -20,11 +22,8 @@ public class PickableObject : MonoBehaviourPun
         {
             CollectTrapperPickup();
         }
-        //if (photonView.IsMine || !PhotonNetwork.IsConnected)
-        //{
         Debug.Log("collectiong Item");
         photonView.RPC("CollectItem", RpcTarget.All);
-        //}
     }
 
     [PunRPC]
@@ -46,6 +45,7 @@ public class PickableObject : MonoBehaviourPun
                 
             }
             InventoryManager.Instance.AddItem(itemData);
+            onPickup.Invoke();
             //Destroy(gameObject); 
         }
     }

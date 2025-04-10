@@ -7,7 +7,7 @@ public class CandleChest : MonoBehaviourPun
     public static CandleChest Instance;
     private bool isUnlocked = false;
     [SerializeField]
-    private DialogueUI dialogueUI;
+    private DialogueManager dialogueUI;
     private DialogueMessage dialogueMessage;
     private void Awake()
     {
