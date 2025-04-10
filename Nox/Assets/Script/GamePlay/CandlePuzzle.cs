@@ -11,6 +11,7 @@ public class CandlePuzzle : MonoBehaviourPun
     private List<GameObject> candle;
     private int candleCount = 0;
     private int requiredCandles = 4;
+    private int tempCandleCount;
     public UnityEvent onQuestComplete;
     [SerializeField]
     private DialogueMessage dialogueMessage;
@@ -30,13 +31,18 @@ public class CandlePuzzle : MonoBehaviourPun
     {
         
     }
-    [PunRPC]
     public void AddCandle()
     {
         candleCount++;
+        tempCandleCount = candleCount;
         Debug.Log("candle count " + candleCount);
+    }
+    [PunRPC]
+    private void UpdateCandleCount()
+    {
+        candleCount = tempCandleCount;
         photonView.RPC("CheckCandleWinCondition", RpcTarget.All);
-
+        Debug.Log("candle count after update " + candleCount);
     }
     [PunRPC]
     private void CheckCandleWinCondition()

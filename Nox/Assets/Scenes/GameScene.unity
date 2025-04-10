@@ -27532,6 +27532,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  isArtifact: 0
 --- !u!65 &221159970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54468,6 +54469,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 0
 --- !u!114 &672984511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105723,6 +105725,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 0
 --- !u!114 &1042093151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126441,6 +126444,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: a5f209185809383478c3393d34ac9753, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 1
 --- !u!1 &1243551439
 GameObject:
   m_ObjectHideFlags: 0
@@ -176203,6 +176207,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 0
 --- !u!114 &1658294511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206231,6 +206236,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 0
 --- !u!114 &2091276775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273723,6 +273729,7 @@ MonoBehaviour:
       m_Calls: []
   itemData: {fileID: 11400000, guid: d6076faf1ded392468997d6b99ccc5f0, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  isArtifact: 0
 --- !u!65 &5634532463163987678
 BoxCollider:
   m_ObjectHideFlags: 0
