@@ -9,6 +9,8 @@ public class PickableObject : MonoBehaviourPun
     [SerializeField]
     private PlayerData playerData;
     private InteractableObject interactableObject;
+    [SerializeField]
+    private bool isArtifact;
 
     private void Start()
     {
@@ -42,9 +44,16 @@ public class PickableObject : MonoBehaviourPun
             {
                 Debug.Log("adding candle ");
                 CandlePuzzle.Instance.AddCandle();
-                
             }
-            InventoryManager.Instance.AddItem(itemData);
+            if (isArtifact)
+            {
+                InventoryManager.Instance.AddArtifact(itemData);
+            }
+            else
+            {
+                InventoryManager.Instance.AddItem(itemData);
+            }
+                
             onPickup.Invoke();
             //Destroy(gameObject); 
         }

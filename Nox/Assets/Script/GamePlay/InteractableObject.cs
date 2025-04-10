@@ -8,7 +8,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 {
     private DialogueMessage dialogueMessage;
     [SerializeField]
-    private DialogueManager dialogueUI;
+    private DialogueManager dialogueManager;
     public List<GameObject> disableObject;
     public List<GameObject> enableObject;
     //public PhotonView photonView;
@@ -35,12 +35,12 @@ public class InteractableObject : MonoBehaviourPunCallbacks
        
         //if (photonView.IsMine || !PhotonNetwork.IsConnected) 
         //{
-            if(gameObject.tag == "Clue" || !dialogueUI.gameObject.activeSelf)
+            if(gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)
             {
                 Debug.Log("player interact Clue" + gameObject);
                 photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
 
-                dialogueUI.gameObject.SetActive(true);
+                dialogueManager.gameObject.SetActive(true);
 
             }
             else
@@ -84,9 +84,9 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [PunRPC]
     void ShowDialogueRPC(string message)
     {
-        if (dialogueUI != null)
+        if (dialogueManager != null)
         {
-            dialogueUI.ShowDialogue(message);
+            dialogueManager.ShowDialogue(message);
             for (int i = 0; i < disableObject.Count; i++)
             {
                 if (disableObject[i] != null)
@@ -107,9 +107,9 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [PunRPC]
     public void ForceDisableAndEnableObjectsRPC(string message)
     {
-        if (dialogueUI != null)
+        if (dialogueManager != null)
         {
-            dialogueUI.ShowDialogue(message);
+            dialogueManager.ShowDialogue(message);
             for (int i = 0; i < disableObject.Count; i++)
             {
                 if (disableObject[i] != null)

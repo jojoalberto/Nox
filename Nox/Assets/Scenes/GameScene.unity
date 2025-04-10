@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  artifact: []
 --- !u!1 &37463617
 GameObject:
   m_ObjectHideFlags: 0
@@ -37987,7 +37988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 3689126225272621235}
   - {fileID: 8179955765024894201}
@@ -38416,7 +38417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 0}
+  dialogueManager: {fileID: 0}
   disableObject: []
   enableObject: []
 --- !u!65 &436606850
@@ -46894,6 +46895,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7858985}
     - target: {fileID: 3065678777435829400, guid: 72f8d2140e925334daa597f9db02c723, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 7858985}
+    - target: {fileID: 3065678777435829400, guid: 72f8d2140e925334daa597f9db02c723, type: 3}
       propertyPath: enableObject.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -54257,6 +54262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1082125314}
   - {fileID: 967024346}
   - {fileID: 718218726}
   - {fileID: 1238432486}
@@ -54441,7 +54447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 672984505}
   enableObject: []
@@ -60613,11 +60619,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 78653171}
+  - {fileID: 718218720}
   enableObject:
   - {fileID: 1021488466}
+  - {fileID: 1082125309}
 --- !u!114 &718218722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66654,6 +66662,8 @@ GameObject:
   m_Component:
   - component: {fileID: 760439659}
   - component: {fileID: 760439660}
+  - component: {fileID: 760439661}
+  - component: {fileID: 760439662}
   m_Layer: 0
   m_Name: PuzzleA
   m_TagString: Untagged
@@ -66692,8 +66702,69 @@ MonoBehaviour:
   - {fileID: 1238432485}
   onQuestComplete:
     m_PersistentCalls:
-      m_Calls: []
-  dialogueMessage: {fileID: 1021488471}
+      m_Calls:
+      - m_Target: {fileID: 1082125309}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1238432485}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  dialogueMessage: {fileID: 760439661}
+  dialogueManager: {fileID: 7858985}
+--- !u!114 &760439661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760439658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - Got it, let us try to open the chest now
+--- !u!114 &760439662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760439658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 28
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &769608020
 GameObject:
   m_ObjectHideFlags: 0
@@ -97548,7 +97619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 797121780}
   enableObject:
@@ -104915,7 +104986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 1021488466}
   enableObject:
@@ -105631,7 +105702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 1042093147}
   enableObject: []
@@ -106678,6 +106749,137 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 1073213970}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1082125309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082125314}
+  - component: {fileID: 1082125313}
+  - component: {fileID: 1082125312}
+  - component: {fileID: 1082125311}
+  - component: {fileID: 1082125310}
+  m_Layer: 7
+  m_Name: ChestOnTableNormal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &1082125310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082125309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8879884, y: 0.49879688, z: 0.47716737}
+  m_Center: {x: -0.0000009685755, y: 0.06678825, z: 0.00033988824}
+--- !u!114 &1082125311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082125309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 27
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!23 &1082125312
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082125309}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 53d4b7211aac9684db15d4565b5f8772, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1082125313
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082125309}
+  m_Mesh: {fileID: 4300000, guid: 8672f26db88ef4f44bd348e6da98ccd0, type: 3}
+--- !u!4 &1082125314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082125309}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.99999535, z: -0, w: -0.0030729584}
+  m_LocalPosition: {x: -5.719001, y: 0.808, z: -64.505}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 655824512}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.352, z: 0}
 --- !u!1 &1083953369
 GameObject:
   m_ObjectHideFlags: 0
@@ -126072,9 +126274,12 @@ GameObject:
   - component: {fileID: 1238432490}
   - component: {fileID: 1238432492}
   - component: {fileID: 1238432493}
-  m_Layer: 0
+  - component: {fileID: 1238432496}
+  - component: {fileID: 1238432495}
+  - component: {fileID: 1238432494}
+  m_Layer: 8
   m_Name: ChestOnTableunlock
-  m_TagString: Untagged
+  m_TagString: Clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126190,6 +126395,52 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8879884, y: 0.49879688, z: 0.47716737}
   m_Center: {x: -0.0000009685755, y: 0.06678825, z: 0.00033988824}
+--- !u!114 &1238432494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238432485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - Artifact Obtain
+--- !u!114 &1238432495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238432485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+--- !u!114 &1238432496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238432485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  itemData: {fileID: 11400000, guid: a5f209185809383478c3393d34ac9753, type: 2}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
 --- !u!1 &1243551439
 GameObject:
   m_ObjectHideFlags: 0
@@ -136577,7 +136828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 1542306302}
   - {fileID: 920452497}
@@ -150351,7 +150602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 1215128533}
   - {fileID: 1387611217}
@@ -175931,7 +176182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 1658294507}
   enableObject: []
@@ -205959,7 +206210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 2091276771}
   enableObject: []
@@ -219211,7 +219462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 335248459752371658}
   - {fileID: 1740817940}
@@ -273449,7 +273700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 7858985}
+  dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 967024345}
   - {fileID: 374289202513321727}
