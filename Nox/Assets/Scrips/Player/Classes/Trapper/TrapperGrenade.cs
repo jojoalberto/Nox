@@ -20,7 +20,7 @@ public class TrapperGrenade : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!photonView.IsMine || hasExploded) return;
+        if (hasExploded) return;
 
         hasExploded = true;
 
