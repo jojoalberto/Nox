@@ -10,7 +10,7 @@ using Photon.Pun;
 public class DemonTargetAI1 : MonoBehaviour
 {
     private Coroutine tauntCoroutine;
-    private enum SpeedState { Idle, ChasingFresh, ChasingTired }
+    private enum SpeedState { Idle, ChasingFresh, ChasingTired}
     private SpeedState currentSpeedState = SpeedState.Idle;
 
 
@@ -50,6 +50,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     public bool isBound = false;
     private bool isSlowed = false;
+    private bool isFrozen = false;
 
     private Coroutine slowCoroutine;
     private float slowMultiplier = 1f;
@@ -89,11 +90,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void Update()
     {
-        if (isBound)
-        {
-            // Optionally update idle animation here.
-            return;
-        }
+        UpdateNavMeshSpeed();
 
         if (!PhotonNetwork.IsMasterClient)
         {
@@ -530,9 +527,32 @@ public class DemonTargetAI1 : MonoBehaviour
         slowCoroutine = null;
     }
 
+    public void RequestFreeze(float duration)
+    {
+        photonView.RPC("RPC_ApplyFreeze", RpcTarget.MasterClient, duration);
+    }
+
+    [PunRPC]
+    public void RPC_ApplyFreeze(float duration)
+    {
+        if (slowCoroutine != null)
+            StopCoroutine(slowCoroutine);
+
+        slowCoroutine = StartCoroutine(FreezeEffect(duration));
+    }
+
+    private IEnumerator FreezeEffect(float duration)
+    {
+        isFrozen = true;
+        UpdateNavMeshSpeed();
+        yield return new WaitForSeconds(duration);
+        isFrozen = false;
+    }
+
+
     private void UpdateNavMeshSpeed()
     {
-        if (isBound || isAttacking)
+        if (isBound || isAttacking || isFrozen)
         {
             navMeshAgent.speed = 0;
             return;
@@ -556,7 +576,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         if (isSlowed)
         {
-            navMeshAgent.speed = Mathf.Max(0.1f, baseSpeed * slowMultiplier);
+            navMeshAgent.speed = Mathf.Max(0.01f, baseSpeed * slowMultiplier);
         }
         else
         {

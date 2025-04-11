@@ -44,6 +44,10 @@ public class Trapper : MonoBehaviour
     public int trapperAbility2Cost = 3;
     public bool Ability2Ready = true;
 
+    [Header("References For Trap")]
+    public GameObject freezeTrap;
+
+
 
 
     void Start()
@@ -162,6 +166,29 @@ public class Trapper : MonoBehaviour
     {
         photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility2Cost);
 
+
+        float trapDistance = 1f;
+        Vector3 forwardDirection = transform.forward;
+        Vector3 tentativePosition = transform.position + forwardDirection * trapDistance;
+
+        Vector3 spawnPosition;
+        RaycastHit hit;
+        if (Physics.Raycast(tentativePosition + Vector3.up, Vector3.down, out hit, 10f, LayerMask.GetMask("Default")))
+        {
+            spawnPosition = hit.point;
+        }
+        else
+        {
+            spawnPosition = tentativePosition;
+        }
+ 
+        GameObject trapInstance = PhotonNetwork.Instantiate(freezeTrap.name, spawnPosition, Quaternion.identity);
+
+        TrapperTrap trapperTrap = trapInstance.GetComponent<TrapperTrap>();
+        if (trapperTrap != null)
+        {
+            trapperTrap.duration = trapperAbility2Duration;
+        }
 
     }
 }

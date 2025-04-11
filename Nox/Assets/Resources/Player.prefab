@@ -5299,6 +5299,7 @@ MonoBehaviour:
   trapperAbility2Duration: 2
   trapperAbility2Cost: 3
   Ability2Ready: 1
+  freezeTrap: {fileID: 3234902940036311696, guid: ebfb3a5521ec7ec4e828cd05b210cb81, type: 3}
 --- !u!4 &6030818222411006575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711222397081296995, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
