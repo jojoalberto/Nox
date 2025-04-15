@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Photon.Pun;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Protector : MonoBehaviour
 
     public PhotonView photonView;
     public bool isProtector = false;
+
+    public PlayerScriptBehaviour playerScriptBehaviour;
 
     [Header("Ability 1 (Salus Brevis)")]
     public string protectorAbility1Name = "Salus Brevis";
@@ -30,6 +33,7 @@ public class Protector : MonoBehaviour
     void Start()
     {
         photonView = GetComponent<PhotonView>();
+        playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
     }
 
     // Update is called once per frame
@@ -41,13 +45,25 @@ public class Protector : MonoBehaviour
             {
                 photonView.RPC("RPC_ResetCooldownProtectorAbility1", RpcTarget.All);
                 StartCoroutine(ActivateAbility1());
+                updateAbility1UI();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
             {
                 photonView.RPC("RPC_ResetCooldownProtectorAbility2", RpcTarget.All);
                 StartCoroutine(ActivateAbility2());
+                updateAbility2UI();
             }
         }
+    }
+
+    private void updateAbility1UI()
+    {
+        playerScriptBehaviour.SetAbility1UICD(protectorAbility1CD);
+    }
+
+    private void updateAbility2UI()
+    {
+        playerScriptBehaviour.SetAbility2UICD(protectorAbility2CD);
     }
 
     [PunRPC]

@@ -5068,6 +5068,8 @@ MonoBehaviour:
   temporaryHealthDecay: 1
   invulnerability: 0
   purgatoryLocation: {fileID: 0}
+  playerScriptBehaviour: {fileID: 6117700120783235675}
+  healthBar: {fileID: 0}
 --- !u!114 &9036687969454709197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5121,6 +5123,30 @@ MonoBehaviour:
   trapper: {fileID: 1655547893240518412}
   globalClassSelected: 
   photonView: {fileID: 0}
+  playerUI: {fileID: 8581594370321421631, guid: 7235abd213ab72c4cb8dc5f31e64a380, type: 3}
+  hudInstance: {fileID: 0}
+  protectorSprites:
+  - {fileID: 21300000, guid: 32d67b6ec9154e340a184e6652dc8668, type: 3}
+  - {fileID: 21300000, guid: ae49706cccf88c54f828a0992d2a12f7, type: 3}
+  occultistSprites:
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  drifterSprites:
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  trapperSprites:
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  ability1CDText: {fileID: 0}
+  ability2CDText: {fileID: 0}
+  ability1CDFill: {fileID: 0}
+  ability2CDFill: {fileID: 0}
+  ability1Image: {fileID: 0}
+  ability2Image: {fileID: 0}
+  isAbility1CD: 0
+  isAbility2CD: 0
+  ability1CD: 0
+  ability2CD: 0
 --- !u!114 &7001537754630203479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,6 +5161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photonView: {fileID: 0}
   isProtector: 0
+  playerScriptBehaviour: {fileID: 0}
   protectorAbility1Name: Salus Brevis
   protectorAbility1Description: Give nearby characters temporary health
   ability1Radius: 20

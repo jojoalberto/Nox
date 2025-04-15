@@ -35,10 +35,13 @@ public class Drifter : MonoBehaviour
     public float drifterAbility2Duration = 2f;
     public bool Ability2Ready = true;
 
+    public PlayerScriptBehaviour playerScriptBehaviour;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         photonView = GetComponent<PhotonView>();
+        playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
         thirdPersonController = GetComponent<ThirdPersonController>();
     }
 
@@ -54,14 +57,26 @@ public class Drifter : MonoBehaviour
             {
                 photonView.RPC("RPC_ResetCooldownDrifterAbility1", RpcTarget.All);
                 StartCoroutine(ActivateAbility1());
+                updateAbility1UI();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && targetDemon != null)
             {
                 photonView.RPC("RPC_ResetCooldownDrifterAbility2", RpcTarget.All);
                 StartCoroutine(ActivateAbility2(targetDemon));
+                updateAbility2UI();
             }
         }
         
+    }
+
+    private void updateAbility1UI()
+    {
+        playerScriptBehaviour.SetAbility1UICD(drifterAbility1CD);
+    }
+
+    private void updateAbility2UI()
+    {
+        playerScriptBehaviour.SetAbility2UICD(drifterAbility2CD);
     }
 
     [PunRPC]

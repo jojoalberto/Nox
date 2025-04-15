@@ -47,12 +47,13 @@ public class Trapper : MonoBehaviour
     [Header("References For Trap")]
     public GameObject freezeTrap;
 
-
+    public PlayerScriptBehaviour playerScriptBehaviour;
 
 
     void Start()
     {
         photonView = GetComponent<PhotonView>();
+        playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
         if (isTrapper)
         {
             mainCamera = Camera.main;
@@ -72,13 +73,25 @@ public class Trapper : MonoBehaviour
             {
                 photonView.RPC("RPC_ResetCooldownTrapperAbility1", RpcTarget.All);
                 ActivateAbility1();
+                updateAbility1UI();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready && (pickups >= trapperAbility2Cost))
             {
                 photonView.RPC("RPC_ResetCooldownTrapperAbility2", RpcTarget.All);
                 ActivateAbility2();
+                updateAbility2UI();
             }
         }
+    }
+
+    private void updateAbility1UI()
+    {
+        playerScriptBehaviour.SetAbility1UICD(trapperAbility1CD);
+    }
+
+    private void updateAbility2UI()
+    {
+        playerScriptBehaviour.SetAbility2UICD(trapperAbility2CD);
     }
 
     void OnEnable()

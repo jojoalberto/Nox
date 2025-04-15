@@ -30,13 +30,15 @@ public class Occultist : MonoBehaviour
     public float occultistAbility2CD = 10f;
     public bool Ability2Ready = true;
 
-
+    public PlayerScriptBehaviour playerScriptBehaviour;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         photonView = GetComponent<PhotonView>();
-        if(photonView.IsMine && isOccultist)
+        playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
+
+        if (photonView.IsMine && isOccultist)
         {
             occultistCam.enabled = true;
         }
@@ -62,6 +64,7 @@ public class Occultist : MonoBehaviour
                 {
                     StartCoroutine(ActivateAbility1(thirdPersonController));
                 }
+                updateAbility1UI();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) && Ability2Ready)
             {
@@ -74,10 +77,21 @@ public class Occultist : MonoBehaviour
                 {
                     ActivateAbility2(thirdPersonController);
                 }
+                updateAbility2UI();
             }
         }
 
         
+    }
+
+    private void updateAbility1UI()
+    {
+        playerScriptBehaviour.SetAbility1UICD(occultistAbility1CD);
+    }
+
+    private void updateAbility2UI()
+    {
+        playerScriptBehaviour.SetAbility2UICD(occultistAbility2CD);
     }
 
     [PunRPC]

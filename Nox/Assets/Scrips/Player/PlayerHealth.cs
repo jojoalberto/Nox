@@ -14,18 +14,43 @@ public class PlayerHealth : MonoBehaviourPun
 
     public Transform purgatoryLocation;
 
+    private Coroutine tempHealthCoroutine;
+
+    public PlayerScriptBehaviour playerScriptBehaviour;
+    public HealthBar healthBar;
+
     void Start()
     {
+        StartCoroutine(WaitForHUDAndSetHealth());
+    }
+
+    private IEnumerator WaitForHUDAndSetHealth()
+    {
+        // Wait until playerScriptBehaviour and hudInstance are both valid
+        while (playerScriptBehaviour == null || playerScriptBehaviour.hudInstance == null)
+        {
+            yield return null;
+        }
+
         if (playerData != null)
         {
             SetPlayerHealth();
         }
     }
 
+
     private void SetPlayerHealth()
     {
         totalHealth = playerData.GetTotalHealth();
         currentHealth = totalHealth;
+
+        
+        healthBar = playerScriptBehaviour.hudInstance.GetComponentInChildren<HealthBar>();
+        if (healthBar != null)
+        {
+            healthBar.playerHealth = this;
+            healthBar.SetMaxHealth();
+        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -52,6 +77,11 @@ public class PlayerHealth : MonoBehaviourPun
 
         currentHealth -= damageAmount;
         if (currentHealth <= 0) GoToPurgatory();
+
+        if (photonView.IsMine)
+        {
+            healthBar.UpdateHealth();
+        }
     }
 
     [PunRPC]
@@ -59,14 +89,24 @@ public class PlayerHealth : MonoBehaviourPun
     {
         currentHealth += totalHealth * value;
         currentHealth = Mathf.Min(currentHealth, totalHealth);
+
+        if (photonView.IsMine)
+        {
+            healthBar.UpdateHealth();
+        }
     }
 
     [PunRPC]
     public void RPC_AddTemporaryHealth(float value)
     {
         temporaryHealth += value;
-        StartCoroutine(DecayTemporaryHealth());
+
+        if (tempHealthCoroutine != null)
+            StopCoroutine(tempHealthCoroutine);
+
+        tempHealthCoroutine = StartCoroutine(DecayTemporaryHealth());
     }
+
 
     private IEnumerator DecayTemporaryHealth()
     {
