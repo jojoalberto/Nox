@@ -5132,11 +5132,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
   - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
   drifterSprites:
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 6db100c05bec2ad47bb532b7060541e0, type: 3}
   - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
   trapperSprites:
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 150f83ee697bfcc4894160c9349d53bb, type: 3}
+  - {fileID: 21300000, guid: a3630373102c17642b965d65f773db0a, type: 3}
   ability1CDText: {fileID: 0}
   ability2CDText: {fileID: 0}
   ability1CDFill: {fileID: 0}
@@ -5147,6 +5147,7 @@ MonoBehaviour:
   isAbility2CD: 0
   ability1CD: 0
   ability2CD: 0
+  UIHolder: {fileID: 0}
 --- !u!114 &7001537754630203479
 MonoBehaviour:
   m_ObjectHideFlags: 0

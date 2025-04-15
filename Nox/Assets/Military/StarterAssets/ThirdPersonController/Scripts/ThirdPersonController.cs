@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -128,6 +129,13 @@ namespace StarterAssets
         public bool SprintAllowed = true;
         public bool IsSprinting => _input != null && _input.sprint;
 
+        public DemonTargetAI1 demonTargetAI1;
+        public float distanceToDemon;
+        public float walkSoundThreshold = 5f;
+        public float runSoundThreshold = 10f;
+        private float lastChaseRequestTime = -999f;
+        public float chaseRequestCooldown = 2f;
+
         private void Awake()
         {
             // get a reference to our main camera
@@ -139,6 +147,8 @@ namespace StarterAssets
 
         private void Start()
         {
+            demonTargetAI1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<DemonTargetAI1>();
+
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
@@ -160,6 +170,8 @@ namespace StarterAssets
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
+
+
 
             JumpAndGravity();
             GroundedCheck();
@@ -238,6 +250,13 @@ namespace StarterAssets
                 _speed = targetSpeed;
             }
 
+            if (demonTargetAI1 != null)
+            {
+                CheckForDemon();
+
+                
+            }
+
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
             if (_animationBlend < 0.01f) _animationBlend = 0f;
 
@@ -257,6 +276,28 @@ namespace StarterAssets
             {
                 _animator.SetFloat(_animIDSpeed, _animationBlend);
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+            }
+        }
+
+        private void CheckForDemon()
+        {
+            distanceToDemon = Vector3.Distance(transform.position, demonTargetAI1.transform.position);
+
+            bool shouldRequestChase = false;
+
+            if (_input.sprint && distanceToDemon <= runSoundThreshold)
+            {
+                shouldRequestChase = true;
+            }
+            else if (_input.move.magnitude > 0 && distanceToDemon <= walkSoundThreshold)
+            {
+                shouldRequestChase = true;
+            }
+
+            if (shouldRequestChase && Time.time - lastChaseRequestTime > chaseRequestCooldown)
+            {
+                lastChaseRequestTime = Time.time;
+                demonTargetAI1.RequestStartChasing(transform);
             }
         }
 

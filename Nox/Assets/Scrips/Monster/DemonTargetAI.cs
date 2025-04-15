@@ -646,4 +646,35 @@ public class DemonTargetAI1 : MonoBehaviour
         photonView.RPC("RPC_SoundAlert", RpcTarget.MasterClient, soundOrigin);
     }
 
+    public void RequestStartChasing(Transform target)
+    {
+        PhotonView targetView = target.GetComponent<PhotonView>();
+        if (targetView != null)
+        {
+            photonView.RPC("RPC_StartChasing", RpcTarget.MasterClient, targetView.ViewID);
+        }
+    }
+
+    [PunRPC]
+    public void RPC_StartChasing(int targetViewID)
+    {
+        PhotonView targetView = PhotonView.Find(targetViewID);
+        if (targetView == null) return;
+
+        currentTarget = targetView.transform;
+        isChasingPlayer = true;
+        currentSpeedState = SpeedState.ChasingFresh;
+        UpdateNavMeshSpeed();
+
+        if (chaseCoroutine != null)
+        {
+            StopCoroutine(chaseCoroutine);
+        }
+
+        chaseCoroutine = StartCoroutine(ChasePlayer());
+
+        Debug.Log("Demon has started chasing the player!");
+    }
+
+
 }

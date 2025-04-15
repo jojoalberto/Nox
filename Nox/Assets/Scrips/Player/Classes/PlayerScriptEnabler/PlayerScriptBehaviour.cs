@@ -1,5 +1,6 @@
 using System.Collections;
 using Photon.Pun;
+using StarterAssets;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -37,6 +38,8 @@ public class PlayerScriptBehaviour : MonoBehaviour
     public bool isAbility2CD;
     public float ability1CD;
     public float ability2CD;
+
+    public UIBob UIHolder;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,7 +86,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
         if (photonView.IsMine && hudInstance != null)
         {
-            Transform abilitiesPanel = hudInstance.transform.GetChild(1);
+            Transform abilitiesPanel = hudInstance.transform.GetChild(0).GetChild(1);
             ability1Image = abilitiesPanel.GetChild(0).GetChild(0).GetComponent<Image>();
             ability2Image = abilitiesPanel.GetChild(1).GetChild(0).GetComponent<Image>();
 
@@ -92,6 +95,10 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
             ability1CDText = abilitiesPanel.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
             ability2CDText = abilitiesPanel.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+
+            UIHolder = hudInstance.transform.GetChild(0).GetComponent<UIBob>();
+            UIHolder.playerController = GetComponent<ThirdPersonController>();
+            UIHolder.playerTransform = gameObject.transform;
 
             switch (globalClassSelected)
             {
