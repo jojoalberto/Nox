@@ -13,6 +13,8 @@ public class DemonTargetAI1 : MonoBehaviour
     private enum SpeedState { Idle, ChasingFresh, ChasingTired}
     private SpeedState currentSpeedState = SpeedState.Idle;
 
+    private Transform pendingAlertTarget = null;
+    private bool investigatingAlert = false;
 
     [Header("General Settings")]
     public Transform[] targetLocations;
@@ -136,8 +138,19 @@ public class DemonTargetAI1 : MonoBehaviour
 
         if (!isChasingPlayer && !navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)
         {
-            ReduceTargetWeight(currentTargetIndex);
-            PickNewTarget();
+            if (investigatingAlert)
+            {
+                // Done investigating. Resume normal behavior.
+                investigatingAlert = false;
+                pendingAlertTarget = null;
+                debugMessages[1] = "Finished alert investigation. Picking new target.";
+                PickNewTarget();
+            }
+            else
+            {
+                ReduceTargetWeight(currentTargetIndex);
+                PickNewTarget();
+            }
         }
 
         UpdateAnimation();
@@ -582,6 +595,55 @@ public class DemonTargetAI1 : MonoBehaviour
         {
             navMeshAgent.speed = baseSpeed;
         }
+    }
+
+    [PunRPC]
+    public void RPC_SoundAlert(GameObject soundOrigin)
+    {
+        if (soundOrigin == null || targetLocations.Length == 0) return;
+
+        Transform nearestTarget = null;
+        float shortestDistance = Mathf.Infinity;
+
+        foreach (Transform location in targetLocations)
+        {
+            if (location == null) continue;
+
+            float distance = Vector3.Distance(soundOrigin.transform.position, location.position);
+            if (distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                nearestTarget = location;
+            }
+        }
+
+        if (nearestTarget == null) return;
+
+        // If chasing, remember it for later
+        if (isChasingPlayer)
+        {
+            pendingAlertTarget = nearestTarget;
+            debugMessages[1] = "Heard sound, but still chasing.";
+        }
+        else
+        {
+            InvestigateAlertLocation(nearestTarget);
+        }
+    }
+
+    private void InvestigateAlertLocation(Transform target)
+    {
+        if (target == null) return;
+
+        currentTargetIndex = -1; // make it clear it's not a standard patrol point
+        navMeshAgent.SetDestination(target.position);
+        investigatingAlert = true;
+        debugMessages[1] = "Investigating alert at: " + target.name;
+    }
+
+    public void RequestSoundAlert(GameObject soundOrigin)
+    {
+        photonView.RPC("RPC_SoundAlert", RpcTarget.MasterClient, soundOrigin);
     }
 
 }

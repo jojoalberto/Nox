@@ -1,4 +1,5 @@
-﻿ using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
 #endif
@@ -377,5 +378,19 @@ namespace StarterAssets
         {
             speedMultiplier = 1f;
         }
+
+        public void ApplySlow(float multiplier, float duration)
+        {
+            StopCoroutine("SlowEffect"); // Stop any existing slow effect
+            StartCoroutine(SlowEffect(multiplier, duration));
+        }
+
+        IEnumerator SlowEffect(float multiplier, float duration)
+        {
+            SetSpeedMultiplier(multiplier);
+            yield return new WaitForSeconds(duration);
+            ResetSpeedMultiplier();
+        }
+
     }
 }

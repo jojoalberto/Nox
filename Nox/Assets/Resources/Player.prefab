@@ -5204,6 +5204,7 @@ MonoBehaviour:
   occultistAbility2Value: 0.25
   occultistAbility2CD: 10
   Ability2Ready: 1
+  playerScriptBehaviour: {fileID: 0}
 --- !u!114 &1481441408572852225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5292,6 +5293,7 @@ MonoBehaviour:
   drifterAbility2CD: 15
   drifterAbility2Duration: 2
   Ability2Ready: 1
+  playerScriptBehaviour: {fileID: 0}
 --- !u!114 &1655547893240518412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5327,6 +5329,7 @@ MonoBehaviour:
   trapperAbility2Cost: 3
   Ability2Ready: 1
   freezeTrap: {fileID: 3234902940036311696, guid: ebfb3a5521ec7ec4e828cd05b210cb81, type: 3}
+  playerScriptBehaviour: {fileID: 0}
 --- !u!4 &6030818222411006575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 711222397081296995, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
