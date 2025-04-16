@@ -46641,6 +46641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundTrapAudioClip: {fileID: 8300000, guid: 5d6f11f7bd3d5174e9f8e6e7c38e218c, type: 3}
+  audioClips:
+  - {fileID: 8300000, guid: ffcb7dedbe16d8d4994f06a6b8bf09cb, type: 3}
   audioSource: {fileID: 0}
 --- !u!82 &588212676
 AudioSource:
@@ -102929,7 +102931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -102941,7 +102943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayAudio
+      value: PlayAudioByName
       objectReference: {fileID: 0}
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -102950,10 +102952,10 @@ PrefabInstance:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1010331239}
+      objectReference: {fileID: 0}
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Name
@@ -103004,11 +103006,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
---- !u!1 &1010331239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
-  m_PrefabInstance: {fileID: 1010331238}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010509484
 GameObject:
   m_ObjectHideFlags: 0

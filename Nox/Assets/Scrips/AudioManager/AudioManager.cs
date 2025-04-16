@@ -1,25 +1,54 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public AudioClip soundTrapAudioClip;
+    [Header("Audio Settings")]
+    public List<AudioClip> audioClips = new List<AudioClip>();
     [SerializeField] private AudioSource audioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();  
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayAudioByIndex(int index)
     {
-        
+        if (index >= 0 && index < audioClips.Count)
+        {
+            Debug.Log("Playing AudioClip at index: " + index);
+            audioSource.PlayOneShot(audioClips[index]);
+        }
+        else
+        {
+            Debug.Log("Invalid audio index: " + index);
+        }
     }
 
-    public void PlayAudio(GameObject game)
+    public void PlayAudioByName(string clipName)
     {
-        Debug.Log("Play Audio Called" + game);
-        audioSource.PlayOneShot(soundTrapAudioClip);
+        AudioClip clip = audioClips.Find(c => c.name == clipName);
+        if (clip != null)
+        {
+            Debug.Log("Playing AudioClip named: " + clipName);
+            audioSource.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.LogWarning("AudioClip not found with name: " + clipName);
+        }
+    }
+
+    public void PlayDefaultAudio()
+    {
+        if (audioClips.Count > 0)
+        {
+            audioSource.PlayOneShot(audioClips[0]);
+        }
     }
 }
