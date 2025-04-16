@@ -4813,6 +4813,9 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 4090338442048484595}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 7193742271148095078}
+    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6731244504116558929}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
@@ -4934,6 +4937,38 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &7193742271148095078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309164442572235219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74a7af1738df9843bde0614e005257f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 0
+  playerCamera: {fileID: 6129125867121193388}
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  pickableLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  interactionUI: {fileID: 4753742032257792640}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  classSelected: 
+  trapper: {fileID: 1655547893240518412}
+  trapperPickableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  photonView: {fileID: 8787963150614822784}
+  interactLayers:
+    serializedVersion: 2
+    m_Bits: 384
+  highlightMaterial: {fileID: 2100000, guid: 8e97c0d814e33ce4f8ee7d7e87b2abde, type: 2}
 --- !u!114 &6731244504116558929
 MonoBehaviour:
   m_ObjectHideFlags: 0
