@@ -5119,6 +5119,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   flashlight: {fileID: 5721236003213993890}
+  flashlightPosition: {fileID: 1588660854051004809}
+  flashlightRange: 10
+  trapLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  flashlightAngle: 60
 --- !u!114 &492160832062886508
 MonoBehaviour:
   m_ObjectHideFlags: 0

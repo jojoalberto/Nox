@@ -37,7 +37,7 @@ public class DemonTargetAI1 : MonoBehaviour
     public Transform currentTarget;
 
     [Header("Debug Settings")]
-    public string[] debugMessages = { "", "", "" };
+    public string[] debugMessages = { "", "", "", "" };
 
     [Header("States")]
     public bool isChasingPlayer = false;
@@ -57,6 +57,17 @@ public class DemonTargetAI1 : MonoBehaviour
     private Coroutine slowCoroutine;
     private float slowMultiplier = 1f;
 
+    [Header("Aggression Settings")]
+    [SerializeField] private float rate = 120f;
+    [SerializeField] private float damageIncrement = 10f;
+    [SerializeField] private float speedIncrement = 0.3f;
+    [SerializeField] private float maximumDamage = 50f;
+    [SerializeField] private float maximumSpeedIncrement = 2f;
+
+    private float originaldefaultSpeed = 3f;
+    private float originaltiredSpeed = 5f;
+    private float originalchaseSpeed = 5.5f;
+
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -68,6 +79,45 @@ public class DemonTargetAI1 : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             StartCoroutine(WaitForPlayersToInstantiate());
+        }
+
+        originaldefaultSpeed = defaultSpeed;
+        originaltiredSpeed = tiredSpeed;
+        originalchaseSpeed = chaseSpeed;
+
+        StartCoroutine(Aggression());
+    }
+
+    IEnumerator Aggression()
+    {
+        WaitForSeconds wait = new WaitForSeconds(rate);
+
+        while (true)
+        {
+            yield return wait;
+
+            if (PhotonNetwork.IsMasterClient)
+            {
+                // Increase damage
+                if (damageAmount < maximumDamage)
+                {
+                    damageAmount += (int)damageIncrement;
+                    damageAmount = Mathf.Min(damageAmount, (int)maximumDamage);
+                }
+
+                // Increase speeds
+                defaultSpeed += speedIncrement;
+                tiredSpeed += speedIncrement;
+                chaseSpeed += speedIncrement;
+
+                defaultSpeed = Mathf.Min(defaultSpeed, originaldefaultSpeed + maximumSpeedIncrement);
+                tiredSpeed = Mathf.Min(tiredSpeed, originaltiredSpeed + maximumSpeedIncrement);
+                chaseSpeed = Mathf.Min(chaseSpeed, originalchaseSpeed + maximumSpeedIncrement);
+
+                UpdateNavMeshSpeed();
+
+                debugMessages[3] = $"Aggression Increased: DMG={damageAmount}, SPD={defaultSpeed:F2}";
+            }
         }
     }
 
@@ -126,7 +176,6 @@ public class DemonTargetAI1 : MonoBehaviour
             float distanceToPlayer = Vector3.Distance(transform.position, currentTarget.position);
             if (distanceToPlayer <= attackRange)
             {
-                // Stop chasing when attacking starts
                 if (chaseCoroutine != null)
                 {
                     StopCoroutine(chaseCoroutine);
@@ -140,7 +189,6 @@ public class DemonTargetAI1 : MonoBehaviour
         {
             if (investigatingAlert)
             {
-                // Done investigating. Resume normal behavior.
                 investigatingAlert = false;
                 pendingAlertTarget = null;
                 debugMessages[1] = "Finished alert investigation. Picking new target.";

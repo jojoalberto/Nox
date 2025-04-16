@@ -1,6 +1,7 @@
 using System.Collections;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MonsterTrapAlert : MonoBehaviour
 {
@@ -27,11 +28,13 @@ public class MonsterTrapAlert : MonoBehaviour
 
     [SerializeField] private Renderer trapRenderer;
 
+    [SerializeField] private UnityEvent onSoundTrapTrigger;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         trapRenderer = GetComponentInChildren<Renderer>();
-
+        
     }
 
     // Update is called once per frame
@@ -51,6 +54,8 @@ public class MonsterTrapAlert : MonoBehaviour
                 if (demonTargetAI1 != null)
                 {
                     demonTargetAI1.RequestSoundAlert(this.gameObject);
+
+                    onSoundTrapTrigger.Invoke();
                 }
             }
             if(isDamageTrap)
@@ -65,6 +70,7 @@ public class MonsterTrapAlert : MonoBehaviour
             {
                 ThirdPersonController thirdPersonController = other.gameObject.GetComponent<ThirdPersonController>();
                 thirdPersonController.ApplySlow(slowMultiplier, slowDuration);
+                Destroy(gameObject);
             }
         }
     }
