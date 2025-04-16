@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Highlight : PlayerInteraction
 {
-    public LayerMask interactLayers;
+    public LayerMask interActablelayers;
     public Material highlightMaterial;
 
     private GameObject currentTarget;
@@ -26,7 +26,7 @@ public class Highlight : PlayerInteraction
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, interactDistance, interactLayers))
+        if (Physics.Raycast(ray, out hit, interactDistance, interActablelayers))
         {
             GameObject hitObj = hit.collider.gameObject;
             GameObject rootObj = hitObj;
@@ -51,6 +51,7 @@ public class Highlight : PlayerInteraction
                         outline = rend.gameObject.AddComponent<Outline>();
 
                     outline.enabled = true;
+                    outline.OutlineWidth = 2;
                     activeOutlines.Add(outline);
                 }
 

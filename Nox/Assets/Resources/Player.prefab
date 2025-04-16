@@ -4965,9 +4965,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   photonView: {fileID: 8787963150614822784}
-  interactLayers:
+  interActablelayers:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 1408
   highlightMaterial: {fileID: 2100000, guid: 8e97c0d814e33ce4f8ee7d7e87b2abde, type: 2}
 --- !u!114 &6731244504116558929
 MonoBehaviour:

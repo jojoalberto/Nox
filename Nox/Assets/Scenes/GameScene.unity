@@ -96620,8 +96620,10 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject:
   - {fileID: 797121780}
+  - {fileID: 967024345}
   enableObject:
   - {fileID: 920452497}
+  - {fileID: 1082125309}
 --- !u!114 &967024350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271925,7 +271927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
   disableObject:
-  - {fileID: 967024345}
+  - {fileID: 1082125309}
   - {fileID: 374289202513321727}
   enableObject:
   - {fileID: 718218720}
