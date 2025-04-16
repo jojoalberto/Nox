@@ -4073,6 +4073,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1011701311243766634, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1733835530471299431}
+    - targetCorrespondingSourceObject: {fileID: 1011701311243766634, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5765598058323504448}
   m_SourcePrefab: {fileID: 100100000, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
 --- !u!1 &2753860200613162025 stripped
 GameObject:
@@ -4123,6 +4126,14 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!81 &5765598058323504448
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753860200613162025}
+  m_Enabled: 1
 --- !u!1 &2866247069618935548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1151533089436823999, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
