@@ -31,7 +31,7 @@ public class PlayerData : ScriptableObject
     public void Setclass(string className)
     {
         classSelected = className;
-        SetPlaayerHealth();
+        SetPlayerHealth();
     }
 
     public void setFlashlight(bool flashlight)
@@ -44,7 +44,7 @@ public class PlayerData : ScriptableObject
         return hasFlashlight;
     }
 
-    public void SetPlaayerHealth()
+    public void SetPlayerHealth()
     {
         if (getClassSelected() == "Protector")
         {

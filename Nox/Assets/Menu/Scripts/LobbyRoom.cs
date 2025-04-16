@@ -21,7 +21,7 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     public Sprite[] spriteList;
     public Sprite noneSprite;
 
-
+    private bool isStartingGame = false;
     void Start()
     {
         UpdatePlayerUI();
@@ -267,6 +267,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+
+        if (isStartingGame)
+            return; 
+
+        isStartingGame = true;
+
         PhotonNetwork.CurrentRoom.IsOpen = false;
         PhotonNetwork.CurrentRoom.IsVisible = false;
         PhotonNetwork.LoadLevel(1);

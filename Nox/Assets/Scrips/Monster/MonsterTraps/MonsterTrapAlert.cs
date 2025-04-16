@@ -22,11 +22,16 @@ public class MonsterTrapAlert : MonoBehaviour
 
     [SerializeField] private DemonTargetAI1 demonTargetAI1;
 
+    [Tooltip("Angle within which the trap is considered visible (in degrees)")]
+    public float visibilityAngle = 60f;
+
+    [SerializeField] private Renderer trapRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        trapRenderer = GetComponentInChildren<Renderer>();
+
     }
 
     // Update is called once per frame
@@ -64,7 +69,13 @@ public class MonsterTrapAlert : MonoBehaviour
         }
     }
 
-    
+    public void SetTrapVisibility(bool isVisible)
+    {
+        if (trapRenderer != null)
+        {
+            trapRenderer.enabled = isVisible;
+        }
+    }
 
 
 }
