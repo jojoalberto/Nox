@@ -1,7 +1,8 @@
+using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MonoBehaviourPun
 {
     public AudioClip soundTrapAudioClip;
     [Header("Audio Settings")]
@@ -17,6 +18,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void PlayAudioByIndex(int index)
     {
         if (index >= 0 && index < audioClips.Count)
@@ -30,6 +32,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void PlayAudioByName(string clipName)
     {
         AudioClip clip = audioClips.Find(c => c.name == clipName);
@@ -44,6 +47,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void PlayDefaultAudio()
     {
         if (audioClips.Count > 0)
@@ -51,4 +55,20 @@ public class AudioManager : MonoBehaviour
             audioSource.PlayOneShot(audioClips[0]);
         }
     }
+
+    public void RPCPlayAudioByIndex(int index)
+    {
+        photonView.RPC("PlayAudioByIndex", RpcTarget.All);
+    }
+
+    public void RPCPlayAudioByName(string clipName)
+    {
+        photonView.RPC("PlayAudioByName", RpcTarget.All);
+    }
+
+    public void RPCPlayDefaultAudio()
+    {
+        photonView.RPC("PlayDefaultAudio", RpcTarget.All);
+    }
+
 }
