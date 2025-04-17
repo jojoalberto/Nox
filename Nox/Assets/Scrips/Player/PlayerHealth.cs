@@ -34,7 +34,14 @@ public class PlayerHealth : MonoBehaviourPun
 
     void Start()
     {
-        StartCoroutine(WaitForHUDAndSetHealth());
+        if (photonView.IsMine)
+        {
+            StartCoroutine(WaitForHUDAndSetHealth());
+        }
+        else
+        {
+            SetPlayerHealth();
+        }
 
         if (postProcessingVolume != null )
         {
@@ -54,15 +61,20 @@ public class PlayerHealth : MonoBehaviourPun
 
     private IEnumerator WaitForHUDAndSetHealth()
     {
+        if (playerData != null)
+        {
+            SetPlayerHealth();
+        }
         // Wait until playerScriptBehaviour and hudInstance are both valid
         while (playerScriptBehaviour == null || playerScriptBehaviour.hudInstance == null)
         {
             yield return null;
-        }
-
-        if (playerData != null)
+        }        
+        healthBar = playerScriptBehaviour.hudInstance.GetComponentInChildren<HealthBar>();
+        if (healthBar != null)
         {
-            SetPlayerHealth();
+            healthBar.playerHealth = this;
+            healthBar.SetMaxHealth();
         }
     }
 
@@ -71,14 +83,6 @@ public class PlayerHealth : MonoBehaviourPun
     {
         totalHealth = playerData.GetTotalHealth();
         currentHealth = totalHealth;
-
-        
-        healthBar = playerScriptBehaviour.hudInstance.GetComponentInChildren<HealthBar>();
-        if (healthBar != null)
-        {
-            healthBar.playerHealth = this;
-            healthBar.SetMaxHealth();
-        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -111,8 +115,10 @@ public class PlayerHealth : MonoBehaviourPun
             healthBar.UpdateHealth();
             FlashVignette(damageColor);
             CheckLowHealthEffect();
+            SyncHealthWithOthers();
 
             if (currentHealth <= 0) PlayerDies();
+            
         }
     }
 
@@ -130,6 +136,8 @@ public class PlayerHealth : MonoBehaviourPun
             healthBar.UpdateHealth();
             FlashVignette(healColor);
             CheckLowHealthEffect();
+
+            SyncHealthWithOthers();
         }
     }
 
@@ -236,5 +244,24 @@ public class PlayerHealth : MonoBehaviourPun
         }
 
         colorAdjustments.saturation.value = target;
+    }
+
+    [PunRPC]
+    private void RPC_SyncHealth(float totalHealth, float currentHealth)
+    {
+        this.totalHealth = totalHealth;
+        this.currentHealth = currentHealth;
+
+        // Update health bar and effects
+        if (photonView.IsMine)
+        {
+            healthBar.SetMaxHealth();
+            healthBar.UpdateHealth();
+        }
+    }
+
+    public void SyncHealthWithOthers()
+    {
+        photonView.RPC("RPC_SyncHealth", RpcTarget.All, totalHealth, currentHealth);
     }
 }
