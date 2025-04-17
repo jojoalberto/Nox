@@ -34,7 +34,7 @@ public class PickableObject : MonoBehaviourPun
         Debug.Log("collecting Item before if statement ");
         if (InventoryManager.Instance != null)
         {
-            interactableObject.CallForceActivation();
+            interactableObject.CallForceActivation(itemData);
             Debug.Log("collecting Item ");
             if(playerData != null && itemData.isFlashlight)
             {

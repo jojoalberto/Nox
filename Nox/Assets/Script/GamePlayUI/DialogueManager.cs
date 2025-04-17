@@ -9,7 +9,9 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
     public TextMeshProUGUI dialogueText;
+    public Image itemImage;
     public GameObject dialoguePanel;
+    public GameObject imagePanel;
     public UnityEvent onDialogueEnds;
 
     private void Awake()
@@ -29,6 +31,21 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = message;
         Canvas.ForceUpdateCanvases();
         StartCoroutine(StartCloseDialogue());
+    }
+
+
+    public void ShowImage(string clueID)
+    {
+        var data = ClueDatabase.GetClueByID(clueID);
+        if (data != null)
+        {
+            imagePanel.SetActive(true);
+            itemImage.sprite = data.image;
+        }
+        else
+        {
+            Debug.LogWarning($"ClueItemSO with ID '{clueID}' not found.");
+        }
     }
 
     private void Update()
@@ -52,6 +69,7 @@ public class DialogueManager : MonoBehaviour
     void CloseDialogue()
     {
         onDialogueEnds.Invoke();
+        imagePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         StopAllCoroutines();
     }

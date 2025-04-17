@@ -6,7 +6,7 @@ public class DialogueMessage : MonoBehaviour
 {
     public List<string> dialogueMessage;
     [SerializeField]
-    private Image image;
+    private Sprite image;
 
 
     public string GetDialogueMessage(int message)
@@ -14,7 +14,7 @@ public class DialogueMessage : MonoBehaviour
         return dialogueMessage[message];
     }
 
-    public Image GetImage()
+    public Sprite GetImage()
     {
         return image;
     }

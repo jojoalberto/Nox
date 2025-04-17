@@ -3,9 +3,12 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviourPunCallbacks
 {
+    private ClueItemSO itemData;
+    private ClueItemSO tempItemData;
     private DialogueMessage dialogueMessage;
     [SerializeField]
     private DialogueManager dialogueManager;
@@ -32,25 +35,19 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 
     public void Interact()
     {
-       
-        //if (photonView.IsMine || !PhotonNetwork.IsConnected) 
-        //{
-            if(gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)
-            {
-                Debug.Log("player interact Clue" + gameObject);
-                photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
+        if (gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)
+        {
+            Debug.Log("player interact Clue" + gameObject);
+            photonView.RPC("ShowItemDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0),dialogueMessage.GetImage());
+            dialogueManager.gameObject.SetActive(true);
 
-                dialogueManager.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("player interact the object " + gameObject);
+            photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
 
-            }
-            else
-            {
-                Debug.Log("player interact the object " + gameObject);
-                photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
-                //photonView.RPC("OnInteract", RpcTarget.All);
-            }
-
-        //}
+        }
     }
 
     [PunRPC]
@@ -74,11 +71,37 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 
     }
 
-    public void CallForceActivation()
+    public void CallForceActivation(ClueItemSO data)
     {
-
-        photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
-
+        itemData = data;
+        photonView.RPC("ShowItemDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0), itemData.itemID);
+    }
+    [PunRPC]
+    public void ShowItemDialogueRPC(string message,string data)
+    {
+        if (dialogueManager != null)
+        {
+            dialogueManager.ShowDialogue(message);
+            if(data != null)
+            {
+                Debug.Log($"data is : "+ data);
+                dialogueManager.ShowImage(data);
+            }
+            for (int i = 0; i < disableObject.Count; i++)
+            {
+                if (disableObject[i] != null)
+                {
+                    disableObject[i].SetActive(false);
+                }
+            }
+            for (int i = 0; i < enableObject.Count; i++)
+            {
+                if (enableObject[i] != null)
+                {
+                    enableObject[i].SetActive(true);
+                }
+            }
+        }
     }
 
     [PunRPC]
