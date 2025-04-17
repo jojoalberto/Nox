@@ -99,6 +99,7 @@ MonoBehaviour:
   - RPC_StartChasing
   - RPC_ShowAggressionClaw
   - PlayAudio
+  - RPC_SetTrapVisibility
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

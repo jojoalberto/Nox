@@ -7,10 +7,12 @@ public class FlashlightScript : MonoBehaviourPun
     public PlayerData playerData;
     public GameObject flashlight;
 
-    public Transform flashlightPosition; 
-    public float flashlightRange = 10f;  
-    public LayerMask trapLayer; 
+    public Transform flashlightPosition;
+    public float flashlightRange = 10f;
+    public LayerMask trapLayer;
     [Range(1f, 180f)] public float flashlightAngle = 60f;
+
+    private PhotonView PhotonView;
 
     private void Start()
     {
