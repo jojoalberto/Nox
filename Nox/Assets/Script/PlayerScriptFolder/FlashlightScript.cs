@@ -74,7 +74,14 @@ public class FlashlightScript : MonoBehaviourPun
                     trapsNowVisible.Add(trap);
                     if (!trapsInView.Contains(trap))
                     {
-                        trap.RegisterViewer(photonView.OwnerActorNr);
+                        if (PhotonNetwork.IsMasterClient)
+                        {
+                            trap.RegisterViewer(photonView.OwnerActorNr);
+                        }
+                        else
+                        {
+                            trap.photonView.RPC("RPC_RequestRegisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
+                        }
                     }
                 }
             }
@@ -84,7 +91,15 @@ public class FlashlightScript : MonoBehaviourPun
         {
             if (!trapsNowVisible.Contains(trap))
             {
-                trap.UnregisterViewer(photonView.OwnerActorNr);
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    trap.UnregisterViewer(photonView.OwnerActorNr);
+                }
+                else
+                {
+                    trap.photonView.RPC("RPC_RequestUnregisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
+                }
+
             }
         }
 

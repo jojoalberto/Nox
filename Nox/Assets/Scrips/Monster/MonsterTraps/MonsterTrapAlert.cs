@@ -25,7 +25,7 @@ public class MonsterTrapAlert : MonoBehaviourPun
 
     [SerializeField] private UnityEvent onSoundTrapTrigger;
 
-    private readonly HashSet<int> viewers = new(); // Track which players are looking
+    private readonly HashSet<int> viewers = new(); //Trap Player Tracker
     private bool isVisible = false;
 
     private void Awake()
@@ -58,6 +58,8 @@ public class MonsterTrapAlert : MonoBehaviourPun
 
     public void RegisterViewer(int actorNumber)
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         if (viewers.Add(actorNumber) && viewers.Count == 1)
         {
             photonView.RPC(nameof(RPC_SetTrapVisibility), RpcTarget.All, true);
@@ -66,11 +68,14 @@ public class MonsterTrapAlert : MonoBehaviourPun
 
     public void UnregisterViewer(int actorNumber)
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         if (viewers.Remove(actorNumber) && viewers.Count == 0)
         {
             photonView.RPC(nameof(RPC_SetTrapVisibility), RpcTarget.All, false);
         }
     }
+
 
     [PunRPC]
     private void RPC_SetTrapVisibility(bool visible)
@@ -78,5 +83,17 @@ public class MonsterTrapAlert : MonoBehaviourPun
         isVisible = visible;
         if (trapRenderer != null)
             trapRenderer.enabled = visible;
+    }
+
+    [PunRPC]
+    private void RPC_RequestRegisterViewer(int actorNumber)
+    {
+        RegisterViewer(actorNumber);
+    }
+
+    [PunRPC]
+    private void RPC_RequestUnregisterViewer(int actorNumber)
+    {
+        UnregisterViewer(actorNumber);
     }
 }

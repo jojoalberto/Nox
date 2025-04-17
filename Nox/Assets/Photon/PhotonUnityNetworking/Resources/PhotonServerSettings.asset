@@ -103,6 +103,8 @@ MonoBehaviour:
   - PlayAudioByIndex
   - PlayAudioByName
   - PlayDefaultAudio
+  - RPC_RequestRegisterViewer
+  - RPC_RequestUnregisterViewer
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
