@@ -1,6 +1,8 @@
 using System.Collections;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerHealth : MonoBehaviourPun
 {
@@ -19,9 +21,35 @@ public class PlayerHealth : MonoBehaviourPun
     public PlayerScriptBehaviour playerScriptBehaviour;
     public HealthBar healthBar;
 
+    [SerializeField] public Volume postProcessingVolume;
+
+    private Vignette vignette;
+    private Coroutine vignetteCoroutine;
+    [ColorUsage(true, true)] public Color damageColor = Color.red;
+    [ColorUsage(true, true)] public Color healColor = Color.green;
+
+    private Coroutine saturationCoroutine;
+    private ColorAdjustments colorAdjustments;
+    private bool isBlackAndWhite = false;
+
     void Start()
     {
         StartCoroutine(WaitForHUDAndSetHealth());
+
+        if (postProcessingVolume != null )
+        {
+            if(postProcessingVolume.profile.TryGet(out Vignette v))
+            {
+                vignette = v;
+                vignette.intensity.value = 0f;
+                vignette.color.value = damageColor;
+            }
+            if(postProcessingVolume.profile.TryGet(out ColorAdjustments ca))
+            {
+                colorAdjustments = ca;
+                colorAdjustments.saturation.value = 0f;
+            }
+        }
     }
 
     private IEnumerator WaitForHUDAndSetHealth()
@@ -81,8 +109,13 @@ public class PlayerHealth : MonoBehaviourPun
         if (photonView.IsMine)
         {
             healthBar.UpdateHealth();
+            FlashVignette(damageColor);
+            CheckLowHealthEffect();
         }
     }
+
+    
+
 
     [PunRPC]
     public void RPC_RestoreHealthPercent(float value)
@@ -93,6 +126,8 @@ public class PlayerHealth : MonoBehaviourPun
         if (photonView.IsMine)
         {
             healthBar.UpdateHealth();
+            FlashVignette(healColor);
+            CheckLowHealthEffect();
         }
     }
 
@@ -127,5 +162,76 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (purgatoryLocation != null)
             transform.position = purgatoryLocation.position;
+    }
+
+    private void FlashVignette(Color color)
+    {
+        if (vignette == null) return;
+
+        if (vignetteCoroutine != null)
+            StopCoroutine(vignetteCoroutine);
+
+        vignetteCoroutine = StartCoroutine(FadeVignette(color));
+    }
+
+    private IEnumerator FadeVignette(Color color)
+    {
+        vignette.color.value = color;
+        vignette.intensity.value = 0.4f;
+
+        float duration = 2f;
+        float t = 0f;
+        float startIntensity = 0.4f;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            vignette.intensity.value = Mathf.Lerp(startIntensity, 0f, t / duration);
+            yield return null;
+        }
+
+        vignette.intensity.value = 0f;
+    }
+
+    private void CheckLowHealthEffect()
+    {
+        if (colorAdjustments == null) return;
+
+        float healthPercent = currentHealth / totalHealth;
+
+        if (healthPercent <= 0.2f && !isBlackAndWhite)
+        {
+            SmoothSaturation(-100f);
+            isBlackAndWhite = true;
+        }
+        else if (healthPercent > 0.2f && isBlackAndWhite)
+        {
+            SmoothSaturation(0f);
+            isBlackAndWhite = false;
+        }
+    }
+
+
+    private void SmoothSaturation(float targetSaturation, float duration = 1f)
+    {
+        if (saturationCoroutine != null)
+            StopCoroutine(saturationCoroutine);
+
+        saturationCoroutine = StartCoroutine(FadeSaturation(targetSaturation, duration));
+    }
+
+    private IEnumerator FadeSaturation(float target, float duration)
+    {
+        float start = colorAdjustments.saturation.value;
+        float t = 0f;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            colorAdjustments.saturation.value = Mathf.Lerp(start, target, t / duration);
+            yield return null;
+        }
+
+        colorAdjustments.saturation.value = target;
     }
 }

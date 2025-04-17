@@ -97,6 +97,8 @@ MonoBehaviour:
   - RPC_ApplyFreeze
   - RPC_SoundAlert
   - RPC_StartChasing
+  - RPC_ShowAggressionClaw
+  - PlayAudio
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

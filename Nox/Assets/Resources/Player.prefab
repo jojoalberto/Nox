@@ -1785,6 +1785,55 @@ Transform:
   - {fileID: 2139351332309752876}
   m_Father: {fileID: 3958086702979593468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3050365372814415587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755291498798808595}
+  - component: {fileID: 8495064229218988537}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755291498798808595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050365372814415587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4251971966584025843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8495064229218988537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050365372814415587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3dc7cae9fdc062b49bae3ccd7eb64b24, type: 2}
 --- !u!1 &3148161488179482557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,7 +4117,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1387086977239717296, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1755291498798808595}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1011701311243766634, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       insertIndex: -1
@@ -4105,7 +4157,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -5116,6 +5168,9 @@ MonoBehaviour:
   purgatoryLocation: {fileID: 0}
   playerScriptBehaviour: {fileID: 6117700120783235675}
   healthBar: {fileID: 0}
+  postProcessingVolume: {fileID: 8495064229218988537}
+  damageColor: {r: 0.39215687, g: 0.009825237, b: 0, a: 1}
+  healColor: {r: 0, g: 0.39215687, b: 0, a: 1}
 --- !u!114 &9036687969454709197
 MonoBehaviour:
   m_ObjectHideFlags: 0

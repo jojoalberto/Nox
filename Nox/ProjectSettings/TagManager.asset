@@ -9,11 +9,12 @@ TagManager:
   - Purgatory
   - Enemy
   - PlayerUI
+  - AggressionUI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessing
   - Water
   - UI
   - InvisToCam

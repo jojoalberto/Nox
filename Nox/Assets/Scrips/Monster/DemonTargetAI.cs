@@ -68,6 +68,8 @@ public class DemonTargetAI1 : MonoBehaviour
     private float originaltiredSpeed = 5f;
     private float originalchaseSpeed = 5.5f;
 
+    [SerializeField] private Aggression aggressionUI;
+
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -85,12 +87,15 @@ public class DemonTargetAI1 : MonoBehaviour
         originaltiredSpeed = tiredSpeed;
         originalchaseSpeed = chaseSpeed;
 
+        StartCoroutine(GetAggressionUI());
         StartCoroutine(Aggression());
+        
     }
 
     IEnumerator Aggression()
     {
         WaitForSeconds wait = new WaitForSeconds(rate);
+        
 
         while (true)
         {
@@ -115,11 +120,37 @@ public class DemonTargetAI1 : MonoBehaviour
                 chaseSpeed = Mathf.Min(chaseSpeed, originalchaseSpeed + maximumSpeedIncrement);
 
                 UpdateNavMeshSpeed();
+                if (aggressionUI != null)
+                {
+                    if (damageAmount == maximumDamage && defaultSpeed == originaldefaultSpeed + maximumSpeedIncrement)
+                    {
+                        photonView.RPC("RPC_ShowAggressionClaw", RpcTarget.All, 1);
+                    }
+                    else
+                    {
+                        photonView.RPC("RPC_ShowAggressionClaw", RpcTarget.All, 0);
+                    }
+                }
+                
 
                 debugMessages[3] = $"Aggression Increased: DMG={damageAmount}, SPD={defaultSpeed:F2}";
             }
         }
     }
+
+    [PunRPC]
+    public void RPC_ShowAggressionClaw(int tier)
+    {
+        if(tier == 0)
+        {
+            aggressionUI.SetVisibility();
+        }
+        else
+        {
+            aggressionUI.maxAggression();
+        }
+    }
+
 
     IEnumerator WaitForPlayersToInstantiate()
     {
@@ -131,6 +162,27 @@ public class DemonTargetAI1 : MonoBehaviour
 
         PickNewTarget();
     }
+
+    IEnumerator GetAggressionUI()
+    {
+        GameObject uiObj = null;
+
+        // Wait until the object with the tag exists in the scene
+        while (uiObj == null)
+        {
+            uiObj = GameObject.FindGameObjectWithTag("AggressionUI");
+            yield return null;
+        }
+
+        // Now try to get the component
+        aggressionUI = uiObj.GetComponent<Aggression>();
+
+        if (aggressionUI == null)
+        {
+            Debug.LogError("Found 'AggressionUI' object, but it has no Aggression component.");
+        }
+    }
+
 
     void UpdatePlayerList()
     {
