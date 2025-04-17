@@ -44,7 +44,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       photonView = GetComponent<PhotonView>();
+       
 
         if(photonView.IsMine)
         {
@@ -66,6 +66,11 @@ public class PlayerScriptBehaviour : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -84,44 +89,47 @@ public class PlayerScriptBehaviour : MonoBehaviour
     private void SetBools()
     {
 
-        if (photonView.IsMine && hudInstance != null)
+        if (photonView.IsMine)
         {
-            Transform abilitiesPanel = hudInstance.transform.GetChild(0).GetChild(1);
-            ability1Image = abilitiesPanel.GetChild(0).GetChild(0).GetComponent<Image>();
-            ability2Image = abilitiesPanel.GetChild(1).GetChild(0).GetComponent<Image>();
-
-            ability1CDFill = abilitiesPanel.GetChild(0).GetChild(1).GetComponent<Image>();
-            ability2CDFill = abilitiesPanel.GetChild(1).GetChild(1).GetComponent<Image>();
-
-            ability1CDText = abilitiesPanel.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-            ability2CDText = abilitiesPanel.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-
-            UIHolder = hudInstance.transform.GetChild(0).GetComponent<UIBob>();
-            UIHolder.playerController = GetComponent<ThirdPersonController>();
-            UIHolder.playerTransform = gameObject.transform;
-
-            switch (globalClassSelected)
+            if (hudInstance != null)
             {
-                case "Protector":
-                    protector.isProtector = true;
-                    ability1Image.sprite = protectorSprites[0];
-                    ability2Image.sprite = protectorSprites[1];
-                    break;
-                case "Occultist":
-                    occultist.isOccultist = true;
-                    ability1Image.sprite = occultistSprites[0];
-                    ability2Image.sprite = occultistSprites[1];
-                    break;
-                case "Drifter":
-                    drifter.isDrifter = true;
-                    ability1Image.sprite = drifterSprites[0];
-                    ability2Image.sprite = drifterSprites[1];
-                    break;
-                case "Trapper":
-                    trapper.isTrapper = true;
-                    ability1Image.sprite = trapperSprites[0];
-                    ability2Image.sprite = trapperSprites[1];
-                    break;
+                Transform abilitiesPanel = hudInstance.transform.GetChild(0).GetChild(1);
+                ability1Image = abilitiesPanel.GetChild(0).GetChild(0).GetComponent<Image>();
+                ability2Image = abilitiesPanel.GetChild(1).GetChild(0).GetComponent<Image>();
+
+                ability1CDFill = abilitiesPanel.GetChild(0).GetChild(1).GetComponent<Image>();
+                ability2CDFill = abilitiesPanel.GetChild(1).GetChild(1).GetComponent<Image>();
+
+                ability1CDText = abilitiesPanel.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+                ability2CDText = abilitiesPanel.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+
+                UIHolder = hudInstance.transform.GetChild(0).GetComponent<UIBob>();
+                UIHolder.playerController = GetComponent<ThirdPersonController>();
+                UIHolder.playerTransform = gameObject.transform;
+
+                switch (globalClassSelected)
+                {
+                    case "Protector":
+                        protector.isProtector = true;
+                        ability1Image.sprite = protectorSprites[0];
+                        ability2Image.sprite = protectorSprites[1];
+                        break;
+                    case "Occultist":
+                        occultist.isOccultist = true;
+                        ability1Image.sprite = occultistSprites[0];
+                        ability2Image.sprite = occultistSprites[1];
+                        break;
+                    case "Drifter":
+                        drifter.isDrifter = true;
+                        ability1Image.sprite = drifterSprites[0];
+                        ability2Image.sprite = drifterSprites[1];
+                        break;
+                    case "Trapper":
+                        trapper.isTrapper = true;
+                        ability1Image.sprite = trapperSprites[0];
+                        ability2Image.sprite = trapperSprites[1];
+                        break;
+                }
             }
         }
         else
