@@ -37245,6 +37245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Seek the torch and follow the glow, Step just right, the path will show
+  image: {fileID: 0}
 --- !u!1001 &419463969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46110,6 +46111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Nice we all get a flashlight
+  image: {fileID: 0}
 --- !u!1001 &567501854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53839,6 +53841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
+  image: {fileID: 0}
 --- !u!1 &675685978
 GameObject:
   m_ObjectHideFlags: 0
@@ -59761,6 +59764,7 @@ MonoBehaviour:
   dialogueMessage:
   - It seems the key is not engough to open this chest
   - Let us now check the chest
+  image: {fileID: 0}
 --- !u!114 &718218723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65863,6 +65867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Got it, let us try to open the chest now
+  image: {fileID: 0}
 --- !u!114 &760439662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96657,6 +96662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - We need to find a way to unlock this chest
+  image: {fileID: 0}
 --- !u!114 &967024351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103973,6 +103979,7 @@ MonoBehaviour:
   dialogueMessage:
   - Four candles placed, chest surrounded, key will glow, prize unbounded
   - Got it, let us try to open the chest now
+  image: {fileID: 0}
 --- !u!114 &1021488472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104439,7 +104446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1035387159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -105010,6 +105017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
+  image: {fileID: 0}
 --- !u!1 &1044882200
 GameObject:
   m_ObjectHideFlags: 0
@@ -124691,6 +124699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Artifact Obtain
+  image: {fileID: 0}
 --- !u!114 &1238432495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135162,6 +135171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The key will glow to heights you'll go, Reach daring peaks, the prize will show
+  image: {fileID: 0}
 --- !u!1 &1274107922
 GameObject:
   m_ObjectHideFlags: 0
@@ -148649,6 +148659,7 @@ MonoBehaviour:
   dialogueMessage:
   - It's a lock chest, I need to find a way to unlock this I'll place this on the
     table
+  image: {fileID: 0}
 --- !u!1001 &1392030462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174032,6 +174043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
+  image: {fileID: 0}
 --- !u!1001 &1668330075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204159,6 +204171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
+  image: {fileID: 0}
 --- !u!1001 &2095491501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217322,6 +217335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Press 'F' to use flashlight
+  image: {fileID: 0}
 --- !u!65 &1857963653378689753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -271507,6 +271521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You got a Key
+  image: {fileID: 0}
 --- !u!114 &5634532463163987676
 MonoBehaviour:
   m_ObjectHideFlags: 0
