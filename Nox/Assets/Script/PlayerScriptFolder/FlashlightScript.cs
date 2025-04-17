@@ -40,13 +40,20 @@ public class FlashlightScript : MonoBehaviourPun
 
             if (!newState)
             {
-                // Flashlight turned off, unregister from all traps we were viewing
                 foreach (var trap in trapsInView)
                 {
-                    trap.UnregisterViewer(photonView.OwnerActorNr);
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        trap.UnregisterViewer(photonView.OwnerActorNr);
+                    }
+                    else
+                    {
+                        trap.photonView.RPC("RPC_RequestUnregisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
+                    }
                 }
                 trapsInView.Clear();
             }
+
         }
     }
 
@@ -71,22 +78,31 @@ public class FlashlightScript : MonoBehaviourPun
 
                 if (angle <= flashlightAngle / 2f)
                 {
-                    trapsNowVisible.Add(trap);
-                    if (!trapsInView.Contains(trap))
+                    // Line-of-sight check
+                    if (Physics.Raycast(flashlightPosition.position, dirToTrap.normalized, out RaycastHit rayHit, flashlightRange))
                     {
-                        if (PhotonNetwork.IsMasterClient)
+                        if (rayHit.collider.gameObject != hit.gameObject)
+                            continue; 
+
+                        // It's visible and not blocked
+                        trapsNowVisible.Add(trap);
+                        if (!trapsInView.Contains(trap))
                         {
-                            trap.RegisterViewer(photonView.OwnerActorNr);
-                        }
-                        else
-                        {
-                            trap.photonView.RPC("RPC_RequestRegisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
+                            if (PhotonNetwork.IsMasterClient)
+                            {
+                                trap.RegisterViewer(photonView.OwnerActorNr);
+                            }
+                            else
+                            {
+                                trap.photonView.RPC("RPC_RequestRegisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
+                            }
                         }
                     }
                 }
             }
         }
 
+        // Unregister no longer visible traps
         foreach (var trap in trapsInView)
         {
             if (!trapsNowVisible.Contains(trap))
@@ -99,10 +115,10 @@ public class FlashlightScript : MonoBehaviourPun
                 {
                     trap.photonView.RPC("RPC_RequestUnregisterViewer", RpcTarget.MasterClient, photonView.OwnerActorNr);
                 }
-
             }
         }
 
         trapsInView = trapsNowVisible;
     }
+
 }
