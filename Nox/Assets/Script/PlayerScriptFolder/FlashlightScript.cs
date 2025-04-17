@@ -1,102 +1,93 @@
-using System;
 using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FlashlightScript : MonoBehaviourPun
 {
     public PlayerData playerData;
     public GameObject flashlight;
-
     public Transform flashlightPosition;
     public float flashlightRange = 10f;
     public LayerMask trapLayer;
     [Range(1f, 180f)] public float flashlightAngle = 60f;
 
-    private PhotonView PhotonView;
+    [SerializeField] private PhotonView photonView;
+    private HashSet<MonsterTrapAlert> trapsInView = new();
 
     private void Start()
     {
+        photonView = GetComponent<PhotonView>();
         if (!playerData.hasFlashlight)
-        {
             flashlight.SetActive(false);
-        }
     }
 
     private void Update()
     {
-        UseFlashlight();
-        CheckFlashlightHitTrap();
+        if (!photonView.IsMine && PhotonNetwork.IsConnected) return;
+
+        HandleFlashlightToggle();
+        if (flashlight.activeSelf)
+            UpdateTrapVisibility();
     }
 
-    public void UseFlashlight()
+    private void HandleFlashlightToggle()
     {
-        if (photonView.IsMine || !PhotonNetwork.IsConnected)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (playerData.hasFlashlight && Input.GetKeyDown(KeyCode.F))
+            bool newState = !flashlight.activeSelf;
+            flashlight.SetActive(newState);
+            photonView.RPC("SyncFlashlightState", RpcTarget.Others, newState);
+
+            if (!newState)
             {
-                flashlight.SetActive(!flashlight.activeSelf);
-                photonView.RPC("SyncFlashlightState", RpcTarget.Others, flashlight.activeSelf);
+                // Flashlight turned off, unregister from all traps we were viewing
+                foreach (var trap in trapsInView)
+                {
+                    trap.UnregisterViewer(photonView.OwnerActorNr);
+                }
+                trapsInView.Clear();
             }
         }
     }
 
+
     [PunRPC]
-    void SyncFlashlightState(bool state)
+    private void SyncFlashlightState(bool state)
     {
         flashlight.SetActive(state);
     }
 
-    private void CheckFlashlightHitTrap()
+    private void UpdateTrapVisibility()
     {
-        if (flashlight.activeSelf)
+        Collider[] hits = Physics.OverlapSphere(flashlightPosition.position, flashlightRange, trapLayer);
+        HashSet<MonsterTrapAlert> trapsNowVisible = new();
+
+        foreach (var hit in hits)
         {
-            // Calculate the forward direction of the flashlight
-            Vector3 forwardDirection = flashlight.transform.forward;
-
-            // Raycast in the direction of the flashlight's beam to find traps within the cone of light
-            Collider[] hits = Physics.OverlapSphere(flashlightPosition.position, flashlightRange, trapLayer);
-
-            foreach (Collider hit in hits)
+            if (hit.TryGetComponent(out MonsterTrapAlert trap))
             {
-                // Calculate the angle between the flashlight's forward direction and the trap position
-                Vector3 directionToTrap = hit.transform.position - flashlightPosition.position;
-                float angle = Vector3.Angle(forwardDirection, directionToTrap);
+                Vector3 dirToTrap = hit.transform.position - flashlightPosition.position;
+                float angle = Vector3.Angle(flashlight.transform.forward, dirToTrap);
 
-                // Check if the trap is within the flashlight's cone angle
                 if (angle <= flashlightAngle / 2f)
                 {
-                    MonsterTrapAlert trap = hit.GetComponent<MonsterTrapAlert>();
-                    if (trap != null)
+                    trapsNowVisible.Add(trap);
+                    if (!trapsInView.Contains(trap))
                     {
-                        // Set trap visibility to true
-                        trap.SetTrapVisibility(true);
-                    }
-                }
-                else
-                {
-                    // If the trap is outside the flashlight's cone, hide it
-                    MonsterTrapAlert trap = hit.GetComponent<MonsterTrapAlert>();
-                    if (trap != null)
-                    {
-                        trap.SetTrapVisibility(false);
+                        trap.RegisterViewer(photonView.OwnerActorNr);
                     }
                 }
             }
         }
-        else
-        {
-            // If the flashlight is off, make sure all visible traps are hidden
-            HideAllTraps();
-        }
-    }
 
-    private void HideAllTraps()
-    {
-        // Find all traps and set their visibility to false
-        MonsterTrapAlert[] traps = FindObjectsOfType<MonsterTrapAlert>();
-        foreach (MonsterTrapAlert trap in traps)
+        foreach (var trap in trapsInView)
         {
-            trap.SetTrapVisibility(false);
+            if (!trapsNowVisible.Contains(trap))
+            {
+                trap.UnregisterViewer(photonView.OwnerActorNr);
+            }
         }
+
+        trapsInView = trapsNowVisible;
     }
 }

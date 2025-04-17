@@ -5191,6 +5191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   flashlightAngle: 60
+  photonView: {fileID: 0}
 --- !u!114 &492160832062886508
 MonoBehaviour:
   m_ObjectHideFlags: 0

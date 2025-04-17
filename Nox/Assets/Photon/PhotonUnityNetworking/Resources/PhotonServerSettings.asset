@@ -100,6 +100,9 @@ MonoBehaviour:
   - RPC_ShowAggressionClaw
   - PlayAudio
   - RPC_SetTrapVisibility
+  - PlayAudioByIndex
+  - PlayAudioByName
+  - PlayDefaultAudio
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

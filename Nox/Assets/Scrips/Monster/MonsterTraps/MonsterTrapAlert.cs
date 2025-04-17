@@ -1,12 +1,11 @@
 using Photon.Pun;
 using StarterAssets;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MonsterTrapAlert : MonoBehaviourPun
 {
-    private PhotonView photonView;
-
     [Header("Trap Kind")]
     [SerializeField] private bool isSoundTrap;
     [SerializeField] private bool isDamageTrap;
@@ -25,16 +24,12 @@ public class MonsterTrapAlert : MonoBehaviourPun
     public float visibilityAngle = 60f;
 
     [SerializeField] private UnityEvent onSoundTrapTrigger;
-    private bool isCurrentlyVisible = false;
 
-    private void Start()
-    {
-        
-    }
+    private readonly HashSet<int> viewers = new(); // Track which players are looking
+    private bool isVisible = false;
 
     private void Awake()
     {
-        photonView = GetComponent<PhotonView>();
         if (trapRenderer == null)
             trapRenderer = GetComponentInChildren<Renderer>();
     }
@@ -47,17 +42,12 @@ public class MonsterTrapAlert : MonoBehaviourPun
         {
             var enemy = GameObject.FindGameObjectWithTag("Enemy");
             var demonAI = enemy?.GetComponent<DemonTargetAI1>();
-            if (demonAI != null)
-            {
-                demonAI.RequestSoundAlert(gameObject);
-                onSoundTrapTrigger?.Invoke();
-            }
+            demonAI?.RequestSoundAlert(gameObject);
+            onSoundTrapTrigger?.Invoke();
         }
 
         if (isDamageTrap && other.TryGetComponent<PlayerHealth>(out var playerHealth))
-        {
             playerHealth.TakeDamage(damage);
-        }
 
         if (isSlowTrap && other.TryGetComponent<ThirdPersonController>(out var controller))
         {
@@ -66,18 +56,27 @@ public class MonsterTrapAlert : MonoBehaviourPun
         }
     }
 
-    public void SetTrapVisibility(bool isVisible)
+    public void RegisterViewer(int actorNumber)
     {
-        if (isVisible == isCurrentlyVisible) return;
-        isCurrentlyVisible = isVisible;
-        photonView.RPC("RPC_SetTrapVisibility", RpcTarget.All, isVisible);
-       
+        if (viewers.Add(actorNumber) && viewers.Count == 1)
+        {
+            photonView.RPC(nameof(RPC_SetTrapVisibility), RpcTarget.All, true);
+        }
+    }
+
+    public void UnregisterViewer(int actorNumber)
+    {
+        if (viewers.Remove(actorNumber) && viewers.Count == 0)
+        {
+            photonView.RPC(nameof(RPC_SetTrapVisibility), RpcTarget.All, false);
+        }
     }
 
     [PunRPC]
-    private void RPC_SetTrapVisibility(bool isVisible)
+    private void RPC_SetTrapVisibility(bool visible)
     {
+        isVisible = visible;
         if (trapRenderer != null)
-            trapRenderer.enabled = isVisible;
+            trapRenderer.enabled = visible;
     }
 }
