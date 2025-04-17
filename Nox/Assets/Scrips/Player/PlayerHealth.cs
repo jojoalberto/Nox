@@ -104,13 +104,15 @@ public class PlayerHealth : MonoBehaviourPun
         }
 
         currentHealth -= damageAmount;
-        if (currentHealth <= 0) GoToPurgatory();
+        
 
         if (photonView.IsMine)
         {
             healthBar.UpdateHealth();
             FlashVignette(damageColor);
             CheckLowHealthEffect();
+
+            if (currentHealth <= 0) PlayerDies();
         }
     }
 
@@ -154,14 +156,15 @@ public class PlayerHealth : MonoBehaviourPun
         temporaryHealth = 0;
     }
 
-    [PunRPC]
-    private void GoToPurgatory()
+    private void PlayerDies()
     {
-        if (purgatoryLocation == null)
-            purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory")?.transform;
+        //if (purgatoryLocation == null)
+        //    purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory")?.transform;
 
-        if (purgatoryLocation != null)
-            transform.position = purgatoryLocation.position;
+        //if (purgatoryLocation != null)
+        //    transform.position = purgatoryLocation.position;
+
+        Debug.Log(gameObject.name + " DIED LOL");
     }
 
     private void FlashVignette(Color color)
