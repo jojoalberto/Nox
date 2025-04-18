@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
   m_Name: PuzzleAKey
   m_EditorClassIdentifier: 
-  itemID: 05
   itemName: Key
   description: key for Puzzle A chest
-  image: {fileID: -7343220986905845580, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
   isFlashlight: 0
   isCandle: 0
