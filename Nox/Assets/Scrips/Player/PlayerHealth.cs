@@ -36,28 +36,26 @@ public class PlayerHealth : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
+            SetPlayerHealth(); // ONLY the owner uses PlayerData
             StartCoroutine(WaitForHUDAndSetHealth());
         }
-        else
-        {
-            SetPlayerHealth();
-        }
 
-        if (postProcessingVolume != null )
+        if (postProcessingVolume != null)
         {
-            if(postProcessingVolume.profile.TryGet(out Vignette v))
+            if (postProcessingVolume.profile.TryGet(out Vignette v))
             {
                 vignette = v;
                 vignette.intensity.value = 0f;
                 vignette.color.value = damageColor;
             }
-            if(postProcessingVolume.profile.TryGet(out ColorAdjustments ca))
+            if (postProcessingVolume.profile.TryGet(out ColorAdjustments ca))
             {
                 colorAdjustments = ca;
                 colorAdjustments.saturation.value = 0f;
             }
         }
     }
+
 
     private IEnumerator WaitForHUDAndSetHealth()
     {
@@ -83,6 +81,7 @@ public class PlayerHealth : MonoBehaviourPun
     {
         totalHealth = playerData.GetTotalHealth();
         currentHealth = totalHealth;
+        SyncHealthWithOthers();
     }
 
     public void TakeDamage(int damageAmount)
@@ -252,8 +251,9 @@ public class PlayerHealth : MonoBehaviourPun
         this.totalHealth = totalHealth;
         this.currentHealth = currentHealth;
 
-        // Update health bar and effects
-        if (photonView.IsMine)
+        Debug.Log($"{photonView.Owner.NickName} synced health: {currentHealth}/{totalHealth}");
+
+        if (photonView.IsMine && healthBar != null)
         {
             healthBar.SetMaxHealth();
             healthBar.UpdateHealth();
