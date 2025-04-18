@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Photon.Pun;
 using UnityEngine;
@@ -15,7 +14,7 @@ public class PlayerHealth : MonoBehaviourPun
     public float temporaryHealthDecay = 1f;
     public bool invulnerability = false;
 
-    public Transform respawnLocation;
+    public Transform purgatoryLocation;
 
     private Coroutine tempHealthCoroutine;
 
@@ -33,20 +32,12 @@ public class PlayerHealth : MonoBehaviourPun
     private ColorAdjustments colorAdjustments;
     private bool isBlackAndWhite = false;
 
-    public float respawnDelay = 10f;
-    private bool isDead = false;
-
     void Start()
     {
         if (photonView.IsMine)
         {
             SetPlayerHealth(); // ONLY the owner uses PlayerData
             StartCoroutine(WaitForHUDAndSetHealth());
-        }
-
-        if (respawnLocation == null)
-        {
-            respawnLocation = GameObject.FindGameObjectWithTag("Respawn")?.transform;
         }
 
         if (postProcessingVolume != null)
@@ -174,78 +165,13 @@ public class PlayerHealth : MonoBehaviourPun
 
     private void PlayerDies()
     {
-        if (!photonView.IsMine) return;
+        //if (purgatoryLocation == null)
+        //    purgatoryLocation = GameObject.FindGameObjectWithTag("Purgatory")?.transform;
+
+        //if (purgatoryLocation != null)
+        //    transform.position = purgatoryLocation.position;
 
         Debug.Log(gameObject.name + " DIED LOL");
-        isDead = true;
-        StartCoroutine(SpectateAndRespawn());
-
-    }
-
-    private IEnumerator SpectateAndRespawn()
-    {
-        photonView.RPC("RPC_DisablePlayer", RpcTarget.All);
-
-        yield return new WaitForSeconds(respawnDelay);
-
-        RespawnPlayer();
-
-    }
-
-    private void RespawnPlayer()
-    {
-        if (respawnLocation == null)
-        {
-            respawnLocation = GameObject.FindGameObjectWithTag("Respawn")?.transform;
-        }
-
-        if (respawnLocation != null)
-        {
-            transform.position = respawnLocation.position;
-        }
-        else
-        {
-            Debug.LogWarning("Respawn location not found!");
-        }
-
-        photonView.RPC("RPC_EnablePlayer", RpcTarget.All);
-
-        if (photonView.IsMine)
-        {
-            SetPlayerHealth(); // Resets health
-            currentHealth = totalHealth;
-            isDead = false;
-
-            healthBar.UpdateHealth();
-        }
-        
-
-        FlashVignette(healColor);
-        CheckLowHealthEffect();
-
-        Debug.Log($"{gameObject.name} respawned.");
-
-        GameObject demon = GameObject.FindWithTag("Enemy");
-        if (demon != null)
-        {
-            PhotonView demonView = demon.GetComponent<PhotonView>();
-            if (demonView != null)
-            {
-                demonView.RPC("RPC_AddPlayer", RpcTarget.MasterClient, photonView.ViewID);
-            }
-        }
-    }
-
-    [PunRPC]
-    private void RPC_DisablePlayer()
-    {
-        playerScriptBehaviour.DisablePlayer();
-    }
-
-    [PunRPC]
-    private void RPC_EnablePlayer()
-    {
-        playerScriptBehaviour.EnablePlayer();
     }
 
     private void FlashVignette(Color color)

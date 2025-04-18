@@ -107,9 +107,6 @@ MonoBehaviour:
   - RPC_RequestUnregisterViewer
   - ShowItemDialogueRPC
   - RPC_SyncHealth
-  - RPC_AddPlayer
-  - RPC_DisablePlayer
-  - RPC_EnablePlayer
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 using System.Collections;
@@ -461,8 +461,6 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
-        if (isFrozen || isBound) yield break;
-
         isAttacking = true;
 
         if (chaseCoroutine != null)
@@ -662,9 +660,7 @@ public class DemonTargetAI1 : MonoBehaviour
         UpdateNavMeshSpeed();
         yield return new WaitForSeconds(duration);
         isFrozen = false;
-        UpdateNavMeshSpeed(); // ← Add this
     }
-
 
 
     private void UpdateNavMeshSpeed()
@@ -763,9 +759,6 @@ public class DemonTargetAI1 : MonoBehaviour
     public void RPC_StartChasing(int targetViewID)
     {
         PhotonView targetView = PhotonView.Find(targetViewID);
-        if (currentTarget == targetView.transform && isChasingPlayer)
-            return;
-
         if (targetView == null) return;
 
         currentTarget = targetView.transform;
@@ -783,23 +776,5 @@ public class DemonTargetAI1 : MonoBehaviour
         Debug.Log("Demon has started chasing the player!");
     }
 
-    [PunRPC]
-    public void RPC_AddPlayer(int playerViewID)
-    {
-        PhotonView view = PhotonView.Find(playerViewID);
-        if (view != null && view.transform != null)
-        {
-            AddPlayer(view.transform);
-        }
-    }
-
-    public void AddPlayer(Transform player)
-    {
-        if (!players.Contains(player))
-        {
-            players.Add(player);
-            debugMessages[2] = $"Added player {player.name} to tracking list.";
-        }
-    }
 
 }

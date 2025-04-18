@@ -3645,6 +3645,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1776573877008095890}
+  - component: {fileID: 98185515386256293}
+  - component: {fileID: 2864870933584541186}
   - component: {fileID: 2554918960925083798}
   - component: {fileID: -7358331633586837644}
   m_Layer: 0
@@ -3672,6 +3674,45 @@ Transform:
   - {fileID: 1110090078267175653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &98185515386256293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911323217924822332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 2864870933584541186}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2864870933584541186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911323217924822332}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!114 &2554918960925083798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5124,13 +5165,12 @@ MonoBehaviour:
   temporaryHealth: 0
   temporaryHealthDecay: 1
   invulnerability: 0
-  respawnLocation: {fileID: 0}
+  purgatoryLocation: {fileID: 0}
   playerScriptBehaviour: {fileID: 6117700120783235675}
   healthBar: {fileID: 0}
   postProcessingVolume: {fileID: 8495064229218988537}
   damageColor: {r: 0.39215687, g: 0.009825237, b: 0, a: 1}
   healColor: {r: 0, g: 0.39215687, b: 0, a: 1}
-  respawnDelay: 10
 --- !u!114 &9036687969454709197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5216,7 +5256,6 @@ MonoBehaviour:
   ability1CD: 0
   ability2CD: 0
   UIHolder: {fileID: 0}
-  usernameCanvas: {fileID: 2448140359336260765}
 --- !u!114 &7001537754630203479
 MonoBehaviour:
   m_ObjectHideFlags: 0
