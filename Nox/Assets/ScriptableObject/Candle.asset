@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
   m_Name: Candle
   m_EditorClassIdentifier: 
+  itemID: 07
   itemName: Candle
-  description: candlePuzzleA
-  isFlashlight: 0
-  isCandle: 1
+  image: {fileID: -1869673367297931309, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
+  itemType: 2
+  keyID: 

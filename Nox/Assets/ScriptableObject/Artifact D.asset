@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea3ac4652ddc18f47882e48841864dde, type: 3}
-  m_Name: ClueInventory
+  m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
+  m_Name: Artifact D
   m_EditorClassIdentifier: 
-  clueItems: []
+  itemID: 11
+  itemName: ArtifactD
+  image: {fileID: 0}
+  itemType: 4
+  keyID: 0

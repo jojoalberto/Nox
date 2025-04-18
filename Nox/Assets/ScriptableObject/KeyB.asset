@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
-  m_Name: PuzzleAKey
+  m_Name: KeyB
   m_EditorClassIdentifier: 
-  itemID: 02
-  itemName: Key
-  description: key for Puzzle A chest
-  image: {fileID: 0}
-  isFlashlight: 0
-  isCandle: 0
-  isKey: 0
-  keyID: 0
+  itemID: 05
+  itemName: Key B
+  image: {fileID: 1578094316, guid: 395be64ecc653f342a68ce3aeab5c997, type: 3}
+  itemType: 1
+  keyID: 1

@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<ClueItemSO> items = new List<ClueItemSO>();
     public List<ClueItemSO> artifact = new List<ClueItemSO>();
+    public List<ClueItemSO> keys = new List<ClueItemSO>();
     //public Transform inventoryUIParent; 
     //public GameObject inventorySlotPrefab; 
 
@@ -32,7 +33,11 @@ public class InventoryManager : MonoBehaviour
         artifact.Add(newItem);
         //UpdateInventoryUI();
     }
-
+    public void AddKey(ClueItemSO newItem)
+    {
+        keys.Add(newItem);
+        //UpdateInventoryUI();
+    }
 
     //void UpdateInventoryUI()
     //{

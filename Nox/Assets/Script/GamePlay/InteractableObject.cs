@@ -20,7 +20,10 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     {
 
         dialogueMessage = this.gameObject.GetComponent<DialogueMessage>();
-        gameObject.AddComponent<PhotonTransformView>();
+        if (!gameObject.TryGetComponent(out PhotonTransformView transformView))
+        {
+            gameObject.AddComponent<PhotonTransformView>();
+        }
         if (gameObject.TryGetComponent(out PhotonView cPhotonView))
         {
             Debug.Log("PhotonView found on " + gameObject.name);
@@ -33,7 +36,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
         if (gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)
         {
@@ -105,7 +108,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    void ShowDialogueRPC(string message)
+    public void ShowDialogueRPC(string message)
     {
         if (dialogueManager != null)
         {

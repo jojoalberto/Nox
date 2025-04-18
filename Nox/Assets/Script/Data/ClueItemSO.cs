@@ -1,12 +1,20 @@
 using UnityEngine;
+public enum ClueItemType
+{
+    General,
+    Key,
+    Candle,
+    Flashlight,
+    Artifact
+}
 
 [CreateAssetMenu(fileName = "NewClueItem", menuName = "Inventory/Clue Item")]
 public class ClueItemSO : ScriptableObject
 {
     public string itemID;
     public string itemName;
-    public string description;
     public Sprite image;
-    public bool isFlashlight;
-    public bool isCandle;
+    public ClueItemType itemType;
+    [Tooltip("Only used if item is a Key")]
+    public string keyID;
 }

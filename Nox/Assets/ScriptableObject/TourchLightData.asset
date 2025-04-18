@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 01
   itemName: Tourch Light
-  description: Puzzle A Clue
   image: {fileID: -2794259043635821732, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
-  isFlashlight: 1
-  isCandle: 0
+  itemType: 3
+  keyID: 0
