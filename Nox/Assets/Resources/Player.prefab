@@ -5165,12 +5165,13 @@ MonoBehaviour:
   temporaryHealth: 0
   temporaryHealthDecay: 1
   invulnerability: 0
-  purgatoryLocation: {fileID: 0}
+  respawnLocation: {fileID: 0}
   playerScriptBehaviour: {fileID: 6117700120783235675}
   healthBar: {fileID: 0}
   postProcessingVolume: {fileID: 8495064229218988537}
   damageColor: {r: 0.39215687, g: 0.009825237, b: 0, a: 1}
   healColor: {r: 0, g: 0.39215687, b: 0, a: 1}
+  respawnDelay: 10
 --- !u!114 &9036687969454709197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5256,6 +5257,7 @@ MonoBehaviour:
   ability1CD: 0
   ability2CD: 0
   UIHolder: {fileID: 0}
+  usernameCanvas: {fileID: 2448140359336260765}
 --- !u!114 &7001537754630203479
 MonoBehaviour:
   m_ObjectHideFlags: 0

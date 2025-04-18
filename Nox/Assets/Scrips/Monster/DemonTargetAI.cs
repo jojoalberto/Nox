@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 using System.Collections;
@@ -10,7 +10,7 @@ using Photon.Pun;
 public class DemonTargetAI1 : MonoBehaviour
 {
     private Coroutine tauntCoroutine;
-    private enum SpeedState { Idle, ChasingFresh, ChasingTired}
+    private enum SpeedState { Idle, ChasingFresh, ChasingTired }
     private SpeedState currentSpeedState = SpeedState.Idle;
 
     private Transform pendingAlertTarget = null;
@@ -89,13 +89,13 @@ public class DemonTargetAI1 : MonoBehaviour
 
         StartCoroutine(GetAggressionUI());
         StartCoroutine(Aggression());
-        
+
     }
 
     IEnumerator Aggression()
     {
         WaitForSeconds wait = new WaitForSeconds(rate);
-        
+
 
         while (true)
         {
@@ -131,7 +131,7 @@ public class DemonTargetAI1 : MonoBehaviour
                         photonView.RPC("RPC_ShowAggressionClaw", RpcTarget.All, 0);
                     }
                 }
-                
+
 
                 debugMessages[3] = $"Aggression Increased: DMG={damageAmount}, SPD={defaultSpeed:F2}";
             }
@@ -141,7 +141,7 @@ public class DemonTargetAI1 : MonoBehaviour
     [PunRPC]
     public void RPC_ShowAggressionClaw(int tier)
     {
-        if(tier == 0)
+        if (tier == 0)
         {
             aggressionUI.SetVisibility();
         }
@@ -461,6 +461,8 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
+        if (isFrozen || isBound) yield break;
+
         isAttacking = true;
 
         if (chaseCoroutine != null)
@@ -660,7 +662,9 @@ public class DemonTargetAI1 : MonoBehaviour
         UpdateNavMeshSpeed();
         yield return new WaitForSeconds(duration);
         isFrozen = false;
+        UpdateNavMeshSpeed(); // ← Add this
     }
+
 
 
     private void UpdateNavMeshSpeed()
@@ -759,6 +763,9 @@ public class DemonTargetAI1 : MonoBehaviour
     public void RPC_StartChasing(int targetViewID)
     {
         PhotonView targetView = PhotonView.Find(targetViewID);
+        if (currentTarget == targetView.transform && isChasingPlayer)
+            return;
+
         if (targetView == null) return;
 
         currentTarget = targetView.transform;
@@ -776,5 +783,23 @@ public class DemonTargetAI1 : MonoBehaviour
         Debug.Log("Demon has started chasing the player!");
     }
 
+    [PunRPC]
+    public void RPC_AddPlayer(int playerViewID)
+    {
+        PhotonView view = PhotonView.Find(playerViewID);
+        if (view != null && view.transform != null)
+        {
+            AddPlayer(view.transform);
+        }
+    }
+
+    public void AddPlayer(Transform player)
+    {
+        if (!players.Contains(player))
+        {
+            players.Add(player);
+            debugMessages[2] = $"Added player {player.name} to tracking list.";
+        }
+    }
 
 }

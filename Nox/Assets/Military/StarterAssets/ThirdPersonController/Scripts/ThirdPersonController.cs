@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -135,9 +136,16 @@ namespace StarterAssets
         public float runSoundThreshold = 10f;
         private float lastChaseRequestTime = -999f;
         public float chaseRequestCooldown = 2f;
+        private PhotonView photonView;
 
         private void Awake()
         {
+            photonView = GetComponent<PhotonView>();
+            if (!photonView.IsMine)
+            {
+                this.enabled = false;
+
+            }
             // get a reference to our main camera
             if (_mainCamera == null)
             {
@@ -150,7 +158,7 @@ namespace StarterAssets
             demonTargetAI1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<DemonTargetAI1>();
 
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -254,7 +262,7 @@ namespace StarterAssets
             {
                 CheckForDemon();
 
-                
+
             }
 
             _animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
@@ -387,7 +395,7 @@ namespace StarterAssets
 
             // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
             Gizmos.DrawSphere(
-                new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
+            new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
         }
 

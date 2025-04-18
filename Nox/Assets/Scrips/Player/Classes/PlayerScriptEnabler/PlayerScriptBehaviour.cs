@@ -41,12 +41,14 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
     public UIBob UIHolder;
 
+    [SerializeField] private GameObject usernameCanvas;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
 
-        if(photonView.IsMine)
+
+        if (photonView.IsMine)
         {
             if (playerData == null)
             {
@@ -63,7 +65,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
             }
         }
-        
+
     }
 
     private void Awake()
@@ -74,7 +76,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     [PunRPC]
@@ -243,6 +245,39 @@ public class PlayerScriptBehaviour : MonoBehaviour
             yield return new WaitForSeconds(flashDuration);
             abilityIcon.color = originalColor;
             yield return new WaitForSeconds(flashDuration);
+        }
+    }
+
+    public void DisablePlayer()
+    {
+
+        GetComponent<ThirdPersonController>().enabled = false;
+        GetComponent<CharacterController>().enabled = false;
+
+        foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            smr.enabled = false;
+        }
+
+        if (usernameCanvas != null)
+        {
+            usernameCanvas.SetActive(false);
+        }
+    }
+
+    public void EnablePlayer()
+    {
+        GetComponent<ThirdPersonController>().enabled = true;
+        GetComponent<CharacterController>().enabled = true;
+
+        foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            smr.enabled = true;
+        }
+
+        if (usernameCanvas != null)
+        {
+            usernameCanvas.SetActive(true);
         }
     }
 
