@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dd32829a7f14424999a873d6f05d109, type: 3}
-  m_Name: Artifact
+  m_Name: RoomBKey
   m_EditorClassIdentifier: 
-  itemID: 06
-  itemName: ArtifactA
-  description: puzzle A artifact
-  image: {fileID: 2586379074099917112, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
+  itemID: 03
+  itemName: Key B
+  description: Room B Key
+  image: {fileID: 1133572751, guid: 395be64ecc653f342a68ce3aeab5c997, type: 3}
   isFlashlight: 0
   isCandle: 0

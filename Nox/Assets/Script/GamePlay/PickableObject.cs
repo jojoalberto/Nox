@@ -1,11 +1,13 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class PickableObject : MonoBehaviourPun
 {
     public UnityEvent onPickup;
     public ClueItemSO itemData;
+    public List<ClueItemSO> otherItemData;
     [SerializeField]
     private PlayerData playerData;
     private InteractableObject interactableObject;
@@ -53,8 +55,15 @@ public class PickableObject : MonoBehaviourPun
             {
                 InventoryManager.Instance.AddItem(itemData);
             }
-                
-            onPickup.Invoke();
+            if (otherItemData != null)
+            {
+                for (int i = 0; i < otherItemData.Count; i++)
+                {
+                    InventoryManager.Instance.AddItem(otherItemData[i]);
+                }
+            }
+
+                onPickup.Invoke();
             //Destroy(gameObject); 
         }
     }
