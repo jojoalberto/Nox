@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -135,9 +136,16 @@ namespace StarterAssets
         public float runSoundThreshold = 10f;
         private float lastChaseRequestTime = -999f;
         public float chaseRequestCooldown = 2f;
+        private PhotonView photonView;
 
         private void Awake()
         {
+            photonView = GetComponent<PhotonView>();
+            if (!photonView.IsMine)
+            {
+                this.enabled = false;
+
+            }
             // get a reference to our main camera
             if (_mainCamera == null)
             {
