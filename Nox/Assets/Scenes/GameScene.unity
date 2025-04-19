@@ -209890,6 +209890,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 175989295627730242}
   - {fileID: 732385594352614962}
   m_Father: {fileID: 1704144713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219346,7 +219347,7 @@ Transform:
   m_GameObject: {fileID: 7589732808102707811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4180012, y: -2.4577, z: 2.4799995}
+  m_LocalPosition: {x: 1.917, y: -2.4577, z: 2.4799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -219355,7 +219356,7 @@ Transform:
   - {fileID: 508055470821674279}
   - {fileID: 1859113936263843421}
   - {fileID: 8951522577117331670}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 2024299943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &179088379928844164
 MeshFilter:
@@ -355374,7 +355375,6 @@ Transform:
   - {fileID: 2392622856953927023}
   - {fileID: 8889816333959524441}
   - {fileID: 4901565311069079701}
-  - {fileID: 175989295627730242}
   - {fileID: 6294014727571879979}
   - {fileID: 989479830498125846}
   - {fileID: 7589984572493862919}
@@ -469420,13 +469420,86 @@ GameObject:
   - component: {fileID: 175989295627730242}
   - component: {fileID: 454439669975702768}
   - component: {fileID: 7168096742957296762}
+  - component: {fileID: 7589732808102707815}
+  - component: {fileID: 7589732808102707814}
+  - component: {fileID: 7589732808102707813}
+  - component: {fileID: 7589732808102707812}
   m_Layer: 0
-  m_Name: SM_VinylDisc (8)
+  m_Name: RealVinylDisc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7589732808102707812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589732808102707811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - there are blood on this Vinyl
+  image: {fileID: 0}
+--- !u!65 &7589732808102707813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589732808102707811}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.41322014, y: 1.1710492, z: 0.5974598}
+  m_Center: {x: 0.049983636, y: 0.5830229, z: -0.008345604}
+--- !u!114 &7589732808102707814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589732808102707811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  itemData: {fileID: 11400000, guid: 1c56263864c27d045805ecfc8ae83292, type: 2}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+--- !u!114 &7589732808102707815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589732808102707811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject:
+  - {fileID: 7589732808102707811}
+  enableObject: []
 --- !u!4 &7589984572493862919
 Transform:
   m_ObjectHideFlags: 0
