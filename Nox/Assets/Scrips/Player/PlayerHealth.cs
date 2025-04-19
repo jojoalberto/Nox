@@ -201,7 +201,8 @@ public class PlayerHealth : MonoBehaviourPun
 
         if (respawnLocation != null)
         {
-            transform.position = respawnLocation.position;
+            Vector3 pos = respawnLocation.position;
+            photonView.RPC("RPC_RespawnPosition", RpcTarget.All, pos);
         }
         else
         {
@@ -246,6 +247,29 @@ public class PlayerHealth : MonoBehaviourPun
     private void RPC_EnablePlayer()
     {
         playerScriptBehaviour.EnablePlayer();
+    }
+
+    [PunRPC]
+    void RPC_RespawnPosition(Vector3 newPos)
+    {
+        //transform.position = newPos;
+
+        var photonTransform = GetComponent<PhotonTransformView>();
+        if (photonTransform != null)
+            photonTransform.enabled = false;
+
+        transform.position = newPos;
+
+        // Reactivate sync shortly after
+        StartCoroutine(ReenableTransformSync());
+    }
+
+    IEnumerator ReenableTransformSync()
+    {
+        yield return new WaitForSeconds(0.1f); // wait 1 frame or so
+        var photonTransform = GetComponent<PhotonTransformView>();
+        if (photonTransform != null)
+            photonTransform.enabled = true;
     }
 
     private void FlashVignette(Color color)
