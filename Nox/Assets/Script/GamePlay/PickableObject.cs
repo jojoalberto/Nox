@@ -59,7 +59,7 @@ public class PickableObject : MonoBehaviourPun
                 PlayerInventory inventory = playerObj.GetComponent<PlayerInventory>();
                 if (inventory != null)
                 {
-                    inventory.PickupVinyl(itemData, DialogueManager.Instance,gameObject.GetComponent<DialogueMessage>());
+                    inventory.PickupVinyl(this.gameObject,itemData, DialogueManager.Instance,gameObject.GetComponent<DialogueMessage>());
                 }
                 break;
             case ClueItemType.FakeVinyl:

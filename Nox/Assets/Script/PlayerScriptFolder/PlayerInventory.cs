@@ -13,12 +13,13 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
     }
 
     public bool IsHoldingVinyl() => heldVinyl != null;
-    public void PickupVinyl(ClueItemSO vinyl, DialogueManager dialogueManager, DialogueMessage vinylDialogueMessage)
+    public void PickupVinyl(GameObject gameobject,ClueItemSO vinyl, DialogueManager dialogueManager, DialogueMessage vinylDialogueMessage)
     {
-        if (heldVinyl == null && vinyl.itemType == ClueItemType.Vinyl) // or ClueItemType.Vinyl
+        if (heldVinyl == null && vinyl.itemType == ClueItemType.Vinyl) 
         {
             heldVinyl = vinyl;
             Debug.Log("Picked up: " + vinyl.name);
+            gameobject.SetActive(false);
         }
         else
         {
@@ -26,6 +27,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
             if (dialogueManager != null)
             {
                 dialogueManager.ShowDialogue(vinylDialogueMessage.GetDialogueMessage(1));
+
             }
 
         }
