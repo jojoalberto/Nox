@@ -52,10 +52,17 @@ public class PickableObject : MonoBehaviourPun
                 break;
             case ClueItemType.Vinyl:
                 InventoryManager.Instance.AddVinyl(itemData);
+                GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+                Debug.Log(playerObj + " player object tag");
+                if (playerObj == null) return;
+
+                PlayerInventory inventory = playerObj.GetComponent<PlayerInventory>();
+                if (inventory != null)
+                {
+                    inventory.PickupVinyl(itemData, DialogueManager.Instance,gameObject.GetComponent<DialogueMessage>());
+                }
                 break;
             case ClueItemType.FakeVinyl:
-                //add fake vinyl
-                break;
 
             default: // General or any unspecified type
                 InventoryManager.Instance.AddItem(itemData);

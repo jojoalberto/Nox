@@ -3742,6 +3742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: e60d8d88ef36c8c478b34b95efee50e8, type: 2}
+  heldVinyl: {fileID: 0}
 --- !u!1 &8183459590890790225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,6 +5147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: e60d8d88ef36c8c478b34b95efee50e8, type: 2}
+  heldVinyl: {fileID: 0}
 --- !u!114 &4407479906219040308
 MonoBehaviour:
   m_ObjectHideFlags: 0
