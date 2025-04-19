@@ -14,15 +14,6 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
         }
     }
 
-    public void AddKey(string keyID)
-    {
-        if (inventory != null && !string.IsNullOrEmpty(keyID))
-        {
-            inventory.AddKey(keyID); // Adds key to the inventory (consider implementing this in your InventorySO)
-            photonView.RPC("SyncKeys", RpcTarget.AllBuffered, keyID);  // Sync keys across all players
-        }
-    }
-
     [PunRPC]
     void SyncInventory(string itemName)
     {
@@ -33,16 +24,6 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
         }
     }
 
-    [PunRPC]
-    void SyncKeys(string keyID)
-    {
-        if (!string.IsNullOrEmpty(keyID) && !inventory.keyIDs.Contains(keyID))
-        {
-            inventory.AddKey(keyID);  // Ensure key is added across all players
-        }
-    }
-    public bool HasKey(int keyID)
-    {
-        return inventory.keyIDs.Contains(keyID.ToString());  // Assuming keys are stored as strings
-    }
+
+
 }

@@ -15,7 +15,7 @@ public class PickableKey : PickableObject
                 PlayerInventory inventory = playerObj.GetComponent<PlayerInventory>();
                 if (inventory != null)
                 {
-                    inventory.AddKey(itemData.keyID);
+                    
                 }
             }
         }

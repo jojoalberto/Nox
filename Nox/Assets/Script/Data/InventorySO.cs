@@ -14,6 +14,10 @@ public class InventorySO : ScriptableObject
             clueItems.Add(item);
         }
     }
+    public void ClearInventory()
+    {
+        clueItems.Clear();
+    }
 
     public void AddKey(string keyID)
     {
@@ -26,5 +30,10 @@ public class InventorySO : ScriptableObject
     public bool HasKey(string keyID)
     {
         return keyIDs.Contains(keyID);  // Check if a particular key is in the list
+    }
+
+    public List<ClueItemSO> GetClueItemSO()
+    {
+        return clueItems;
     }
 }

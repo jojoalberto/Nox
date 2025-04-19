@@ -1150,6 +1150,7 @@ MonoBehaviour:
   items: []
   artifact: []
   keys: []
+  vinyl: []
 --- !u!1001 &40195113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163151,7 +163152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b4da17454aea64e8892cd3ab52d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
@@ -177352,7 +177353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b4da17454aea64e8892cd3ab52d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
@@ -323672,7 +323673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b4da17454aea64e8892cd3ab52d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
@@ -462962,7 +462963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b4da17454aea64e8892cd3ab52d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}

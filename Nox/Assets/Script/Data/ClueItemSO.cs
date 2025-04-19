@@ -6,7 +6,8 @@ public enum ClueItemType
     Candle,
     Flashlight,
     Artifact,
-    Vinyl
+    Vinyl,
+    FakeVinyl
 }
 
 [CreateAssetMenu(fileName = "NewClueItem", menuName = "Inventory/Clue Item")]
