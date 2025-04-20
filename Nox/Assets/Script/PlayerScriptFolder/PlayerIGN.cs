@@ -29,7 +29,6 @@ public class PlayerIGN : MonoBehaviourPun
         if (photonView.IsMine)
         {
             photonView.RPC("SetNickname", RpcTarget.AllBuffered, PhotonNetwork.NickName);
-            PhotonNetwork.LocalPlayer.TagObject = this.gameObject;
         }
         else
         {
