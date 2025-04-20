@@ -7,7 +7,7 @@ public class DoorInteraction : InteractableObject
     public ClueItemSO keyID;
     public Animator doorAnimator;
     private bool isOpen = false;
-    private DialogueMessage dialogueMessage;
+    private DialogueMessage dialogueMessages;
 
     public override void Interact()
     {
@@ -21,8 +21,8 @@ public class DoorInteraction : InteractableObject
         }
         else
         {
-            dialogueMessage = this.gameObject.GetComponent<DialogueMessage>();
-            photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0));
+            dialogueMessages = this.gameObject.GetComponent<DialogueMessage>();
+            photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessages.GetDialogueMessage(0));
         }
     }
 
