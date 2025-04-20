@@ -260,7 +260,16 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
         Animator animator = GetComponentInChildren<Animator>();
         if (animator != null)
-            animator.enabled = false;
+        {
+            // 1) Never pause for culling
+            animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+
+            // 2) Rebind wipes & rebuilds the state graph
+            animator.Rebind();
+
+            // 3) Kick the machine forward one tick
+            animator.Update(0f);
+        }
 
         foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
