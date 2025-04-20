@@ -153,6 +153,12 @@ namespace StarterAssets
             }
         }
 
+        private void OnEnable()
+        {
+            _hasAnimator = TryGetComponent(out _animator);
+            AssignAnimationIDs();
+        }
+
         private void Start()
         {
             demonTargetAI1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<DemonTargetAI1>();

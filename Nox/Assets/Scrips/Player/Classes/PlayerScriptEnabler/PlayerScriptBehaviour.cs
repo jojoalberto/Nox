@@ -250,26 +250,19 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
     public void DisablePlayer()
     {
-
-        GetComponent<ThirdPersonController>().enabled = false;
-        GetComponent<CharacterController>().enabled = false;
-        protector.enabled = false;
-        occultist.enabled = false;
-        drifter.enabled = false;
-        trapper.enabled = false;
-
-        Animator animator = GetComponentInChildren<Animator>();
-        if (animator != null)
+        if (photonView.IsMine)
         {
-            // 1) Never pause for culling
-            animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-
-            // 2) Rebind wipes & rebuilds the state graph
-            animator.Rebind();
-
-            // 3) Kick the machine forward one tick
-            animator.Update(0f);
+            GetComponent<ThirdPersonController>().enabled = false;
+            GetComponent<CharacterController>().enabled = false;
+            protector.enabled = false;
+            occultist.enabled = false;
+            drifter.enabled = false;
+            trapper.enabled = false;
         }
+
+        
+
+        
 
         foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
@@ -284,16 +277,15 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
     public void EnablePlayer()
     {
-        GetComponent<ThirdPersonController>().enabled = true;
-        GetComponent<CharacterController>().enabled = true;
-        protector.enabled = true;
-        occultist.enabled = true;
-        drifter.enabled = true;
-        trapper.enabled = true;
-
-        Animator animator = GetComponentInChildren<Animator>();
-        if (animator != null)
-            animator.enabled = true;
+        if (photonView.IsMine)
+        {
+            GetComponent<ThirdPersonController>().enabled = true;
+            GetComponent<CharacterController>().enabled = true;
+            protector.enabled = true;
+            occultist.enabled = true;
+            drifter.enabled = true;
+            trapper.enabled = true;
+        }
 
         foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
