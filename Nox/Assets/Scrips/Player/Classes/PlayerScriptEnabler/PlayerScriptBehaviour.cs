@@ -47,7 +47,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
 
         if (photonView.IsMine)
         {
@@ -253,6 +253,14 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
         GetComponent<ThirdPersonController>().enabled = false;
         GetComponent<CharacterController>().enabled = false;
+        protector.enabled = false;
+        occultist.enabled = false;
+        drifter.enabled = false;
+        trapper.enabled = false;
+
+        Animator animator = GetComponentInChildren<Animator>();
+        if (animator != null)
+            animator.enabled = false;
 
         foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
@@ -269,6 +277,14 @@ public class PlayerScriptBehaviour : MonoBehaviour
     {
         GetComponent<ThirdPersonController>().enabled = true;
         GetComponent<CharacterController>().enabled = true;
+        protector.enabled = true;
+        occultist.enabled = true;
+        drifter.enabled = true;
+        trapper.enabled = true;
+
+        Animator animator = GetComponentInChildren<Animator>();
+        if (animator != null)
+            animator.enabled = true;
 
         foreach (SkinnedMeshRenderer smr in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
