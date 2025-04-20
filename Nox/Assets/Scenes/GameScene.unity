@@ -355078,10 +355078,10 @@ GameObject:
   - component: {fileID: 463313920586016028}
   - component: {fileID: 2417011089537831382}
   - component: {fileID: 5623644267217897938}
-  - component: {fileID: 5623644267217897942}
   - component: {fileID: 5623644267217897941}
   - component: {fileID: 5623644267217897940}
   - component: {fileID: 5623644267217897939}
+  - component: {fileID: 5623644267217897942}
   m_Layer: 8
   m_Name: keyRoomA
   m_TagString: Untagged
@@ -397071,7 +397071,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject: []
+  disableObject:
+  - {fileID: 4218200182354522115}
   enableObject: []
 --- !u!114 &5623644267217897942
 MonoBehaviour:
@@ -397082,7 +397083,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4218200182354522115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f162e7d53746fc4fab0e80949b03276, type: 3}
+  m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onPickup:
