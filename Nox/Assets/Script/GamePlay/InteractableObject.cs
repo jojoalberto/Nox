@@ -36,6 +36,11 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 
     }
 
+    public DialogueManager GetDialogueManager()
+    {
+        return dialogueManager;
+    }
+
     public virtual void Interact()
     {
         if (gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)

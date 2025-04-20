@@ -22,7 +22,8 @@ public class DoorInteraction : InteractableObject
         else
         {
             dialogueMessages = this.gameObject.GetComponent<DialogueMessage>();
-            photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessages.GetDialogueMessage(0));
+            //photonView.RPC("ShowDialogueRPC", RpcTarget.All, dialogueMessages.GetDialogueMessage(0));
+            GetDialogueManager().ShowDialogue(dialogueMessages.GetDialogueMessage(0));
         }
     }
 

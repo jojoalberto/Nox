@@ -3617,7 +3617,31 @@ MonoBehaviour:
       m_Calls: []
   onCorrectVinyl:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 528387100}
+        m_TargetAssemblyTypeName: GetArtifactScript, Assembly-CSharp
+        m_MethodName: CallGetKeyByItemID
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 03
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 528387100}
+        m_TargetAssemblyTypeName: GetArtifactScript, Assembly-CSharp
+        m_MethodName: CallGetArtifactByItemID
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 11
+          m_BoolArgument: 0
+        m_CallState: 2
   onWrongVinyl:
     m_PersistentCalls:
       m_Calls: []
@@ -45674,6 +45698,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 526808768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &528387098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528387099}
+  - component: {fileID: 528387100}
+  - component: {fileID: 528387101}
+  m_Layer: 0
+  m_Name: ArtifactManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528387099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528387098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141717994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528387100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528387098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf3b1e3aa1c0c74a87dcb7eb98ddbfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys:
+  - {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
+  - {fileID: 11400000, guid: dc69365d69a7a584aaff836ba25389e7, type: 2}
+  - {fileID: 11400000, guid: 23cc010c1dd765b4c86626d7ed24d6ac, type: 2}
+  - {fileID: 11400000, guid: c3f116e8100c2ac46b6607d187c2a996, type: 2}
+  artifact:
+  - {fileID: 11400000, guid: a5f209185809383478c3393d34ac9753, type: 2}
+  - {fileID: 11400000, guid: 7e078662397bff04ba8aab4c35ad1999, type: 2}
+  - {fileID: 11400000, guid: 39023d77105f0f7429f1dfa88e399e32, type: 2}
+  - {fileID: 11400000, guid: 2127d26d38b678a429bd5110e9eefb52, type: 2}
+  inventoryManager: {fileID: 36981976}
+--- !u!114 &528387101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528387098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 43
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &531980909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113972,6 +114074,7 @@ Transform:
   - {fileID: 760439659}
   - {fileID: 588212674}
   - {fileID: 1859692531}
+  - {fileID: 528387099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143666468
