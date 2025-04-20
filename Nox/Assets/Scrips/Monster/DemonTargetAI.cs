@@ -70,6 +70,10 @@ public class DemonTargetAI1 : MonoBehaviour
 
     [SerializeField] private Aggression aggressionUI;
 
+    [SerializeField] ChaseEffects chaseEffects;
+
+
+
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -326,6 +330,10 @@ public class DemonTargetAI1 : MonoBehaviour
     IEnumerator ChasePlayer()
     {
         isChasingPlayer = true;
+        if (chaseEffects != null)
+        {
+            chaseEffects.StartChaseEffect();
+        }
 
         currentSpeedState = SpeedState.ChasingFresh;
         UpdateNavMeshSpeed();
@@ -376,6 +384,11 @@ public class DemonTargetAI1 : MonoBehaviour
         }
 
         isChasingPlayer = false;
+        if (chaseEffects != null)
+        {
+            chaseEffects.StopChaseEffect();
+        }
+
         currentSpeedState = SpeedState.Idle;
         UpdateNavMeshSpeed();
 
@@ -479,6 +492,13 @@ public class DemonTargetAI1 : MonoBehaviour
             PlayerHealth playerHealth = currentTarget.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
+                if (isFrozen || isBound)
+                {
+                    isAttacking = false;
+                    UpdateNavMeshSpeed();
+                    yield break;
+                }
+
                 playerHealth.TakeDamage(damageAmount);
                 if (playerHealth.currentHealth <= 0)
                 {
@@ -515,6 +535,10 @@ public class DemonTargetAI1 : MonoBehaviour
         {
             currentSpeedState = SpeedState.Idle;
             isChasingPlayer = false;
+            if (chaseEffects != null)
+            {
+                chaseEffects.StopChaseEffect();
+            }
 
             PickNewTarget();
         }

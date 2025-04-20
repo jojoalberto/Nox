@@ -5240,11 +5240,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 32d67b6ec9154e340a184e6652dc8668, type: 3}
   - {fileID: 21300000, guid: ae49706cccf88c54f828a0992d2a12f7, type: 3}
   occultistSprites:
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 6ac6c4f758bd657418c22b0b92b3d071, type: 3}
+  - {fileID: 21300000, guid: 87c82900d4fae83408be310a4a274646, type: 3}
   drifterSprites:
   - {fileID: 21300000, guid: 6db100c05bec2ad47bb532b7060541e0, type: 3}
-  - {fileID: 21300000, guid: 741e8ae9ee815cd41ab656063176c978, type: 3}
+  - {fileID: 21300000, guid: 67d677b07cf74dd4ebb6d6e60d2b1e6d, type: 3}
   trapperSprites:
   - {fileID: 21300000, guid: 150f83ee697bfcc4894160c9349d53bb, type: 3}
   - {fileID: 21300000, guid: a3630373102c17642b965d65f773db0a, type: 3}

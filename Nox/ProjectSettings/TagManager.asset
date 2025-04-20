@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - PlayerUI
   - AggressionUI
+  - DemonEffects
   layers:
   - Default
   - TransparentFX

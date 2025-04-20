@@ -114,6 +114,8 @@ MonoBehaviour:
   - SyncKey
   - SyncKeys
   - RPC_RespawnPosition
+  - RPC_StartChaseEffect
+  - RPC_StopChaseEffect
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
