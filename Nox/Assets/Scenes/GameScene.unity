@@ -317443,7 +317443,7 @@ Transform:
   m_GameObject: {fileID: 4218200182354522115}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7069834, z: 0.7072302, w: 0}
-  m_LocalPosition: {x: -13.701, y: 1.874, z: -7.8319855}
+  m_LocalPosition: {x: -16.64, y: 1.89, z: -33.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -355082,7 +355082,7 @@ GameObject:
   - component: {fileID: 5623644267217897941}
   - component: {fileID: 5623644267217897940}
   - component: {fileID: 5623644267217897939}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: keyRoomA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
