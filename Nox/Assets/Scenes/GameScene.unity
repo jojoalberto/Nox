@@ -35748,6 +35748,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 7.926
       objectReference: {fileID: 0}
+    - target: {fileID: 6943625039938387635, guid: 398a2252c0435f54b8ec704da484f878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892308117167948204, guid: 398a2252c0435f54b8ec704da484f878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.49
+      objectReference: {fileID: 0}
     - target: {fileID: 8463938423159427306, guid: 398a2252c0435f54b8ec704da484f878, type: 3}
       propertyPath: m_Name
       value: 'gatherRoom '
@@ -106986,12 +106994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   demonTransform: {fileID: 0}
-  playerTransform: {fileID: 0}
   chromaticFadeSpeed: 2
   targetChromatic: 1
-  minVignette: 0
-  maxVignette: 0.6
-  vignetteDistanceThreshold: 15
   photonView: {fileID: 0}
 --- !u!1 &1065167288
 GameObject:
