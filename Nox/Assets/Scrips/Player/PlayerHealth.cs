@@ -1,6 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Photon.Pun;
+using Unity.Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -36,6 +40,16 @@ public class PlayerHealth : MonoBehaviourPun
     public float respawnDelay = 10f;
     private bool isDead = false;
 
+    public CinemachineVirtualCamera virtualCam;
+    private List<GameObject> spectateTargets = new List<GameObject>();
+    private int currentSpectateIndex = 0;
+    private bool isSpectating = false;
+
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         if (photonView.IsMine)
@@ -63,8 +77,26 @@ public class PlayerHealth : MonoBehaviourPun
                 colorAdjustments.saturation.value = 0f;
             }
         }
+
+        
     }
 
+    private void Update()
+    {
+        if (isSpectating && Input.GetMouseButtonDown(0)) // Left click
+        {
+            currentSpectateIndex = (currentSpectateIndex + 1) % spectateTargets.Count;
+            SetSpectateView(currentSpectateIndex);
+        }
+    }
+
+
+    void UpdateSpectateList()
+    {
+        spectateTargets.Clear();
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+        spectateTargets.AddRange(playerObjects);
+    }
 
     private IEnumerator WaitForHUDAndSetHealth()
     {
@@ -115,7 +147,7 @@ public class PlayerHealth : MonoBehaviourPun
             damageAmount -= tempAbsorbed;
         }
 
-        currentHealth -= damageAmount;
+        currentHealth = Mathf.Max(0, currentHealth - damageAmount);
 
 
         if (photonView.IsMine)
@@ -177,7 +209,7 @@ public class PlayerHealth : MonoBehaviourPun
         if (!photonView.IsMine) return;
 
         Debug.Log(gameObject.name + " DIED LOL");
-        isDead = true;
+        
         StartCoroutine(SpectateAndRespawn());
 
     }
@@ -186,11 +218,33 @@ public class PlayerHealth : MonoBehaviourPun
     {
         photonView.RPC("RPC_DisablePlayer", RpcTarget.All);
 
+        Spectate();
+
         yield return new WaitForSeconds(respawnDelay);
 
         RespawnPlayer();
 
     }
+
+    private void Spectate()
+    {
+        UpdateSpectateList();
+        if (spectateTargets.Count > 0)
+        {
+            isSpectating = true;
+            SetSpectateView(currentSpectateIndex);
+        }
+
+
+    }
+
+    private void SetSpectateView(int index)
+    {
+        if (index < 0 || index >= spectateTargets.Count || virtualCam == null) return;
+        Transform target = spectateTargets[index].transform.GetChild(0);
+        virtualCam.Follow = target;
+    }
+
 
     private void RespawnPlayer()
     {
@@ -215,7 +269,7 @@ public class PlayerHealth : MonoBehaviourPun
         {
             SetPlayerHealth(); // Resets health
             currentHealth = totalHealth;
-            isDead = false;
+            
 
             healthBar.UpdateHealth();
         }
@@ -235,18 +289,31 @@ public class PlayerHealth : MonoBehaviourPun
                 demonView.RPC("RPC_AddPlayer", RpcTarget.MasterClient, photonView.ViewID);
             }
         }
+
+        if (virtualCam != null)
+        {
+            Transform myCameraRoot = transform.GetChild(0);
+            if (myCameraRoot != null)
+            {
+                virtualCam.Follow = myCameraRoot;
+                isSpectating = false;
+            }
+        }
+
     }
 
     [PunRPC]
     private void RPC_DisablePlayer()
     {
         playerScriptBehaviour.DisablePlayer();
+        isDead = true;
     }
 
     [PunRPC]
     private void RPC_EnablePlayer()
     {
         playerScriptBehaviour.EnablePlayer();
+        isDead = false;
     }
 
     [PunRPC]
