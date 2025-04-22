@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     public Camera playerCamera;
     public LayerMask interactableLayer;
     public LayerMask pickableLayer;
+    public LayerMask destroyableLayer;
     public GameObject interactionUI;
 
     private PickableObject currentItem;
@@ -118,6 +119,12 @@ public class PlayerInteraction : MonoBehaviour
                 interactionUI.SetActive(true);
                 return;
             }
+        }
+        if (Physics.Raycast(ray, out hit, interactDistance, destroyableLayer))
+        {
+            interactionUI.SetActive(true);
+            return;
+
         }
 
         interactionUI.SetActive(false);

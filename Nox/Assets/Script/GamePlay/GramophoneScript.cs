@@ -4,13 +4,12 @@ using UnityEngine.Events;
 
 public class GramophoneScript : InteractableObject
 {
-    public UnityEvent onInteract;
     public UnityEvent onCorrectVinyl;
     public UnityEvent onFinishVinylQuest;
     public UnityEvent onWrongVinyl;
     public string requiredVinylID;
     private int vinylCount = 0;
-    private bool hasInteract;
+    private bool hasInteract =false;
     private PlayerInventory inventory;
     private GameObject playerObj;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -54,6 +53,7 @@ public class GramophoneScript : InteractableObject
         Debug.Log(inventory.IsHoldingVinyl() + "player inventory has");
         if (inventory.IsHoldingVinyl())
         {
+            hasInteract = true;
             ClueItemSO vinyl = inventory.GetHeldVinyl();
             if (vinyl.itemID == requiredVinylID) // Match by ID
             {
@@ -75,11 +75,6 @@ public class GramophoneScript : InteractableObject
                 Debug.Log("Wrong vinyl.");
                 onWrongVinyl.Invoke();
             }
-        }
-        else
-        {
-            Debug.Log("Player is not holding any vinyl.");
-            onInteract.Invoke();
         }
     }
 }

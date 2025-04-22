@@ -119,6 +119,8 @@ MonoBehaviour:
   - AddKey
   - AddArtifact
   - InteractGramaphone
+  - DestroyObject
+  - DestroyObjectRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

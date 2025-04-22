@@ -5032,6 +5032,9 @@ MonoBehaviour:
   pickableLayer:
     serializedVersion: 2
     m_Bits: 256
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 0
   interactionUI: {fileID: 4753742032257792640}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   classSelected: 
@@ -5042,7 +5045,7 @@ MonoBehaviour:
   photonView: {fileID: 8787963150614822784}
   interActablelayers:
     serializedVersion: 2
-    m_Bits: 1408
+    m_Bits: 17792
   highlightMaterial: {fileID: 2100000, guid: 8e97c0d814e33ce4f8ee7d7e87b2abde, type: 2}
 --- !u!114 &6731244504116558929
 MonoBehaviour:
@@ -5137,6 +5140,9 @@ MonoBehaviour:
   pickableLayer:
     serializedVersion: 2
     m_Bits: 256
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 16384
   interactionUI: {fileID: 4753742032257792640}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   classSelected: 
@@ -5284,6 +5290,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd83abc47d8afc43a9735411fa7e667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactDistance: 30
+  onDestroyObject:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyableLayer:
+    serializedVersion: 2
+    m_Bits: 16384
   photonView: {fileID: 0}
   isProtector: 0
   playerScriptBehaviour: {fileID: 0}

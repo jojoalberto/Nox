@@ -2,11 +2,16 @@ using System;
 using System.Collections;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Protector : MonoBehaviour
 {
-
+    [SerializeField] private float interactDistance;
+    public UnityEvent onDestroyObject;
+    public LayerMask destroyableLayer;
     public PhotonView photonView;
+    private GameObject targetObject;
+    private PlayerInteraction playerInteraction;
     public bool isProtector = false;
 
     public PlayerScriptBehaviour playerScriptBehaviour;
@@ -34,12 +39,13 @@ public class Protector : MonoBehaviour
     {
         photonView = GetComponent<PhotonView>();
         playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
+        playerInteraction = GetComponent<PlayerInteraction>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(photonView.IsMine && isProtector)
+        if (photonView.IsMine && isProtector)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) && Ability1Ready)
             {
@@ -53,7 +59,19 @@ public class Protector : MonoBehaviour
                 StartCoroutine(ActivateAbility2());
                 updateAbility2UI();
             }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("pressing E");
+                DestroyObject();
+            }
         }
+    }
+    [PunRPC]
+    public void DestroyObjectRPC()
+    {
+        Debug.Log("protector is hitting deactivation");
+        targetObject.SetActive(false);
+        onDestroyObject.Invoke();
     }
 
     private void updateAbility1UI()
@@ -131,5 +149,19 @@ public class Protector : MonoBehaviour
         }
         yield return null;
     }
-
+    public void DestroyObject()
+    {
+        if (photonView.IsMine && isProtector)
+        {
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, interactDistance, destroyableLayer))
+            {
+                GameObject hitObj = hit.collider.gameObject;
+                targetObject = hitObj;
+                Debug.Log("protector is hitting " + hitObj);
+                photonView.RPC("DestroyObjectRPC", RpcTarget.All);
+            }
+        }
+    }
 }
