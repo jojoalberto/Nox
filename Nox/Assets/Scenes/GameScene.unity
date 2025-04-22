@@ -107097,7 +107097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   demonTransform: {fileID: 0}
   chromaticFadeSpeed: 2
-  targetChromatic: 1
+  targetChromatic: 0
   photonView: {fileID: 0}
 --- !u!1 &1065167288
 GameObject:
