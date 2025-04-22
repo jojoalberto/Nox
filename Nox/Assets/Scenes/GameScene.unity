@@ -46156,11 +46156,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3096398421620041331}
   - {fileID: 3971939470405380071}
   - {fileID: 2021250830997895056}
   - {fileID: 4379190475492773447}
-  - {fileID: 2590389046716139328}
   - {fileID: 9021484608593205522}
   - {fileID: 7722820348844903395}
   - {fileID: 4983974542748062887}
@@ -46168,8 +46166,6 @@ Transform:
   - {fileID: 7589984572493862919}
   - {fileID: 989479830498125846}
   - {fileID: 7293999511759868417}
-  - {fileID: 1656450337148011540}
-  - {fileID: 1078987665651661094}
   - {fileID: 3910119117999853597}
   - {fileID: 6132454688807921239}
   - {fileID: 6800666288216556835}
@@ -113616,6 +113612,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3621515048870942829}
+  - {fileID: 5771962706514528626}
+  - {fileID: 5384857967718786058}
+  - {fileID: 7583914756844308172}
+  - {fileID: 3428254183682867010}
+  - {fileID: 5994578072473188601}
+  - {fileID: 5513517950874184938}
+  - {fileID: 7256061933863905527}
+  - {fileID: 6096781735311801696}
+  - {fileID: 2653442014542869251}
+  - {fileID: 7194081284430035746}
+  - {fileID: 3738302093319044780}
+  - {fileID: 3103384685201678028}
+  - {fileID: 758855927110753817}
+  - {fileID: 2345129726654623846}
+  - {fileID: 8348291994196993960}
+  - {fileID: 2764035835920737051}
+  - {fileID: 2281494720550894946}
+  - {fileID: 6359913358418297397}
+  - {fileID: 7056037907096459832}
+  - {fileID: 2746887043761658039}
+  - {fileID: 1688777862596805462}
+  - {fileID: 4706256930568561191}
+  - {fileID: 4901565311069079701}
+  - {fileID: 7605187542060646851}
+  - {fileID: 3128655501415042485}
+  - {fileID: 3096398421620041331}
+  - {fileID: 1656450337148011540}
+  - {fileID: 8980904378121469897}
+  - {fileID: 1078987665651661094}
+  - {fileID: 909453174295156862}
+  - {fileID: 4601208397104865556}
+  - {fileID: 5901324895330089987}
+  - {fileID: 2590389046716139328}
   - {fileID: 8325381328174917537}
   m_Father: {fileID: 544897190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -217141,7 +217171,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7589984572493862919}
-  m_Layer: 0
+  - component: {fileID: 7589984572493862922}
+  - component: {fileID: 7589984572493862921}
+  - component: {fileID: 7589984572493862920}
+  m_Layer: 7
   m_Name: Shelf_F (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220476,7 +220509,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -221692,7 +221725,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7722820348844903395}
-  m_Layer: 0
+  - component: {fileID: 7722820348844903398}
+  - component: {fileID: 7722820348844903397}
+  - component: {fileID: 7722820348844903396}
+  m_Layer: 7
   m_Name: Shelf_F (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222219,7 +222255,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -227447,7 +227483,10 @@ GameObject:
   - component: {fileID: 3096398421620041331}
   - component: {fileID: 4107393665623323893}
   - component: {fileID: 4250622932035674205}
-  m_Layer: 0
+  - component: {fileID: 4250622932035674208}
+  - component: {fileID: 4250622932035674207}
+  - component: {fileID: 4250622932035674206}
+  m_Layer: 7
   m_Name: Shelf_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234298,12 +234337,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113498866447874136}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.08, y: 0, z: 0}
+  m_LocalRotation: {x: -0.000000026692542, y: -0.7071068, z: -0.000000026692542, w: 0.7071068}
+  m_LocalPosition: {x: -10.708, y: -2.71, z: -0.14099884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 819023400095548918}
+  m_Father: {fileID: 4328237584901199899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &716768287199184879
 MeshFilter:
@@ -236618,7 +236657,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2340614775939899895}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!33 &761302712023397747
 MeshFilter:
@@ -238173,8 +238212,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 819078434408531818}
-  - {fileID: 715254675347265159}
-  - {fileID: 5901324895330089987}
   - {fileID: 818831018463657908}
   - {fileID: 811387933268033602}
   - {fileID: 818918891511388608}
@@ -240105,7 +240142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &909828816078857003
 MeshRenderer:
@@ -243088,10 +243125,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (18)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1028796184129847312
 GameObject:
   m_ObjectHideFlags: 0
@@ -248865,7 +248902,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1078987665651661094}
-  m_Layer: 0
+  - component: {fileID: 1078987665651661097}
+  - component: {fileID: 1078987665651661096}
+  - component: {fileID: 1078987665651661095}
+  m_Layer: 7
   m_Name: Cupboard (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249006,8 +249046,63 @@ Transform:
   - {fileID: 1073604827833351314}
   - {fileID: 1079164637984384272}
   - {fileID: 1078808193368101442}
-  m_Father: {fileID: 535869931}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90.044, z: 0}
+--- !u!114 &1078987665651661095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075838533008824542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 72
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1078987665651661096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075838533008824542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &1078987665651661097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075838533008824542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1079007517511973818
 Transform:
   m_ObjectHideFlags: 0
@@ -250579,7 +250674,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -253003,7 +253098,10 @@ GameObject:
   - component: {fileID: 4442072491657790157}
   - component: {fileID: 3340985197760401483}
   - component: {fileID: 3287851589501420771}
-  m_Layer: 0
+  - component: {fileID: 4442072491657790160}
+  - component: {fileID: 4442072491657790159}
+  - component: {fileID: 4442072491657790158}
+  m_Layer: 7
   m_Name: Shelf_A (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255491,7 +255589,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (11)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -256721,7 +256819,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (14)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -257140,7 +257238,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9021484608593205522}
-  m_Layer: 0
+  - component: {fileID: 9021484608593205525}
+  - component: {fileID: 9021484608593205524}
+  - component: {fileID: 9021484608593205523}
+  m_Layer: 7
   m_Name: Shelf_F (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261346,7 +261447,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9191948489635630590}
-  m_Layer: 0
+  - component: {fileID: 9191948489635630593}
+  - component: {fileID: 9191948489635630592}
+  - component: {fileID: 9191948489635630591}
+  m_Layer: 7
   m_Name: Shelf_F (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261362,7 +261466,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656450337148011540}
-  m_Layer: 0
+  - component: {fileID: 1656450337148011543}
+  - component: {fileID: 1656450337148011542}
+  - component: {fileID: 1656450337148011541}
+  m_Layer: 7
   m_Name: Cupboard (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261470,8 +261577,63 @@ Transform:
   - {fileID: 1649307820897583520}
   - {fileID: 1656277772525475874}
   - {fileID: 1656483573378969456}
-  m_Father: {fileID: 535869931}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90.044, z: 0}
+--- !u!114 &1656450337148011541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651576607314437612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 68
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1656450337148011542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651576607314437612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &1656450337148011543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651576607314437612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1656483573378969456
 Transform:
   m_ObjectHideFlags: 0
@@ -262384,7 +262546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 270.081, z: 0}
 --- !u!1 &1695621003186293826
 GameObject:
@@ -263764,7 +263926,7 @@ Transform:
   m_GameObject: {fileID: 8321315183608601424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.151001, y: -1.916, z: -1.9770012}
+  m_LocalPosition: {x: 10.08, y: -1.916, z: -1.9770012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -266874,7 +267036,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1864143477362933368}
-  m_Layer: 0
+  - component: {fileID: 1864143477362933371}
+  - component: {fileID: 1864143477362933370}
+  - component: {fileID: 1864143477362933369}
+  m_Layer: 7
   m_Name: Cupboard (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267151,6 +267316,61 @@ Transform:
   - {fileID: 1864247644652131612}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 32.146}
+--- !u!114 &1864143477362933369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858214779241291648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 67
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1864143477362933370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858214779241291648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &1864143477362933371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858214779241291648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1864198410452810980
 Transform:
   m_ObjectHideFlags: 0
@@ -270152,10 +270372,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (19)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &2032396251339251922
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -273781,7 +274001,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -274289,7 +274509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 270.081, z: 0}
 --- !u!4 &2282154018705457284
 Transform:
@@ -276422,13 +276642,71 @@ GameObject:
   - component: {fileID: 1097530995159483924}
   - component: {fileID: 2072728485463495826}
   - component: {fileID: 2251399989707522106}
-  m_Layer: 0
+  - component: {fileID: 2311406121044241027}
+  - component: {fileID: 2311406121044241026}
+  - component: {fileID: 2311406121044241025}
+  m_Layer: 7
   m_Name: Shelf_A (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2311406121044241025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311406121044241024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 66
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2311406121044241026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311406121044241024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &2311406121044241027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311406121044241024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &2311785281869166248
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -277049,7 +277327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 754322986994651016}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2346181926727535629
 MeshFilter:
@@ -280803,7 +281081,10 @@ GameObject:
   - component: {fileID: 3248683757778388782}
   - component: {fileID: 7921352022221518510}
   - component: {fileID: 8159329427668960042}
-  m_Layer: 0
+  - component: {fileID: 8159329427668960045}
+  - component: {fileID: 8159329427668960044}
+  - component: {fileID: 8159329427668960043}
+  m_Layer: 7
   m_Name: Cupboard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283482,7 +283763,7 @@ Transform:
   - {fileID: 5334692447953989927}
   - {fileID: 4608033826260814045}
   - {fileID: 3543683038077332325}
-  m_Father: {fileID: 535869931}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: -2.982, z: 0}
 --- !u!1 &2590518786182125459
 GameObject:
@@ -285035,7 +285316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1021926483912019181}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!23 &2653570311430994020
 MeshRenderer:
@@ -286128,10 +286409,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (16)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2697317209889639210
 Transform:
   m_ObjectHideFlags: 0
@@ -286769,7 +287050,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2750033879613838408
 GameObject:
@@ -286994,7 +287275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &2768492906620456343
 MeshRenderer:
@@ -300021,7 +300302,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (15)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -302691,7 +302972,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (10)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -308017,7 +308298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 535869931}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 194.923, z: 0}
 --- !u!4 &3098040450148052286
 Transform:
@@ -308106,12 +308387,12 @@ Transform:
   m_GameObject: {fileID: 798205183032994969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.474, y: -2.71, z: 6.5099983}
+  m_LocalPosition: {x: -1.4740009, y: -2.71, z: 6.5099983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 138793693029736738}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3105653632097312158
 Transform:
@@ -308345,7 +308626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3128722617832225128
 MeshRenderer:
@@ -309651,7 +309932,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4983974542748062887}
-  m_Layer: 0
+  - component: {fileID: 4983974542748062890}
+  - component: {fileID: 4983974542748062889}
+  - component: {fileID: 4983974542748062888}
+  m_Layer: 7
   m_Name: Shelf_F (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313367,10 +313651,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (20)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &3368884698434418493
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -314242,7 +314526,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (7)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -314801,7 +315085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 391792040954200236}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3429302383827189959
 MeshRenderer:
@@ -324135,7 +324419,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (13)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -324161,7 +324445,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1782936663490586499}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &3622251991544830659
 MeshCollider:
@@ -327612,7 +327896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1809719447035707714}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!4 &3738612940474875511
 Transform:
@@ -328200,13 +328484,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3756083196059891025}
-  m_Layer: 0
+  - component: {fileID: 3762538851418789036}
+  - component: {fileID: 3762538851418789035}
+  - component: {fileID: 3762538851418789034}
+  m_Layer: 7
   m_Name: Cupboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &3762538851418789034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762538851418789033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 63
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &3762538851418789035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762538851418789033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &3762538851418789036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3762538851418789033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &3764756489779850818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -333411,13 +333753,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3910119117999853597}
-  m_Layer: 0
+  - component: {fileID: 3915027194702901736}
+  - component: {fileID: 3915027194702901735}
+  - component: {fileID: 3915027194702901734}
+  m_Layer: 7
   m_Name: Cupboard (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &3915027194702901734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915027194702901733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 62
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &3915027194702901735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915027194702901733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &3915027194702901736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915027194702901733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3915042702357813599
 GameObject:
   m_ObjectHideFlags: 0
@@ -355832,10 +356232,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &4211488546932083313
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -356877,6 +357277,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4250622932035674206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418949988098837223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 73
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4250622932035674207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418949988098837223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &4250622932035674208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418949988098837223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4251880075475589113
 GameObject:
   m_ObjectHideFlags: 0
@@ -357830,6 +358285,7 @@ Transform:
   - {fileID: 1878625143956082927}
   - {fileID: 2673543320163383611}
   - {fileID: 1533960790957189502}
+  - {fileID: 715254675347265159}
   - {fileID: 819023400095548918}
   - {fileID: 6038179651531394145}
   - {fileID: 948234053065634674}
@@ -357852,7 +358308,6 @@ Transform:
   - {fileID: 1781763380119665770}
   - {fileID: 3942928730673777428}
   - {fileID: 688718486597573473}
-  - {fileID: 909453174295156862}
   - {fileID: 8737582892543825359}
   - {fileID: 2512985385212809231}
   - {fileID: 6657197298989055140}
@@ -357861,7 +358316,6 @@ Transform:
   - {fileID: 5018739566931887413}
   - {fileID: 5288914004545282275}
   - {fileID: 1343446612957111462}
-  - {fileID: 8980904378121469897}
   - {fileID: 4641710548804733421}
   - {fileID: 7830677249386787734}
   - {fileID: 4376398152304366995}
@@ -357871,7 +358325,6 @@ Transform:
   - {fileID: 8263304611990866247}
   - {fileID: 3171325107064893868}
   - {fileID: 7258735499996340065}
-  - {fileID: 4601208397104865556}
   - {fileID: 4448979474822924793}
   - {fileID: 5080448454801032802}
   - {fileID: 577796314774519683}
@@ -357881,42 +358334,16 @@ Transform:
   - {fileID: 8117378854952026023}
   - {fileID: 4227264206128071972}
   - {fileID: 8393729670821247405}
-  - {fileID: 7605187542060646851}
   - {fileID: 5252959433795208280}
   - {fileID: 5857494746855098332}
   - {fileID: 7680001488925501400}
-  - {fileID: 3128655501415042485}
   - {fileID: 2392622856953927023}
   - {fileID: 8889816333959524441}
-  - {fileID: 4901565311069079701}
   - {fileID: 6294014727571879979}
   - {fileID: 8742009100832625417}
   - {fileID: 5148096586054538486}
-  - {fileID: 3621515048870942829}
-  - {fileID: 5771962706514528626}
-  - {fileID: 5384857967718786058}
-  - {fileID: 7583914756844308172}
-  - {fileID: 3428254183682867010}
-  - {fileID: 5994578072473188601}
-  - {fileID: 5513517950874184938}
-  - {fileID: 7256061933863905527}
-  - {fileID: 6096781735311801696}
-  - {fileID: 2653442014542869251}
-  - {fileID: 7194081284430035746}
-  - {fileID: 3738302093319044780}
-  - {fileID: 3103384685201678028}
-  - {fileID: 758855927110753817}
-  - {fileID: 2345129726654623846}
-  - {fileID: 8348291994196993960}
-  - {fileID: 2764035835920737051}
-  - {fileID: 2281494720550894946}
-  - {fileID: 6359913358418297397}
-  - {fileID: 7056037907096459832}
-  - {fileID: 2746887043761658039}
-  - {fileID: 1688777862596805462}
   - {fileID: 6874055976023083292}
   - {fileID: 1561463879658478724}
-  - {fileID: 4706256930568561191}
   - {fileID: 8655079648654045675}
   - {fileID: 131698711594377145}
   - {fileID: 2229187511563578945}
@@ -358858,7 +359285,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (9)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -360524,6 +360951,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 192.731, z: 0}
+--- !u!114 &4442072491657790158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336896581256556121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 71
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4442072491657790159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336896581256556121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &4442072491657790160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336896581256556121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &4443086421855230702
 Transform:
   m_ObjectHideFlags: 0
@@ -363657,7 +364139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &4601397485512351525
 MeshRenderer:
@@ -364273,7 +364755,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -366225,11 +366707,11 @@ Transform:
   m_GameObject: {fileID: 3056505077347654918}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7558994, y: -2.35, z: 5.278}
+  m_LocalPosition: {x: 4.4820023, y: -2.657, z: 5.278}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4708752541996762037
 GameObject:
@@ -374992,7 +375474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4902388160401186133
 GameObject:
@@ -376809,6 +377291,61 @@ Transform:
   - {fileID: 6338248711326382210}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: -3.804, z: 0}
+--- !u!114 &4983974542748062888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193078606711990906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 64
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4983974542748062889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193078606711990906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &4983974542748062890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193078606711990906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!137 &4984541896193160927
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -387756,7 +388293,10 @@ GameObject:
   - component: {fileID: 7351226257853080444}
   - component: {fileID: 8501727809953051130}
   - component: {fileID: 8503200347177149778}
-  m_Layer: 0
+  - component: {fileID: 8503200347177149781}
+  - component: {fileID: 8503200347177149780}
+  - component: {fileID: 8503200347177149779}
+  m_Layer: 7
   m_Name: Shelf_A (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389590,7 +390130,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -390485,13 +391025,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2590389046716139328}
-  m_Layer: 0
+  - component: {fileID: 5370634358643571104}
+  - component: {fileID: 5370634358643571103}
+  - component: {fileID: 5370634358643571102}
+  m_Layer: 7
   m_Name: Shelf_F (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5370634358643571102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370634358643571101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 60
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5370634358643571103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370634358643571101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &5370634358643571104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5370634358643571101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5370753633552162449
 GameObject:
   m_ObjectHideFlags: 0
@@ -391338,7 +391936,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6937421425212922852}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5385598824432507347
 Animator:
@@ -395386,7 +395984,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7385767669738705668}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5514751786731638109
 Transform:
@@ -398561,7 +399159,7 @@ Transform:
   m_GameObject: {fileID: 2696488620026326060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.571627, y: -1.6100993, z: 2.2980995}
+  m_LocalPosition: {x: 9.446, y: -2.61, z: 2.2980995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406234,7 +406832,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8855860606961890972}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!1 &5772184979882212767
 GameObject:
@@ -413638,12 +414236,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7603538420204762593}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.255, y: 0, z: -0}
+  m_LocalRotation: {x: -0.000000026692542, y: -0.7071068, z: -0.000000026692542, w: 0.7071068}
+  m_LocalPosition: {x: -10.707998, y: -2.71, z: -18.476002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 819023400095548918}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5903632737751471637
 MeshFilter:
@@ -419899,7 +420497,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8776797908152567575}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!1 &5994648095460285871
 GameObject:
@@ -422187,7 +422785,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9106394318428832398}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6097844043609261299
 GameObject:
@@ -422614,7 +423212,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6132454688807921239}
-  m_Layer: 0
+  - component: {fileID: 6132454688807921242}
+  - component: {fileID: 6132454688807921241}
+  - component: {fileID: 6132454688807921240}
+  m_Layer: 7
   m_Name: Cupboard (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422773,6 +423374,61 @@ Transform:
   - {fileID: 6132562159732673843}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &6132454688807921240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128743710705960879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 59
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6132454688807921241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128743710705960879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6132454688807921242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128743710705960879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6132470037969380555
 Transform:
   m_ObjectHideFlags: 0
@@ -424138,13 +424794,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4379190475492773447}
-  m_Layer: 0
+  - component: {fileID: 6178016106513723549}
+  - component: {fileID: 6178016106513723548}
+  - component: {fileID: 6178016106513723547}
+  m_Layer: 7
   m_Name: Shelf_F (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6178016106513723547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178016106513723546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 58
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6178016106513723548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178016106513723546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6178016106513723549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178016106513723546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6179269950150029137
 GameObject:
   m_ObjectHideFlags: 0
@@ -428052,7 +428766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6364743985717458384
 MeshFilter:
@@ -428650,7 +429364,10 @@ GameObject:
   - component: {fileID: 6905264819416644311}
   - component: {fileID: 2633407417972170278}
   - component: {fileID: 6702486219447877431}
-  m_Layer: 0
+  - component: {fileID: 6905264819416644314}
+  - component: {fileID: 6905264819416644313}
+  - component: {fileID: 6905264819416644312}
+  m_Layer: 7
   m_Name: Cupboard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447981,13 +448698,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3971939470405380071}
-  m_Layer: 0
+  - component: {fileID: 6802005011388471613}
+  - component: {fileID: 6802005011388471612}
+  - component: {fileID: 6802005011388471611}
+  m_Layer: 7
   m_Name: Shelf_F (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6802005011388471611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802005011388471610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 56
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6802005011388471612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802005011388471610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6802005011388471613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6802005011388471610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6805916919213818071
 Transform:
   m_ObjectHideFlags: 0
@@ -448107,13 +448882,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6800666288216556835}
-  m_Layer: 0
+  - component: {fileID: 6807086484139910366}
+  - component: {fileID: 6807086484139910365}
+  - component: {fileID: 6807086484139910364}
+  m_Layer: 7
   m_Name: Cupboard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &6807086484139910364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807086484139910363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 55
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6807086484139910365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807086484139910363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6807086484139910366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807086484139910363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &6807291977107241161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -450400,7 +451233,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6889069340855148915}
-  m_Layer: 0
+  - component: {fileID: 6889069340855148918}
+  - component: {fileID: 6889069340855148917}
+  - component: {fileID: 6889069340855148916}
+  m_Layer: 7
   m_Name: Cupboard (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450623,6 +451459,61 @@ Transform:
   - {fileID: 6889104274613717527}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &6889069340855148916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885323174119882891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 54
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6889069340855148917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885323174119882891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6889069340855148918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885323174119882891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6889104274613717527
 Transform:
   m_ObjectHideFlags: 0
@@ -450757,10 +451648,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (21)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6895323369301136920
 Transform:
   m_ObjectHideFlags: 0
@@ -450946,6 +451837,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6389490316013571275}
   m_Mesh: {fileID: 4300000, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
+--- !u!114 &6905264819416644312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389490316013571275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 57
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6905264819416644313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389490316013571275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &6905264819416644314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6389490316013571275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!64 &6905571575196937656
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -460165,7 +461111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 270.081, z: 0}
 --- !u!4 &7056684968455300132
 Transform:
@@ -460193,13 +461139,71 @@ GameObject:
   - component: {fileID: 5682176114668539167}
   - component: {fileID: 6711449905238630297}
   - component: {fileID: 6836050743143992113}
-  m_Layer: 0
+  - component: {fileID: 7058213931687354766}
+  - component: {fileID: 7058213931687354765}
+  - component: {fileID: 7058213931687354764}
+  m_Layer: 7
   m_Name: Shelf_A (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7058213931687354764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058213931687354763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 53
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7058213931687354765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058213931687354763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &7058213931687354766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058213931687354763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7059967889388985128
 GameObject:
   m_ObjectHideFlags: 0
@@ -463192,7 +464196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5272295706276889804}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7196888038452873203
 Transform:
@@ -464371,7 +465375,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5642660891687016217}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!1 &7256590307166729924
 GameObject:
@@ -464560,13 +465564,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989479830498125846}
-  m_Layer: 0
+  - component: {fileID: 7260344428028499662}
+  - component: {fileID: 7260344428028499661}
+  - component: {fileID: 7260344428028499660}
+  m_Layer: 7
   m_Name: Shelf_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7260344428028499660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260344428028499659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 52
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7260344428028499661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260344428028499659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &7260344428028499662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260344428028499659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &7260902127641900477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -465361,7 +466423,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7293999511759868417}
-  m_Layer: 0
+  - component: {fileID: 7293999511759868420}
+  - component: {fileID: 7293999511759868419}
+  - component: {fileID: 7293999511759868418}
+  m_Layer: 7
   m_Name: Cupboard (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465508,6 +466573,61 @@ Transform:
   - {fileID: 7293749125732677989}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 66.579, z: 0}
+--- !u!114 &7293999511759868418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290779189967008761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 51
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7293999511759868419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290779189967008761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &7293999511759868420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290779189967008761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &7294053354398066755
 Transform:
   m_ObjectHideFlags: 0
@@ -471743,12 +472863,12 @@ Transform:
   m_GameObject: {fileID: 5277619276219921561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.99999046, z: -0, w: -0.0043768627}
-  m_LocalPosition: {x: -1.4680586, y: -2.71, z: -0.7563057}
+  m_LocalPosition: {x: -1.4680576, y: -2.71, z: -0.7563057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4882761296086513954}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!64 &7584165158867079082
 MeshCollider:
@@ -471994,6 +473114,61 @@ Transform:
   - {fileID: 8902019074520265762}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: -3.688, z: 0}
+--- !u!114 &7589984572493862920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13423537307002586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 75
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7589984572493862921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13423537307002586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &7589984572493862922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13423537307002586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7590377189950958856
 GameObject:
   m_ObjectHideFlags: 0
@@ -472125,7 +473300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &7606792555442139807
 MeshCollider:
@@ -475166,7 +476341,7 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (12)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -475300,6 +476475,61 @@ Transform:
   - {fileID: 8787545277142017990}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: -37.29, z: 0}
+--- !u!114 &7722820348844903396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168394960992613694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 74
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7722820348844903397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168394960992613694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &7722820348844903398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168394960992613694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &7723374537730335860
 Transform:
   m_ObjectHideFlags: 0
@@ -482832,13 +484062,71 @@ GameObject:
   - component: {fileID: 6847479178127897283}
   - component: {fileID: 5548394312806867013}
   - component: {fileID: 5693254667674449133}
-  m_Layer: 0
+  - component: {fileID: 8083916485560720986}
+  - component: {fileID: 8083916485560720985}
+  - component: {fileID: 8083916485560720984}
+  m_Layer: 7
   m_Name: Shelf_A (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8083916485560720984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083916485560720983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 50
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8083916485560720985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083916485560720983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8083916485560720986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083916485560720983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8085693990246159147
 GameObject:
   m_ObjectHideFlags: 0
@@ -484122,6 +485410,61 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
+--- !u!114 &8159329427668960043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513818126561152871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 65
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8159329427668960044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513818126561152871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8159329427668960045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513818126561152871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &8160321714390293837
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -486445,7 +487788,10 @@ GameObject:
   - component: {fileID: 626037296648057189}
   - component: {fileID: 4083062749911368033}
   - component: {fileID: 3311103062303427781}
-  m_Layer: 0
+  - component: {fileID: 8398866005973610175}
+  - component: {fileID: 8398866005973610174}
+  - component: {fileID: 8398866005973610173}
+  m_Layer: 7
   m_Name: Cupboard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487532,10 +488878,10 @@ GameObject:
   m_Layer: 0
   m_Name: SM_VinylDisc (17)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &8321703676398493065
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -488366,7 +489712,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6424209613571627078}
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 180.502, z: 0}
 --- !u!33 &8350113889612788917
 MeshFilter:
@@ -489221,6 +490567,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 16.479, z: 0}
+--- !u!114 &8398866005973610173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280730841963024208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 49
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8398866005973610174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280730841963024208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8398866005973610175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280730841963024208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!137 &8399247480201259099
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -490676,13 +492077,71 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2021250830997895056}
-  m_Layer: 0
+  - component: {fileID: 8464047693775669584}
+  - component: {fileID: 8464047693775669583}
+  - component: {fileID: 8464047693775669582}
+  m_Layer: 7
   m_Name: Shelf_F (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8464047693775669582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464047693775669581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 48
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8464047693775669583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464047693775669581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8464047693775669584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464047693775669581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8464952216394332704
 GameObject:
   m_ObjectHideFlags: 0
@@ -491362,7 +492821,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8490550397938485413}
-  m_Layer: 0
+  - component: {fileID: 8490550397938485416}
+  - component: {fileID: 8490550397938485415}
+  - component: {fileID: 8490550397938485414}
+  m_Layer: 7
   m_Name: Cupboard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491534,6 +492996,61 @@ Transform:
   - {fileID: 8490861295491457985}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &8490550397938485414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485642033790593373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 47
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8490550397938485415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485642033790593373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8490550397938485416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485642033790593373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &8490602041609663207
 Transform:
   m_ObjectHideFlags: 0
@@ -492017,6 +493534,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8503200347177149779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272651298677477352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 61
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8503200347177149780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272651298677477352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8503200347177149781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272651298677477352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &8505519489468429855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -493920,13 +495492,71 @@ GameObject:
   - component: {fileID: 6171642097508798056}
   - component: {fileID: 940091830528018597}
   - component: {fileID: 2007790510015219903}
-  m_Layer: 0
+  - component: {fileID: 8608848035643047871}
+  - component: {fileID: 8608848035643047870}
+  - component: {fileID: 8608848035643047869}
+  m_Layer: 7
   m_Name: Cupboard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &8608848035643047869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608848035643047868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 46
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8608848035643047870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608848035643047868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &8608848035643047871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8608848035643047868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &8609720693424252216
 Transform:
   m_ObjectHideFlags: 0
@@ -502316,11 +503946,11 @@ Transform:
   m_GameObject: {fileID: 8982669804641881659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.675001, y: -2.7141, z: 5.1919975}
+  m_LocalPosition: {x: 10.675003, y: -2.7141, z: 5.1919975}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4328237584901199899}
+  m_Father: {fileID: 1120634375}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &8982669804641881659
 GameObject:
@@ -503089,6 +504719,61 @@ Transform:
   - {fileID: 8065271400960832823}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 8.587, z: 0}
+--- !u!114 &9021484608593205523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461552321023125455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 70
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &9021484608593205524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461552321023125455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &9021484608593205525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461552321023125455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &9022026137431780959
 Transform:
   m_ObjectHideFlags: 0
@@ -503295,13 +504980,71 @@ GameObject:
   - component: {fileID: 5935845724277802155}
   - component: {fileID: 4726709296904885805}
   - component: {fileID: 4784510280488583813}
-  m_Layer: 0
+  - component: {fileID: 9027651281231980610}
+  - component: {fileID: 9027651281231980609}
+  - component: {fileID: 9027651281231980608}
+  m_Layer: 7
   m_Name: Shelf_A (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9027651281231980608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027651281231980607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 45
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &9027651281231980609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027651281231980607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &9027651281231980610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9027651281231980607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9027716468308740898
 GameObject:
   m_ObjectHideFlags: 0
@@ -506574,6 +508317,61 @@ Transform:
   - {fileID: 7876520444639224283}
   m_Father: {fileID: 535869931}
   m_LocalEulerAnglesHint: {x: 0, y: 4.088, z: 0}
+--- !u!114 &9191948489635630591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651385173075997475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 69
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &9191948489635630592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651385173075997475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - This Drawer is Empty
+  image: {fileID: 0}
+--- !u!114 &9191948489635630593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651385173075997475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &9192430440421985568
 MeshFilter:
   m_ObjectHideFlags: 0
