@@ -3616,6 +3616,9 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   onCorrectVinyl:
     m_PersistentCalls:
       m_Calls:
@@ -29841,6 +29844,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &274655198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37903,6 +37909,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 2003748920}
   - {fileID: 567361142}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &408641855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38449,6 +38458,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 0}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &436606850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46760,6 +46772,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 555029510}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &555029516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55033,6 +55048,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 672984505}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &672984510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61080,6 +61098,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 1021488466}
   - {fileID: 1082125309}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &718218722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98032,6 +98053,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 920452497}
   - {fileID: 1082125309}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &967024350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105534,6 +105558,9 @@ MonoBehaviour:
   - {fileID: 1042093147}
   - {fileID: 1658294507}
   - {fileID: 672984505}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1021488473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106515,6 +106542,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 1042093147}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1042093150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126842,6 +126872,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 1082125309}
   - {fileID: 555029510}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1238432496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137340,6 +137373,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 797121780}
   - {fileID: 374289202513321727}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1271306989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -138352,99 +138388,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 1283335679}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1287713895
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 98185515386256293, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: sceneViewId
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.0856996
-      objectReference: {fileID: 0}
-    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9400952
-      objectReference: {fileID: 0}
-    - target: {fileID: 352180593711799348, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.440193
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588660854051004809, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 29.633026
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.27817178
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 17.052452
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7911323217924822332, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8497385182267823044, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.0856996
-      objectReference: {fileID: 0}
-    - target: {fileID: 8497385182267823044, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9400952
-      objectReference: {fileID: 0}
-    - target: {fileID: 8497385182267823044, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.440193
-      objectReference: {fileID: 0}
-    - target: {fileID: 8787963150614822784, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
-      propertyPath: sceneViewId
-      value: 44
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
 --- !u!1 &1290473493
 GameObject:
   m_ObjectHideFlags: 0
@@ -140211,6 +140154,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &1337397323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -151136,6 +151082,9 @@ MonoBehaviour:
   - {fileID: 1387611217}
   enableObject:
   - {fileID: 967024345}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1387611222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164921,6 +164870,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 1556216025}
 --- !u!65 &1556216024
@@ -176971,6 +176923,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 1658294507}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1658294510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179122,6 +179077,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 1747084027}
 --- !u!65 &1747084026
@@ -214343,6 +214301,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 2091276771}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2091276774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266217,6 +266178,9 @@ MonoBehaviour:
   - {fileID: 1740817940}
   enableObject:
   - {fileID: 1387611217}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1857963653378689751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325606,6 +325570,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 3472946924545620604}
 --- !u!114 &3663533472672132132
@@ -325623,6 +325590,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 3472946924080229401}
 --- !u!33 &3664197519747531270
@@ -397413,6 +397383,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 4218200182354522115}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5623644267217897942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397697,6 +397670,9 @@ MonoBehaviour:
   enableObject:
   - {fileID: 718218720}
   - {fileID: 881985765}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5634532463163987677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464800,6 +464776,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 7458345565677248162}
 --- !u!1 &7291314527160523587
@@ -467194,6 +467173,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 7858985}
   disableObject: []
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
   keyID: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   doorAnimator: {fileID: 7215211535612475119}
 --- !u!23 &7393972018937757539
@@ -471336,6 +471318,9 @@ MonoBehaviour:
   disableObject:
   - {fileID: 7589732808102707811}
   enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7589732808102707816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506449,4 +506434,3 @@ SceneRoots:
   - {fileID: 1062066532}
   - {fileID: 3585390986413140665}
   - {fileID: 1536238252}
-  - {fileID: 1287713895}
