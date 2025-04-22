@@ -254,6 +254,8 @@ public class PlayerScriptBehaviour : MonoBehaviour
         {
             GetComponent<ThirdPersonController>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
+            hudInstance.SetActive(false);
+
             protector.enabled = false;
             occultist.enabled = false;
             drifter.enabled = false;
@@ -281,6 +283,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
         {
             GetComponent<ThirdPersonController>().enabled = true;
             GetComponent<CharacterController>().enabled = true;
+            hudInstance.SetActive(true);
             protector.enabled = true;
             occultist.enabled = true;
             drifter.enabled = true;
