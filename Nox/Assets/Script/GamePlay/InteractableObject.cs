@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviourPunCallbacks
 {
@@ -14,6 +15,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     private DialogueManager dialogueManager;
     public List<GameObject> disableObject;
     public List<GameObject> enableObject;
+    public UnityEvent onInteract;
     //public PhotonView photonView;
 
     private void Awake()
@@ -61,6 +63,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [PunRPC]
     void OnInteract()
     {
+        onInteract.Invoke();
         Debug.Log($"{gameObject.name} interacted with!");
         for (int i = 0; i < enableObject.Count; i++)
         {

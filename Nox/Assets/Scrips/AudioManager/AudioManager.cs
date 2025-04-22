@@ -1,6 +1,8 @@
 using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviourPun
 {
@@ -8,6 +10,7 @@ public class AudioManager : MonoBehaviourPun
     [Header("Audio Settings")]
     public List<AudioClip> audioClips = new List<AudioClip>();
     [SerializeField] private AudioSource audioSource;
+    public UnityEvent onAudioEnd;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +28,7 @@ public class AudioManager : MonoBehaviourPun
         {
             Debug.Log("Playing AudioClip at index: " + index);
             audioSource.PlayOneShot(audioClips[index]);
+            StartCoroutine(WaitForSFXToEnd(audioSource));
         }
         else
         {
@@ -40,6 +44,7 @@ public class AudioManager : MonoBehaviourPun
         {
             Debug.Log("Playing AudioClip named: " + clipName);
             audioSource.PlayOneShot(clip);
+            StartCoroutine(WaitForSFXToEnd(audioSource));
         }
         else
         {
@@ -53,6 +58,7 @@ public class AudioManager : MonoBehaviourPun
         if (audioClips.Count > 0)
         {
             audioSource.PlayOneShot(audioClips[0]);
+            StartCoroutine(WaitForSFXToEnd(audioSource));
         }
     }
 
@@ -69,6 +75,12 @@ public class AudioManager : MonoBehaviourPun
     public void RPCPlayDefaultAudio()
     {
         photonView.RPC("PlayDefaultAudio", RpcTarget.All);
+    }
+
+    private IEnumerator WaitForSFXToEnd(AudioSource sfxSource)
+    {
+        yield return new WaitWhile(() => sfxSource.isPlaying);
+        onAudioEnd.Invoke();
     }
 
 }

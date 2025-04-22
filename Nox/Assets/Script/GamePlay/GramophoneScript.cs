@@ -6,8 +6,13 @@ public class GramophoneScript : InteractableObject
 {
     public UnityEvent onInteract;
     public UnityEvent onCorrectVinyl;
+    public UnityEvent onFinishVinylQuest;
     public UnityEvent onWrongVinyl;
     public string requiredVinylID;
+    private int vinylCount = 0;
+    private bool hasInteract;
+    private PlayerInventory inventory;
+    private GameObject playerObj;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,16 +26,25 @@ public class GramophoneScript : InteractableObject
     }
     public override void Interact()
     {
-        base.Interact();
-        InteractGramaphone();
+        if (!hasInteract)
+        {
+            base.Interact();
+        }
+        else
+        {
+            playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+            inventory = playerObj.GetComponent<PlayerInventory>();
+            photonView.RPC("InteractGramaphone", RpcTarget.All);
+            inventory.DropVinyl();
+        }
+
         
     }
-
+    [PunRPC]
     public void InteractGramaphone()
     {
-        GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
-        if (playerObj == null) return;
-        PlayerInventory inventory = playerObj.GetComponent<PlayerInventory>();
+        //GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        if (playerObj == null) return;   
 
         if (inventory == null)
         {
@@ -43,17 +57,23 @@ public class GramophoneScript : InteractableObject
             ClueItemSO vinyl = inventory.GetHeldVinyl();
             if (vinyl.itemID == requiredVinylID) // Match by ID
             {
-                Debug.Log("Correct vinyl played!");
+                vinylCount++;
                 onCorrectVinyl.Invoke();
+                if (vinylCount >= 2)
+                {
+                    Debug.Log("Correct vinyl played!");
+                    onFinishVinylQuest.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Correct vinyl played!");
+                }
 
-                // Optionally clear the vinyl
-                inventory.DropVinyl();
             }
             else
             {
                 Debug.Log("Wrong vinyl.");
                 onWrongVinyl.Invoke();
-                inventory.DropVinyl();
             }
         }
         else
