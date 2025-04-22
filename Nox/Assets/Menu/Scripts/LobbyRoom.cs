@@ -21,6 +21,13 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
     public Sprite[] spriteList;
     public Sprite noneSprite;
 
+    [SerializeField] private string[] protectorDetails = { "Munimen Sanitas - Protector has more Health and Stamina.", "(1) Salus Brevis - Give nearby characters temporary health.", "(2) Audacia Mortalis - Taunts nearby enemy." };
+    [SerializeField] private string[] occultistDetails = { "Spectaculum Tenebris - Occultist can see the demon through walls at regular intervals.", "(1) Auget Agilitas - Increases Movement Speed of Allies.", "(2) Sanatio Tenebris - Restores Health To Allies." };
+    [SerializeField] private string[] drifterDetails = { "Fuga Velox - Drifter has higher movement speed.", "(1) Umbra Fugitiva - Become invisible.", "(2) Aethereus Vinculum - Bind yourself and the enemy for a brief period." };
+    [SerializeField] private string[] trapperDetails = { "Munera Venandi - Trapper can interact with unique collectibles to charge his abilities.", "(1) Hibernus Impedimentum - Throw a slowing grenade.", "(2) Gelu Immobilis - Place a trap that freezes the enemy for a few seconds." };
+
+    [SerializeField] private GameObject[] classDetails = {};
+
     private bool isStartingGame = false;
     void Start()
     {
@@ -29,36 +36,13 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
 
     private void getButtonList()
     {
-        
-        int currentActor = PhotonNetwork.LocalPlayer.ActorNumber;
-        
-        if (currentActor == 1)
+
+        int playerIndex = PhotonNetwork.LocalPlayer.ActorNumber - 1;
+        Transform playerTransform = lobbyPlayersHeading.GetChild(playerIndex);
+
+        for (int i = 0; i < 4; i++)
         {
-            buttonGameObjects[0] = lobbyPlayersHeading.GetChild(0).GetChild(1).gameObject;
-            buttonGameObjects[1] = lobbyPlayersHeading.GetChild(0).GetChild(2).gameObject;
-            buttonGameObjects[2] = lobbyPlayersHeading.GetChild(0).GetChild(3).gameObject;
-            buttonGameObjects[3] = lobbyPlayersHeading.GetChild(0).GetChild(4).gameObject;
-        }
-        else if (currentActor == 2)
-        {
-            buttonGameObjects[0] = lobbyPlayersHeading.GetChild(1).GetChild(1).gameObject;
-            buttonGameObjects[1] = lobbyPlayersHeading.GetChild(1).GetChild(2).gameObject;
-            buttonGameObjects[2] = lobbyPlayersHeading.GetChild(1).GetChild(3).gameObject;
-            buttonGameObjects[3] = lobbyPlayersHeading.GetChild(1).GetChild(4).gameObject;
-        }
-        else if(currentActor == 3)
-        {
-            buttonGameObjects[0] = lobbyPlayersHeading.GetChild(2).GetChild(1).gameObject;
-            buttonGameObjects[1] = lobbyPlayersHeading.GetChild(2).GetChild(2).gameObject;
-            buttonGameObjects[2] = lobbyPlayersHeading.GetChild(2).GetChild(3).gameObject;
-            buttonGameObjects[3] = lobbyPlayersHeading.GetChild(2).GetChild(4).gameObject;
-        }
-        else if(currentActor == 4)
-        {
-            buttonGameObjects[0] = lobbyPlayersHeading.GetChild(3).GetChild(1).gameObject;
-            buttonGameObjects[1] = lobbyPlayersHeading.GetChild(3).GetChild(2).gameObject;
-            buttonGameObjects[2] = lobbyPlayersHeading.GetChild(3).GetChild(3).gameObject;
-            buttonGameObjects[3] = lobbyPlayersHeading.GetChild(3).GetChild(4).gameObject;
+            buttonGameObjects[i] = playerTransform.GetChild(i + 1).gameObject;
         }
 
         AddButtonListeners();
@@ -127,6 +111,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         string selectedClass = "Protector";
         playerData.Setclass(selectedClass);
         ReportClassSelection(selectedClass);
+
+        classDetails[0].SetActive(true);
+        classDetails[1].GetComponent<TextMeshProUGUI>().text = selectedClass;
+        classDetails[2].GetComponent<TextMeshProUGUI>().text = protectorDetails[0];
+        classDetails[3].GetComponent<TextMeshProUGUI>().text = protectorDetails[1];
+        classDetails[4].GetComponent<TextMeshProUGUI>().text = protectorDetails[2];
     }
 
     public void ClassSelectionOccultist()
@@ -134,6 +124,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         string selectedClass = "Occultist";
         playerData.Setclass(selectedClass);
         ReportClassSelection(selectedClass);
+
+        classDetails[0].SetActive(true);
+        classDetails[1].GetComponent<TextMeshProUGUI>().text = selectedClass;
+        classDetails[2].GetComponent<TextMeshProUGUI>().text = occultistDetails[0];
+        classDetails[3].GetComponent<TextMeshProUGUI>().text = occultistDetails[1];
+        classDetails[4].GetComponent<TextMeshProUGUI>().text = occultistDetails[2];
     }
 
     public void ClassSelectionDrifter()
@@ -141,6 +137,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         string selectedClass = "Drifter";
         playerData.Setclass(selectedClass);
         ReportClassSelection(selectedClass);
+
+        classDetails[0].SetActive(true);
+        classDetails[1].GetComponent<TextMeshProUGUI>().text = selectedClass;
+        classDetails[2].GetComponent<TextMeshProUGUI>().text = drifterDetails[0];
+        classDetails[3].GetComponent<TextMeshProUGUI>().text = drifterDetails[1];
+        classDetails[4].GetComponent<TextMeshProUGUI>().text = drifterDetails[2];
     }
 
     public void ClassSelectionTrapper()
@@ -148,6 +150,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         string selectedClass = "Trapper";
         playerData.Setclass(selectedClass);
         ReportClassSelection(selectedClass);
+
+        classDetails[0].SetActive(true);
+        classDetails[1].GetComponent<TextMeshProUGUI>().text = selectedClass;
+        classDetails[2].GetComponent<TextMeshProUGUI>().text = trapperDetails[0];
+        classDetails[3].GetComponent<TextMeshProUGUI>().text = trapperDetails[1];
+        classDetails[4].GetComponent<TextMeshProUGUI>().text = trapperDetails[2];
     }
 
     private void ReportClassSelection(string className)
@@ -278,4 +286,12 @@ public class LobbyRoom : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(1);
             
     }
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("SyncSelectedClasses", newPlayer, selectedClasses);
+        }
+    }
+
 }

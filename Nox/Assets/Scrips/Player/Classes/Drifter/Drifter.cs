@@ -43,6 +43,11 @@ public class Drifter : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         playerScriptBehaviour = GetComponent<PlayerScriptBehaviour>();
         thirdPersonController = GetComponent<ThirdPersonController>();
+        if(thirdPersonController != null)
+        {
+            thirdPersonController.MoveSpeed = thirdPersonController.MoveSpeed * 1.2f;
+            thirdPersonController.MoveSpeed = thirdPersonController.SprintSpeed * 1.2f;
+        }
     }
 
     // Update is called once per frame
