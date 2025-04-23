@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrapperGrenade : MonoBehaviour
 {
     public PhotonView photonView;
+    private Rigidbody rb;
 
     public float explosionRadius = 15f;
     public float slowAmount = 0.5f;
@@ -13,10 +14,36 @@ public class TrapperGrenade : MonoBehaviour
 
     private bool hasExploded = false;
 
+    public float pitchMultiplier = 8f; 
+    public float rotationSmoothness = 10f;
+    public float rollSpeed = 360f; 
+
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
+        rb = GetComponent<Rigidbody>();
     }
+
+    private void Update()
+    {
+        if (rb == null) return;
+
+        float verticalVelocity = rb.linearVelocity.y;
+        float forwardSpeed = rb.linearVelocity.magnitude;
+
+        // Make pitch more dramatic and snappy
+        float targetPitch = Mathf.Clamp(-verticalVelocity * pitchMultiplier, -70f, 70f);
+
+        // Optionally add a constant spin around Z (forward roll)
+        float roll = Time.time * rollSpeed;
+
+        // Create a target rotation
+        Quaternion targetRotation = Quaternion.Euler(targetPitch, targetPitch, roll);
+
+        // Smoothly interpolate to that rotation
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmoothness);
+    }
+
 
     void OnCollisionEnter(Collision collision)
     {
