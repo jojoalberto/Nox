@@ -9121,8 +9121,8 @@ MonoBehaviour:
   - {fileID: 1339671590}
   spriteList:
   - {fileID: 21300000, guid: f4977aa108e0092409c53aaf21b64a26, type: 3}
-  - {fileID: 21300000, guid: 8f725f71e68d72c4fab658f0fd895b36, type: 3}
-  - {fileID: 21300000, guid: 7d62a36f1deb3134390d6699974203c1, type: 3}
+  - {fileID: 21300000, guid: c5313bf759b7abb4cb0af475b6ce36f2, type: 3}
+  - {fileID: 21300000, guid: 0e0897819c2a22c4fb2d00e958e67147, type: 3}
   - {fileID: 21300000, guid: 1bc6e7c0af11d5e4baddce4b26a9e07c, type: 3}
   noneSprite: {fileID: 0}
   protectorDetails:
