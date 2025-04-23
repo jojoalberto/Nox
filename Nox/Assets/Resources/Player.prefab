@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a7af1738df9843bde0614e005257f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 0
+  interactDistance: 30
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2
@@ -5034,7 +5034,7 @@ MonoBehaviour:
     m_Bits: 256
   destroyableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16384
   interactionUI: {fileID: 4753742032257792640}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
   classSelected: 
