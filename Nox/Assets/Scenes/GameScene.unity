@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 11757582}
   - component: {fileID: 11757581}
   - component: {fileID: 11757580}
+  - component: {fileID: 11757583}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -572,6 +573,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &11757583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11757578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 159
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &13090956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28220,6 +28243,7 @@ GameObject:
   - component: {fileID: 213123085}
   - component: {fileID: 213123084}
   - component: {fileID: 213123083}
+  - component: {fileID: 213123086}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -28352,6 +28376,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &213123086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213123081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 158
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &216906098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38227,6 +38273,7 @@ GameObject:
   - component: {fileID: 367527065}
   - component: {fileID: 367527064}
   - component: {fileID: 367527063}
+  - component: {fileID: 367527066}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -38359,6 +38406,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &367527066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367527061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 157
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &368833224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58351,6 +58420,7 @@ GameObject:
   - component: {fileID: 676472095}
   - component: {fileID: 676472094}
   - component: {fileID: 676472093}
+  - component: {fileID: 676472096}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -58483,6 +58553,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &676472096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676472091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 156
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &677023875
 GameObject:
   m_ObjectHideFlags: 0
@@ -58922,7 +59014,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: eeacefc2a1cbcbd48ad5e93fe50a5b17, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -64215,6 +64307,7 @@ GameObject:
   - component: {fileID: 701608571}
   - component: {fileID: 701608572}
   - component: {fileID: 701608573}
+  - component: {fileID: 701608574}
   m_Layer: 0
   m_Name: OnEnterCollider
   m_TagString: Untagged
@@ -64271,6 +64364,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelineDirector: {fileID: 686823152}
+--- !u!114 &701608574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701608570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 160
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &702403965
 GameObject:
   m_ObjectHideFlags: 0
@@ -70334,6 +70449,7 @@ GameObject:
   - component: {fileID: 741052882}
   - component: {fileID: 741052881}
   - component: {fileID: 741052880}
+  - component: {fileID: 741052883}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -70466,6 +70582,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &741052883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741052878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 155
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &742760449
 GameObject:
   m_ObjectHideFlags: 0
@@ -110402,6 +110540,7 @@ GameObject:
   - component: {fileID: 1023126631}
   - component: {fileID: 1023126630}
   - component: {fileID: 1023126629}
+  - component: {fileID: 1023126632}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -110534,6 +110673,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1023126632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023126627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 154
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1023185820
 GameObject:
   m_ObjectHideFlags: 0
@@ -111932,6 +112093,7 @@ GameObject:
   - component: {fileID: 1053344425}
   - component: {fileID: 1053344424}
   - component: {fileID: 1053344423}
+  - component: {fileID: 1053344426}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -112064,6 +112226,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1053344426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053344421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 153
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1055358347
 GameObject:
   m_ObjectHideFlags: 0
@@ -214926,6 +215110,7 @@ GameObject:
   - component: {fileID: 1955669716}
   - component: {fileID: 1955669715}
   - component: {fileID: 1955669714}
+  - component: {fileID: 1955669717}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -215058,6 +215243,28 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1955669717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955669712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 152
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1958302725
 GameObject:
   m_ObjectHideFlags: 0
