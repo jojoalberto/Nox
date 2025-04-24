@@ -33654,7 +33654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735c64751d3083844851a8e8fac7da09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedPlayers: []
 --- !u!1 &272558444
 GameObject:
   m_ObjectHideFlags: 0
@@ -382199,7 +382198,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4580590878279949079}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271905887}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: DealDamageToAll
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4580626462325562597
 MonoBehaviour:
   m_ObjectHideFlags: 0

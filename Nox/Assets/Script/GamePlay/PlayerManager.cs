@@ -6,62 +6,17 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviourPunCallbacks
 {
-    public static PlayerManager Instance;
-    public List<GameObject> loadedPlayers = new List<GameObject>();
-    private bool allPlayerHasLoaded = false;
-
-    private void Awake()
+    public void DealDamageToAll(int damageAmount)
     {
-        if (Instance == null)
+        PlayerHealth[] allPlayers = Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
+
+        foreach (PlayerHealth player in allPlayers)
         {
+            // Only let the owner call the RPC to avoid duplicate calls
+            if (player.photonView.IsMine)
             {
-                Instance = this;
+                player.photonView.RPC("RPC_TakeDamage", RpcTarget.All, damageAmount);
             }
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        StartPlayerStoring();
-    }
-
-    public void StartPlayerStoring()
-    {
-        if (loadedPlayers.Count == PhotonNetwork.CurrentRoom.PlayerCount && !allPlayerHasLoaded)
-        {
-            StartCoroutine(FinishLoad());
-        }
-    }
-    public void PlayerFinishedLoading()
-    {
-        photonView.RPC("RPC_PlayerLoaded", RpcTarget.AllBuffered, PhotonNetwork.LocalPlayer);
-    }
-    [PunRPC]
-    void RPC_PlayerLoaded(GameObject player)
-    {
-        if (!loadedPlayers.Contains(player))
-        {
-            loadedPlayers.Add(player);
-        }
-        if (loadedPlayers.Count == PhotonNetwork.CurrentRoom.PlayerCount)
-        {
-            Debug.Log("All players have loaded!");
-            allPlayerHasLoaded = true;
-        }
-    }
-    IEnumerator FinishLoad()
-    {
-        yield return new WaitForSeconds(2); // replace with actual load condition
-        PlayerFinishedLoading();
-    }
-
 }
