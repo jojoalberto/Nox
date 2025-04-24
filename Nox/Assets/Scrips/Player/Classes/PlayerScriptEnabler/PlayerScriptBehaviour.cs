@@ -1,5 +1,6 @@
 using System.Collections;
 using Photon.Pun;
+using Photon.Voice.Unity;
 using StarterAssets;
 using TMPro;
 using Unity.VisualScripting;
@@ -43,6 +44,8 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject usernameCanvas;
 
+    [SerializeField] private Recorder recorder;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,7 +68,10 @@ public class PlayerScriptBehaviour : MonoBehaviour
                 }
 
             }
+            recorder = GameObject.FindGameObjectWithTag("VCRecorder").GetComponent<Recorder>();
         }
+
+        
     }
 
     private void Awake()
@@ -76,7 +82,14 @@ public class PlayerScriptBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKey(KeyCode.V))
+        {
+            recorder.TransmitEnabled = true;
+        }
+        else
+        {
+            recorder.TransmitEnabled = false;
+        }
     }
 
     [PunRPC]

@@ -11,6 +11,7 @@ TagManager:
   - PlayerUI
   - AggressionUI
   - DemonEffects
+  - VCRecorder
   layers:
   - Default
   - TransparentFX

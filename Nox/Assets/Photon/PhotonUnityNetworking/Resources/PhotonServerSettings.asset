@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 1e355dc9-4d39-4dd9-a7e7-7784202b0352
+    AppIdRealtime: c50a4b14-bb2f-4f8a-80ca-bf288eb26ce8
     AppIdFusion: 
     AppIdChat: 
-    AppIdVoice: 
-    AppVersion: 0.1
+    AppIdVoice: c50a4b14-bb2f-4f8a-80ca-bf288eb26ce8
+    AppVersion: 
     UseNameServer: 1
     FixedRegion: 
     Server: 
@@ -28,101 +28,86 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: eu
+  DevRegion: 
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
+  - CantHearYou
+  - ChangeColour
   - ClickRpc
   - DestroyRpc
+  - HeresWhy
+  - AddArtifact
+  - AddKey
+  - CheckCandleWinCondition
+  - CollectItem
+  - CollectTrapperPickup
+  - DestroyObjectRPC
+  - DestroySelf
   - DestroySpaceship
   - Fire
-  - RespawnSpaceship
-  - SetNickname
-  - changeColorTo
-  - changeDirectionTo
-  - changePositionTo
-  - changeScore
-  - setPlayerNames
-  - SetPlayerNames
-  - UpdateSelectedClasses
-  - SetPlayerClasses
-  - OnInteract
-  - ShowDialogueRPC
-  - SyncInventory
-  - CollectItem
-  - GetSelectedClasses
-  - ReportClassToMaster
-  - SyncSelectedClasses
-  - GoToPurgatory
-  - PlayAttackAnimation
-  - PlayPostAttackAnimation
-  - ResetAnimation
-  - SyncAnimation
-  - SyncFlashlightState
-  - UnlockChestRPC
-  - ShowChestDialogueRPC
   - ForceDisableAndEnableObjectsRPC
+  - InteractGramaphone
+  - OnInteract
+  - OpenDoor
+  - PlayAttackAnimation
+  - PlayAudioByIndex
+  - PlayAudioByName
+  - PlayCutscene
+  - PlayDefaultAudio
+  - PlayerEnteredTrigger
+  - PlayPostAttackAnimation
+  - ReportClassToMaster
+  - RespawnSpaceship
   - RPC_ActivateAbility1
   - RPC_ActivateAbility2
-  - RPC_RestoreHealthPercent
-  - RPC_TakeDamage
-  - SetClassSelected
-  - RPC_SetClassSelected
-  - RPC_ToggleInvisibility
-  - BindDemon
-  - RPC_BindDemon
-  - RPC_ResetCooldownAbility1
-  - RPC_ResetCooldownAbility2
+  - RPC_AddPlayer
   - RPC_AddTemporaryHealth
-  - RPC_Taunt
-  - RPC_ResetCooldownProtectorAbility1
-  - RPC_ResetCooldownProtectorAbility2
+  - RPC_ApplyFreeze
+  - RPC_ApplySlow
+  - RPC_BindDemon
+  - RPC_DecrementPickup
+  - RPC_DisablePlayer
+  - RPC_EnablePlayer
+  - RPC_IncrementPickup
+  - RPC_RequestRegisterViewer
+  - RPC_RequestUnregisterViewer
   - RPC_ResetCooldownDrifterAbility1
   - RPC_ResetCooldownDrifterAbility2
   - RPC_ResetCooldownOccultistAbility1
   - RPC_ResetCooldownOccultistAbility2
+  - RPC_ResetCooldownProtectorAbility1
+  - RPC_ResetCooldownProtectorAbility2
   - RPC_ResetCooldownTrapperAbility1
   - RPC_ResetCooldownTrapperAbility2
-  - ToggleTrapperGrenadeActive
-  - RPC_IncrementPickup
-  - RPC_DecrementPickup
-  - ApplySlow
-  - DestroySelf
-  - RPC_ApplySlow
-  - AddCandle
-  - CheckCandleWinCondition
-  - UpdateCandleCount
-  - RPC_ApplyFreeze
-  - RPC_SoundAlert
-  - RPC_StartChasing
-  - RPC_ShowAggressionClaw
-  - PlayAudio
-  - RPC_SetTrapVisibility
-  - PlayAudioByIndex
-  - PlayAudioByName
-  - PlayDefaultAudio
-  - RPC_RequestRegisterViewer
-  - RPC_RequestUnregisterViewer
-  - ShowItemDialogueRPC
-  - RPC_SyncHealth
-  - RPC_AddPlayer
-  - RPC_DisablePlayer
-  - RPC_EnablePlayer
-  - OpenDoor
-  - SyncKey
-  - SyncKeys
   - RPC_RespawnPosition
+  - RPC_RestoreHealthPercent
+  - RPC_SetActiveState
+  - RPC_SetClassSelected
+  - RPC_SetTrapVisibility
+  - RPC_ShowAggressionClaw
+  - RPC_SoundAlert
   - RPC_StartChaseEffect
+  - RPC_StartChasing
   - RPC_StopChaseEffect
-  - AddKey
-  - AddArtifact
-  - InteractGramaphone
-  - DestroyObject
-  - DestroyObjectRPC
-  - PlayCutscene
-  - PlayerEnteredTrigger
+  - RPC_SyncHealth
+  - RPC_TakeDamage
+  - RPC_Taunt
+  - RPC_ToggleInvisibility
+  - SetNickname
+  - SetPlayerClasses
+  - SetPlayerNames
+  - ShowChestDialogueRPC
+  - ShowDialogueRPC
+  - ShowItemDialogueRPC
+  - SyncAnimation
+  - SyncFlashlightState
+  - SyncInventory
+  - SyncSelectedClasses
+  - UnlockChestRPC
+  - UpdateCandleCount
   DisableAutoOpenWizard: 1
-  ShowSettings: 0
-  DevRegionSetOnce: 1
+  ShowSettings: 1
+  DevRegionSetOnce: 0

@@ -208,7 +208,11 @@ public class PlayerHealth : MonoBehaviourPun
         {
             yield return new WaitForSeconds(1f);
             temporaryHealth -= temporaryHealthDecay;
-            healthBar.UpdateHealth();
+
+            if(photonView.IsMine)
+            {
+                healthBar.UpdateHealth();
+            }
         }
         temporaryHealth = 0;
     }
