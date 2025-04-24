@@ -109,6 +109,7 @@ MonoBehaviour:
   - UnlockChestRPC
   - UpdateCandleCount
   - RPC_PlayerLoaded
+  - RPC_RequestDamageAll
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

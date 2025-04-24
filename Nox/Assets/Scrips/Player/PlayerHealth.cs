@@ -351,6 +351,16 @@ public class PlayerHealth : MonoBehaviourPun
         }
     }
 
+    [PunRPC]
+    public void RPC_RequestDamageAll(int amount)
+    {
+        PlayerHealth myHealth = GetComponent<PlayerHealth>();
+        if (myHealth != null && photonView.IsMine)
+        {
+            myHealth.TakeDamage(amount);
+        }
+    }
+
     IEnumerator ReenableTransformSync()
     {
         yield return new WaitForSeconds(0.1f); // wait 1 frame or so

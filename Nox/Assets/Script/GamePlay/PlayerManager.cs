@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
 
         foreach (PlayerHealth player in allPlayers)
         {
-            player.photonView.RPC("PublicTakeDamage", player.photonView.Owner, damageAmount);
+            player.photonView.RPC("RPC_RequestDamageAll", player.photonView.Owner, damageAmount);
         }
     }
 
