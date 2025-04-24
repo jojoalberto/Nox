@@ -6,17 +6,17 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviourPunCallbacks
 {
+    PlayerHealth[] allPlayers;
     public void DealDamageToAll(int damageAmount)
     {
-        PlayerHealth[] allPlayers = Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
+        if (!PhotonNetwork.IsMasterClient)
+            return;
+
+        allPlayers = Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
 
         foreach (PlayerHealth player in allPlayers)
         {
-            // Only let the owner call the RPC to avoid duplicate calls
-            if (player.photonView.IsMine)
-            {
-                player.photonView.RPC("RPC_TakeDamage", RpcTarget.All, damageAmount);
-            }
+            player.photonView.RPC("PublicTakeDamage", player.photonView.Owner, damageAmount);
         }
     }
 

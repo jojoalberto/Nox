@@ -343,6 +343,13 @@ public class PlayerHealth : MonoBehaviourPun
         // Reactivate sync shortly after
         StartCoroutine(ReenableTransformSync());
     }
+    public void PublicTakeDamage(int amount)
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_TakeDamage", RpcTarget.All, amount);
+        }
+    }
 
     IEnumerator ReenableTransformSync()
     {
