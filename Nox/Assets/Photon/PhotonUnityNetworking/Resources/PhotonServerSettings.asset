@@ -108,6 +108,7 @@ MonoBehaviour:
   - SyncSelectedClasses
   - UnlockChestRPC
   - UpdateCandleCount
+  - RPC_PlayerLoaded
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0
