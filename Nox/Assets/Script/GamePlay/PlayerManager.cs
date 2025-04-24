@@ -19,4 +19,18 @@ public class PlayerManager : MonoBehaviourPunCallbacks
             }
         }
     }
+
+    public void EnableCursor()
+    {
+            Debug.Log("showing Cursor");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        
+    }
+
+    public void DisableCursor()
+    {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+    }
 }
