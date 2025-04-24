@@ -189,6 +189,15 @@ public class PlayerHealth : MonoBehaviourPun
         if (tempHealthCoroutine != null)
             StopCoroutine(tempHealthCoroutine);
 
+        if (photonView.IsMine)
+        {
+            healthBar.UpdateHealth();
+            FlashVignette(healColor);
+            CheckLowHealthEffect();
+
+            SyncHealthWithOthers();
+        }
+
         tempHealthCoroutine = StartCoroutine(DecayTemporaryHealth());
     }
 
@@ -199,8 +208,8 @@ public class PlayerHealth : MonoBehaviourPun
         {
             yield return new WaitForSeconds(1f);
             temporaryHealth -= temporaryHealthDecay;
+            healthBar.UpdateHealth();
         }
-
         temporaryHealth = 0;
     }
 

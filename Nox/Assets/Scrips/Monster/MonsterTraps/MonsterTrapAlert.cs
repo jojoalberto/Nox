@@ -25,13 +25,15 @@ public class MonsterTrapAlert : MonoBehaviourPun
 
     [SerializeField] private UnityEvent onSoundTrapTrigger;
 
-    private readonly HashSet<int> viewers = new(); //Trap Player Tracker
+    private readonly HashSet<int> viewers = new(); 
     private bool isVisible = false;
 
     private void Awake()
     {
         if (trapRenderer == null)
             trapRenderer = GetComponentInChildren<Renderer>();
+        if (trapRenderer != null)
+            trapRenderer.enabled = isVisible;
     }
 
     private void OnTriggerEnter(Collider other)

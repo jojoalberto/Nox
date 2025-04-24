@@ -18,7 +18,7 @@ public class PickableObject : MonoBehaviourPun
     {
         if (gameObject.layer == 10)  
         {
-            CollectTrapperPickup();
+            photonView.RPC("CollectTrapperPickup", RpcTarget.All);
             return;
         }
 
@@ -72,8 +72,9 @@ public class PickableObject : MonoBehaviourPun
         onPickup.Invoke();
     }
 
+    [PunRPC]
     protected void CollectTrapperPickup()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

@@ -1196,12 +1196,20 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
   isChasingPlayer: 0
   isAttacking: 0
   attackRange: 4
   damageAmount: 20
   postAttackIdleTime: 4
   isBound: 0
+  rate: 120
+  damageIncrement: 10
+  speedIncrement: 0.3
+  maximumDamage: 50
+  maximumSpeedIncrement: 2
+  aggressionUI: {fileID: 0}
+  chaseEffects: {fileID: 0}
 --- !u!114 &8833935332830290465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1949,7 +1957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290884568573657346}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10735501, y: 0.1319901, z: 0.10723868, w: 0.97956795}
+  m_LocalRotation: {x: -0.10735503, y: 0.1319901, z: 0.107238695, w: 0.97956795}
   m_LocalPosition: {x: -0.0811095, y: -8.5265126e-16, z: -3.5527135e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2544,7 +2552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290884568573657374}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10735501, y: 0.1319901, z: 0.10723868, w: 0.97956795}
+  m_LocalRotation: {x: -0.10735503, y: 0.1319901, z: 0.107238695, w: 0.97956795}
   m_LocalPosition: {x: 0.0811062, y: -0.0000029791704, z: -0.0000013876395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3170,7 +3178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290884568573657404}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0006440358, y: 0.12744845, z: -0.012658571, w: 0.9917642}
+  m_LocalRotation: {x: 0.0006440359, y: 0.12744845, z: -0.012658573, w: 0.9917642}
   m_LocalPosition: {x: -0.07730218, y: 6.217249e-17, z: 1.7053025e-15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -5,8 +5,11 @@ public class HealthBar : MonoBehaviour
 {
 
     public Slider healthBar;
+    public Slider tempHealthBar;
     public Gradient colorGradient;
+    public Gradient tempColorGradient;
     public Image fill;
+    public Image tempFill;
 
     public PlayerHealth playerHealth;
 
@@ -27,7 +30,12 @@ public class HealthBar : MonoBehaviour
         healthBar.maxValue = playerHealth.totalHealth;
         healthBar.value = playerHealth.totalHealth;
 
+        tempHealthBar.maxValue = playerHealth.totalHealth;
+        tempHealthBar.value = 0f;
+
         fill.color = colorGradient.Evaluate(1f);
+        tempFill.color = tempColorGradient.Evaluate(1f);
+        UpdateTempFill();
     }
 
     public void UpdateHealth()
@@ -35,5 +43,13 @@ public class HealthBar : MonoBehaviour
         healthBar.value = playerHealth.currentHealth;
 
         fill.color = colorGradient.Evaluate(healthBar.normalizedValue);
+        UpdateTempFill();
     }
+
+    private void UpdateTempFill()
+    {
+        tempHealthBar.value = playerHealth.temporaryHealth;
+        tempFill.color = tempColorGradient.Evaluate(tempHealthBar.normalizedValue);
+    }
+
 }
