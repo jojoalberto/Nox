@@ -826,4 +826,24 @@ public class DemonTargetAI1 : MonoBehaviour
         }
     }
 
+    public void AlertDemon(string voiceLevel)
+    {
+        if(voiceLevel == "scream")
+        {
+
+        }
+        else if(voiceLevel == "talk")
+        {
+
+        }
+        else if (voiceLevel == "whisper")
+        {
+
+        }
+        else
+        {
+            Debug.Log("What is " +  voiceLevel);
+        }
+    }
+    
 }
