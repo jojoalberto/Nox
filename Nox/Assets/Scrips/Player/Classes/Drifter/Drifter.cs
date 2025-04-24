@@ -46,7 +46,7 @@ public class Drifter : MonoBehaviour
         if(thirdPersonController != null)
         {
             thirdPersonController.MoveSpeed = thirdPersonController.MoveSpeed * 1.2f;
-            thirdPersonController.MoveSpeed = thirdPersonController.SprintSpeed * 1.2f;
+            thirdPersonController.SprintSpeed = thirdPersonController.SprintSpeed * 1.2f;
         }
     }
 
