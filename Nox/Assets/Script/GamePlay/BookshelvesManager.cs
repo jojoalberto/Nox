@@ -7,12 +7,8 @@ using UnityEngine.Events;
 public class BookshelvesManager : MonoBehaviourPun
 {
     public static BookshelvesManager Instance;
-    [SerializeField]
-    private ClueItemSO itemPrize;
     public UnityEvent onFinishQuest;
     public UnityEvent onIncorrectAnswer;
-    [SerializeField]private int bookShelf;
-    public List<GameObject> players;
     private HashSet<string> interactedBookshelves = new HashSet<string>();
     private int totalBookshelves;
     public UnityEvent onFinalQuest;

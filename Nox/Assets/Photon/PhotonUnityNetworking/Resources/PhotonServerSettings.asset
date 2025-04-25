@@ -115,6 +115,8 @@ MonoBehaviour:
   - TriggerFinalEventRPC
   - ReapeatQuizRPC
   - RepeatQuizRPC
+  - UpdateQuest
+  - OpenOtherDoor
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -1,6 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 using System.Linq;
+using UnityEngine.Events;
 
 public class DoorInteraction : InteractableObject
 {
@@ -8,6 +9,7 @@ public class DoorInteraction : InteractableObject
     public Animator doorAnimator;
     private bool isOpen = false;
     private DialogueMessage dialogueMessages;
+    public UnityEvent onDoorOpen;
 
     public override void Interact()
     {
@@ -27,18 +29,56 @@ public class DoorInteraction : InteractableObject
         }
     }
 
+    public void CallOpenOtherDoor()
+    {
+        if (!isOpen)
+        {
+            photonView.RPC("OpenOtherDoor", RpcTarget.All);
+        }
+
+    }
+
     [PunRPC]
     void OpenDoor()
     {
-        isOpen = true;
-        Collider col = GetComponent<Collider>();
-        if (col != null)
+        if (!isOpen)
         {
-            col.enabled = false;
+            onDoorOpen.Invoke();
+            isOpen = true;
+            Collider col = GetComponent<Collider>();
+            if (col != null)
+            {
+                col.enabled = false;
+            }
+            if (doorAnimator != null)
+            {
+                doorAnimator.Play("OpenDoor");
+            }
         }
-        if (doorAnimator != null)
+        else
         {
-            doorAnimator.Play("OpenDoor");
+            return;
+        }
+    }
+    [PunRPC]
+    void OpenOtherDoor()
+    {
+        if (!isOpen)
+        {
+            isOpen = true;
+            Collider col = GetComponent<Collider>();
+            if (col != null)
+            {
+                col.enabled = false;
+            }
+            if (doorAnimator != null)
+            {
+                doorAnimator.Play("OpenDoor");
+            }
+        }
+        else
+        {
+            return;
         }
     }
 }
