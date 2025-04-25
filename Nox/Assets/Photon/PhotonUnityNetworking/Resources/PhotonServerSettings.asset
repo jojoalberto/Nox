@@ -110,6 +110,11 @@ MonoBehaviour:
   - UpdateCandleCount
   - RPC_PlayerLoaded
   - RPC_RequestDamageAll
+  - ShowBookDialogueRPC
+  - TriggerFinalEvent
+  - TriggerFinalEventRPC
+  - ReapeatQuizRPC
+  - RepeatQuizRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

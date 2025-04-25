@@ -12,6 +12,7 @@ TagManager:
   - AggressionUI
   - DemonEffects
   - VCRecorder
+  - Bookshelf
   layers:
   - Default
   - TransparentFX
