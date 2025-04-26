@@ -72,7 +72,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     [SerializeField] ChaseEffects chaseEffects;
 
-
+    [SerializeField] private AudioManager audioManager;
 
     void Start()
     {
@@ -330,6 +330,9 @@ public class DemonTargetAI1 : MonoBehaviour
     IEnumerator ChasePlayer()
     {
         isChasingPlayer = true;
+
+        BeginChaseMusic("ChaseA");
+
         if (chaseEffects != null)
         {
             chaseEffects.StartChaseEffect();
@@ -384,6 +387,8 @@ public class DemonTargetAI1 : MonoBehaviour
         }
 
         isChasingPlayer = false;
+        EndChaseMusic();
+
         if (chaseEffects != null)
         {
             chaseEffects.StopChaseEffect();
@@ -524,8 +529,9 @@ public class DemonTargetAI1 : MonoBehaviour
         UpdateNavMeshSpeed();
         damageAmount = originalDamage;
 
-        if (currentTarget != null && HasLineOfSightToPlayer(currentTarget))
+        if (currentTarget != null && !currentTarget.GetComponent<PlayerHealth>().isDead)
         {
+            
             currentSpeedState = SpeedState.ChasingTired;
             isChasingPlayer = true;
 
@@ -826,5 +832,16 @@ public class DemonTargetAI1 : MonoBehaviour
             debugMessages[2] = $"Added player {player.name} to tracking list.";
         }
     }
+
     
+    private void BeginChaseMusic(string name)
+    {
+        audioManager.RequestPlayMusicClipByName(name);
+    }
+
+    private void EndChaseMusic()
+    {
+        audioManager.RequestPlayMusicClipByName("General");
+    }
+
 }

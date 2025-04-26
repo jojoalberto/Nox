@@ -5368,6 +5368,7 @@ MonoBehaviour:
   damageColor: {r: 0.39215687, g: 0.009825237, b: 0, a: 1}
   healColor: {r: 0, g: 0.39215687, b: 0, a: 1}
   respawnDelay: 10
+  isDead: 0
   virtualCam: {fileID: 6282848611391418736}
 --- !u!114 &9036687969454709197
 MonoBehaviour:

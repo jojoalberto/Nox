@@ -2,6 +2,7 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviourPun
@@ -11,8 +12,13 @@ public class AudioManager : MonoBehaviourPun
     public List<AudioClip> sfxAudioClips = new List<AudioClip>();
     public List<AudioClip> musicAudioClips = new List<AudioClip>();
     [SerializeField] private AudioSource sfxAudioSource;
-    [SerializeField] private AudioSource musicAudioSource;
     public UnityEvent onAudioEnd;
+
+    [SerializeField] private AudioSource musicAudioSourceA;
+    [SerializeField] private AudioSource musicAudioSourceB;
+
+    private AudioSource currentMusicSource;
+    private AudioSource nextMusicSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,13 +27,13 @@ public class AudioManager : MonoBehaviourPun
         {
             sfxAudioSource = GetComponent<AudioSource>();
         }
-        if (musicAudioSource == null)
-        {
-            musicAudioSource = GetComponent<AudioSource>();
-        }
 
-        if (!musicAudioSource.isPlaying && PhotonNetwork.IsMasterClient)
+        currentMusicSource = musicAudioSourceA;
+        nextMusicSource = musicAudioSourceB;
+
+        if (!currentMusicSource.isPlaying && PhotonNetwork.IsMasterClient)
         {
+            Debug.Log("Music Attempt");
             RequestPlayMusicClipByName("General");
         }
     }
@@ -94,7 +100,7 @@ public class AudioManager : MonoBehaviourPun
         onAudioEnd.Invoke();
     }
 
-    private void RequestPlayMusicClipByName(string name)
+    public void RequestPlayMusicClipByName(string name)
     {
         Debug.Log("Requesting music:" + name);
         photonView.RPC("RPC_PlayMusicClipByName", RpcTarget.All, name);
@@ -104,51 +110,57 @@ public class AudioManager : MonoBehaviourPun
     public void RPC_PlayMusicClipByName(string name)
     {
         Debug.Log("RPC_PlayMusicClipByName:" + name);
-        StartCoroutine(FadeOutAndSwitchMusic(name));
+        StartCoroutine(CrossfadeToNewMusic(name));
     }
 
-    private IEnumerator FadeOutAndSwitchMusic(string newClipName)
+    private IEnumerator CrossfadeToNewMusic(string newClipName)
     {
+        float crossfadeTime = 2.0f;
 
-        Debug.Log("Changing music to :" + newClipName);
-        float fadeOutTime = 1.5f; // Duration of fade out
-        float fadeInTime = 1.5f;  // Duration of fade in
-
-        // Fade out
-        float startVolume = musicAudioSource.volume;
-        while (musicAudioSource.volume > 0)
-        {
-            musicAudioSource.volume -= startVolume * Time.deltaTime / fadeOutTime;
-            yield return null;
-        }
-
-        musicAudioSource.Stop();
-        musicAudioSource.volume = startVolume; // Reset volume immediately after stopping
-
-        // Switch clip
         AudioClip newClip = musicAudioClips.Find(c => c.name == newClipName);
-        if (newClip != null)
-        {
-            musicAudioSource.clip = newClip;
-            musicAudioSource.loop = true;
-            musicAudioSource.Play();
-        }
-        else
+        if (newClip == null)
         {
             Debug.LogWarning("Music clip not found: " + newClipName);
-            yield break; // Exit early if clip not found
+            yield break;
+        }
+        if (currentMusicSource.clip == newClip && currentMusicSource.isPlaying)
+        {
+            // The clip is already playing, no need to change
+            Debug.Log("The clip is already playing.");
+            yield break;
         }
 
-        // Fade in
-        musicAudioSource.volume = 0f;
-        while (musicAudioSource.volume < startVolume)
+        // Set up the next music source
+        nextMusicSource.clip = newClip;
+        nextMusicSource.volume = 0f;
+        nextMusicSource.loop = true;
+        nextMusicSource.Play();
+
+        float timeElapsed = 0f;
+        float startVolume = currentMusicSource.volume;
+
+        while (timeElapsed < crossfadeTime)
         {
-            musicAudioSource.volume += startVolume * Time.deltaTime / fadeInTime;
+            float t = timeElapsed / crossfadeTime;
+            currentMusicSource.volume = Mathf.Lerp(startVolume, 0f, t);
+            nextMusicSource.volume = Mathf.Lerp(0f, startVolume, t);
+
+            timeElapsed += Time.deltaTime;
             yield return null;
         }
 
-        musicAudioSource.volume = startVolume; // Ensure exact volume at the end
+        // Ensure perfect end values
+        currentMusicSource.volume = 0f;
+        nextMusicSource.volume = startVolume;
+
+        currentMusicSource.Stop();
+
+        // Swap sources
+        AudioSource temp = currentMusicSource;
+        currentMusicSource = nextMusicSource;
+        nextMusicSource = temp;
     }
+
 
 
 }

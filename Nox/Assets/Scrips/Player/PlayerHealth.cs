@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviourPun
     private bool isBlackAndWhite = false;
 
     public float respawnDelay = 10f;
-    private bool isDead = false;
+    public bool isDead = false;
 
     public CinemachineVirtualCamera virtualCam;
     private List<GameObject> spectateTargets = new List<GameObject>();
