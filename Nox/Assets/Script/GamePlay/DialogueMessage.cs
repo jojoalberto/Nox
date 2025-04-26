@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class DialogueMessage : MonoBehaviour
 {
     public List<string> dialogueMessage;
-    [SerializeField]
     private Sprite image;
 
 
