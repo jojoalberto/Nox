@@ -4210,15 +4210,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.0856981
+      value: -29.580118
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5733488
+      value: 1.2125187
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.451
+      value: -101.3893
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4369,6 +4369,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1776573877008095890}
     m_Modifications:
+    - target: {fileID: 5504259220806075265, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      propertyPath: FootstepAudioClips
+      value: 
+      objectReference: {fileID: 8300000, guid: b3e08e1a353da7b44b6e4e4fe68bb2e0, type: 3}
+    - target: {fileID: 5504259220806075265, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
+      propertyPath: FootstepAudioVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5504259220806075265, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 1
@@ -5398,10 +5406,12 @@ MonoBehaviour:
   totalStamina: 1
   currentStamina: 1
   staminaRegen: 2.5
-  staminaDelay: 2.5
+  staminaDelay: 6
   infiniteStamina: 0
-  runConsumption: 1
+  runConsumption: 10
   thirdPersonController: {fileID: 1588660854051004813}
+  staminaDepletionAudio: {fileID: 8300000, guid: 3cc3594dbe033cc4dbebbcf8df8d5d34, type: 3}
+  staminaDepletionAudioVolume: 1
 --- !u!114 &6117700120783235675
 MonoBehaviour:
   m_ObjectHideFlags: 0

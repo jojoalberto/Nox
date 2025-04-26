@@ -17,6 +17,11 @@ public class PlayerStamina : MonoBehaviour
 
     public ThirdPersonController thirdPersonController;
 
+
+    public AudioClip staminaDepletionAudio;
+    [Range(0, 1)] public float staminaDepletionAudioVolume = 1f;
+    private bool hasPlayedStaminaDepletionSound = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,6 +76,19 @@ public class PlayerStamina : MonoBehaviour
             }
         }
 
+        if (currentStamina <= 0f)
+        {
+            if (!hasPlayedStaminaDepletionSound)
+            {
+                PlayLandingSoundRPC();
+                hasPlayedStaminaDepletionSound = true; 
+            }
+        }
+        else
+        {
+            hasPlayedStaminaDepletionSound = false; 
+        }
+
         // Prevent sprinting if stamina is depleted.
         if (thirdPersonController != null)
         {
@@ -85,5 +103,10 @@ public class PlayerStamina : MonoBehaviour
 
         staminaRegen = playerData.GetStaminaRegen();
         staminaDelay = playerData.GetStaminaDelay();
+    }
+
+    void PlayLandingSoundRPC()
+    {
+        AudioSource.PlayClipAtPoint(staminaDepletionAudio, transform.position, staminaDepletionAudioVolume);
     }
 }

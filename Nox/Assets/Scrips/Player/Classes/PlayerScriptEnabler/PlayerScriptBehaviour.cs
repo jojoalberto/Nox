@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using Photon.Pun;
 using Photon.Voice.Unity;
 using StarterAssets;
@@ -6,6 +7,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Windows.Speech;
+
 
 public class PlayerScriptBehaviour : MonoBehaviour
 {
@@ -55,6 +58,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
     private float soundAlertCooldown = 2f;
     private float nextSoundAlertTime = 0f;
 
+    private KeywordRecognizer keywordRecognizer;
+    private string[] triggerWords = { "franklin", "jack", "amber" };
+
     [SerializeField] private AudioSource heartbeatSource;
     [SerializeField] private AudioClip heartbeatClip;
     private Coroutine heartbeatRoutine;
@@ -84,7 +90,8 @@ public class PlayerScriptBehaviour : MonoBehaviour
             demonTargetAI1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<DemonTargetAI1>();
         }
 
-        
+        keywordRecognizer = new KeywordRecognizer(triggerWords);
+        keywordRecognizer.OnPhraseRecognized += OnPhraseRecognized;
 
     }
 
@@ -113,10 +120,20 @@ public class PlayerScriptBehaviour : MonoBehaviour
             {
                 recorder.TransmitEnabled = true;
                 CheckVoiceLevels();
+                if (keywordRecognizer != null && !keywordRecognizer.IsRunning)
+                {
+                    keywordRecognizer.Start();
+                    Debug.Log("Recognizer Started");
+                }
             }
             else
             {
                 recorder.TransmitEnabled = false;
+                if (keywordRecognizer != null && keywordRecognizer.IsRunning)
+                {
+                    keywordRecognizer.Stop();
+                    Debug.Log("Recognizer Stopped");
+                }
             }
 
 
@@ -495,5 +512,16 @@ public class PlayerScriptBehaviour : MonoBehaviour
         // Scream range - Red
         Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
         Gizmos.DrawWireSphere(transform.position, 25f);
+    }
+
+    private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
+    {
+        Debug.Log("Recognizer Recognized phrase: " + args.text);
+
+        if (triggerWords.Contains(args.text.ToLower()))
+        {
+            Debug.Log("Recognizer Trigger word spoken! Enraging demon!");
+            demonTargetAI1.RequestStartChasing(transform);
+        }
     }
 }

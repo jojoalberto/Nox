@@ -776,6 +776,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
     public void RequestStartChasing(Transform target)
     {
+        Debug.Log("Recognizer " + target.name);
         PhotonView targetView = target.GetComponent<PhotonView>();
         if (targetView != null)
         {
@@ -823,26 +824,6 @@ public class DemonTargetAI1 : MonoBehaviour
         {
             players.Add(player);
             debugMessages[2] = $"Added player {player.name} to tracking list.";
-        }
-    }
-
-    public void AlertDemon(string voiceLevel)
-    {
-        if(voiceLevel == "scream")
-        {
-
-        }
-        else if(voiceLevel == "talk")
-        {
-
-        }
-        else if (voiceLevel == "whisper")
-        {
-
-        }
-        else
-        {
-            Debug.Log("What is " +  voiceLevel);
         }
     }
     
