@@ -155,7 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &63075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,7 +4259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &88665156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,7 +5205,6 @@ MonoBehaviour:
   dialogueMessage:
   - Find the original Gramophone Record in order to be provided with a clue to the
     puzzle.
-  image: {fileID: 0}
 --- !u!1001 &103658098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11110,7 +11107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - there are blood on this Recording
-  image: {fileID: 0}
 --- !u!65 &129548248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28228,7 +28224,7 @@ Transform:
   m_GameObject: {fileID: 172631099}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3685665, y: -0.05071354, z: 0.24845123}
+  m_LocalPosition: {x: 0.321, y: -0.05071354, z: 0.24845123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29777,7 +29773,6 @@ MonoBehaviour:
   dialogueMessage:
   - "Bookshelf D: The truth is two places away from me. That\u2019s all I\u2019ll
     say."
-  image: {fileID: 0}
 --- !u!114 &207730589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33607,7 +33602,6 @@ MonoBehaviour:
   dialogueMessage:
   - there are blood on this Vinyl
   - I can't Carry anymore
-  image: {fileID: 0}
 --- !u!65 &274655195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42559,7 +42553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &399365085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42872,7 +42865,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &404230967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43138,7 +43130,7 @@ Transform:
   m_GameObject: {fileID: 408549685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00056648254, y: -0.05071354, z: 0.001449585}
+  m_LocalPosition: {x: 0.00056648254, y: -0.05071354, z: -0.129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43345,7 +43337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Seek the torch and follow the glow, Step just right, the path will show
-  image: {fileID: 0}
 --- !u!1 &409188757
 GameObject:
   m_ObjectHideFlags: 0
@@ -53281,7 +53272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - oh, Great a key with Symbol
-  image: {fileID: 0}
 --- !u!114 &555029515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53877,7 +53867,6 @@ MonoBehaviour:
   dialogueMessage:
   - "The room is engulfed in darkness\u2026 You sense a faint glimmer in the left
     corner."
-  image: {fileID: 0}
 --- !u!1001 &567361140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54026,7 +54015,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Nice we all get a flashlight
-  image: {fileID: 1023881543254830229, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
 --- !u!1001 &567501854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62282,7 +62270,6 @@ MonoBehaviour:
   dialogueMessage:
   - "Bookshelf B: The one to my left is a liar, and the one to my right doesn\u2019t
     dare tell the truth.\u201D"
-  image: {fileID: 0}
 --- !u!114 &649720899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63323,7 +63310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
-  image: {fileID: 0}
 --- !u!1 &675967545
 GameObject:
   m_ObjectHideFlags: 0
@@ -69725,7 +69711,6 @@ MonoBehaviour:
   dialogueMessage:
   - It seems the key is not engough to open this chest
   - Let us now check the chest
-  image: {fileID: 0}
 --- !u!114 &718218723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75054,6 +75039,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 730251735}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &730994489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730994491}
+  - component: {fileID: 730994490}
+  m_Layer: 0
+  m_Name: keys_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &730994490
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730994489}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1088708239, guid: 395be64ecc653f342a68ce3aeab5c997, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.9300003, y: 7.69}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &730994491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730994489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 16.13, y: 3.25, z: 12.43}
+  m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &732186916
 GameObject:
   m_ObjectHideFlags: 0
@@ -76445,7 +76517,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Got it, let us try to open the chest now
-  image: {fileID: 0}
 --- !u!114 &760439662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76527,7 +76598,6 @@ MonoBehaviour:
   dialogueMessage:
   - 'Bookshelf E: Between B and C hides a deceiver, one who tells truths, the other
     misleads. Me? I just hold stories.'
-  image: {fileID: 0}
 --- !u!114 &768022247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89025,7 +89095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - 'Bookshelf C: Though I stay silent, I carry no harm inside.'
-  image: {fileID: 0}
 --- !u!114 &842721208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102459,7 +102528,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &946858476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108457,7 +108525,6 @@ MonoBehaviour:
   dialogueMessage:
   - "Bookshelf A: I\u2019m not what you\u2019re looking for, but the one next to
     me will lead you astray."
-  image: {fileID: 0}
 --- !u!114 &964841891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108784,7 +108851,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - We need to find a way to unlock this chest
-  image: {fileID: 0}
 --- !u!114 &967024351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116549,7 +116615,6 @@ MonoBehaviour:
   dialogueMessage:
   - Four candles placed, chest surrounded, key will glow, prize unbounded
   - Got it, let us try to open the chest now
-  image: {fileID: 0}
 --- !u!114 &1021488472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117868,7 +117933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
-  image: {fileID: 0}
 --- !u!1 &1044882200
 GameObject:
   m_ObjectHideFlags: 0
@@ -119052,7 +119116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &1069614672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128659,7 +128722,7 @@ Transform:
   m_GameObject: {fileID: 1198496579}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3324337, y: -0.05071354, z: 0.29644775}
+  m_LocalPosition: {x: -0.368, y: -0.05071354, z: 0.258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -139797,7 +139860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1238432486
 Transform:
   m_ObjectHideFlags: 0
@@ -139923,7 +139986,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Artifact Obtain
-  image: {fileID: 0}
 --- !u!114 &1238432495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139942,6 +140004,11 @@ MonoBehaviour:
   enableObject:
   - {fileID: 1082125309}
   - {fileID: 555029510}
+  - {fileID: 408549685}
+  - {fileID: 1198496579}
+  - {fileID: 1730951899}
+  - {fileID: 172631099}
+  - {fileID: 1524888804}
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -150661,7 +150728,204 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The key will glow to heights you'll go, Reach daring peaks, the prize will show
-  image: {fileID: 0}
+--- !u!1 &1274043452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274043460}
+  - component: {fileID: 1274043459}
+  - component: {fileID: 1274043458}
+  - component: {fileID: 1274043457}
+  - component: {fileID: 1274043456}
+  - component: {fileID: 1274043455}
+  - component: {fileID: 1274043454}
+  - component: {fileID: 1274043453}
+  m_Layer: 8
+  m_Name: keyRoomC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1274043453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 644980602}
+        m_TargetAssemblyTypeName: QuestTracker, Assembly-CSharp
+        m_MethodName: CallUpdateQuestRPC
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enter the Common Room
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemData: {fileID: 11400000, guid: 23cc010c1dd765b4c86626d7ed24d6ac, type: 2}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+--- !u!114 &1274043454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - Got a key with a Symbol on it
+--- !u!114 &1274043455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 115
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1274043456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject:
+  - {fileID: 1274043452}
+  - {fileID: 1798426992}
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!65 &1274043457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.23348793, y: 0.29444787, z: 0.55546767}
+  m_Center: {x: 0.017466135, y: -0.066289306, z: 0.018218815}
+--- !u!23 &1274043458
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: eaeb934ccde705849981a75770dfddea, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1274043459
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  m_Mesh: {fileID: 7265974592398154989, guid: 2c5e779568bc06c4d947ac355f408a35, type: 3}
+--- !u!4 &1274043460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274043452}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7069834, z: 0.7072302, w: 0}
+  m_LocalPosition: {x: -27.15, y: 1.095, z: 30.713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1656072805}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 180}
 --- !u!1 &1274733680
 GameObject:
   m_ObjectHideFlags: 0
@@ -153654,7 +153918,6 @@ MonoBehaviour:
   dialogueMessage:
   - there are blood on this Vinyl
   - I can't Carry anymore
-  image: {fileID: 0}
 --- !u!65 &1337397320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165215,7 +165478,6 @@ MonoBehaviour:
   dialogueMessage:
   - It's a lock chest, I need to find a way to unlock this I'll place this on the
     table
-  image: {fileID: 0}
 --- !u!1 &1389588882
 GameObject:
   m_ObjectHideFlags: 0
@@ -167144,6 +167406,93 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446257615}
   m_Mesh: {fileID: 4242472996877839115, guid: 5d9c5baea1407914486c3f1d6c45d425, type: 3}
+--- !u!1 &1447042815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447042817}
+  - component: {fileID: 1447042816}
+  m_Layer: 0
+  m_Name: keys_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1447042816
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447042815}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1578094316, guid: 395be64ecc653f342a68ce3aeab5c997, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.75, y: 7.09}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1447042817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447042815}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35.649, y: 3.1677666, z: -11.016}
+  m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1451044177
 GameObject:
   m_ObjectHideFlags: 0
@@ -174738,6 +175087,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521801965}
   m_Mesh: {fileID: -6553035424356706157, guid: 3f567369409017542950fb64f611c283, type: 3}
+--- !u!1 &1524888804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524888805}
+  m_Layer: 0
+  m_Name: pentagram (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1524888805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524888804}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6053047, y: -0.055413544, z: 0.014663696}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1957584867}
+  - {fileID: 1871289350}
+  m_Father: {fileID: 1804015590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535113683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180408,7 +180790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!114 &1556216021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181753,7 +182134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &1607374314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192894,6 +193274,127 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654118810}
   m_Mesh: {fileID: 3884913868871453905, guid: bf6b05184eac1e54ab7f2101a9831e3d, type: 3}
+--- !u!1 &1656072804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656072805}
+  - component: {fileID: 1656072807}
+  - component: {fileID: 1656072806}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1656072805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656072804}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274043460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656072806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656072804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1656072807
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656072804}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.9342736, b: 0, a: 1}
+  m_Intensity: 10
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &1657376024
 GameObject:
   m_ObjectHideFlags: 0
@@ -193231,7 +193732,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
-  image: {fileID: 0}
 --- !u!1 &1661125420
 GameObject:
   m_ObjectHideFlags: 0
@@ -195305,7 +195805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &1726595264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195733,7 +196232,7 @@ Transform:
   m_GameObject: {fileID: 1730951899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008565903, y: -0.05071354, z: 0.5564499}
+  m_LocalPosition: {x: 0.008565903, y: -0.05071354, z: 0.587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -196118,7 +196617,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!114 &1747084023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196180,7 +196678,19 @@ MonoBehaviour:
   doorAnimator: {fileID: 1747084027}
   onDoorOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7291199687161122537}
+        m_TargetAssemblyTypeName: DoorInteraction, Assembly-CSharp
+        m_MethodName: CallOpenOtherDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1747084026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -196875,6 +197385,93 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1764531065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764531067}
+  - component: {fileID: 1764531066}
+  m_Layer: 0
+  m_Name: keys_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1764531066
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764531065}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1578094316, guid: 395be64ecc653f342a68ce3aeab5c997, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.75, y: 7.09}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1764531067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764531065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -17.486, y: 3.1677666, z: 1.186}
+  m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1766488481
 GameObject:
   m_ObjectHideFlags: 0
@@ -197830,7 +198427,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This is empty
-  image: {fileID: 0}
 --- !u!114 &1782259783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203150,6 +203746,7 @@ Transform:
   - {fileID: 1198496580}
   - {fileID: 1730951900}
   - {fileID: 172631100}
+  - {fileID: 1524888805}
   m_Father: {fileID: 147769003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1808919155
@@ -210994,6 +211591,127 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 1866200951}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1871289349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871289350}
+  - component: {fileID: 1871289352}
+  - component: {fileID: 1871289351}
+  m_Layer: 0
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871289350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871289349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.52327543, y: -0.34203398, z: 0.72694236, w: 0.28416628}
+  m_LocalPosition: {x: 0, y: 0, z: 0.09}
+  m_LocalScale: {x: 100.00001, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1524888805}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1871289351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871289349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1871289352
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871289349}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 0.776241, b: 0.39811313, a: 1}
+  m_Intensity: 50
+  m_Range: 6
+  m_SpotAngle: 45
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &1872284482
 GameObject:
   m_ObjectHideFlags: 0
@@ -211428,18 +212146,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 528387100}
         m_TargetAssemblyTypeName: GetArtifactScript, Assembly-CSharp
-        m_MethodName: CallGetKeyByItemID
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 03
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 528387100}
-        m_TargetAssemblyTypeName: GetArtifactScript, Assembly-CSharp
         m_MethodName: CallGetArtifactByItemID
         m_Mode: 5
         m_Arguments:
@@ -211461,6 +212167,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 10
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1274043452}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 10
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1994326434}
+        m_TargetAssemblyTypeName: InteractableObject, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 10
+          m_BoolArgument: 1
         m_CallState: 2
   onIncorrectAnswer:
     m_PersistentCalls:
@@ -224087,6 +224817,92 @@ MonoBehaviour:
   sceneViewId: 152
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!1 &1957584866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957584867}
+  - component: {fileID: 1957584869}
+  - component: {fileID: 1957584868}
+  m_Layer: 0
+  m_Name: circle6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1957584867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957584866}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6917378, y: 0.14662483, z: 0.14662483, w: 0.69173783}
+  m_LocalPosition: {x: 0.5622, y: -0, z: 0.2272}
+  m_LocalScale: {x: 513.7968, y: 513.7968, z: 513.7968}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1524888805}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1957584868
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957584866}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0c1a3daefe0f3d0499411c55b47288a8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1957584869
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957584866}
+  m_Mesh: {fileID: -8877655178832134399, guid: 691b382d221460f418b4228772e9ac2d, type: 3}
 --- !u!1 &1958302725
 GameObject:
   m_ObjectHideFlags: 0
@@ -225121,6 +225937,112 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992212290}
   m_Mesh: {fileID: 322824529733448865, guid: bf6b05184eac1e54ab7f2101a9831e3d, type: 3}
+--- !u!1 &1994326432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994326436}
+  - component: {fileID: 1994326435}
+  - component: {fileID: 1994326434}
+  - component: {fileID: 1994326433}
+  - component: {fileID: 1994326437}
+  m_Layer: 8
+  m_Name: ArtifactB
+  m_TagString: Clue
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1994326433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994326432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - I got an Artifact
+--- !u!114 &1994326434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994326432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1994326435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994326432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84ffa0f2c1cf72459252302ce293541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  itemData: {fileID: 11400000, guid: 7e078662397bff04ba8aab4c35ad1999, type: 2}
+  playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+--- !u!4 &1994326436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994326432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -34.446228, y: -3.490772, z: 32.09232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994326437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994326432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 117
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2003748920
 GameObject:
   m_ObjectHideFlags: 0
@@ -234642,7 +235564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Candle pick up
-  image: {fileID: 0}
 --- !u!1 &2093540482
 GameObject:
   m_ObjectHideFlags: 0
@@ -259495,7 +260416,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &929742264744268972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267417,7 +268337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &1078987665651661097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279255,7 +280174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &1656450337148011543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284347,7 +285265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Press 'F' to use flashlight
-  image: {fileID: 0}
 --- !u!65 &1857963653378689753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -284693,7 +285610,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &1864143477362933371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288087,7 +289003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!114 &2093409670137627387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288102,7 +289017,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!23 &2093443782589557283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -293592,7 +294506,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &2311406121044241027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294219,7 +295132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &2345129726654623848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298996,7 +299908,6 @@ MonoBehaviour:
   dialogueMessage:
   - "Where light leads, knowledge follows. Five towers of books stand shrouded in
     mist\u2014where lies and truth dance together."
-  image: {fileID: 0}
 --- !u!114 &2580766472047785186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301808,7 +302719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &2653442014542869253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319078,7 +319988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3063956271087037518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319680,7 +320589,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3103384685201678030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325378,7 +326286,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3386637621568263691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326289,7 +327196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3428254183682867012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335538,7 +336444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3621515048870942831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338912,7 +339817,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3738302093319044782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339517,7 +340421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3762538851418789036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344499,7 +345402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &3915027194702901736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368070,7 +368972,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &4250622932035674208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371645,7 +372546,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &4442072491657790160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371869,7 +372769,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &4458623938887670547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375396,7 +376295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &4601208397104865558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386435,7 +387333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &4901565311069079703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388181,7 +389078,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &4983974542748062890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388527,7 +389423,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &5003702125341197207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401346,7 +402241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &5359346008614083727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401728,7 +402622,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &5370634358643571104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405827,7 +406720,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &5475672046800985336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409056,7 +409948,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Got a key with a Symbol on it
-  image: {fileID: 0}
 --- !u!114 &5623644267217897940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409359,7 +410250,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You got a Key
-  image: {fileID: 0}
 --- !u!114 &5634532463163987676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433358,7 +434248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6132454688807921242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434795,7 +435684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6178016106513723549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443027,7 +443915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6538817895855260733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458050,7 +458937,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6802005011388471613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458251,7 +459137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6807086484139910366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460551,7 +461436,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6889069340855148918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460934,7 +461818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &6905264819416644314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470100,7 +470983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7058213931687354766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471958,7 +472840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7138322697180650552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473146,7 +474027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7194081284430035748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474314,7 +475194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7256061933863905529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474613,7 +475492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7260344428028499662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475003,7 +475881,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7269356125570223499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475535,7 +476412,19 @@ MonoBehaviour:
   doorAnimator: {fileID: 7458345565677248162}
   onDoorOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1747084025}
+        m_TargetAssemblyTypeName: DoorInteraction, Assembly-CSharp
+        m_MethodName: CallOpenOtherDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7291314527160523587
 GameObject:
   m_ObjectHideFlags: 0
@@ -475672,7 +476561,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7293999511759868420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477622,7 +478510,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7380610663745988445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481646,7 +482533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7583914756844308174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481847,7 +482733,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - there are blood on this Recording
-  image: {fileID: 0}
 --- !u!65 &7589732808102707813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -481988,7 +482873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7589984572493862922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482148,7 +483032,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &7603538420204762595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484455,7 +485338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7690036301580768865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485460,7 +486342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7722820348844903398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486754,7 +487635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7818626987660123841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488858,7 +489738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &7905030015561392243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490206,7 +491085,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7960077033478201156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490576,7 +491454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &7974735380525554033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492674,7 +493551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8077352232514894633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492961,7 +493837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8083916485560720986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494297,7 +495172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8159329427668960045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496634,7 +497508,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8282368585493437361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497111,7 +497984,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8301154942249847470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498135,7 +499007,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &8331310593215809115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498724,7 +499595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8348291994196993962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499134,7 +500004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!23 &8373962007193968111
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -499628,7 +500497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8398866005973610175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499869,7 +500737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8403358605281234743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501027,7 +501894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8464047693775669584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501892,7 +502758,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8490550397938485416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502406,7 +503271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8503200347177149781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504404,7 +505268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &8608848035643047871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504500,7 +505363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - The Door is lock
-  image: {fileID: 0}
 --- !u!23 &8616682432702694765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -513194,7 +514056,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - You found a Recording.
-  image: {fileID: 0}
 --- !u!114 &9006871473586032379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513557,7 +514418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &9021484608593205525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513850,7 +514710,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &9027651281231980610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514562,7 +515421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &9080784655325821315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514855,7 +515713,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &9097369432883937839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517174,7 +518031,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - This Shelf is Empty
-  image: {fileID: 0}
 --- !u!114 &9191948489635630593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517642,7 +518498,12 @@ SceneRoots:
   - {fileID: 1062066532}
   - {fileID: 1798426993}
   - {fileID: 3585390986413140665}
+  - {fileID: 1274043460}
   - {fileID: 672751837381401640}
   - {fileID: 1536238252}
   - {fileID: 1961469590}
   - {fileID: 750348318}
+  - {fileID: 1447042817}
+  - {fileID: 1764531067}
+  - {fileID: 730994491}
+  - {fileID: 1994326436}
