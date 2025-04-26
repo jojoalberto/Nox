@@ -4210,15 +4210,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.580118
+      value: 3.0856981
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2125187
+      value: -2.5733488
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -101.3893
+      value: -16.451
       objectReference: {fileID: 0}
     - target: {fileID: 3233258914357394295, guid: 67ee4c92fc8701b409879e605766f8f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5409,7 +5409,7 @@ MonoBehaviour:
   staminaRegen: 2.5
   staminaDelay: 6
   infiniteStamina: 0
-  runConsumption: 10
+  runConsumption: 1
   thirdPersonController: {fileID: 1588660854051004813}
   staminaDepletionAudio: {fileID: 8300000, guid: 3cc3594dbe033cc4dbebbcf8df8d5d34, type: 3}
   staminaDepletionAudioVolume: 1

@@ -111,6 +111,12 @@ MonoBehaviour:
   - RPC_PlayerLoaded
   - RPC_RequestDamageAll
   - RPC_PlayMusicClipByName
+  - OnPuzzleCompleted
+  - OpenOtherDoor
+  - RepeatQuizRPC
+  - SetOccupied
+  - TriggerFinalEventRPC
+  - UpdateQuest
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

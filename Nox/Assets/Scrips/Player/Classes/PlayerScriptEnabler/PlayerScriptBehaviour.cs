@@ -88,10 +88,12 @@ public class PlayerScriptBehaviour : MonoBehaviour
             }
             recorder = GameObject.FindGameObjectWithTag("VCRecorder").GetComponent<Recorder>();
             demonTargetAI1 = GameObject.FindGameObjectWithTag("Enemy").GetComponent<DemonTargetAI1>();
+
+            keywordRecognizer = new KeywordRecognizer(triggerWords);
+            keywordRecognizer.OnPhraseRecognized += OnPhraseRecognized;
         }
 
-        keywordRecognizer = new KeywordRecognizer(triggerWords);
-        keywordRecognizer.OnPhraseRecognized += OnPhraseRecognized;
+        
 
     }
 
