@@ -42,7 +42,8 @@ public class Highlight : PlayerInteraction
                     if (!originalMaterials.ContainsKey(rend))
                     {
                         originalMaterials[rend] = rend.material;
-                        rend.material = highlightMaterial;
+                        Material instancedHighlightMat = new Material(highlightMaterial);
+                        rend.material = instancedHighlightMat;
                     }
 
                     // Enable or add Outline component (Chris Nolet's version)
@@ -51,7 +52,7 @@ public class Highlight : PlayerInteraction
                         outline = rend.gameObject.AddComponent<Outline>();
 
                     outline.enabled = true;
-                    outline.OutlineWidth = 2;
+                    outline.OutlineWidth = 4;
                     activeOutlines.Add(outline);
                 }
 
