@@ -75939,12 +75939,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730994489}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.13, y: 3.25, z: 12.43}
-  m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 38.61252, y: 1.4597317, z: 122.692825}
+  m_LocalScale: {x: 0.17446035, y: 0.17446037, z: 0.17446035}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1566443682}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &732186916
 GameObject:
@@ -164429,12 +164429,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447042815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.649, y: 3.1677666, z: -11.016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.166479, y: 1.3774983, z: 99.246826}
   m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1566443682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1451044177
 GameObject:
@@ -173726,6 +173726,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
   m_PrefabInstance: {fileID: 1559991786}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1566443681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566443682}
+  m_Layer: 0
+  m_Name: DoorSymbol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566443682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566443681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.48252, y: 1.7902683, z: -110.262825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1447042817}
+  - {fileID: 1764531067}
+  - {fileID: 730994491}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1573434916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190114,12 +190148,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764531065}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -17.486, y: 3.1677666, z: 1.186}
-  m_LocalScale: {x: 0.17446037, y: 0.17446037, z: 0.17446037}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.996519, y: 1.3774983, z: 111.44882}
+  m_LocalScale: {x: 0.17446035, y: 0.17446037, z: 0.17446035}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1566443682}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1766488481
 GameObject:
@@ -288266,8 +288300,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "\u201CLight guides, path below, Step with care, the
-            way will show, One wrong move, and fate\u2019s a foe\u2026 "
+          m_StringArgument: "Locate the Chest \u201CLight guides, path below, Step
+            with care, the way will show, One wrong move, and fate\u2019s a foe\u2026 "
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1857963653378689751
@@ -632299,7 +632333,5 @@ SceneRoots:
   - {fileID: 1536238252}
   - {fileID: 1961469590}
   - {fileID: 750348318}
-  - {fileID: 1447042817}
-  - {fileID: 1764531067}
-  - {fileID: 730994491}
   - {fileID: 1994326436}
+  - {fileID: 1566443682}
