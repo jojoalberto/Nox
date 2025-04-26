@@ -115,7 +115,7 @@ public class AudioManager : MonoBehaviourPun
 
     private IEnumerator CrossfadeToNewMusic(string newClipName)
     {
-        float crossfadeTime = 2.0f;
+        float crossfadeTime = 1.0f;
 
         AudioClip newClip = musicAudioClips.Find(c => c.name == newClipName);
         if (newClip == null)
