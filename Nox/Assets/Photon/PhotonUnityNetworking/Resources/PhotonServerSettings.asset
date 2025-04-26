@@ -110,19 +110,7 @@ MonoBehaviour:
   - UpdateCandleCount
   - RPC_PlayerLoaded
   - RPC_RequestDamageAll
-  - ShowBookDialogueRPC
-  - TriggerFinalEvent
-  - TriggerFinalEventRPC
-  - ReapeatQuizRPC
-  - RepeatQuizRPC
-  - UpdateQuest
-  - OpenOtherDoor
-<<<<<<< Updated upstream
-  - OnPuzzleCompleted
-  - SetOccupied
-=======
   - RPC_PlayMusicClipByName
->>>>>>> Stashed changes
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
