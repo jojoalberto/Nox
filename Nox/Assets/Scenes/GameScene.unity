@@ -121320,7 +121320,7 @@ GameObject:
   - component: {fileID: 1082125312}
   - component: {fileID: 1082125311}
   - component: {fileID: 1082125310}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ChestOnTableNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
