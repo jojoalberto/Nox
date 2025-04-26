@@ -113,11 +113,13 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 }
             }
         }
+        
     }
 
     [PunRPC]
     public void ShowDialogueRPC(string message)
     {
+        onInteract.Invoke();
         if (dialogueManager != null)
         {
             dialogueManager.ShowDialogue(message);
