@@ -121320,7 +121320,7 @@ GameObject:
   - component: {fileID: 1082125312}
   - component: {fileID: 1082125311}
   - component: {fileID: 1082125310}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ChestOnTableNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136493,7 +136493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1238432486
 Transform:
   m_ObjectHideFlags: 0
@@ -239792,9 +239792,9 @@ GameObject:
   - component: {fileID: 5634532463163987676}
   - component: {fileID: 5634532463163987675}
   - component: {fileID: 5634532463163987679}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: rust_key
-  m_TagString: Untagged
+  m_TagString: Clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

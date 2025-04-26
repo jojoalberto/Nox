@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 02
   itemName: Key
-  image: {fileID: 0}
+  image: {fileID: 4104117333016806175, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
   itemType: 0
   keyID: 0
