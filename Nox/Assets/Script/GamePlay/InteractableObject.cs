@@ -46,6 +46,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
 
     public virtual void Interact()
     {
+        Debug.Log("on layer is " + gameObject.layer);
         if (gameObject.tag == "Clue" || !dialogueManager.gameObject.activeSelf)
         {
             Debug.Log("player interact Clue" + gameObject);
@@ -53,8 +54,9 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             dialogueManager.gameObject.SetActive(true);
 
         }
-        else if(gameObject.layer == 14)
+        else if(gameObject.layer == LayerMask.NameToLayer("Destroyable"))
         {
+            Debug.Log("layer is " + gameObject.layer);
             ShowDialogue();
         }
         else
