@@ -9138,8 +9138,7 @@ MonoBehaviour:
   - (1) Umbra Fugitiva - Become invisible.
   - (2) Aethereus Vinculum - Bind yourself and the enemy for a brief period.
   trapperDetails:
-  - Munera Venandi - Trapper can interact with unique collectibles to charge his
-    abilities.
+  - Exiguo Partes - Trapper can interact with unique collectibles to charge his abilities.
   - (1) Hibernus Impedimentum - Throw a slowing grenade.
   - (2) Gelu Immobilis - Place a trap that freezes the enemy for a few seconds.
   classDetails:

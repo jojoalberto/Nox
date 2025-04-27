@@ -38,6 +38,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
     public Image ability1Image;
     public Image ability2Image;
 
+    public Image passiveImage;
+    public TMP_Text passiveText;
+
     public bool isAbility1CD;
     public bool isAbility2CD;
     public float ability1CD;
@@ -238,6 +241,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
                 UIHolder.playerController = GetComponent<ThirdPersonController>();
                 UIHolder.playerTransform = gameObject.transform;
 
+                passiveImage = abilitiesPanel.GetChild(2).GetComponent<Image>();
+                passiveText = abilitiesPanel.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>();
+
                 switch (globalClassSelected)
                 {
                     case "Protector":
@@ -259,6 +265,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
                         trapper.isTrapper = true;
                         ability1Image.sprite = trapperSprites[0];
                         ability2Image.sprite = trapperSprites[1];
+                        passiveImage.sprite = trapperSprites[2];
+                        trapper.passiveText = passiveText;
+                        passiveImage.gameObject.SetActive(true);
                         break;
                 }
             }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Photon.Pun;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -48,6 +49,7 @@ public class Trapper : MonoBehaviour
     public GameObject freezeTrap;
 
     public PlayerScriptBehaviour playerScriptBehaviour;
+    public TMP_Text passiveText;
 
 
     void Start()
@@ -119,12 +121,20 @@ public class Trapper : MonoBehaviour
     void RPC_IncrementPickup()
     {
         pickups++;
+        if (photonView.IsMine)
+        {
+            passiveText.text = "x" + pickups.ToString();
+        }
     }
 
     [PunRPC]
     void RPC_DecrementPickup(int amount)
     {
         pickups = pickups - amount;
+        if (photonView.IsMine)
+        {
+            passiveText.text = "x" + pickups.ToString();
+        }
     }
 
     [PunRPC]

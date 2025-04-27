@@ -5446,12 +5446,15 @@ MonoBehaviour:
   trapperSprites:
   - {fileID: 21300000, guid: 150f83ee697bfcc4894160c9349d53bb, type: 3}
   - {fileID: 21300000, guid: a3630373102c17642b965d65f773db0a, type: 3}
+  - {fileID: 21300000, guid: c2fa7580ee81b8241a3ce587c105df2a, type: 3}
   ability1CDText: {fileID: 0}
   ability2CDText: {fileID: 0}
   ability1CDFill: {fileID: 0}
   ability2CDFill: {fileID: 0}
   ability1Image: {fileID: 0}
   ability2Image: {fileID: 0}
+  passiveImage: {fileID: 0}
+  passiveText: {fileID: 0}
   isAbility1CD: 0
   isAbility2CD: 0
   ability1CD: 0
@@ -5655,6 +5658,7 @@ MonoBehaviour:
   Ability2Ready: 1
   freezeTrap: {fileID: 3234902940036311696, guid: ebfb3a5521ec7ec4e828cd05b210cb81, type: 3}
   playerScriptBehaviour: {fileID: 0}
+  passiveText: {fileID: 0}
 --- !u!82 &3428435386632263720
 AudioSource:
   m_ObjectHideFlags: 0
