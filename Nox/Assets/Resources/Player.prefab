@@ -5313,7 +5313,7 @@ MonoBehaviour:
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 16512
   pickableLayer:
     serializedVersion: 2
     m_Bits: 256
