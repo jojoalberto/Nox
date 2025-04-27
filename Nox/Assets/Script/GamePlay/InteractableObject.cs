@@ -16,6 +16,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     public List<GameObject> disableObject;
     public List<GameObject> enableObject;
     public UnityEvent onInteract;
+    private Protector protector;
     //public PhotonView photonView;
 
     private void Awake()
@@ -51,6 +52,10 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             photonView.RPC("ShowItemDialogueRPC", RpcTarget.All, dialogueMessage.GetDialogueMessage(0),dialogueMessage.GetImage());
             dialogueManager.gameObject.SetActive(true);
 
+        }
+        else if(gameObject.layer == 14)
+        {
+            ShowDialogue();
         }
         else
         {
@@ -159,6 +164,18 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 {
                     enableObject[i].SetActive(true);
                 }
+            }
+        }
+    }
+    public void ShowDialogue()
+    {
+        GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+        protector = playerObj.GetComponent<Protector>();
+        if (protector.isProtector == false)
+        {
+            if (dialogueManager != null)
+            {
+                dialogueManager.ShowDialogue(dialogueMessage.GetDialogueMessage(0));
             }
         }
     }
