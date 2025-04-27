@@ -64117,7 +64117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - Candle pick up
+  - You got a Candle
 --- !u!1 &675967545
 GameObject:
   m_ObjectHideFlags: 0
@@ -119163,7 +119163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - Candle pick up
+  - You got a Candle
 --- !u!1 &1044882200
 GameObject:
   m_ObjectHideFlags: 0
@@ -186413,7 +186413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - Candle pick up
+  - You got a Candle
 --- !u!1 &1661125420
 GameObject:
   m_ObjectHideFlags: 0
@@ -228760,7 +228760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - Candle pick up
+  - You got a Candle
 --- !u!1 &2093540482
 GameObject:
   m_ObjectHideFlags: 0
