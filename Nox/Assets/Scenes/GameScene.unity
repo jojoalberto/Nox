@@ -150005,6 +150005,8 @@ GameObject:
   - component: {fileID: 1312958428}
   - component: {fileID: 1312958427}
   - component: {fileID: 1312958426}
+  - component: {fileID: 1312958430}
+  - component: {fileID: 1312958429}
   m_Layer: 14
   m_Name: DestroyableBox
   m_TagString: Untagged
@@ -150093,6 +150095,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.8625436, y: 5.0809703, z: 6.4073944}
   m_Center: {x: 1.2699509, y: 1.5261, z: -0.26259518}
+--- !u!114 &1312958429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312958424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414890fd15020474d82a032b1f105a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueMessage:
+  - I need the protector for this
+--- !u!114 &1312958430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312958424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4852ca723ff5c674cba926c3062b0640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 7858985}
+  disableObject: []
+  enableObject: []
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1313380046
 GameObject:
   m_ObjectHideFlags: 0
