@@ -33,6 +33,8 @@ public class Protector : MonoBehaviour
     public float protectorAbility2Duration = 10f;
     public bool Ability2Ready = true;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] abilityAduioClips;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -112,6 +114,11 @@ public class Protector : MonoBehaviour
 
     IEnumerator ActivateAbility1()
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+        }
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
         foreach (Collider hit in hitColliders)
         {
@@ -133,6 +140,10 @@ public class Protector : MonoBehaviour
 
     IEnumerator ActivateAbility2()
     {
+        if(photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+        }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
         foreach (Collider hit in hitColliders)
@@ -163,5 +174,15 @@ public class Protector : MonoBehaviour
                 photonView.RPC("DestroyObjectRPC", RpcTarget.All);
             }
         }
+    }
+
+    [PunRPC]
+    public void RPC_PlayAbilityAudio(int clipIndex)
+    {
+        if (audioSource != null && abilityAduioClips[clipIndex] != null)
+        {
+            audioSource.PlayOneShot(abilityAduioClips[clipIndex]);
+        }
+        
     }
 }

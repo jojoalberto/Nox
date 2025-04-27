@@ -2,6 +2,7 @@ using System.Collections;
 using Photon.Pun;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Occultist : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class Occultist : MonoBehaviour
     public bool Ability2Ready = true;
 
     public PlayerScriptBehaviour playerScriptBehaviour;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] abilityAduioClips;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -123,6 +127,11 @@ public class Occultist : MonoBehaviour
     [PunRPC]
     void RPC_ActivateAbility1(int targetPlayerID)
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+        }
+
         GameObject targetObject = PhotonView.Find(targetPlayerID).gameObject;
         ThirdPersonController target = targetObject.GetComponent<ThirdPersonController>();
 
@@ -131,6 +140,11 @@ public class Occultist : MonoBehaviour
 
     IEnumerator ActivateAbility1(ThirdPersonController target)
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+        }
+
         target.SetSpeedMultiplier(occultistAbility1Value);
         yield return new WaitForSeconds(occultistAbility1Duration);
         target.SetSpeedMultiplier(1f);
@@ -144,6 +158,11 @@ public class Occultist : MonoBehaviour
     [PunRPC]
     void RPC_ActivateAbility2(int targetPlayerID)
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+        }
+
         GameObject targetObject = PhotonView.Find(targetPlayerID)?.gameObject;
         if (targetObject == null) return;
 
@@ -156,6 +175,11 @@ public class Occultist : MonoBehaviour
 
     void ActivateAbility2(ThirdPersonController target)
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+        }
+
         if (target == null) return;
 
         PlayerHealth playerhealth = target.GetComponent<PlayerHealth>();
@@ -202,4 +226,15 @@ public class Occultist : MonoBehaviour
             lastHighlightedPlayer = targetPlayer;
         }
     }
+
+    [PunRPC]
+    public void RPC_PlayAbilityAudio(int clipIndex)
+    {
+        if (audioSource != null && abilityAduioClips[clipIndex] != null)
+        {
+            audioSource.PlayOneShot(abilityAduioClips[clipIndex]);
+        }
+
+    }
+
 }

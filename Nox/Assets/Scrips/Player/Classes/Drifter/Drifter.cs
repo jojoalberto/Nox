@@ -37,6 +37,10 @@ public class Drifter : MonoBehaviour
 
     public PlayerScriptBehaviour playerScriptBehaviour;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] abilityAduioClips;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -112,6 +116,11 @@ public class Drifter : MonoBehaviour
 
     IEnumerator ActivateAbility1()
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+        }
+
         photonView.RPC("RPC_ToggleInvisibility", RpcTarget.All, true);
 
         yield return new WaitForSeconds(drifterAbility1Duration);
@@ -136,6 +145,11 @@ public class Drifter : MonoBehaviour
 
     IEnumerator ActivateAbility2(DemonTargetAI1 targetDemon)
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+        }
+
         if (thirdPersonController != null)
         {
             thirdPersonController.enabled = false;
@@ -187,4 +201,15 @@ public class Drifter : MonoBehaviour
         }
         lastHighlightedDemon = targetDemon;
     }
+
+    [PunRPC]
+    public void RPC_PlayAbilityAudio(int clipIndex)
+    {
+        if (audioSource != null && abilityAduioClips[clipIndex] != null)
+        {
+            audioSource.PlayOneShot(abilityAduioClips[clipIndex]);
+        }
+
+    }
+
 }

@@ -51,7 +51,8 @@ public class Trapper : MonoBehaviour
     public PlayerScriptBehaviour playerScriptBehaviour;
     public TMP_Text passiveText;
 
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] abilityAduioClips;
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -165,6 +166,11 @@ public class Trapper : MonoBehaviour
 
     private void ActivateAbility1()
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+        }
+
         photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility1Cost);
         GameObject instantiatedGrenade = PhotonNetwork.Instantiate(grenade.name, grenadeSpawnPosition.position, cam.rotation);
 
@@ -187,6 +193,11 @@ public class Trapper : MonoBehaviour
 
     private void ActivateAbility2()
     {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+        }
+
         photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility2Cost);
 
 
@@ -214,4 +225,15 @@ public class Trapper : MonoBehaviour
         }
 
     }
+
+    [PunRPC]
+    public void RPC_PlayAbilityAudio(int clipIndex)
+    {
+        if (audioSource != null && abilityAduioClips[clipIndex] != null)
+        {
+            audioSource.PlayOneShot(abilityAduioClips[clipIndex]);
+        }
+
+    }
+
 }
