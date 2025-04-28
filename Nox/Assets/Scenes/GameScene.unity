@@ -29877,7 +29877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - "Bookshelf D: Bookshelf C\_is\_lying."
+  - 'Bookshelf D: C Bookshelf is lying and Relic  is in The Bookshelf C or D'
 --- !u!114 &207730589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62722,7 +62722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - 'Bookshelf B: Relic is not in bookshelf C or D.'
+  - 'Bookshelf B: Relic  is not in Bookshelf C or D.'
 --- !u!114 &649720899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90063,7 +90063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - 'Bookshelf C: Relic is in bookshelf A.'
+  - 'Bookshelf C: Relic  is in Bookshelf  A.'
 --- !u!114 &842721208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109761,7 +109761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - 'Bookshelf A: Relic is in bookshelf B or C. '
+  - 'Bookshelf A: Relic is in Bookshelf B or C.'
 --- !u!114 &964841891
 MonoBehaviour:
   m_ObjectHideFlags: 0
