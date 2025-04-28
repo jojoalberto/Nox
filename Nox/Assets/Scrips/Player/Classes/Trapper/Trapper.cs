@@ -168,7 +168,7 @@ public class Trapper : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+            photonView.RPC("RPC_PlayTrapperAbilityAudio", RpcTarget.All, 0);
         }
 
         photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility1Cost);
@@ -195,7 +195,7 @@ public class Trapper : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+            photonView.RPC("RPC_PlayTrapperAbilityAudio", RpcTarget.All, 1);
         }
 
         photonView.RPC("RPC_DecrementPickup", RpcTarget.All, trapperAbility2Cost);
@@ -227,13 +227,12 @@ public class Trapper : MonoBehaviour
     }
 
     [PunRPC]
-    public void RPC_PlayAbilityAudio(int clipIndex)
+    public void RPC_PlayTrapperAbilityAudio(int clipIndex)
     {
         if (audioSource != null && abilityAduioClips[clipIndex] != null)
         {
             audioSource.PlayOneShot(abilityAduioClips[clipIndex]);
         }
-
     }
 
 }

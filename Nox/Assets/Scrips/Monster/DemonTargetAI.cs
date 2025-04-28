@@ -72,7 +72,11 @@ public class DemonTargetAI1 : MonoBehaviour
 
     [SerializeField] ChaseEffects chaseEffects;
 
-    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private AudioManager globalAudioManager;
+    [SerializeField] private AudioSource breathingAudioSource;
+    [SerializeField] private AudioSource generalAudioSource;
+    [SerializeField] private AudioClip[] demonSfx;
+    private Coroutine breathingCoroutine;
 
     void Start()
     {
@@ -104,7 +108,7 @@ public class DemonTargetAI1 : MonoBehaviour
         while (true)
         {
             yield return wait;
-
+            PlaySoundAudioFromManager("MonsterAggression");
             if (PhotonNetwork.IsMasterClient)
             {
                 // Increase damage
@@ -112,21 +116,23 @@ public class DemonTargetAI1 : MonoBehaviour
                 {
                     damageAmount += (int)damageIncrement;
                     damageAmount = Mathf.Min(damageAmount, (int)maximumDamage);
+
+                    // Increase speeds
+                    defaultSpeed += speedIncrement;
+                    tiredSpeed += speedIncrement;
+                    chaseSpeed += speedIncrement;
+
+                    defaultSpeed = Mathf.Min(defaultSpeed, originaldefaultSpeed + maximumSpeedIncrement);
+                    tiredSpeed = Mathf.Min(tiredSpeed, originaltiredSpeed + maximumSpeedIncrement);
+                    chaseSpeed = Mathf.Min(chaseSpeed, originalchaseSpeed + maximumSpeedIncrement);
                 }
 
-                // Increase speeds
-                defaultSpeed += speedIncrement;
-                tiredSpeed += speedIncrement;
-                chaseSpeed += speedIncrement;
-
-                defaultSpeed = Mathf.Min(defaultSpeed, originaldefaultSpeed + maximumSpeedIncrement);
-                tiredSpeed = Mathf.Min(tiredSpeed, originaltiredSpeed + maximumSpeedIncrement);
-                chaseSpeed = Mathf.Min(chaseSpeed, originalchaseSpeed + maximumSpeedIncrement);
+                
 
                 UpdateNavMeshSpeed();
                 if (aggressionUI != null)
                 {
-                    if (damageAmount == maximumDamage && defaultSpeed == originaldefaultSpeed + maximumSpeedIncrement)
+                    if (damageAmount == maximumDamage)
                     {
                         photonView.RPC("RPC_ShowAggressionClaw", RpcTarget.All, 1);
                     }
@@ -331,6 +337,7 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         isChasingPlayer = true;
 
+
         BeginChaseMusic("ChaseA");
 
         if (chaseEffects != null)
@@ -515,6 +522,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         damageAmount = 0;
 
+        photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
         photonView.RPC("PlayAttackAnimation", RpcTarget.All);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
@@ -541,6 +549,7 @@ public class DemonTargetAI1 : MonoBehaviour
         {
             currentSpeedState = SpeedState.Idle;
             isChasingPlayer = false;
+
             if (chaseEffects != null)
             {
                 chaseEffects.StopChaseEffect();
@@ -836,12 +845,95 @@ public class DemonTargetAI1 : MonoBehaviour
     
     private void BeginChaseMusic(string name)
     {
-        audioManager.RequestPlayMusicClipByName(name);
+        globalAudioManager.RequestPlayMusicClipByName(name);
     }
 
     private void EndChaseMusic()
     {
-        audioManager.RequestPlayMusicClipByName("General");
+        globalAudioManager.RequestPlayMusicClipByName("General");
+    }
+
+    private void PlaySoundAudioFromManager(string name)
+    {
+        globalAudioManager.RPCPlayAudioByName(name);
+    }
+
+
+    public void UpdateBreathing(float distance)
+    {
+        if (distance > 25f)
+        {
+            if (breathingCoroutine != null)
+            {
+                StopCoroutine(breathingCoroutine);
+                breathingCoroutine = null;
+            }
+
+            StartCoroutine(FadeOutBreathing());
+            return;
+        }
+
+        if (!breathingAudioSource.isPlaying)
+            breathingAudioSource.Play();
+
+        float t = Mathf.InverseLerp(25f, 8f, distance);
+        float targetVolume = Mathf.Lerp(0.1f, 1f, t);
+        float targetPitch = Mathf.Lerp(0.8f, 1.5f, t);
+
+        if (breathingCoroutine != null)
+            StopCoroutine(breathingCoroutine);
+
+        breathingCoroutine = StartCoroutine(FadeInBreathing(targetVolume, targetPitch));
+    }
+
+    IEnumerator FadeInBreathing(float targetVolume, float targetPitch)
+    {
+        float duration = 0.5f;
+        float timer = 0f;
+
+        float startVolume = breathingAudioSource.volume;
+        float startPitch = breathingAudioSource.pitch;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / duration;
+
+            breathingAudioSource.volume = Mathf.Lerp(startVolume, targetVolume, t);
+            breathingAudioSource.pitch = Mathf.Lerp(startPitch, targetPitch, t);
+
+            yield return null;
+        }
+
+        breathingAudioSource.volume = targetVolume;
+        breathingAudioSource.pitch = targetPitch;
+    }
+
+    IEnumerator FadeOutBreathing()
+    {
+        float duration = 0.5f;
+        float timer = 0f;
+
+        float startVolume = breathingAudioSource.volume;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            float t = timer / duration;
+
+            breathingAudioSource.volume = Mathf.Lerp(startVolume, 0f, t);
+
+            yield return null;
+        }
+
+        breathingAudioSource.volume = 0f;
+        breathingAudioSource.Stop();
+    }
+
+    [PunRPC]
+    public void RPC_PlayAudioClip(int clipIndex)
+    {
+        generalAudioSource.PlayOneShot(demonSfx[clipIndex]);
     }
 
 }

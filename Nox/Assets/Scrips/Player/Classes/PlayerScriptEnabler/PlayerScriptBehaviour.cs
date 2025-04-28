@@ -441,6 +441,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
 
     private void UpdateHeartbeat(float distance)
     {
+        demonTargetAI1.UpdateBreathing(distance);
         if (distance > 25f)
         {
             if (heartbeatRoutine != null)
@@ -456,7 +457,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
         if (!heartbeatSource.isPlaying)
             heartbeatSource.Play();
 
-        float t = Mathf.InverseLerp(25f, 8f, distance); // 0 = far, 1 = close
+        float t = Mathf.InverseLerp(25f, 8f, distance); 
         float targetVolume = Mathf.Lerp(0.1f, 1f, t);
         float targetPitch = Mathf.Lerp(0.8f, 1.5f, t);
 

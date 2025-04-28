@@ -118,7 +118,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5670,7 +5670,9 @@ MonoBehaviour:
   Ability2Ready: 1
   playerScriptBehaviour: {fileID: 0}
   audioSource: {fileID: 3960943734243963001}
-  abilityAduioClips: []
+  abilityAduioClips:
+  - {fileID: 8300000, guid: 1e3bf4f53b93d3d4dad9e3adbb4b60a6, type: 3}
+  - {fileID: 8300000, guid: 307eafac599e3e14686125cfb364d4c8, type: 3}
 --- !u!114 &1481441408572852225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5761,7 +5763,9 @@ MonoBehaviour:
   Ability2Ready: 1
   playerScriptBehaviour: {fileID: 0}
   audioSource: {fileID: 3960943734243963001}
-  abilityAduioClips: []
+  abilityAduioClips:
+  - {fileID: 8300000, guid: fd89ecd3bbad93241accdc3534342cd9, type: 3}
+  - {fileID: 8300000, guid: e2a374eb29ba8e54b95173cc082ee9c9, type: 3}
 --- !u!114 &1655547893240518412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5800,7 +5804,9 @@ MonoBehaviour:
   playerScriptBehaviour: {fileID: 0}
   passiveText: {fileID: 0}
   audioSource: {fileID: 3960943734243963001}
-  abilityAduioClips: []
+  abilityAduioClips:
+  - {fileID: 8300000, guid: 5295387558bc19d458eb5901156247ee, type: 3}
+  - {fileID: 8300000, guid: b959dca5a15771c4b834850139688c6d, type: 3}
 --- !u!82 &3428435386632263720
 AudioSource:
   m_ObjectHideFlags: 0

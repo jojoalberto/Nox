@@ -119,6 +119,16 @@ MonoBehaviour:
   - UpdateQuest
   - PlayAbilityAudio
   - RPC_PlayAbilityAudio
+  - StartBreathing
+  - StopBreathing
+  - RPC_StartBreathing
+  - RPC_StopBreathing
+  - PlayAudioClip
+  - RPC_PlayAudioClip
+  - RPC_PlayProtectorAbilityAudio
+  - RPC_PlayOccultistAbilityAudio
+  - RPC_PlayDrifterAbilityAudio
+  - RPC_PlayTrapperAbilityAudio
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

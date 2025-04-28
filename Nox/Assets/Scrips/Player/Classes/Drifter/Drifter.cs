@@ -118,7 +118,7 @@ public class Drifter : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+            photonView.RPC("RPC_PlayDrifterAbilityAudio", RpcTarget.All, 0);
         }
 
         photonView.RPC("RPC_ToggleInvisibility", RpcTarget.All, true);
@@ -147,7 +147,7 @@ public class Drifter : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+            photonView.RPC("RPC_PlayDrifterAbilityAudio", RpcTarget.All, 1);
         }
 
         if (thirdPersonController != null)
@@ -203,7 +203,7 @@ public class Drifter : MonoBehaviour
     }
 
     [PunRPC]
-    public void RPC_PlayAbilityAudio(int clipIndex)
+    public void RPC_PlayDrifterAbilityAudio(int clipIndex)
     {
         if (audioSource != null && abilityAduioClips[clipIndex] != null)
         {

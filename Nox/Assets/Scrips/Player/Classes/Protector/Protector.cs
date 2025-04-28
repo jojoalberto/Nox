@@ -116,7 +116,7 @@ public class Protector : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+            photonView.RPC("RPC_PlayProtectorAbilityAudio", RpcTarget.All, 0);
         }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
@@ -142,7 +142,7 @@ public class Protector : MonoBehaviour
     {
         if(photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+            photonView.RPC("RPC_PlayProtectorAbilityAudio", RpcTarget.All, 1);
         }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, ability1Radius);
@@ -177,7 +177,7 @@ public class Protector : MonoBehaviour
     }
 
     [PunRPC]
-    public void RPC_PlayAbilityAudio(int clipIndex)
+    public void RPC_PlayProtectorAbilityAudio(int clipIndex)
     {
         if (audioSource != null && abilityAduioClips[clipIndex] != null)
         {

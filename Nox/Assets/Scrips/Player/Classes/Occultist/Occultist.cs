@@ -129,7 +129,7 @@ public class Occultist : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+            photonView.RPC("RPC_PlayOccultistAbilityAudio", RpcTarget.All, 0);
         }
 
         GameObject targetObject = PhotonView.Find(targetPlayerID).gameObject;
@@ -142,7 +142,7 @@ public class Occultist : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 0);
+            photonView.RPC("RPC_PlayOccultistAbilityAudio", RpcTarget.All, 0);
         }
 
         target.SetSpeedMultiplier(occultistAbility1Value);
@@ -160,7 +160,7 @@ public class Occultist : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+            photonView.RPC("RPC_PlayOccultistAbilityAudio", RpcTarget.All, 1);
         }
 
         GameObject targetObject = PhotonView.Find(targetPlayerID)?.gameObject;
@@ -177,7 +177,7 @@ public class Occultist : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            photonView.RPC("RPC_PlayAbilityAudio", RpcTarget.All, 1);
+            photonView.RPC("RPC_PlayOccultistAbilityAudio", RpcTarget.All, 1);
         }
 
         if (target == null) return;
@@ -228,7 +228,7 @@ public class Occultist : MonoBehaviour
     }
 
     [PunRPC]
-    public void RPC_PlayAbilityAudio(int clipIndex)
+    public void RPC_PlayOccultistAbilityAudio(int clipIndex)
     {
         if (audioSource != null && abilityAduioClips[clipIndex] != null)
         {
