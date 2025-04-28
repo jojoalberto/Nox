@@ -4783,7 +4783,19 @@ MonoBehaviour:
       m_Calls: []
   onCorrectVinyl:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129182582}
+        m_TargetAssemblyTypeName: DemonTargetAI1, Assembly-CSharp
+        m_MethodName: RequestSoundAlert
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 103533344}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onFinishVinylQuest:
     m_PersistentCalls:
       m_Calls:
@@ -4813,7 +4825,19 @@ MonoBehaviour:
         m_CallState: 2
   onWrongVinyl:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1129182582}
+        m_TargetAssemblyTypeName: DemonTargetAI1, Assembly-CSharp
+        m_MethodName: RequestSoundAlert
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 103533344}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   requiredVinylID: 12
 --- !u!65 &103533347
 BoxCollider:
@@ -127716,6 +127740,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 290884568573959264, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
   m_PrefabInstance: {fileID: 1129182580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129182582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533fe6d567a28444ca3ca0905a14ce3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130761561
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,11 @@ public class GramophoneScript : InteractableObject
     private bool hasInteract =false;
     private PlayerInventory inventory;
     private GameObject playerObj;
+
+
+
+    private 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -62,7 +67,8 @@ public class GramophoneScript : InteractableObject
                 if (vinylCount >= 2)
                 {
                     Debug.Log("Correct vinyl played!");
-                    onFinishVinylQuest.Invoke();
+                    if (onFinishVinylQuest != null)
+                        onFinishVinylQuest.Invoke();
                 }
                 else
                 {
@@ -73,8 +79,21 @@ public class GramophoneScript : InteractableObject
             else
             {
                 Debug.Log("Wrong vinyl.");
-                onWrongVinyl.Invoke();
+                FakeVinyl();
             }
         }
+    }
+
+    public void FakeVinyl()
+    {
+        float r = Random.Range(1, 10);
+
+        if(r < 3)
+        {
+            Debug.Log("Attempting Sound Alert");
+            if(onWrongVinyl != null)
+                onWrongVinyl.Invoke();
+        }
+        
     }
 }
