@@ -69,10 +69,12 @@ public class Protector : MonoBehaviour
         }
     }
     [PunRPC]
-    public void DestroyObjectRPC(GameObject tarObj)
+    public void DestroyObjectRPC(int targetViewID)
     {
+        PhotonView targetPhotonView = PhotonView.Find(targetViewID);
+        GameObject obj = targetPhotonView.gameObject;
         Debug.Log("protector is hitting deactivation");
-        tarObj.SetActive(false);
+        obj.SetActive(false);
         onDestroyObject.Invoke();
     }
 
@@ -169,9 +171,13 @@ public class Protector : MonoBehaviour
             if (Physics.Raycast(ray, out hit, interactDistance, destroyableLayer))
             {
                 GameObject hitObj = hit.collider.gameObject;
+                PhotonView hitPV = hitObj.GetComponent<PhotonView>();
                 targetObject = hitObj;
                 Debug.Log("protector is hitting " + hitObj);
-                photonView.RPC("DestroyObjectRPC", RpcTarget.All, targetObject);
+                if (hitPV != null)
+                {
+                    photonView.RPC("DestroyObjectRPC", RpcTarget.All, hitPV.ViewID);
+                }
             }
         }
     }
