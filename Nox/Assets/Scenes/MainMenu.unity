@@ -8881,6 +8881,7 @@ MonoBehaviour:
   LoginGameObject: {fileID: 2018429295}
   signupGameObject: {fileID: 430744861}
   statusTextGameObject: {fileID: 293942952}
+  MainLoginPanel: {fileID: 797992398}
 --- !u!4 &1421878256
 Transform:
   m_ObjectHideFlags: 0
