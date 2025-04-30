@@ -69,10 +69,10 @@ public class Protector : MonoBehaviour
         }
     }
     [PunRPC]
-    public void DestroyObjectRPC()
+    public void DestroyObjectRPC(GameObject tarObj)
     {
         Debug.Log("protector is hitting deactivation");
-        targetObject.SetActive(false);
+        tarObj.SetActive(false);
         onDestroyObject.Invoke();
     }
 
@@ -171,7 +171,7 @@ public class Protector : MonoBehaviour
                 GameObject hitObj = hit.collider.gameObject;
                 targetObject = hitObj;
                 Debug.Log("protector is hitting " + hitObj);
-                photonView.RPC("DestroyObjectRPC", RpcTarget.All);
+                photonView.RPC("DestroyObjectRPC", RpcTarget.All, targetObject);
             }
         }
     }
