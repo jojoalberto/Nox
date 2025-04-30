@@ -111,8 +111,11 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-
-        if (roomNameInput.GetComponent<TextMeshProUGUI>().text != "")
+        roomName = roomNameInput.GetComponent<TextMeshProUGUI>().text;
+        roomName = roomName.Replace(" ", "");
+        if (roomName == "" || roomName.Length <= 1)
+            return;
+        if (!string.IsNullOrWhiteSpace(roomName))
         {
             roomName = roomNameInput.GetComponent<TextMeshProUGUI>().text;
             joiningRoom = true;
