@@ -7,6 +7,7 @@ using Firebase.Database;
 using System.Collections;
 using UnityEngine.Events;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 public class FirebaseManagerScript : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class FirebaseManagerScript : MonoBehaviour
     private GameObject lobbyGameObject;
     [SerializeField]
     private GameObject LoginGameObject;
+    [SerializeField]
+    private GameObject signupGameObject;
+    [SerializeField]
+    private GameObject statusTextGameObject;
+    [SerializeField]
+    private GameObject MainLoginPanel;
     private bool isLoggin = false;
     private string currentUserId;
 
@@ -65,14 +72,28 @@ public class FirebaseManagerScript : MonoBehaviour
         auth.CreateUserWithEmailAndPasswordAsync(emailSignupInput.text, passwordSignupInput.text).ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted)
+            {
                 statusText.text = "Registration Failed!";
+                UpdateStatusText();
+            }
             else
             {
                 FirebaseUser newUser = auth.CurrentUser;
                 SaveNicknameToFirebase(newUser.UserId, nicknameInput.text);
                 statusText.text = "Registration Successful!";
+                MainLoginPanel.SetActive(true);
+                signupGameObject.SetActive(false);
             }
-        });
+        },TaskScheduler.FromCurrentSynchronizationContext());
+        UpdateStatusText();
+    }
+    public void UpdateStatusText()
+    {
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(statusText.rectTransform);
+
+        statusTextGameObject.SetActive(false);
+        statusTextGameObject.SetActive(true);
     }
 
     public void Login()

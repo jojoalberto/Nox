@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject imagePanel;
     public UnityEvent onDialogueEnds;
+    private float dialogueStartTime;
+    [SerializeField]
+    private float forceCloseDelayTimer = 1.5f;
 
     private void Awake()
     {
@@ -29,6 +32,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("showing Dialogue");
         dialoguePanel.SetActive(true);
         dialogueText.text = message;
+        dialogueStartTime = Time.time; // will check the condition in update no need Time.deltatime
         Canvas.ForceUpdateCanvases();
         StartCoroutine(StartCloseDialogue());
     }
@@ -50,9 +54,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if(dialoguePanel.activeSelf)
+        if (dialoguePanel.activeSelf)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Time.time - dialogueStartTime >= forceCloseDelayTimer && Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("closing Dialogue");
                 CloseDialogue();
@@ -62,7 +66,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator StartCloseDialogue()
     {
-        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        yield return new WaitForSeconds(8f); 
         CloseDialogue();
     }
 

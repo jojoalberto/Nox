@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 12
   itemName: Vinyl Disc
-  image: {fileID: -4834095905783300709, guid: 215687feeab0b7445b4a1cd86c82c2e1, type: 3}
+  image: {fileID: 21300000, guid: 8307752c18a664a4d94c613af06b7afb, type: 3}
   itemType: 5
   keyID: 

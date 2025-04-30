@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 10
   itemName: ArtifactC
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 8519c73e1d770e142bbdbfa14bcc8b0a, type: 3}
   itemType: 4
   keyID: 0
