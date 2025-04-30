@@ -5321,7 +5321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a7af1738df9843bde0614e005257f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 15
+  interactDistance: 8
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c296ff1cfd68b0b438fdd9e2e1d3b71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 15
+  interactDistance: 8
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2

@@ -216385,7 +216385,7 @@ AudioEchoFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010492225}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Delay: 300
   m_DecayRatio: 0.5
