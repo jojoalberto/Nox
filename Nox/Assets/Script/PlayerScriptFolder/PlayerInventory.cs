@@ -9,9 +9,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        PhotonNetwork.LocalPlayer.TagObject = this.gameObject;
-        GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
-        Debug.Log("photon local player is: " + playerObj+ playerObj.GetComponent<Protector>().isProtector);
+
 
     }
 
