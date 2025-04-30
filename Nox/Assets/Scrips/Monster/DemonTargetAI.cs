@@ -78,6 +78,12 @@ public class DemonTargetAI1 : MonoBehaviour
     [SerializeField] private AudioClip[] demonSfx;
     private Coroutine breathingCoroutine;
 
+    [Header("Spawn Settings")]
+    public bool isSpawnWaiting = true;
+    [SerializeField] private float spawnWaitTime = 30f;
+    [SerializeField] SkinnedMeshRenderer[] meshRenderer;
+    
+
     void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -88,6 +94,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
         {
+            StartCoroutine(GhoulStartWait());
             StartCoroutine(WaitForPlayersToInstantiate());
         }
 
@@ -95,9 +102,29 @@ public class DemonTargetAI1 : MonoBehaviour
         originaltiredSpeed = tiredSpeed;
         originalchaseSpeed = chaseSpeed;
 
+
+        
         StartCoroutine(GetAggressionUI());
         StartCoroutine(Aggression());
 
+    }
+
+    IEnumerator GhoulStartWait()
+    {
+        foreach (SkinnedMeshRenderer mesh in meshRenderer)
+        {
+            mesh.enabled = false;
+        }
+
+        WaitForSeconds wait = new WaitForSeconds(spawnWaitTime);
+        yield return wait;
+
+        foreach(SkinnedMeshRenderer mesh in meshRenderer)
+        {
+            mesh.enabled = true;
+        }
+        isSpawnWaiting = false;
+        PickNewTarget();
     }
 
     IEnumerator Aggression()
@@ -169,22 +196,18 @@ public class DemonTargetAI1 : MonoBehaviour
             UpdatePlayerList();
             yield return new WaitForSeconds(0.5f);
         }
-
-        PickNewTarget();
     }
 
     IEnumerator GetAggressionUI()
     {
         GameObject uiObj = null;
 
-        // Wait until the object with the tag exists in the scene
         while (uiObj == null)
         {
             uiObj = GameObject.FindGameObjectWithTag("AggressionUI");
             yield return null;
         }
 
-        // Now try to get the component
         aggressionUI = uiObj.GetComponent<Aggression>();
 
         if (aggressionUI == null)
@@ -204,6 +227,8 @@ public class DemonTargetAI1 : MonoBehaviour
 
     void Update()
     {
+        if(isSpawnWaiting)
+            { return; }
         UpdateNavMeshSpeed();
 
         if (!PhotonNetwork.IsMasterClient)
@@ -335,6 +360,9 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator ChasePlayer()
     {
+        if (isSpawnWaiting)
+        { yield break; }
+
         isChasingPlayer = true;
 
 
@@ -486,6 +514,9 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
+        if (isSpawnWaiting)
+        { yield break; }
+
         if (isFrozen || isBound) yield break;
 
         isAttacking = true;
@@ -610,6 +641,9 @@ public class DemonTargetAI1 : MonoBehaviour
     {
         if (!PhotonNetwork.IsMasterClient) return;
 
+        if (isSpawnWaiting)
+        { return ; }
+
         GameObject protectorObj = PhotonView.Find(protectorViewID)?.gameObject;
         if (protectorObj == null) return;
 
@@ -623,6 +657,9 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator ForcedChaseProtector(Transform protector, float duration)
     {
+        if (!isSpawnWaiting)
+            yield break;
+
         if (chaseCoroutine != null)
         {
             StopCoroutine(chaseCoroutine);
@@ -701,7 +738,7 @@ public class DemonTargetAI1 : MonoBehaviour
         UpdateNavMeshSpeed();
         yield return new WaitForSeconds(duration);
         isFrozen = false;
-        UpdateNavMeshSpeed(); // ← Add this
+        UpdateNavMeshSpeed(); 
     }
 
 
@@ -725,6 +762,8 @@ public class DemonTargetAI1 : MonoBehaviour
                 baseSpeed = tiredSpeed;
                 break;
             case SpeedState.Idle:
+                baseSpeed = defaultSpeed;
+                break;
             default:
                 baseSpeed = defaultSpeed;
                 break;
@@ -802,6 +841,11 @@ public class DemonTargetAI1 : MonoBehaviour
     [PunRPC]
     public void RPC_StartChasing(int targetViewID)
     {
+        if (isSpawnWaiting)
+        {
+            return;
+        }
+
         PhotonView targetView = PhotonView.Find(targetViewID);
         if (currentTarget == targetView.transform && isChasingPlayer)
             return;
@@ -861,6 +905,8 @@ public class DemonTargetAI1 : MonoBehaviour
 
     public void UpdateBreathing(float distance)
     {
+        if(isSpawnWaiting)
+            { return; }
         if (distance > 25f)
         {
             if (breathingCoroutine != null)

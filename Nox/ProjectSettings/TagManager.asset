@@ -13,6 +13,7 @@ TagManager:
   - DemonEffects
   - VCRecorder
   - Bookshelf
+  - AudioManager
   layers:
   - Default
   - TransparentFX

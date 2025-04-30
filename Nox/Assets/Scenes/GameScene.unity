@@ -34030,9 +34030,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1303672493}
-    - targetCorrespondingSourceObject: {fileID: 400002, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1781849531}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2eee86fd8a4988499e8c13b834ad2d7, type: 3}
 --- !u!4 &278206197 stripped
@@ -54997,7 +54994,7 @@ GameObject:
   - component: {fileID: 588212676}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55035,6 +55032,8 @@ MonoBehaviour:
   soundTrapAudioClip: {fileID: 8300000, guid: 5d6f11f7bd3d5174e9f8e6e7c38e218c, type: 3}
   sfxAudioClips:
   - {fileID: 8300000, guid: 0271b00ff83ab984386265f06e634c8a, type: 3}
+  - {fileID: 8300000, guid: 4fa59ca78c5977142979810e2d6c18d3, type: 3}
+  - {fileID: 8300000, guid: 3af57bdce5ce86949a09cbf486bc4e06, type: 3}
   musicAudioClips:
   - {fileID: 8300000, guid: d9fec70763290ef4b95869b141525713, type: 3}
   - {fileID: 8300000, guid: ce0d2a5687c51ea48a3356121a42b0fb, type: 3}
@@ -55044,6 +55043,7 @@ MonoBehaviour:
       m_Calls: []
   musicAudioSourceA: {fileID: 999964609}
   musicAudioSourceB: {fileID: 1453992363}
+  audioEchoFilter: {fileID: 2010492228}
 --- !u!114 &588212676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127833,9 +127833,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: c8465f7bce6127543a6b854da96973cb, type: 3}
     - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: meshRenderer.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
       propertyPath: debugMessages.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1129182588}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1129182587}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1129182586}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1129182585}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1129182584}
+    - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+      propertyPath: 'meshRenderer.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1129182583}
     - target: {fileID: 3850548172548749433, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
       propertyPath: targetLocations.Array.size
       value: 16
@@ -127928,6 +127956,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533fe6d567a28444ca3ca0905a14ce3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!137 &1129182583 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773450, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1129182584 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773448, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1129182585 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773446, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1129182586 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773444, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1129182587 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773442, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1129182588 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 290884568576773440, guid: 6ec18304030011c47aaa07296ea319e0, type: 3}
+  m_PrefabInstance: {fileID: 1129182580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130761561
 GameObject:
   m_ObjectHideFlags: 0
@@ -169518,7 +169576,19 @@ MonoBehaviour:
   doorAnimator: {fileID: 1556216025}
   onDoorOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588212675}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: RPCPlayAudioByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoorOpen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1556216024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186282,6 +186352,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 588212675}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: RPCPlayAudioByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoorOpen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1747084026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187922,68 +188004,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780185017}
   m_Mesh: {fileID: 4300000, guid: d6f2c9324b03e8b4d93c47c464c73709, type: 3}
---- !u!1001 &1781849530
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 278206197}
-    m_Modifications:
-    - target: {fileID: 100004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_Name
-      value: opened spamcan1 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 19.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.72371453
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.0000000015097044
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.6900995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -87.276
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
---- !u!4 &1781849531 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 91d9ba29912facb46a4575f765997bdb, type: 3}
-  m_PrefabInstance: {fileID: 1781849530}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782259781
 GameObject:
   m_ObjectHideFlags: 0
@@ -216238,6 +216258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010492226}
   - component: {fileID: 2010492227}
+  - component: {fileID: 2010492228}
   m_Layer: 0
   m_Name: SFXSource
   m_TagString: Untagged
@@ -216357,6 +216378,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!168 &2010492228
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010492225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Delay: 500
+  m_DecayRatio: 0.5
+  m_WetMix: 1
+  m_DryMix: 1
 --- !u!1001 &2013298569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357368,6 +357402,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Touch the Glowing Pillar
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 588212675}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: RPCPlayAudioByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoorOpen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &3663533472672132132
@@ -553012,6 +553058,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 588212675}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: RPCPlayAudioByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoorOpen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7291314527160523587
 GameObject:
   m_ObjectHideFlags: 0
@@ -555678,6 +555736,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Touch the Glowing Pillar
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 588212675}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: RPCPlayAudioByName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoorOpen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!23 &7393972018937757539

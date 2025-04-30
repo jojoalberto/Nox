@@ -1,9 +1,12 @@
 using Photon.Pun;
+using POpusCodec.Enums;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviourPun
 {
@@ -19,6 +22,7 @@ public class AudioManager : MonoBehaviourPun
 
     private AudioSource currentMusicSource;
     private AudioSource nextMusicSource;
+    public AudioEchoFilter audioEchoFilter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -70,6 +74,37 @@ public class AudioManager : MonoBehaviourPun
     }
 
     [PunRPC]
+    public void PlayAudioByNameAndEcho(string clipName)
+    {
+        AudioClip clip = sfxAudioClips.Find(c => c.name == clipName);
+        //Make it echo
+        if (clip != null)
+        {
+            Debug.Log("Playing AudioClip named: " + clipName);
+
+            audioEchoFilter.enabled = true;
+            audioEchoFilter.delay = 300f;
+            audioEchoFilter.decayRatio = 0.5f;
+            audioEchoFilter.wetMix = 1.0f;
+            audioEchoFilter.dryMix = 1.0f;
+
+            sfxAudioSource.PlayOneShot(clip);
+            StartCoroutine(WaitForSFXToEnd(sfxAudioSource));
+            StartCoroutine(DisableEchoAfterDelay(audioEchoFilter, clip.length));
+        }
+        else
+        {
+            Debug.LogWarning("AudioClip not found with name: " + clipName);
+        }
+    }
+
+    private IEnumerator DisableEchoAfterDelay(AudioEchoFilter audioEchoFilter, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        audioEchoFilter.enabled = false;
+    }
+
+    [PunRPC]
     public void PlayDefaultAudio()
     {
         if (sfxAudioClips.Count > 0)
@@ -87,6 +122,11 @@ public class AudioManager : MonoBehaviourPun
     public void RPCPlayAudioByName(string clipName)
     {
         photonView.RPC("PlayAudioByName", RpcTarget.All, clipName);
+    }
+
+    public void RPCPlayAudioByNameAndEcho(string clipName)
+    {
+        photonView.RPC("PlayAudioByNameAndEcho", RpcTarget.All, clipName);
     }
 
     public void RPCPlayDefaultAudio()

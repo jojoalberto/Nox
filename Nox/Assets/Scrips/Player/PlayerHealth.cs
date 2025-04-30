@@ -45,6 +45,8 @@ public class PlayerHealth : MonoBehaviourPun
     private int currentSpectateIndex = 0;
     private bool isSpectating = false;
 
+    public AudioManager audioManager;
+
     private void Awake()
     {
         
@@ -77,7 +79,7 @@ public class PlayerHealth : MonoBehaviourPun
                 colorAdjustments.saturation.value = 0f;
             }
         }
-
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         
     }
 
@@ -222,7 +224,8 @@ public class PlayerHealth : MonoBehaviourPun
         if (!photonView.IsMine) return;
 
         Debug.Log(gameObject.name + " DIED LOL");
-        
+
+        audioManager.RPCPlayAudioByNameAndEcho("PlayerDeath");
         StartCoroutine(SpectateAndRespawn());
 
     }
