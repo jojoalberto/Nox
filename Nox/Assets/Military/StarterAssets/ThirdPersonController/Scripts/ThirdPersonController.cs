@@ -407,6 +407,8 @@ namespace StarterAssets
 
         private void OnFootstep(AnimationEvent animationEvent)
         {
+            if(!photonView.IsMine) { return;}
+
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(FootstepAudioClips, transform.TransformPoint(_controller.center), FootstepAudioVolume);
