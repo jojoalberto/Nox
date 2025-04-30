@@ -172,7 +172,8 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     public void ShowDialogue()
     {
         GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
-        protector = playerObj.GetComponent<Protector>();
+        protector = playerObj.GetComponentInChildren<Protector>();
+        Debug.Log("photon local player is: " + protector + protector.GetComponentInChildren<Protector>().isProtector);
         if (protector.isProtector == false)
         {
             if (dialogueManager != null)
