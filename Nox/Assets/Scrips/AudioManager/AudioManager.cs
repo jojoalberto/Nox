@@ -83,10 +83,6 @@ public class AudioManager : MonoBehaviourPun
             Debug.Log("Playing AudioClip named: " + clipName);
 
             audioEchoFilter.enabled = true;
-            audioEchoFilter.delay = 300f;
-            audioEchoFilter.decayRatio = 0.5f;
-            audioEchoFilter.wetMix = 1.0f;
-            audioEchoFilter.dryMix = 1.0f;
 
             sfxAudioSource.PlayOneShot(clip);
             StartCoroutine(WaitForSFXToEnd(sfxAudioSource));
@@ -165,7 +161,6 @@ public class AudioManager : MonoBehaviourPun
         }
         if (currentMusicSource.clip == newClip && currentMusicSource.isPlaying)
         {
-            // The clip is already playing, no need to change
             Debug.Log("The clip is already playing.");
             yield break;
         }
@@ -189,7 +184,7 @@ public class AudioManager : MonoBehaviourPun
             yield return null;
         }
 
-        // Ensure perfect end values
+        
         currentMusicSource.volume = 0f;
         nextMusicSource.volume = startVolume;
 
