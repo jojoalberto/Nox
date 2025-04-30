@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 9498135b32df9a34baead70e590c162e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289927
+  packageName: Shelves01 Pack
+  packageVersion: 1.2
+  assetPath: Assets/ShelfObjects/ShelfSet.fbx
+  uploadId: 683573
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -76,8 +83,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -92,7 +97,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -167,10 +172,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 289927
-  packageName: Shelves01 Pack
-  packageVersion: 1.2
-  assetPath: Assets/ShelfObjects/ShelfSet.fbx
-  uploadId: 683573

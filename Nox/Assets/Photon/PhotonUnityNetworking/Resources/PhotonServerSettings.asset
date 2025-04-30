@@ -129,6 +129,7 @@ MonoBehaviour:
   - RPC_PlayOccultistAbilityAudio
   - RPC_PlayDrifterAbilityAudio
   - RPC_PlayTrapperAbilityAudio
+  - InvokeAllplayerEnter
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

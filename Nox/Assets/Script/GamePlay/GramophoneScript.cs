@@ -33,6 +33,7 @@ public class GramophoneScript : InteractableObject
         if (!hasInteract)
         {
             base.Interact();
+            hasInteract = true;
         }
         else
         {

@@ -20,7 +20,25 @@ public class BookshelvesManager : MonoBehaviourPun
     void Awake()
     {
         Instance = this;
-        totalBookshelves = GameObject.FindGameObjectsWithTag("Bookshelf").Length;
+        
+    }
+    private void Start()
+    {
+
+    }
+    private void Update()
+    {
+
+    }
+    public void ScanBookShelves()
+    {
+        GameObject[] foundBookshelves = GameObject.FindGameObjectsWithTag("Bookshelf");
+        totalBookshelves = foundBookshelves.Length;
+        Debug.Log("Total Bookshelves Found: " + totalBookshelves);
+        foreach (var shelf in foundBookshelves)
+        {
+            Debug.Log("bookshelf name is: " + shelf.name);
+        }
     }
     public void CorrectChoice()
     {
@@ -53,16 +71,29 @@ public class BookshelvesManager : MonoBehaviourPun
             interactedBookshelves.Add(bookshelfID);
             Debug.Log($"Bookshelf {bookshelfID} interacted with ({interactedBookshelves.Count}/{totalBookshelves})");
 
-            if (interactedBookshelves.Count == totalBookshelves)
-            {
-                photonView.RPC("TriggerFinalEventRPC", RpcTarget.All);
-            }
+            //if (interactedBookshelves.Count >= totalBookshelves)
+            //{
+            //    photonView.RPC("TriggerFinalEventRPC", RpcTarget.All);
+            //}
+        }
+        if (interactedBookshelves.Count >= totalBookshelves)
+        {
+            Debug.Log("triggering final Quiz part RPC");
+            photonView.RPC("TriggerFinalEventRPC", RpcTarget.All);
         }
     }
     [PunRPC]
-    private void TriggerFinalEventRPC()
+    public void TriggerFinalEventRPC()
     {
+        Debug.Log("triggering final Quiz part");
         onFinalQuest.Invoke();
+        StartCoroutine(StartQuiz());
+    }
+    private IEnumerator StartQuiz()
+    {
+        yield return new WaitForSeconds(8);
+        Debug.Log("setting QUiz ui true");
+        QuizUI.SetActive(true);
     }
 
     private IEnumerator RepeatWrongAnswerDialogue()

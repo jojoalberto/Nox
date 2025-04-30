@@ -70,7 +70,6 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [PunRPC]
     void OnInteract()
     {
-        onInteract.Invoke();
         Debug.Log($"{gameObject.name} interacted with!");
         for (int i = 0; i < enableObject.Count; i++)
         {
@@ -87,6 +86,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             }
         }
 
+        onInteract.Invoke();
     }
 
     public void CallForceActivation(ClueItemSO data)
@@ -126,7 +126,6 @@ public class InteractableObject : MonoBehaviourPunCallbacks
     [PunRPC]
     public void ShowDialogueRPC(string message)
     {
-        onInteract.Invoke();
         if (dialogueManager != null)
         {
             dialogueManager.ShowDialogue(message);
@@ -145,6 +144,7 @@ public class InteractableObject : MonoBehaviourPunCallbacks
                 }
             }
         }
+        onInteract.Invoke();
     }
 
     [PunRPC]
