@@ -201260,7 +201260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1863862631}
   - component: {fileID: 1863862634}
-  - component: {fileID: 1863862633}
   - component: {fileID: 1863862632}
   - component: {fileID: 1863862635}
   m_Layer: 0
@@ -201307,19 +201306,6 @@ MonoBehaviour:
   sceneViewId: 167
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &1863862633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863862630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829619fa10acd2440b2acdbec7230c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineDirector: {fileID: 686823152}
 --- !u!65 &1863862634
 BoxCollider:
   m_ObjectHideFlags: 0
