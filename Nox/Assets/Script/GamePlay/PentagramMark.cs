@@ -36,6 +36,12 @@ public class PentagramMark : MonoBehaviourPunCallbacks
                 photonView.RPC("SetOccupied", RpcTarget.All, playerPhotonView.Owner.ActorNumber, false);
             }
         }
+        photonView.RPC("CallExitTriggerRPC", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void CallExitTriggerRPC()
+    {
         onExitMark.Invoke();
     }
 
