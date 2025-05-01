@@ -555,12 +555,10 @@ public class DemonTargetAI1 : MonoBehaviour
 
         photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
         photonView.RPC("PlayAttackAnimation", RpcTarget.All);
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"));
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(1.5f);
 
         photonView.RPC("PlayPostAttackAnimation", RpcTarget.All);
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsTag("PostAttack"));
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length - 0.75f);
+        yield return new WaitForSeconds(1.2f);
 
 
         isAttacking = false;
