@@ -34,7 +34,7 @@ public class GramophoneScript : InteractableObject
         if (!hasInteract)
         {
             base.Interact();
-            hasInteract = true;
+            photonView.RPC("CallHasInteractRPC", RpcTarget.All);
         }
         else
         {
@@ -59,6 +59,13 @@ public class GramophoneScript : InteractableObject
 
         
     }
+
+    [PunRPC]
+    public void CallHasInteractRPC()
+    {
+        hasInteract = true;
+    }
+
     [PunRPC]
     public void InteractGramaphone(string vinylID)
     {

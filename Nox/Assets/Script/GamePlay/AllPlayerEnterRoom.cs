@@ -41,6 +41,7 @@ public class AllPlayerEnterRoom : MonoBehaviourPunCallbacks
 
         CheckIfAllPlayerEnter();
     }
+    [PunRPC]
     void PlayerExitedTrigger(int actorNumber)
     {
         playersInTrigger.Remove(actorNumber);

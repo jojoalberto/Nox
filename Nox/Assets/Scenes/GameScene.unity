@@ -11095,7 +11095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - there is blood on this Recording
+  - There is blood on this recording.
 --- !u!65 &129548248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -561280,7 +561280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueMessage:
-  - there is blood on this Recording
+  - There is blood on this recording.
 --- !u!65 &7589732808102707813
 BoxCollider:
   m_ObjectHideFlags: 0

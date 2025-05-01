@@ -27,7 +27,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
             dialogueManager.gameObject.SetActive(true);
             if (dialogueManager != null)
             {
-                dialogueManager.ShowDialogue(vinylDialogueMessage.GetDialogueMessage(1));
+                dialogueManager.ShowDialogue(vinylDialogueMessage.GetDialogueMessage(0));
 
             }
 
