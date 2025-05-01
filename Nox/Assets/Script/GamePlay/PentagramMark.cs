@@ -12,6 +12,7 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     public UnityEvent onExitMark;
     private GameObject playerObj;
     private PlayerHealth playerhealth;
+    private bool canBeEnter; 
 
     private bool deadCalled = false;
 
@@ -80,18 +81,19 @@ public class PentagramMark : MonoBehaviourPunCallbacks
             Debug.Log(playerPhotonView.Owner.ActorNumber + " exit actor number");
             if (playerPhotonView != null)
             {
-                photonView.RPC("SetOccupied", RpcTarget.All, playerPhotonView.Owner.ActorNumber, false);
+                photonView.RPC("SetOnExitOccupied", RpcTarget.All, playerPhotonView.Owner.ActorNumber);
             }
         }
-        photonView.RPC("CallExitTriggerRPC", RpcTarget.All);
+        //photonView.RPC("CallExitTriggerRPC", RpcTarget.All);
         deadCalled = false;
     }
 
-    [PunRPC]
-    public void CallExitTriggerRPC()
-    {
-        onExitMark.Invoke();
-    }
+    //[PunRPC]
+    //public void CallExitTriggerRPC()
+    //{
+    //    canBeEnter = true;
+    //    onExitMark.Invoke();
+    //}
 
     [PunRPC]
     public void OnPlayersDeathRPC(int actorNumber, bool occupied, bool playerState)
@@ -110,12 +112,31 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     [PunRPC]
     private void SetOccupied(int actorNumber, bool occupied)
     {
+        if (!canBeEnter)
+        {
+            return;
+        }
+
         isOccupied = occupied;
         isCorrectlyOccupied = (occupied && actorNumber == correctActorNumber);
         if (isCorrectlyOccupied)
         {
+            canBeEnter = false;
             onEnterCorrectMark.Invoke();
         }
+        PentagramPuzzleManager.Instance.CheckPuzzleStatus();
+    }
+    [PunRPC]
+    private void SetOnExitOccupied(int actorNumber)
+    {
+        if (actorNumber == correctActorNumber)
+        {
+            isOccupied = false;
+            isCorrectlyOccupied = false;
+            canBeEnter = true;
+            onExitMark.Invoke();
+        }
+
         PentagramPuzzleManager.Instance.CheckPuzzleStatus();
     }
 }
