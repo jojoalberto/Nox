@@ -76,7 +76,6 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.collider.TryGetComponent(out InteractableObject interactable))
             {
                 interactable.Interact();
-                audioManager.PlayAudioByName("Interaction");
             }
         }
         else if (Physics.Raycast(ray, out hit, interactDistance, pickableMask))
@@ -86,9 +85,9 @@ public class PlayerInteraction : MonoBehaviour
                 if (pickable.gameObject.layer == 10 && trapper != null)
                 {
                     trapper.IncrementPickup();
+                    audioManager.PlayAudioByName("TrapperPickup");
                 }
                 pickable.Interact();
-                audioManager.PlayAudioByName("Interaction");
             }
         }
     }
