@@ -12,6 +12,9 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     public UnityEvent onExitMark;
     private GameObject playerObj;
     private PlayerHealth playerhealth;
+
+    private bool deadCalled = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!photonView.IsMine) return;
@@ -24,6 +27,7 @@ public class PentagramMark : MonoBehaviourPunCallbacks
                 photonView.RPC("SetOccupied", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true);
             }
         }
+        deadCalled = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,12 +47,18 @@ public class PentagramMark : MonoBehaviourPunCallbacks
                     if (playerState)
                     {
                         Debug.Log("gathering, PlayerDead");
+                        if(deadCalled!= false)
+                        {
+                            deadCalled = true;
+                            photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true, playerState);
+                        }
+                        
                     }
                     else
                     {
                         Debug.Log("gathering, PlayerAlive");
                     }
-                    photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true, playerState);
+                    
                 }
                 else
                     Debug.Log("gathering, no health script found");
@@ -74,6 +84,7 @@ public class PentagramMark : MonoBehaviourPunCallbacks
             }
         }
         photonView.RPC("CallExitTriggerRPC", RpcTarget.All);
+        deadCalled = false;
     }
 
     [PunRPC]
