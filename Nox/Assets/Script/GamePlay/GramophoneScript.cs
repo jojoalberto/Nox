@@ -62,9 +62,9 @@ public class GramophoneScript : InteractableObject
     [PunRPC]
     public void InteractGramaphone(string vinylID)
     {
+        hasInteract = true;
         if (string.IsNullOrEmpty(vinylID)) return;
 
-        hasInteract = true;
 
         if (vinylID == requiredVinylID)
         {

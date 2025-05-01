@@ -17,7 +17,7 @@ public class AllPlayerEnterRoom : MonoBehaviourPunCallbacks
             PhotonView otherPhotonView = other.GetComponent<PhotonView>();
             if (otherPhotonView != null && otherPhotonView.IsMine)
             {
-                photonView.RPC("PlayerEnteredTrigger", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.ActorNumber);
+                photonView.RPC("PlayerEnteredTrigger", RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber);
             }
         }
     }
@@ -28,7 +28,7 @@ public class AllPlayerEnterRoom : MonoBehaviourPunCallbacks
             PhotonView otherPhotonView = other.GetComponent<PhotonView>();
             if (otherPhotonView != null && otherPhotonView.IsMine)
             {
-                photonView.RPC("PlayerExitedTrigger", RpcTarget.MasterClient, PhotonNetwork.LocalPlayer.ActorNumber);
+                photonView.RPC("PlayerExitedTrigger", RpcTarget.All, PhotonNetwork.LocalPlayer.ActorNumber);
             }
         }
     }
