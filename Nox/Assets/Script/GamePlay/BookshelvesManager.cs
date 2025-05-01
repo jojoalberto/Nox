@@ -61,13 +61,11 @@ public class BookshelvesManager : MonoBehaviourPun
     [PunRPC]
     public void IncorrectChoiceRPC()
     {
-        QuizUI.SetActive(false);
         onIncorrectAnswer.Invoke();
     }
     public void IncorrectChoice()
     {
         photonView.RPC("IncorrectChoiceRPC", RpcTarget.All);
-        photonView.RPC("RepeatQuizRPC", RpcTarget.All);
     }
     [PunRPC]
     public void RepeatQuizRPC()
@@ -117,6 +115,7 @@ public class BookshelvesManager : MonoBehaviourPun
 
             if (!puzzleSolved)
             {
+                onQuizRepeat.Invoke();
                 QuizUI.SetActive(true);
             }
         }

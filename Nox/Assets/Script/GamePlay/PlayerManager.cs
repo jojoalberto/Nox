@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsMasterClient)
             return;
 
-        allPlayers = Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
+        photonView.RPC("ListAllPlayerRPC", RpcTarget.All);
 
         foreach (PlayerHealth player in allPlayers)
         {
@@ -20,6 +20,12 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         }
     }
 
+
+    [PunRPC]
+    public void ListAllPlayerRPC()
+    {
+        allPlayers = Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
+    }
     public void EnableCursor()
     {
             Debug.Log("showing Cursor");
