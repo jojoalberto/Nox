@@ -391,7 +391,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
         if (photonView.IsMine)
         {
             GetComponent<ThirdPersonController>().enabled = false;
-            GetComponent<CharacterController>().enabled = false;
+            //GetComponent<CharacterController>().enabled = false;
+            GetComponent<CharacterController>().radius = 0.001f;
+            GetComponent<CharacterController>().height = 0.001f;
             hudInstance.SetActive(false);
 
             protector.enabled = false;
@@ -420,7 +422,9 @@ public class PlayerScriptBehaviour : MonoBehaviour
         if (photonView.IsMine)
         {
             GetComponent<ThirdPersonController>().enabled = true;
-            GetComponent<CharacterController>().enabled = true;
+            //GetComponent<CharacterController>().enabled = true;
+            GetComponent<CharacterController>().radius = 0.28f;
+            GetComponent<CharacterController>().height = 1.8f;
             hudInstance.SetActive(true);
             protector.enabled = true;
             occultist.enabled = true;
