@@ -9,6 +9,7 @@ public class BookshelvesManager : MonoBehaviourPun
     public static BookshelvesManager Instance;
     public UnityEvent onFinishQuest;
     public UnityEvent onIncorrectAnswer;
+    public UnityEvent onQuizRepeat;
     private HashSet<string> interactedBookshelves = new HashSet<string>();
     private int totalBookshelves;
     public UnityEvent onFinalQuest;
@@ -40,20 +41,32 @@ public class BookshelvesManager : MonoBehaviourPun
             Debug.Log("bookshelf name is: " + shelf.name);
         }
     }
+ 
     public void CorrectChoice()
+    {
+        photonView.RPC("CorrectChoiceRPC", RpcTarget.All);
+    }
+    [PunRPC]
+    public void CorrectChoiceRPC()
     {
         if (repeatQuizCoroutine != null)
         {
             StopCoroutine(repeatQuizCoroutine);
             repeatQuizCoroutine = null;
         }
+        QuizUI.SetActive(false);
         onFinishQuest.Invoke();
         puzzleSolved = true;
     }
-
+    [PunRPC]
+    public void IncorrectChoiceRPC()
+    {
+        QuizUI.SetActive(false);
+        onIncorrectAnswer.Invoke();
+    }
     public void IncorrectChoice()
     {
-        onIncorrectAnswer.Invoke();
+        photonView.RPC("IncorrectChoiceRPC", RpcTarget.All);
         photonView.RPC("RepeatQuizRPC", RpcTarget.All);
     }
     [PunRPC]
