@@ -35,9 +35,30 @@ public class PentagramMark : MonoBehaviourPunCallbacks
             if (playerPhotonView != null)
             {
                 Debug.Log(playerPhotonView.Owner.ActorNumber + " enter actor number");
-                photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true);
+
+                playerhealth = other.GetComponent<PlayerHealth>();
+                if (playerhealth != null)
+                {
+                    bool playerState = playerhealth.isDead;
+                    if (playerState)
+                    {
+                        Debug.Log("gathering, PlayerDead");
+                    }
+                    else
+                    {
+                        Debug.Log("gathering, PlayerAlive");
+                    }
+                    photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true, playerState);
+                }
+                else
+                    Debug.Log("gathering, no health script found");
+
+                
             }
         }
+
+        
+
     }
 
     private void OnTriggerExit(Collider other)
