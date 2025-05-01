@@ -47,7 +47,7 @@ public class PentagramMark : MonoBehaviourPunCallbacks
                     if (playerState)
                     {
                         Debug.Log("gathering, PlayerDead");
-                        if(deadCalled!= false)
+                        if(!deadCalled)
                         {
                             deadCalled = true;
                             photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true, playerState);
