@@ -22536,6 +22536,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155668300}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!1001 &156995610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 98185515386256293, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: sceneViewId
+      value: 187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.02255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.8263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776573877008095890, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911323217924822332, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497385182267823044, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0856996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8497385182267823044, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787963150614822784, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
+      propertyPath: sceneViewId
+      value: 173
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49be4cc5947de45449bd6a67b639320f, type: 3}
 --- !u!1 &160806031
 GameObject:
   m_ObjectHideFlags: 0
@@ -55057,6 +55130,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0271b00ff83ab984386265f06e634c8a, type: 3}
   - {fileID: 8300000, guid: 4fa59ca78c5977142979810e2d6c18d3, type: 3}
   - {fileID: 8300000, guid: 3af57bdce5ce86949a09cbf486bc4e06, type: 3}
+  - {fileID: 8300000, guid: a58b2307c5fb4444e9ce2ccd6a64b19d, type: 3}
   musicAudioClips:
   - {fileID: 8300000, guid: d9fec70763290ef4b95869b141525713, type: 3}
   - {fileID: 8300000, guid: ce0d2a5687c51ea48a3356121a42b0fb, type: 3}
@@ -76103,6 +76177,114 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6cd87ae861b1cd84c92565f522163c86, type: 3}
   m_PrefabInstance: {fileID: 738071921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &738341171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738341172}
+  - component: {fileID: 738341175}
+  - component: {fileID: 738341174}
+  - component: {fileID: 738341173}
+  m_Layer: 0
+  m_Name: Ceiling (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738341172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738341171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: -141, y: 2.66, z: 0.0947}
+  m_LocalScale: {x: 5.5144596, y: 0.74544, z: 5.114205}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5501002695176062377}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!65 &738341173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738341171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &738341174
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738341171}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ebf8b4d16b7f8924fb9116d2e3207836, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &738341175
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738341171}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &740412091
 GameObject:
   m_ObjectHideFlags: 0
@@ -228194,6 +228376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824916498710469835}
+  - component: {fileID: 824916498710469836}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (11)
   m_TagString: Untagged
@@ -233685,6 +233868,7 @@ GameObject:
   - component: {fileID: 5222974132074360694}
   - component: {fileID: 3824471924743319447}
   - component: {fileID: 37629858102770445}
+  - component: {fileID: 5222974132074360695}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -237604,6 +237788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411053475053835654}
   - component: {fileID: 411053475062983756}
+  - component: {fileID: 411053475062983757}
   m_Layer: 0
   m_Name: Chest of drawers (5)
   m_TagString: Untagged
@@ -238836,6 +239021,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &411053475062983757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411053475053601222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!23 &413107580327431638
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -251786,6 +251992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745789890789934187}
   - component: {fileID: 745789890780413345}
+  - component: {fileID: 745789890789934188}
   m_Layer: 0
   m_Name: Chest of drawers (11)
   m_TagString: Untagged
@@ -252177,6 +252384,27 @@ Transform:
   - {fileID: 745789890789930963}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &745789890789934188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745789890789642283}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &745789890789938725
 Transform:
   m_ObjectHideFlags: 0
@@ -255160,6 +255388,27 @@ Transform:
   - {fileID: 3141996035866492916}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &824916498710469836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16151292167538289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!4 &825885929575425640
 Transform:
   m_ObjectHideFlags: 0
@@ -267642,6 +267891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1967292223870082631}
+  - component: {fileID: 1967292223870082632}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (18)
   m_TagString: Untagged
@@ -268815,22 +269065,6 @@ GameObject:
   - component: {fileID: 4408600144247685543}
   m_Layer: 0
   m_Name: Group005
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1227558871633186535
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1892350662119986269}
-  m_Layer: 0
-  m_Name: Victorian Bookcase Tall and Small (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272004,6 +272238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360458655747934845}
   - component: {fileID: 1360458655754990519}
+  - component: {fileID: 1360458655754990520}
   m_Layer: 0
   m_Name: Chest of drawers (3)
   m_TagString: Untagged
@@ -272414,6 +272649,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1360458655754990520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360458655747710525}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &1360843794681151561
 GameObject:
   m_ObjectHideFlags: 0
@@ -274445,6 +274701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1776236940962787086}
+  - component: {fileID: 1776236940962787087}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (20)
   m_TagString: Untagged
@@ -283002,6 +283259,27 @@ Transform:
   - {fileID: 4057280945500032049}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &1776236940962787087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435987176775169460}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!23 &1778554437354103214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -283512,6 +283790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421618471505860439}
+  - component: {fileID: 1797300032275074542}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (17)
   m_TagString: Untagged
@@ -283519,6 +283798,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1797300032275074542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797300032275074541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!1 &1800819001974351676
 GameObject:
   m_ObjectHideFlags: 0
@@ -286095,6 +286395,7 @@ GameObject:
   - component: {fileID: 1254466283133898410}
   - component: {fileID: 2794230566804357391}
   - component: {fileID: 82171643022636485}
+  - component: {fileID: 2794230566804357392}
   m_Layer: 0
   m_Name: wood chair (3)
   m_TagString: Untagged
@@ -286307,21 +286608,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4521050079236976642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1892350662119986269
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227558871633186535}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 26.210003, y: -2.7199998, z: -13.710004}
-  m_LocalScale: {x: 1.878046, y: 1.49, z: 2.5999997}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4088234587066876673}
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &1893393271922143928
 Transform:
   m_ObjectHideFlags: 0
@@ -287378,6 +287664,7 @@ GameObject:
   - component: {fileID: 1275149747194539164}
   - component: {fileID: 2746604669818807097}
   - component: {fileID: 142163747285915635}
+  - component: {fileID: 2746604669818807098}
   m_Layer: 0
   m_Name: wood chair (6)
   m_TagString: Untagged
@@ -288204,6 +288491,27 @@ Transform:
   - {fileID: 4297863729675304312}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1967292223870082632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154867048146945277}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!64 &1976757925213103854
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -288522,7 +288830,7 @@ Transform:
   m_GameObject: {fileID: 8323136574179206022}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -0.119, y: 2.66, z: 0.0947}
+  m_LocalPosition: {x: -0.119, y: 2.45, z: 0.0947}
   m_LocalScale: {x: 5.5144596, y: 0.74544, z: 4.8544893}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -289520,6 +289828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704526128528448188}
+  - component: {fileID: 2084148304618127367}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (16)
   m_TagString: Untagged
@@ -289527,6 +289836,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2084148304618127367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084148304618127366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!33 &2086250084214098647
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -290110,6 +290440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1588925365019264066}
+  - component: {fileID: 2109707314388049657}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (12)
   m_TagString: Untagged
@@ -290117,6 +290448,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2109707314388049657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109707314388049656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!1 &2110426808677047741
 GameObject:
   m_ObjectHideFlags: 0
@@ -300884,6 +301236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1515436604228116393}
+  - component: {fileID: 2183182743466427668}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (23)
   m_TagString: Untagged
@@ -300891,6 +301244,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2183182743466427668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183182743466427667}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!33 &2184489193166833870
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -304708,6 +305082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2307739447773232989}
   - component: {fileID: 2307739447765649047}
+  - component: {fileID: 2307739447773232990}
   m_Layer: 0
   m_Name: Chest of drawers (6)
   m_TagString: Untagged
@@ -305114,6 +305489,27 @@ Transform:
   - {fileID: 2307739447773170917}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &2307739447773232990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307739447772932893}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &2308233363696630983
 Transform:
   m_ObjectHideFlags: 0
@@ -316987,6 +317383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2584130418301540668}
   - component: {fileID: 2584130418310815990}
+  - component: {fileID: 2584130418310815991}
   m_Layer: 0
   m_Name: Chest of drawers (1)
   m_TagString: Untagged
@@ -317451,6 +317848,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2584130418310815991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584130418301308284}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58563215, y: 0.90696615, z: 1.600826}
+  m_Center: {x: -0.08391816, y: 0.42969587, z: 0.027585996}
 --- !u!23 &2585021171541959847
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -321117,6 +321535,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943845697845851686}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!65 &2746604669818807098
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943845697845851686}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086567, y: 0.429778, z: 0.9003718}
+  m_Center: {x: 0.06672787, y: -0.000022180719, z: 0.021921972}
 --- !u!4 &2746887043761658039
 Transform:
   m_ObjectHideFlags: 0
@@ -326963,6 +327402,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883369808466465808}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!65 &2794230566804357392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883369808466465808}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086568, y: 0.42977807, z: 0.90037155}
+  m_Center: {x: 0.06672792, y: -0.000022168126, z: 0.021921946}
 --- !u!33 &2794814580420445485
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -327798,6 +328258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2840302533917244232}
+  - component: {fileID: 2840302533917244233}
   m_Layer: 0
   m_Name: sand_clock
   m_TagString: Untagged
@@ -327893,6 +328354,27 @@ Transform:
   - {fileID: 2840302533917244224}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2840302533917244233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840302533916813160}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25039288, y: 0.24717547, z: 0.25039318}
+  m_Center: {x: -0.0016076638, y: 0.10938495, z: 0.0016082878}
 --- !u!4 &2840302533917244234
 Transform:
   m_ObjectHideFlags: 0
@@ -329727,6 +330209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2878659719883755817}
   - component: {fileID: 2878659719876192483}
+  - component: {fileID: 2878659719883755818}
   m_Layer: 0
   m_Name: Chest of drawers (13)
   m_TagString: Untagged
@@ -330226,6 +330709,27 @@ Transform:
   - {fileID: 2878659719883743889}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &2878659719883755818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878659719883457897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &2878659719883769027
 Transform:
   m_ObjectHideFlags: 0
@@ -332547,6 +333051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2912235987053170863}
   - component: {fileID: 2912235987062909285}
+  - component: {fileID: 2912235987062909286}
   m_Layer: 0
   m_Name: Chest of drawers (1)
   m_TagString: Untagged
@@ -332774,6 +333279,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2912235987062909286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2912235987053397231}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &2912471713851432987
 GameObject:
   m_ObjectHideFlags: 0
@@ -333275,6 +333801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2933885332288240890}
   - component: {fileID: 2933885332280788272}
+  - component: {fileID: 2933885332288240891}
   m_Layer: 0
   m_Name: Chest of drawers (8)
   m_TagString: Untagged
@@ -333607,6 +334134,27 @@ Transform:
   - {fileID: 2933885332288180034}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2933885332288240891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933885332287940794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &2933885332288243178
 Transform:
   m_ObjectHideFlags: 0
@@ -335135,6 +335683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2574950258201726113}
+  - component: {fileID: 2952073484003071516}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (15)
   m_TagString: Untagged
@@ -335142,6 +335691,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2952073484003071516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952073484003071515}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!1 &2953621242887841905
 GameObject:
   m_ObjectHideFlags: 0
@@ -341139,6 +341709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2772150086634175074}
+  - component: {fileID: 3257078331645206745}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (22)
   m_TagString: Untagged
@@ -341146,6 +341717,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3257078331645206745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257078331645206744}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!33 &3258117788197990306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -356507,6 +357099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3626174830076280602}
   - component: {fileID: 3626174830086129360}
+  - component: {fileID: 3626174830086129361}
   m_Layer: 0
   m_Name: Chest of drawers
   m_TagString: Untagged
@@ -356752,6 +357345,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &3626174830086129361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626174830076504922}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &3627748275554800211
 GameObject:
   m_ObjectHideFlags: 0
@@ -374921,6 +375535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4599672408494769228}
+  - component: {fileID: 4599672408494769229}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (8)
   m_TagString: Untagged
@@ -375436,6 +376051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3807621099917546118}
   - component: {fileID: 3807621099907820364}
+  - component: {fileID: 3807621099917546119}
   m_Layer: 0
   m_Name: Chest of drawers (9)
   m_TagString: Untagged
@@ -375628,6 +376244,27 @@ Transform:
   - {fileID: 3807621099917599038}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3807621099917546119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3807621099917313734}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &3807621099917559660
 Transform:
   m_ObjectHideFlags: 0
@@ -376840,6 +377477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4592485761162037706}
+  - component: {fileID: 4592485761162037707}
   m_Layer: 0
   m_Name: clock 2 (4)
   m_TagString: Untagged
@@ -381185,6 +381823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3973773548526577713}
+  - component: {fileID: 3973773548526577714}
   m_Layer: 0
   m_Name: sand_clock (3)
   m_TagString: Untagged
@@ -381283,6 +381922,27 @@ Transform:
   - {fileID: 3973773548526577721}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3973773548526577714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973773548526416913}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25039288, y: 0.24717547, z: 0.25039318}
+  m_Center: {x: -0.0016076638, y: 0.10938495, z: 0.0016082878}
 --- !u!4 &3973773548526577715
 Transform:
   m_ObjectHideFlags: 0
@@ -382933,6 +383593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4392305949319147705}
+  - component: {fileID: 4392305949319147706}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (13)
   m_TagString: Untagged
@@ -384609,7 +385270,6 @@ Transform:
   - {fileID: 1515436604228116393}
   - {fileID: 7563675258229704694}
   - {fileID: 1776236940962787086}
-  - {fileID: 1892350662119986269}
   - {fileID: 8387992587777166527}
   - {fileID: 6229987726823127982}
   - {fileID: 6474235656101761059}
@@ -392014,6 +392674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4142450607785056048}
   - component: {fileID: 4142450607778082554}
+  - component: {fileID: 4142450607785345905}
   m_Layer: 0
   m_Name: Chest of drawers (10)
   m_TagString: Untagged
@@ -392021,6 +392682,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4142450607785345905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142450607785345904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &4142450607785351808
 GameObject:
   m_ObjectHideFlags: 0
@@ -408804,6 +409486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3576268782928519060}
+  - component: {fileID: 4245387215761671471}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (7)
   m_TagString: Untagged
@@ -408811,6 +409494,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4245387215761671471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245387215761671470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!4 &4246429486440011115
 Transform:
   m_ObjectHideFlags: 0
@@ -411786,6 +412490,27 @@ Transform:
   - {fileID: 2025695613193966470}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &4392305949319147706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017011107958942211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!23 &4393362643930377397
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -419334,6 +420059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3880171329538190558}
+  - component: {fileID: 4508934357904733797}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (6)
   m_TagString: Untagged
@@ -419341,6 +420067,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4508934357904733797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4508934357904733796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!64 &4510021638869041298
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -421690,6 +422437,27 @@ Transform:
   - {fileID: 5932182749399675895}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &4592485761162037707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814577313386468208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!23 &4594403514287062569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -421809,8 +422577,8 @@ Transform:
   m_GameObject: {fileID: 2912471713851432987}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -0.30700207, y: 2.5499997, z: -0.003399849}
-  m_LocalScale: {x: 5.486805, y: 0.74544, z: 4.838632}
+  m_LocalPosition: {x: -0.30700207, y: 2.5499997, z: -0.16}
+  m_LocalScale: {x: 5.486805, y: 0.74544, z: 4.9291143}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4088234587066876673}
@@ -421862,6 +422630,27 @@ Transform:
   - {fileID: 2251092000088647539}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &4599672408494769229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791609790167211766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!33 &4599944235409829771
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -439509,7 +440298,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5525603, z: -0, w: 0.83347297}
   m_LocalPosition: {x: 5.084858, y: -2.48, z: -5.0360756}
-  m_LocalScale: {x: 1.1000594, y: 1, z: 2.0368342}
+  m_LocalScale: {x: 1, y: 1, z: 2.0368342}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4088234587066876673}
@@ -446169,6 +446958,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5148096586054538486}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5222974132074360695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211960305141496480}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7333273, y: 2.3918738, z: 0.8923968}
+  m_Center: {x: -0.000000008664528, y: 1.1834159, z: 0.03641753}
 --- !u!23 &5223936063142672172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -456702,6 +457512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5385598824441454617}
   - component: {fileID: 5385598824432507347}
+  - component: {fileID: 5385598824441754714}
   m_Layer: 0
   m_Name: Chest of drawers (12)
   m_TagString: Untagged
@@ -456709,6 +457520,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5385598824441754714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5385598824441754713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &5385598824441764017
 GameObject:
   m_ObjectHideFlags: 0
@@ -459981,6 +460813,7 @@ GameObject:
   - component: {fileID: 5145816553032048015}
   - component: {fileID: 8126261130118287914}
   - component: {fileID: 6278774587334534880}
+  - component: {fileID: 8126261130118287915}
   m_Layer: 0
   m_Name: wood chair (2)
   m_TagString: Untagged
@@ -460280,6 +461113,7 @@ Transform:
   - {fileID: 90944615576934655}
   - {fileID: 4608683954796706387}
   - {fileID: 2001489026840411518}
+  - {fileID: 738341172}
   m_Father: {fileID: 4328237584901199899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5503370034445219996
@@ -478512,6 +479346,7 @@ GameObject:
   - component: {fileID: 6493028016203088447}
   - component: {fileID: 7904948747803479450}
   - component: {fileID: 5355046351928179024}
+  - component: {fileID: 7904948747803479451}
   m_Layer: 0
   m_Name: wood chair (5)
   m_TagString: Untagged
@@ -485079,6 +485914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6483088068221566867}
+  - component: {fileID: 6483088068221566868}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (14)
   m_TagString: Untagged
@@ -497326,6 +498162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6751220712607345406}
+  - component: {fileID: 6751220712607345407}
   m_Layer: 0
   m_Name: clock 2
   m_TagString: Untagged
@@ -500462,6 +501299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6390191167550172182}
+  - component: {fileID: 6390191167550337079}
   m_Layer: 0
   m_Name: sand_clock (2)
   m_TagString: Untagged
@@ -500469,6 +501307,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6390191167550337079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390191167550337078}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25039288, y: 0.24717547, z: 0.25039318}
+  m_Center: {x: -0.0016076638, y: 0.10938495, z: 0.0016082878}
 --- !u!1 &6390191167550337086
 GameObject:
   m_ObjectHideFlags: 0
@@ -502317,6 +503176,27 @@ Transform:
   - {fileID: 8723652454267591852}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &6483088068221566868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959210718792983849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!23 &6485580810535077091
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -502435,6 +503315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5858610957196443275}
+  - component: {fileID: 6486915248154993714}
   m_Layer: 0
   m_Name: clock 2 (3)
   m_TagString: Untagged
@@ -502442,6 +503323,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6486915248154993714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486915248154993713}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!23 &6491677352147904329
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -503022,6 +503924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6521008759945796247}
   - component: {fileID: 6521008759937966941}
+  - component: {fileID: 6521008759945796248}
   m_Layer: 0
   m_Name: Chest of drawers (7)
   m_TagString: Untagged
@@ -503467,6 +504370,27 @@ Transform:
   - {fileID: 6521008759945783599}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &6521008759945796248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521008759945498327}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!4 &6521008759945809789
 Transform:
   m_ObjectHideFlags: 0
@@ -518568,6 +519492,27 @@ Transform:
   - {fileID: 3484016755138416835}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &6751220712607345407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267594353247006788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!23 &6751442434139329008
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -519156,6 +520101,7 @@ GameObject:
   - component: {fileID: 6146738270445455976}
   - component: {fileID: 7125330637832865229}
   - component: {fileID: 4973862121959633159}
+  - component: {fileID: 7125330637832865230}
   m_Layer: 0
   m_Name: wood chair (1)
   m_TagString: Untagged
@@ -541221,6 +542167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7018146349701011873}
   - component: {fileID: 7018146349693902955}
+  - component: {fileID: 7018146349701303778}
   m_Layer: 0
   m_Name: Chest of drawers (2)
   m_TagString: Untagged
@@ -541228,6 +542175,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7018146349701303778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7018146349701303777}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5411835, y: 0.8860296, z: 1.6905575}
+  m_Center: {x: -0.09593582, y: 0.43578503, z: 0.027337074}
 --- !u!1 &7018146349701305361
 GameObject:
   m_ObjectHideFlags: 0
@@ -548710,6 +549678,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6775183295148921042}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!65 &7125330637832865230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775183295148921042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086563, y: 0.42977786, z: 0.9003714}
+  m_Center: {x: 0.0667279, y: -0.000024080276, z: 0.021921962}
 --- !u!64 &7125416694830704054
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -550268,6 +551257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7563675258229704694}
+  - component: {fileID: 7563675258229704695}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (19)
   m_TagString: Untagged
@@ -559738,6 +560728,27 @@ Transform:
   - {fileID: 5197082514519205065}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &7563675258229704695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186691940933508428}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!23 &7565332468654077021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -573043,6 +574054,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5859198752593647749}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!65 &7904948747803479451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5859198752593647749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086564, y: 0.42977792, z: 0.9003714}
+  m_Center: {x: 0.06672791, y: -0.000024081086, z: 0.021921813}
 --- !u!33 &7905030015561392241
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -574010,6 +575042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7299996227736496899}
+  - component: {fileID: 7927772718418407866}
   m_Layer: 0
   m_Name: clock 2 (6)
   m_TagString: Untagged
@@ -574017,6 +575050,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7927772718418407866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927772718418407865}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!4 &7928342517580218103
 Transform:
   m_ObjectHideFlags: 0
@@ -578246,6 +579300,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5486031171172992821}
   m_Mesh: {fileID: -3704520511592857308, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+--- !u!65 &8126261130118287915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486031171172992821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086565, y: 0.42977786, z: 0.9003715}
+  m_Center: {x: 0.066727914, y: -0.000024080276, z: 0.021921964}
 --- !u!4 &8127070202143787803
 Transform:
   m_ObjectHideFlags: 0
@@ -584319,6 +585394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8846202775885445184}
+  - component: {fileID: 8846202775885445185}
   m_Layer: 0
   m_Name: clock 2 (5)
   m_TagString: Untagged
@@ -586115,6 +587191,7 @@ GameObject:
   - component: {fileID: 8767355148837019334}
   - component: {fileID: 5621684872156303715}
   - component: {fileID: 7629321875293775273}
+  - component: {fileID: 8767355148837019335}
   m_Layer: 0
   m_Name: wood chair
   m_TagString: Untagged
@@ -598131,6 +599208,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8767355148837019335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277677287934985340}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5086564, y: 0.42977792, z: 0.9003714}
+  m_Center: {x: 0.06672791, y: -0.000024081086, z: 0.021921843}
 --- !u!1 &8767406494746712921
 GameObject:
   m_ObjectHideFlags: 0
@@ -599185,6 +600283,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8152266045646587261}
+  - component: {fileID: 8820715941933227977}
+  - component: {fileID: 8820715941933227976}
   m_Layer: 0
   m_Name: clock 2 (1)
   m_TagString: Untagged
@@ -599192,6 +600292,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8820715941933227976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820715941933227975}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8820715941933227977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820715941933227975}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!64 &8820956156550244168
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -599775,6 +600917,27 @@ Transform:
   - {fileID: 1669875855952265853}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &8846202775885445185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8182994492308693754}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.338393, y: 9.623125, z: 2.7882993}
+  m_Center: {x: -1.5958247, y: 4.782571, z: -1.4239978}
 --- !u!4 &8846583320788183274
 Transform:
   m_ObjectHideFlags: 0
@@ -601708,6 +602871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8894722084436935906}
   - component: {fileID: 8894722084429118760}
+  - component: {fileID: 8894722084436935907}
   m_Layer: 0
   m_Name: Chest of drawers
   m_TagString: Untagged
@@ -602119,6 +603283,27 @@ Transform:
   - {fileID: 8894722084436932442}
   m_Father: {fileID: 4088234587066876673}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &8894722084436935907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894722084436644002}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58563215, y: 0.90696615, z: 1.600826}
+  m_Center: {x: -0.08391816, y: 0.42969587, z: 0.027585996}
 --- !u!4 &8894722084436940460
 Transform:
   m_ObjectHideFlags: 0
@@ -603416,6 +604601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8578630993325261802}
+  - component: {fileID: 8955051356389857617}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (10)
   m_TagString: Untagged
@@ -603423,6 +604609,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &8955051356389857617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955051356389857616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!33 &8955539482442415141
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -627391,6 +628598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8387992587777166527}
+  - component: {fileID: 9161432688767342086}
   m_Layer: 0
   m_Name: Victorian Bookcase Tall and Small (9)
   m_TagString: Untagged
@@ -627398,6 +628606,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9161432688767342086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161432688767342085}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9780987, y: 1.8260597, z: 0.3691415}
+  m_Center: {x: -0.004006106, y: 0.9004236, z: -0.024806181}
 --- !u!23 &9162728453639004752
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -627757,6 +628986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9167942269517065821}
+  - component: {fileID: 9167942269517296254}
   m_Layer: 0
   m_Name: sand_clock (1)
   m_TagString: Untagged
@@ -627764,6 +628994,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9167942269517296254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167942269517296253}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25039288, y: 0.24717547, z: 0.25039318}
+  m_Center: {x: -0.0016076638, y: 0.10938495, z: 0.0016082878}
 --- !u!1 &9167942269517296255
 GameObject:
   m_ObjectHideFlags: 0
@@ -629362,3 +630613,4 @@ SceneRoots:
   - {fileID: 1566443682}
   - {fileID: 341689938}
   - {fileID: 701028501}
+  - {fileID: 156995610}

@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public PhotonView photonView;
 
+    [SerializeField] private AudioManager audioManager;
+
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
@@ -43,6 +46,8 @@ public class PlayerInteraction : MonoBehaviour
                 if (trapper != null) trapper.enabled = false;
             }
         }
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -71,6 +76,7 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.collider.TryGetComponent(out InteractableObject interactable))
             {
                 interactable.Interact();
+                audioManager.PlayAudioByName("Interaction");
             }
         }
         else if (Physics.Raycast(ray, out hit, interactDistance, pickableMask))
@@ -82,6 +88,7 @@ public class PlayerInteraction : MonoBehaviour
                     trapper.IncrementPickup();
                 }
                 pickable.Interact();
+                audioManager.PlayAudioByName("Interaction");
             }
         }
     }

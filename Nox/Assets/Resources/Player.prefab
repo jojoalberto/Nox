@@ -5340,6 +5340,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   photonView: {fileID: 8787963150614822784}
+  audioManager: {fileID: 0}
   interActablelayers:
     serializedVersion: 2
     m_Bits: 17792
@@ -5460,6 +5461,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   photonView: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!114 &2188399971952674715
 MonoBehaviour:
   m_ObjectHideFlags: 0
