@@ -357,11 +357,8 @@ public class PlayerHealth : MonoBehaviourPun
     [PunRPC]
     public void RPC_RequestDamageAll(int amount)
     {
-        PlayerHealth myHealth = GetComponent<PlayerHealth>();
-        if (myHealth != null && photonView.IsMine)
-        {
-            myHealth.TakeDamage(amount);
-        }
+        if (photonView.IsMine)
+            TakeDamage(amount);
     }
 
     IEnumerator ReenableTransformSync()

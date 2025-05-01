@@ -9,14 +9,11 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     PlayerHealth[] allPlayers;
     public void DealDamageToAll(int damageAmount)
     {
-        if (!PhotonNetwork.IsMasterClient)
-            return;
-
         photonView.RPC("ListAllPlayerRPC", RpcTarget.All);
 
         foreach (PlayerHealth player in allPlayers)
         {
-            player.photonView.RPC("RPC_RequestDamageAll", player.photonView.Owner, damageAmount);
+            player.photonView.RPC("RPC_RequestDamageAll", RpcTarget.All, damageAmount);
         }
     }
 
