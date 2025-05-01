@@ -73,8 +73,7 @@ public class GramophoneScript : InteractableObject
 
             if (vinylCount >= 2)
             {
-                Debug.Log("Correct vinyl played!");
-                onFinishVinylQuest?.Invoke();
+                photonView.RPC("PuzzleComplete", RpcTarget.All);
             }
             else
             {
@@ -87,10 +86,10 @@ public class GramophoneScript : InteractableObject
             FakeVinyl();
         }
     }
-
+    [PunRPC]
     public void PuzzleComplete()
     {
-
+        onFinishVinylQuest?.Invoke();
     }
 
     public void FakeVinyl()
