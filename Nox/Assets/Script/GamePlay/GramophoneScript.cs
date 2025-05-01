@@ -12,6 +12,7 @@ public class GramophoneScript : InteractableObject
     private bool hasInteract =false;
     private PlayerInventory inventory;
     private GameObject playerObj;
+    private int tempCount;
 
 
 
@@ -39,50 +40,57 @@ public class GramophoneScript : InteractableObject
         {
             playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
             inventory = playerObj.GetComponent<PlayerInventory>();
-            photonView.RPC("InteractGramaphone", RpcTarget.All);
-            inventory.DropVinyl();
+
+            if (inventory != null && inventory.IsHoldingVinyl())
+            {
+                ClueItemSO vinyl = inventory.GetHeldVinyl();
+                string vinylID = vinyl.itemID;
+
+                // Pass the vinyl ID to the RPC so all clients process it the same way
+                photonView.RPC("InteractGramaphone", RpcTarget.All, vinylID);
+
+                inventory.DropVinyl();
+            }
+            else
+            {
+                Debug.Log("No vinyl held");
+            }
         }
 
         
     }
     [PunRPC]
-    public void InteractGramaphone()
+    public void InteractGramaphone(string vinylID)
     {
-        //GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
-        if (playerObj == null) return;   
+        if (string.IsNullOrEmpty(vinylID)) return;
 
-        if (inventory == null)
+        hasInteract = true;
+
+        if (vinylID == requiredVinylID)
         {
-            Debug.LogWarning("No PlayerInventory found!");
-            return;
-        }
-        Debug.Log(inventory.IsHoldingVinyl() + "player inventory has");
-        if (inventory.IsHoldingVinyl())
-        {
-            hasInteract = true;
-            ClueItemSO vinyl = inventory.GetHeldVinyl();
-            if (vinyl.itemID == requiredVinylID) // Match by ID
+            vinylCount++;
+            onCorrectVinyl.Invoke();
+
+            if (vinylCount >= 2)
             {
-                vinylCount++;
-                onCorrectVinyl.Invoke();
-                if (vinylCount >= 2)
-                {
-                    Debug.Log("Correct vinyl played!");
-                    if (onFinishVinylQuest != null)
-                        onFinishVinylQuest.Invoke();
-                }
-                else
-                {
-                    Debug.Log("Correct vinyl played!");
-                }
-
+                Debug.Log("Correct vinyl played!");
+                onFinishVinylQuest?.Invoke();
             }
             else
             {
-                Debug.Log("Wrong vinyl.");
-                FakeVinyl();
+                Debug.Log("Correct vinyl played!");
             }
         }
+        else
+        {
+            Debug.Log("Wrong vinyl.");
+            FakeVinyl();
+        }
+    }
+
+    public void PuzzleComplete()
+    {
+
     }
 
     public void FakeVinyl()
