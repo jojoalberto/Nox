@@ -83,16 +83,13 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void OnPlayersDeathRPC(int actorNumber, bool occupied)
+    public void OnPlayersDeathRPC(int actorNumber, bool occupied, bool playerState)
     {
         isOccupied = occupied;
         isCorrectlyOccupied = (occupied && actorNumber == correctActorNumber);
         if (isCorrectlyOccupied)
         {
-            GameObject tempPlayerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
-            playerObj = tempPlayerObj;
-            playerhealth = playerObj.GetComponentInChildren<PlayerHealth>();
-            if (playerhealth.isDead)
+            if (playerState)
             {
                 onExitMark.Invoke();
             }
