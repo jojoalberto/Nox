@@ -139,6 +139,8 @@ MonoBehaviour:
   - PlayerExitedTrigger
   - CallHasInteractRPC
   - CallExitTriggerRPC
+  - OnplayersDeathRPC
+  - OnPlayersDeathRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

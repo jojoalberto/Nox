@@ -10,6 +10,8 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     public bool isCorrectlyOccupied = false;
     public UnityEvent onEnterCorrectMark;
     public UnityEvent onExitMark;
+    private GameObject playerObj;
+    private PlayerHealth playerhealth;
     private void OnTriggerEnter(Collider other)
     {
         if (!photonView.IsMine) return;
@@ -20,6 +22,20 @@ public class PentagramMark : MonoBehaviourPunCallbacks
             {
                 Debug.Log(playerPhotonView.Owner.ActorNumber + " enter actor number");
                 photonView.RPC("SetOccupied", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true);
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!photonView.IsMine) return;
+        if (other.CompareTag("Player"))
+        {
+            PhotonView playerPhotonView = other.GetComponent<PhotonView>();
+            if (playerPhotonView != null)
+            {
+                Debug.Log(playerPhotonView.Owner.ActorNumber + " enter actor number");
+                photonView.RPC("OnPlayersDeathRPC", RpcTarget.All, playerPhotonView.Owner.ActorNumber, true);
             }
         }
     }
@@ -43,6 +59,23 @@ public class PentagramMark : MonoBehaviourPunCallbacks
     public void CallExitTriggerRPC()
     {
         onExitMark.Invoke();
+    }
+
+    [PunRPC]
+    public void OnPlayersDeathRPC(int actorNumber, bool occupied)
+    {
+        isOccupied = occupied;
+        isCorrectlyOccupied = (occupied && actorNumber == correctActorNumber);
+        if (isCorrectlyOccupied)
+        {
+            GameObject tempPlayerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
+            playerObj = tempPlayerObj;
+            playerhealth = playerObj.GetComponentInChildren<PlayerHealth>();
+            if (playerhealth.isDead)
+            {
+                onExitMark.Invoke();
+            }
+        }
     }
 
     [PunRPC]
