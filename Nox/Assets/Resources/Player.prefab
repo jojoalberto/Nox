@@ -5613,13 +5613,13 @@ MonoBehaviour:
   protectorAbility1Description: Give nearby characters temporary health
   ability1Radius: 20
   protectorAbility1Value: 10
-  protectorAbility1CD: 15
+  protectorAbility1CD: 25
   protectorAbility1Duration: 10
   Ability1Ready: 1
   protectorAbility2Name: Audacia Mortalis
   protectorAbility2Description: Taunts nearby enemy
   ability2Radius: 20
-  protectorAbility2CD: 15
+  protectorAbility2CD: 25
   protectorAbility2Duration: 10
   Ability2Ready: 1
   audioSource: {fileID: 3960943734243963001}
@@ -5647,13 +5647,13 @@ MonoBehaviour:
   occultistAbility1Name: Auget Agilitas
   occultistAbility1Description: Increases Movement Speed of Allies
   occultistAbility1Value: 1.5
-  occultistAbility1CD: 10
-  occultistAbility1Duration: 2
+  occultistAbility1CD: 20
+  occultistAbility1Duration: 10
   Ability1Ready: 1
   occultistAbility2Name: Sanatio Tenebris
   occultistAbility2Description: Restores Health To Allies
   occultistAbility2Value: 0.25
-  occultistAbility2CD: 10
+  occultistAbility2CD: 30
   Ability2Ready: 1
   playerScriptBehaviour: {fileID: 0}
   audioSource: {fileID: 3960943734243963001}
@@ -5740,7 +5740,7 @@ MonoBehaviour:
   drifterAbility1Description: Become invisible
   drifterAbility1Value: 1.5
   drifterAbility1CD: 30
-  drifterAbility1Duration: 10
+  drifterAbility1Duration: 15
   Ability1Ready: 1
   isInvisible: 0
   drifterAbility2Name: Aethereus Vinculum
@@ -5772,8 +5772,8 @@ MonoBehaviour:
   trapperAbility1Description: Throw a slowing grenade
   trapperAbility1SlowValue: 0.5
   trapperAbility1RadiusValue: 15
-  trapperAbility1DurationValue: 2
-  trapperAbility1CD: 10
+  trapperAbility1DurationValue: 5
+  trapperAbility1CD: 1
   trapperAbility1Cost: 1
   Ability1Ready: 1
   cam: {fileID: 6030818222411006575}
@@ -5783,8 +5783,8 @@ MonoBehaviour:
   throwUpwardForce: 12
   trapperAbility2Name: Gelu Immobilis
   trapperAbility2Description: Place a trap that freezes the enemy for a few seconds
-  trapperAbility2CD: 10
-  trapperAbility2Duration: 2
+  trapperAbility2CD: 1
+  trapperAbility2Duration: 10
   trapperAbility2Cost: 3
   Ability2Ready: 1
   freezeTrap: {fileID: 3234902940036311696, guid: ebfb3a5521ec7ec4e828cd05b210cb81, type: 3}
