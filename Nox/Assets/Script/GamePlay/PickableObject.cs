@@ -31,8 +31,6 @@ public class PickableObject : MonoBehaviourPun
     {
         if (InventoryManager.Instance == null || itemData == null) return;
 
-        interactableObject.CallForceActivation(itemData);
-
         GameObject playerObj = PhotonNetwork.LocalPlayer.TagObject as GameObject;
         if (playerObj == null)
         {

@@ -4020,6 +4020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: e60d8d88ef36c8c478b34b95efee50e8, type: 2}
   heldVinyl: {fileID: 0}
+  requiredVinylID: 12
 --- !u!1 &8183459590890790225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,9 +5199,6 @@ PrefabInstance:
       addedObject: {fileID: 5888122833792397135}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2188399971952674715}
-    - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4407479906219040308}
     - targetCorrespondingSourceObject: {fileID: 8819399281915773919, guid: f269b47f315e0284f8824a9e948a3f60, type: 3}
       insertIndex: -1
@@ -5462,20 +5460,6 @@ MonoBehaviour:
     m_Bits: 1024
   photonView: {fileID: 0}
   audioManager: {fileID: 0}
---- !u!114 &2188399971952674715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2309164442572235219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86c3e5e8f4e0c8419dc7421e4dc9757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: e60d8d88ef36c8c478b34b95efee50e8, type: 2}
-  heldVinyl: {fileID: 0}
 --- !u!114 &4407479906219040308
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 63074}
   m_Layer: 7
   m_Name: Shelf_A (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3969,7 +3969,7 @@ GameObject:
   - component: {fileID: 88665155}
   m_Layer: 7
   m_Name: BigShelf (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -42745,7 +42745,7 @@ GameObject:
   - component: {fileID: 399365084}
   m_Layer: 7
   m_Name: Cupboard (05)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43057,7 +43057,7 @@ GameObject:
   - component: {fileID: 404230966}
   m_Layer: 7
   m_Name: CupboardLight (8)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -104093,7 +104093,7 @@ GameObject:
   - component: {fileID: 946858475}
   m_Layer: 7
   m_Name: CupboardLight_Broken (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -120599,7 +120599,7 @@ GameObject:
   - component: {fileID: 1069614671}
   m_Layer: 7
   m_Name: Shelf_F (5)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171423,7 +171423,7 @@ GameObject:
   - component: {fileID: 1607374313}
   m_Layer: 7
   m_Name: Cupboard (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -185648,7 +185648,7 @@ GameObject:
   - component: {fileID: 1726595263}
   m_Layer: 7
   m_Name: Cupboard (3)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -188244,7 +188244,7 @@ GameObject:
   - component: {fileID: 1782259782}
   m_Layer: 7
   m_Name: Cupboard (06)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -228227,7 +228227,7 @@ GameObject:
   - component: {fileID: 7589984572493862923}
   m_Layer: 7
   m_Name: Shelf_F (5)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228983,7 +228983,7 @@ GameObject:
   - component: {fileID: 2345129726654623847}
   m_Layer: 7
   m_Name: Shelf_H (8)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232555,7 +232555,7 @@ GameObject:
   - component: {fileID: 7722820348844903399}
   m_Layer: 7
   m_Name: Shelf_F (9)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235854,7 +235854,7 @@ GameObject:
   - component: {fileID: 2653442014542869252}
   m_Layer: 7
   m_Name: Shelf_H (13)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254019,7 +254019,7 @@ GameObject:
   - component: {fileID: 3103384685201678029}
   m_Layer: 7
   m_Name: Shelf_H (7)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266975,7 +266975,7 @@ GameObject:
   - component: {fileID: 3428254183682867011}
   m_Layer: 7
   m_Name: Shelf_H (3)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268515,7 +268515,7 @@ GameObject:
   - component: {fileID: 7138322697180650551}
   m_Layer: 7
   m_Name: Shelf_C (5)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270038,7 +270038,7 @@ GameObject:
   - component: {fileID: 3621515048870942830}
   m_Layer: 7
   m_Name: Shelf_H (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270465,7 +270465,7 @@ GameObject:
   - component: {fileID: 4442072491657790161}
   m_Layer: 7
   m_Name: Shelf_A (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274293,7 +274293,7 @@ GameObject:
   - component: {fileID: 3738302093319044781}
   m_Layer: 7
   m_Name: Shelf_H (14)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274829,7 +274829,7 @@ GameObject:
   - component: {fileID: 9021484608593205526}
   m_Layer: 7
   m_Name: Shelf_F (8)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279160,7 +279160,7 @@ GameObject:
   - component: {fileID: 9191948489635630594}
   m_Layer: 7
   m_Name: Shelf_F (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285299,7 +285299,7 @@ GameObject:
   - component: {fileID: 1864143477362933372}
   m_Layer: 7
   m_Name: Cupboard (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -305220,7 +305220,7 @@ GameObject:
   - component: {fileID: 2311406121044241028}
   m_Layer: 7
   m_Name: Shelf_A (5)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314772,7 +314772,7 @@ GameObject:
   - component: {fileID: 8159329427668960046}
   m_Layer: 7
   m_Name: Cupboard (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -335642,7 +335642,7 @@ GameObject:
   - component: {fileID: 6538817895855260732}
   m_Layer: 7
   m_Name: Shelf_C (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337592,7 +337592,7 @@ GameObject:
   - component: {fileID: 3063956271087037517}
   m_Layer: 7
   m_Name: Shelf_H (15)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339912,7 +339912,7 @@ GameObject:
   - component: {fileID: 4983974542748062891}
   m_Layer: 7
   m_Name: Shelf_F (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344075,7 +344075,7 @@ GameObject:
   - component: {fileID: 3386637621568263690}
   m_Layer: 7
   m_Name: BigShelf
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -374234,7 +374234,7 @@ GameObject:
   - component: {fileID: 3762538851418789037}
   m_Layer: 7
   m_Name: Cupboard
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -379500,7 +379500,7 @@ GameObject:
   - component: {fileID: 3915027194702901737}
   m_Layer: 7
   m_Name: Cupboard (12)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -413522,7 +413522,7 @@ GameObject:
   - component: {fileID: 4458623938887670546}
   m_Layer: 7
   m_Name: BigShelf (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -434338,7 +434338,7 @@ GameObject:
   - component: {fileID: 7194081284430035747}
   m_Layer: 7
   m_Name: Shelf_H (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435425,7 +435425,7 @@ GameObject:
   - component: {fileID: 7256061933863905528}
   m_Layer: 7
   m_Name: Shelf_H (12)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448172,7 +448172,7 @@ GameObject:
   - component: {fileID: 8503200347177149782}
   m_Layer: 7
   m_Name: Shelf_A (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448286,7 +448286,7 @@ GameObject:
   - component: {fileID: 7583914756844308173}
   m_Layer: 7
   m_Name: Shelf_H (10)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459153,7 +459153,7 @@ GameObject:
   - component: {fileID: 5475672046800985335}
   m_Layer: 7
   m_Name: BigShelf (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -492216,7 +492216,7 @@ GameObject:
   - component: {fileID: 8348291994196993961}
   m_Layer: 7
   m_Name: Shelf_H (16)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494067,7 +494067,7 @@ GameObject:
   - component: {fileID: 6132454688807921243}
   m_Layer: 7
   m_Name: Cupboard (8)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -495788,7 +495788,7 @@ GameObject:
   - component: {fileID: 6178016106513723550}
   m_Layer: 7
   m_Name: Shelf_F (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498043,7 +498043,7 @@ GameObject:
   - component: {fileID: 9097369432883937838}
   m_Layer: 7
   m_Name: Shelf_C (3)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498466,7 +498466,7 @@ GameObject:
   - component: {fileID: 9080784655325821314}
   m_Layer: 7
   m_Name: Shelf_C (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500610,7 +500610,7 @@ GameObject:
   - component: {fileID: 6905264819416644315}
   m_Layer: 7
   m_Name: Cupboard (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -530233,7 +530233,7 @@ GameObject:
   - component: {fileID: 6802005011388471614}
   m_Layer: 7
   m_Name: Shelf_F (3)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530433,7 +530433,7 @@ GameObject:
   - component: {fileID: 6807086484139910367}
   m_Layer: 7
   m_Name: Cupboard (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -537392,7 +537392,7 @@ GameObject:
   - component: {fileID: 6889069340855148919}
   m_Layer: 7
   m_Name: Cupboard (11)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -547539,7 +547539,7 @@ GameObject:
   - component: {fileID: 7058213931687354767}
   m_Layer: 7
   m_Name: Shelf_A (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552642,7 +552642,7 @@ GameObject:
   - component: {fileID: 7269356125570223498}
   m_Layer: 7
   m_Name: BigShelf (3)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -552696,7 +552696,7 @@ GameObject:
   - component: {fileID: 7260344428028499663}
   m_Layer: 7
   m_Name: Shelf_F
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553665,7 +553665,7 @@ GameObject:
   - component: {fileID: 7293999511759868421}
   m_Layer: 7
   m_Name: Cupboard (15)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -556157,7 +556157,7 @@ GameObject:
   - component: {fileID: 7380610663745988444}
   m_Layer: 7
   m_Name: Shelf_C (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563791,7 +563791,7 @@ GameObject:
   - component: {fileID: 7690036301580768864}
   m_Layer: 7
   m_Name: Shelf_H (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571439,7 +571439,7 @@ GameObject:
   - component: {fileID: 7818626987660123840}
   m_Layer: 7
   m_Name: Shelf_H (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574917,7 +574917,7 @@ GameObject:
   - component: {fileID: 7960077033478201155}
   m_Layer: 7
   m_Name: BigShelf (6)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -575632,7 +575632,7 @@ GameObject:
   - component: {fileID: 7974735380525554032}
   m_Layer: 7
   m_Name: Shelf_C (4)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577886,7 +577886,7 @@ GameObject:
   - component: {fileID: 8077352232514894632}
   m_Layer: 7
   m_Name: Shelf_H (9)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -578195,7 +578195,7 @@ GameObject:
   - component: {fileID: 8083916485560720987}
   m_Layer: 7
   m_Name: Shelf_A (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -586688,7 +586688,7 @@ GameObject:
   - component: {fileID: 8282368585493437360}
   m_Layer: 7
   m_Name: BigShelf (7)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -587011,7 +587011,7 @@ GameObject:
   - component: {fileID: 8398866005973610176}
   m_Layer: 7
   m_Name: Cupboard (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -587605,7 +587605,7 @@ GameObject:
   - component: {fileID: 8301154942249847469}
   m_Layer: 7
   m_Name: Shelf_H (11)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590746,7 +590746,7 @@ GameObject:
   - component: {fileID: 8403358605281234742}
   m_Layer: 7
   m_Name: Shelf_H (5)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591963,7 +591963,7 @@ GameObject:
   - component: {fileID: 8464047693775669585}
   m_Layer: 7
   m_Name: Shelf_F (7)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592833,7 +592833,7 @@ GameObject:
   - component: {fileID: 8490550397938485417}
   m_Layer: 7
   m_Name: Cupboard (1)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -595675,7 +595675,7 @@ GameObject:
   - component: {fileID: 8608848035643047872}
   m_Layer: 7
   m_Name: Cupboard (2)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -625567,7 +625567,7 @@ GameObject:
   - component: {fileID: 9027651281231980611}
   m_Layer: 7
   m_Name: Shelf_A (7)
-  m_TagString: Untagged
+  m_TagString: Local
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

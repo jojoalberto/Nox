@@ -59,6 +59,10 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             Debug.Log("layer is " + gameObject.layer);
             ShowDialogue();
         }
+        else if (gameObject.tag == "Local")
+        {
+            ShowlocalDialogue();
+        }
         else
         {
             Debug.Log("player interact the object " + gameObject);
@@ -122,6 +126,19 @@ public class InteractableObject : MonoBehaviourPunCallbacks
         }
         
     }
+    public void ShowItemDialogueLocal(string message, string data)
+    {
+        if (dialogueManager != null)
+        {
+            dialogueManager.ShowDialogue(message);
+            if (data != null)
+            {
+                Debug.Log($"data is : " + data);
+                dialogueManager.ShowImage(data);
+            }
+        }
+
+    }
 
     [PunRPC]
     public void ShowDialogueRPC(string message)
@@ -179,6 +196,13 @@ public class InteractableObject : MonoBehaviourPunCallbacks
             {
                 dialogueManager.ShowDialogue(dialogueMessage.GetDialogueMessage(0));
             }
+        }
+    }
+    public void ShowlocalDialogue()
+    {
+        if (dialogueManager != null)
+        {
+            dialogueManager.ShowDialogue(dialogueMessage.GetDialogueMessage(0));
         }
     }
 }

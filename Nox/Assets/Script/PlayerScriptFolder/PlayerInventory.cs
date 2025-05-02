@@ -7,6 +7,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
     [SerializeField]
     private ClueItemSO heldVinyl;
     private ClueItemSO tempVinyl;
+    public string requiredVinylID;
 
     private void Start()
     {
@@ -37,10 +38,25 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
             heldVinyl = vinyl;
             Debug.Log("Picked up: " + vinyl.name);
             PickableObject pickable = gameobject.GetComponent<PickableObject>();
+            if (dialogueManager != null)
+            {
+                if(vinyl.itemID == requiredVinylID)
+                {
+                    dialogueManager.gameObject.SetActive(true);
+                    dialogueManager.ShowDialogue("There is blood on this recording.");
+                }
+                else
+                {
+                    dialogueManager.gameObject.SetActive(true);
+                    dialogueManager.ShowDialogue("You got a vinyl.");
+                }
+
+            }
             if (pickable != null)
             {
                 pickable.photonView.RPC("CallVinylDeactivateObject", RpcTarget.AllBuffered);
             }
+
         }
     }
 
