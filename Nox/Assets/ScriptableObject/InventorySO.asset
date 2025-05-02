@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: InventorySO
   m_EditorClassIdentifier: 
   clueItems: []
+  keyIDs: []

@@ -6,6 +6,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
     public InventorySO inventory;
     [SerializeField]
     private ClueItemSO heldVinyl;
+    private ClueItemSO tempVinyl;
 
     private void Start()
     {
@@ -16,23 +17,34 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
     public bool IsHoldingVinyl() => heldVinyl != null;
     public void PickupVinyl(GameObject gameobject,ClueItemSO vinyl, DialogueManager dialogueManager, DialogueMessage vinylDialogueMessage)
     {
-        if (heldVinyl == null && vinyl.itemType == ClueItemType.Vinyl) 
+        if (heldVinyl != null)
         {
-            heldVinyl = vinyl;
-            Debug.Log("Picked up: " + vinyl.name);
-            gameobject.SetActive(false);
-        }
-        else
-        {
-            dialogueManager.gameObject.SetActive(true);
+            Debug.Log("Cannot pick up vinyl. Already holding: " + heldVinyl.name);
+
+            // Optional: show dialogue when already holding one
             if (dialogueManager != null)
             {
-                dialogueManager.ShowDialogue(vinylDialogueMessage.GetDialogueMessage(0));
-
+                dialogueManager.gameObject.SetActive(true);
+                dialogueManager.ShowDialogue("You're already holding a vinyl.");
             }
 
+            return;
+        }
+
+        if (vinyl.itemType == ClueItemType.Vinyl)
+        {
+            AddItem(vinyl);
+            heldVinyl = vinyl;
+            Debug.Log("Picked up: " + vinyl.name);
+            PickableObject pickable = gameobject.GetComponent<PickableObject>();
+            if (pickable != null)
+            {
+                pickable.photonView.RPC("CallVinylDeactivateObject", RpcTarget.AllBuffered);
+            }
         }
     }
+
+
     public ClueItemSO DropVinyl()
     {
         ClueItemSO temp = heldVinyl;
@@ -45,6 +57,7 @@ public class PlayerInventory : MonoBehaviourPunCallbacks
     {
         if (!inventory.clueItems.Contains(item))
         {
+            Debug.Log("123Picked up: "+ item);
             inventory.AddItem(item);
             photonView.RPC("SyncInventory", RpcTarget.AllBuffered, item.itemName);
         }

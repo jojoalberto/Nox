@@ -5194,8 +5194,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &105997748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11132,8 +11136,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7589732808102707811}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 1c56263864c27d045805ecfc8ae83292, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &129548250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11147,10 +11167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 129548244}
-  enableObject:
-  - {fileID: 7589732808102707811}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -22211,8 +22229,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &153600027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33883,8 +33905,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 1c56263864c27d045805ecfc8ae83292, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &274655197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51388,8 +51414,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &483317328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53977,8 +54007,12 @@ MonoBehaviour:
           m_StringArgument: 05
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: dc69365d69a7a584aaff836ba25389e7, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!1 &555658499
 GameObject:
   m_ObjectHideFlags: 0
@@ -63704,8 +63738,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &672984511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77382,8 +77420,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &759080861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84678,8 +84720,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &826354201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91114,8 +91160,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &860028906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91543,8 +91593,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &866006818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119361,8 +119415,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &1042093151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137248,8 +137306,12 @@ MonoBehaviour:
           m_StringArgument: Get The key on the table
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: a5f209185809383478c3393d34ac9753, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!1 &1243551439
 GameObject:
   m_ObjectHideFlags: 0
@@ -147925,8 +147987,12 @@ MonoBehaviour:
           m_StringArgument: Enter the Common Room
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 23cc010c1dd765b4c86626d7ed24d6ac, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &1274043454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151294,8 +151360,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &1337397322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168551,8 +168621,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1522864315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169974,8 +170048,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1557440327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170486,8 +170564,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1577784203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182948,8 +183030,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &1658294511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183244,8 +183330,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1664158669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201818,8 +201908,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 0}
   playerData: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!114 &1876577215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204446,6 +204540,7 @@ Transform:
   - {fileID: 7830677249386787734}
   - {fileID: 4376398152304366995}
   - {fileID: 8742009100832625417}
+  - {fileID: 59219739284233644}
   m_Father: {fileID: 544897190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941561242
@@ -216119,8 +216214,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 7e078662397bff04ba8aab4c35ad1999, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!4 &1994326436
 Transform:
   m_ObjectHideFlags: 0
@@ -225820,8 +225919,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 100f453f29586af41bb61c94c32ad1b2, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &2091276775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228059,116 +228162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9455387007325772
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55805690912117960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!64 &9558969603345442
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55746903785733194}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!64 &9559079489671886
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55356719753366212}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!64 &10905068264698614
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55848073038979734}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!64 &11053761716757784
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55406603629811314}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
 --- !u!1 &11747177710007786
 GameObject:
   m_ObjectHideFlags: 0
@@ -229077,96 +229070,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &40722878735661374
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55848073038979734}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a5a0ed70d9df3dd4b9c04e54d371f131, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!23 &40817146386573070
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55746903785733194}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a5a0ed70d9df3dd4b9c04e54d371f131, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &40973626230381658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -229191,51 +229094,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2aa655570e1708a479c7389ab3f073ee, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!23 &41043416765594106
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55805690912117960}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a5a0ed70d9df3dd4b9c04e54d371f131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229290,51 +229148,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &42253024499508758
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55356719753366212}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a5a0ed70d9df3dd4b9c04e54d371f131, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &45074578825308436
 Transform:
   m_ObjectHideFlags: 0
@@ -229554,14 +229367,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7589984572493862919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &51177945882034966
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55356719753366212}
-  m_Mesh: {fileID: 4300004, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
 --- !u!33 &51438531559549904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -229578,30 +229383,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55406603629811314}
   m_Mesh: {fileID: 4300000, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!33 &51661556711856624
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55848073038979734}
-  m_Mesh: {fileID: 4300002, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!33 &51683463286890422
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55746903785733194}
-  m_Mesh: {fileID: 4300008, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
---- !u!33 &52482330075892772
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55805690912117960}
-  m_Mesh: {fileID: 4300006, guid: ae1057f934c75a249ae1a6462f310568, type: 3}
 --- !u!23 &53698251570245449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -230006,25 +229787,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &55356719753366212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 57762241345886852}
-  - component: {fileID: 51177945882034966}
-  - component: {fileID: 42253024499508758}
-  - component: {fileID: 9559079489671886}
-  m_Layer: 14
-  m_Name: Cupboard_Door_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
 --- !u!1 &55406603629811314
 GameObject:
   m_ObjectHideFlags: 0
@@ -230036,83 +229798,11 @@ GameObject:
   - component: {fileID: 59219739284233644}
   - component: {fileID: 51623770946500488}
   - component: {fileID: 40973626230381658}
-  - component: {fileID: 11053761716757784}
+  - component: {fileID: 59219739284233647}
+  - component: {fileID: 59219739284233646}
+  - component: {fileID: 59219739284233645}
   m_Layer: 14
   m_Name: Cupboard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &55493343309184712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59204322382929712}
-  - component: {fileID: 59204322382929713}
-  m_Layer: 14
-  m_Name: Cupboard (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &55746903785733194
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59586670198010964}
-  - component: {fileID: 51683463286890422}
-  - component: {fileID: 40817146386573070}
-  - component: {fileID: 9558969603345442}
-  m_Layer: 14
-  m_Name: Cupboard_Door_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &55805690912117960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59379200783827718}
-  - component: {fileID: 52482330075892772}
-  - component: {fileID: 41043416765594106}
-  - component: {fileID: 9455387007325772}
-  m_Layer: 14
-  m_Name: Cupboard_Door_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &55848073038979734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59256031816459634}
-  - component: {fileID: 51661556711856624}
-  - component: {fileID: 40722878735661374}
-  - component: {fileID: 10905068264698614}
-  m_Layer: 14
-  m_Name: Cupboard_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230220,21 +229910,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &57762241345886852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55356719753366212}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.037427902, y: 1.2039511, z: -0.2673527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 59204322382929712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58913390372825471
 GameObject:
   m_ObjectHideFlags: 0
@@ -230251,33 +229926,44 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &59204322382929712
+--- !u!4 &59219739284233644
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55493343309184712}
+  m_GameObject: {fileID: 55406603629811314}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5028267, y: -0.49715722, z: -0.5028268, w: 0.49715722}
-  m_LocalPosition: {x: -10.981999, y: -2.437, z: 6.2019997}
+  m_LocalRotation: {x: -0.5028267, y: -0.4971572, z: -0.5028268, w: 0.4971572}
+  m_LocalPosition: {x: -10.981998, y: -2.437, z: 6.2019997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 59219739284233644}
-  - {fileID: 59256031816459634}
-  - {fileID: 57762241345886852}
-  - {fileID: 59379200783827718}
-  - {fileID: 59586670198010964}
-  m_Father: {fileID: 4328237584901199899}
-  m_LocalEulerAnglesHint: {x: -90.649, y: -90.00101, z: 0.0010070801}
---- !u!114 &59204322382929713
+  m_Children: []
+  m_Father: {fileID: 1936461445}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &59219739284233645
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55406603629811314}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0040001, y: 1.077, z: 0.273}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.001, y: 1.0890001, z: -0.017}
+  m_TimeToStationary: 0.5
+--- !u!114 &59219739284233646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55493343309184712}
+  m_GameObject: {fileID: 55406603629811314}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -230293,21 +229979,27 @@ MonoBehaviour:
   sceneViewId: 143
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!4 &59219739284233644
-Transform:
+--- !u!65 &59219739284233647
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55406603629811314}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 59204322382929712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0079381, y: 2.1533318, z: 0.54592335}
+  m_Center: {x: 0.0008088866, y: 1.0888506, z: -0.017209837}
 --- !u!65 &59254934648610809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230329,21 +230021,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.000001, y: 0.20000008, z: 4.000001}
   m_Center: {x: 2.0000005, y: -0.099996224, z: -2.0000024}
---- !u!4 &59256031816459634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55848073038979734}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0.000000075500154}
-  m_LocalPosition: {x: -0.9402795, y: 1.2039511, z: -0.2673527}
-  m_LocalScale: {x: -1, y: -1, z: -1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 59204322382929712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &59318127562881995
 GameObject:
   m_ObjectHideFlags: 0
@@ -230360,36 +230037,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &59379200783827718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55805690912117960}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0.000000075500154}
-  m_LocalPosition: {x: 0.040015817, y: 1.2039511, z: -0.2673527}
-  m_LocalScale: {x: -1, y: -1, z: -1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 59204322382929712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &59586670198010964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55746903785733194}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9428674, y: 1.2039511, z: -0.2673527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 59204322382929712}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &62146912503369010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258131,11 +257778,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 906965718149500920}
-  - {fileID: 1187789531502415736}
-  enableObject:
-  - {fileID: 404230965}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -258154,8 +257798,36 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404230965}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1187789531502415736}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &929742264744268974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266485,10 +266157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 1075838533008824542}
-  enableObject:
-  - {fileID: 399365083}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -266507,8 +266177,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 399365083}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!65 &1078987665651661099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -279757,11 +279443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 1651576607314437612}
-  - {fileID: 122090027921332473}
-  enableObject:
-  - {fileID: 1782259781}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -279780,8 +279463,36 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1782259781}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 122090027921332473}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!65 &1656450337148011545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -409613,10 +409324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 418949988098837223}
-  enableObject:
-  - {fileID: 63073}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -409635,8 +409344,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 63073}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &4250622932035674210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410771,7 +410496,6 @@ Transform:
   - {fileID: 8772800443585691836}
   - {fileID: 3289198812232422498}
   - {fileID: 4859467846494056047}
-  - {fileID: 59204322382929712}
   - {fileID: 2281043075886692776}
   - {fileID: 7704685593984904006}
   - {fileID: 5814666147352269356}
@@ -422667,11 +422391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 4599207515411366770}
-  - {fileID: 5337140895274134094}
-  enableObject:
-  - {fileID: 88665154}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -422690,8 +422411,36 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 88665154}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5337140895274134094}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &4601208397104865560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434835,8 +434584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 3395928783324723124}
+  disableObject: []
   enableObject: []
   onInteract:
     m_PersistentCalls:
@@ -434856,8 +434604,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &4901565311069079705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437114,8 +436866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 3056505077347654918}
+  disableObject: []
   enableObject: []
   onInteract:
     m_PersistentCalls:
@@ -437135,8 +436886,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &5003702125341197209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455729,8 +455484,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &5359346008614083729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456098,10 +455857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 5370634358643571101}
-  enableObject:
-  - {fileID: 1069614670}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -456120,8 +455877,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069614670}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!65 &5370634358643571106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -464101,8 +463874,12 @@ MonoBehaviour:
           m_StringArgument: 06
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: f23f78556eb35d64ea83b00924a2c341, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!212 &5624050409385499960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -464399,8 +464176,12 @@ MonoBehaviour:
           m_StringArgument: Use the key to unlock the Chest
           m_BoolArgument: 0
         m_CallState: 2
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: d6076faf1ded392468997d6b99ccc5f0, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!65 &5634532463163987678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -561317,8 +561098,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 1c56263864c27d045805ecfc8ae83292, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &7589732808102707815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561332,8 +561117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 7589732808102707811}
+  disableObject: []
   enableObject: []
   onInteract:
     m_PersistentCalls:
@@ -561660,10 +561444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 7603538420204762593}
-  enableObject:
-  - {fileID: 1726595262}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -561682,8 +561464,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1726595262}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &7603538420204762597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574038,8 +573836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 193115287296294626}
+  disableObject: []
   enableObject: []
   onInteract:
     m_PersistentCalls:
@@ -574059,8 +573856,12 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls: []
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &7905030015561392245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588963,10 +588764,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 8331310593215809113}
-  enableObject:
-  - {fileID: 1607374312}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -588985,8 +588784,24 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607374312}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &8331310593215809117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625074,11 +624889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
-  disableObject:
-  - {fileID: 8982669804641881659}
-  - {fileID: 4358866093033506570}
-  enableObject:
-  - {fileID: 946858474}
+  disableObject: []
+  enableObject: []
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -625097,8 +624909,36 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls: []
+  onPickupVinyl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946858474}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4358866093033506570}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   itemData: {fileID: 11400000, guid: 846a5a6c5d34e53409faaed40a043d69, type: 2}
   playerData: {fileID: 11400000, guid: 7750213d13eb09549a4cf1184eb72431, type: 2}
+  inventory: {fileID: 0}
 --- !u!114 &9006871473586032381
 MonoBehaviour:
   m_ObjectHideFlags: 0
