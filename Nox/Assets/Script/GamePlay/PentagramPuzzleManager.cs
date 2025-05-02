@@ -35,7 +35,7 @@ public class PentagramPuzzleManager : MonoBehaviourPunCallbacks
 
         puzzleCompleted = true;
         Debug.Log("Puzzle Completed!");
-        photonView.RPC("OnPuzzleCompleted", RpcTarget.All);
+        photonView.RPC("OnPuzzleCompleted", RpcTarget.MasterClient);
     }
 
     [PunRPC]
@@ -44,6 +44,7 @@ public class PentagramPuzzleManager : MonoBehaviourPunCallbacks
         onPuzzleComplete.Invoke();
         // Do whatever you want here (play animation, open portal, etc.)
         Debug.Log("Puzzle Completion Synced Across All Players!");
+        PhotonNetwork.LoadLevel(2);
     }
 }
 
