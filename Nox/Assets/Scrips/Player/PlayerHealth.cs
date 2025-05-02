@@ -47,6 +47,7 @@ public class PlayerHealth : MonoBehaviourPun
 
     public AudioManager audioManager;
 
+    [SerializeField] private Animator animator;
     private void Awake()
     {
         
@@ -81,6 +82,7 @@ public class PlayerHealth : MonoBehaviourPun
         }
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -203,6 +205,10 @@ public class PlayerHealth : MonoBehaviourPun
         tempHealthCoroutine = StartCoroutine(DecayTemporaryHealth());
     }
 
+    public void PlayStaggerAnimation()
+    {
+        animator.SetTrigger("Stagger");
+    }
 
     private IEnumerator DecayTemporaryHealth()
     {
