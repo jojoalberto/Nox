@@ -9,13 +9,20 @@ public class Highlight : PlayerInteraction
     private GameObject currentTarget;
     private Dictionary<Renderer, Material> originalMaterials = new();
     private List<Outline> activeOutlines = new();
+    private Camera localCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Only run this script for the local player
+        if (!photonView.IsMine)
+        {
+            enabled = false;
+            return;
+        }
 
+        localCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
         HighlightObjects();
@@ -23,7 +30,9 @@ public class Highlight : PlayerInteraction
 
     public void HighlightObjects()
     {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        if (localCamera == null) return;
+
+        Ray ray = new Ray(localCamera.transform.position, localCamera.transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, interactDistance, interActablelayers))
@@ -38,15 +47,13 @@ public class Highlight : PlayerInteraction
                 Renderer[] renderers = rootObj.GetComponentsInChildren<Renderer>();
                 foreach (var rend in renderers)
                 {
-                    // Store original material
                     if (!originalMaterials.ContainsKey(rend))
                     {
-                        originalMaterials[rend] = rend.material;
+                        originalMaterials[rend] = rend.material; // Store instance material
                         Material instancedHighlightMat = new Material(highlightMaterial);
                         rend.material = instancedHighlightMat;
                     }
 
-                    // Enable or add Outline component (Chris Nolet's version)
                     Outline outline = rend.GetComponent<Outline>();
                     if (outline == null)
                         outline = rend.gameObject.AddComponent<Outline>();
