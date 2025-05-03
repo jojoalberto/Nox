@@ -5425,6 +5425,9 @@ MonoBehaviour:
   - Type: 1
     SynchronizeType: 2
     Name: MotionSpeed
+  - Type: 9
+    SynchronizeType: 0
+    Name: Stagger
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -5489,6 +5492,8 @@ MonoBehaviour:
   isDead: 0
   virtualCam: {fileID: 6282848611391418736}
   audioManager: {fileID: 0}
+  audioSource: {fileID: 0}
+  spectateCamSwitchAudioClip: {fileID: 8300000, guid: adf92b02adfe73f46b954a404f90ba84, type: 3}
   animator: {fileID: 0}
 --- !u!114 &9036687969454709197
 MonoBehaviour:

@@ -46,6 +46,8 @@ public class PlayerHealth : MonoBehaviourPun
     private bool isSpectating = false;
 
     public AudioManager audioManager;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip spectateCamSwitchAudioClip;
 
     [SerializeField] private Animator animator;
     private void Awake()
@@ -83,6 +85,7 @@ public class PlayerHealth : MonoBehaviourPun
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -91,6 +94,11 @@ public class PlayerHealth : MonoBehaviourPun
         {
             currentSpectateIndex = (currentSpectateIndex + 1) % spectateTargets.Count;
             SetSpectateView(currentSpectateIndex);
+
+            if(audioSource != null)
+            {
+                audioSource.PlayOneShot(spectateCamSwitchAudioClip);
+            }
         }
     }
 
