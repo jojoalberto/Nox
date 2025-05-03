@@ -608,7 +608,6 @@ public class DemonTargetAI1 : MonoBehaviour
         // Force to idle or default state if needed
         animator.ResetTrigger("Attack");
         animator.ResetTrigger("PostAttack");
-        animator.Play("Idle", 0, 0);  // Reset layer 0 to Idle from start (if needed)
 
         animator.SetTrigger("Attack");
         Debug.Log($"[AttackAnimation] Triggered on {PhotonNetwork.LocalPlayer.ActorNumber}");
