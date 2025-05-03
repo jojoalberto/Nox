@@ -601,15 +601,17 @@ public class DemonTargetAI1 : MonoBehaviour
     [PunRPC]
     void RPC_PlayAttackAnimation(int attackID)
     {
-        if (attackID <= lastAttackID)
-        {
-            Debug.Log($"[AttackAnimation] Skipping duplicate ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
-            return;
-        }
+        if (attackID <= lastAttackID) return;
 
         lastAttackID = attackID;
-        Debug.Log($"[AttackAnimation] Playing attack ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
+
+        // Force to idle or default state if needed
+        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("PostAttack");
+        animator.Play("Idle", 0, 0);  // Reset layer 0 to Idle from start (if needed)
+
         animator.SetTrigger("Attack");
+        Debug.Log($"[AttackAnimation] Triggered on {PhotonNetwork.LocalPlayer.ActorNumber}");
     }
 
     [PunRPC]
