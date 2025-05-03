@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 06bd1832f31ec1645be78217f68086ed
+timeCreated: 1519219552
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104216
+  packageName: Shed, Tools, Bridge and Fences
+  packageVersion: 1.0
+  assetPath: Assets/TheGamingPeople/Courtyard and Entrance/Timeline2CTR.playable
+  uploadId: 308174

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4a310c4aa0e20304a81527ac2c884bbe
+timeCreated: 1509730877
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104216
+  packageName: Shed, Tools, Bridge and Fences
+  packageVersion: 1.0
+  assetPath: Assets/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Bridge/_Bridge
+    Part/Materials/Main Holders.mat
+  uploadId: 308174

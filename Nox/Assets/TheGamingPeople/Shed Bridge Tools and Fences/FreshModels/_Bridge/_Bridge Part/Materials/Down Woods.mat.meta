@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1af0ff1c5f984f04e923f0a9eaba338d
+timeCreated: 1509730876
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 104216
+  packageName: Shed, Tools, Bridge and Fences
+  packageVersion: 1.0
+  assetPath: Assets/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Bridge/_Bridge
+    Part/Materials/Down Woods.mat
+  uploadId: 308174
