@@ -76,7 +76,7 @@ public class GramophoneScript : InteractableObject
         if (vinylID == requiredVinylID)
         {
             vinylCount++;
-            onCorrectVinyl.Invoke();
+            
 
             if (vinylCount >= 2)
             {
@@ -85,6 +85,7 @@ public class GramophoneScript : InteractableObject
             else
             {
                 Debug.Log("Correct vinyl played!");
+                onCorrectVinyl.Invoke();
             }
         }
         else
