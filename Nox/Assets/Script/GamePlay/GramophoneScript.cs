@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,6 +17,8 @@ public class GramophoneScript : InteractableObject
     private int tempCount;
 
 
+    private AudioSource audioSource;
+    public List<AudioClip> sfxAudioClips = new List<AudioClip>();
 
     private 
 
@@ -81,11 +85,13 @@ public class GramophoneScript : InteractableObject
             if (vinylCount >= 2)
             {
                 photonView.RPC("PuzzleComplete", RpcTarget.All);
+                playClip("Gramophone2");
             }
             else
             {
                 Debug.Log("Correct vinyl played!");
                 onCorrectVinyl.Invoke();
+                playClip("Gramophone1");
             }
         }
         else
@@ -112,4 +118,26 @@ public class GramophoneScript : InteractableObject
         }
         
     }
+
+    private void playClip(string name)
+    {
+        photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, name);
+    }
+
+    [PunRPC]
+    public void RPC_RPC_PlayAudioClip(string name)
+    {
+        AudioClip clip = sfxAudioClips.Find(c => c.name == name);
+        if (clip != null)
+        {
+            Debug.Log("Playing AudioClip named: " + name);
+            audioSource.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.LogWarning("AudioClip not found with name: " + name);
+        }
+    }
+
+
 }

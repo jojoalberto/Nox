@@ -4780,6 +4780,7 @@ GameObject:
   - component: {fileID: 103533351}
   - component: {fileID: 103533350}
   - component: {fileID: 103533352}
+  - component: {fileID: 103533353}
   m_Layer: 7
   m_Name: Gramophone
   m_TagString: Untagged
@@ -4873,18 +4874,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 588212675}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: RPCPlayAudioByName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Gramophone1
-          m_BoolArgument: 0
-        m_CallState: 2
   onFinishVinylQuest:
     m_PersistentCalls:
       m_Calls:
@@ -4937,18 +4926,6 @@ MonoBehaviour:
             the start, where it all begone. Only then shall the curse be undone"
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 588212675}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: RPCPlayAudioByName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Gramophone2
-          m_BoolArgument: 1
-        m_CallState: 2
   onWrongVinyl:
     m_PersistentCalls:
       m_Calls:
@@ -4965,6 +4942,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   requiredVinylID: 12
+  sfxAudioClips:
+  - {fileID: 8300000, guid: 9cd9081585d51bc4180fe8cac2680a0c, type: 3}
+  - {fileID: 8300000, guid: f4177b77e7747824ba77e0e944b377ed, type: 3}
 --- !u!65 &103533347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5094,6 +5074,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMessage:
   - Find the original Gramophone Record.
+--- !u!82 &103533353
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103533344}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243485103152924164, guid: b3e9cd88a146b5b44a5d6fbe1eddb79c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 53
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &103658098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55678,8 +55755,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a58b2307c5fb4444e9ce2ccd6a64b19d, type: 3}
   - {fileID: 8300000, guid: 90e6fa833e6d43a4aa97637c2e96b39b, type: 3}
   - {fileID: 8300000, guid: b99986f6b5ee50945af820d91756c9b6, type: 3}
-  - {fileID: 8300000, guid: 9cd9081585d51bc4180fe8cac2680a0c, type: 3}
-  - {fileID: 8300000, guid: f4177b77e7747824ba77e0e944b377ed, type: 3}
   musicAudioClips:
   - {fileID: 8300000, guid: d9fec70763290ef4b95869b141525713, type: 3}
   - {fileID: 8300000, guid: ce0d2a5687c51ea48a3356121a42b0fb, type: 3}
