@@ -18,6 +18,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
     public Occultist occultist;
     public Drifter drifter;
     public Trapper trapper;
+    public GameObject flashlight;
 
     public string globalClassSelected;
     public PhotonView photonView;
@@ -402,7 +403,7 @@ public class PlayerScriptBehaviour : MonoBehaviour
             trapper.enabled = false;
         }
 
-        
+        flashlight.SetActive(false);
 
         
 

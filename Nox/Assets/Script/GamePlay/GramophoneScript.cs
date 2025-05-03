@@ -125,7 +125,7 @@ public class GramophoneScript : InteractableObject
     }
 
     [PunRPC]
-    public void RPC_RPC_PlayAudioClip(string name)
+    public void RPC_PlayAudioClip(string name)
     {
         AudioClip clip = sfxAudioClips.Find(c => c.name == name);
         if (clip != null)

@@ -906,7 +906,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 10
-  MaxDistance: 25
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -5516,6 +5516,7 @@ MonoBehaviour:
     m_Bits: 4096
   flashlightAngle: 60
   photonView: {fileID: 0}
+  playerHealth: {fileID: 4407479906219040308}
 --- !u!114 &492160832062886508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5555,6 +5556,7 @@ MonoBehaviour:
   occultist: {fileID: 3161394040208994571}
   drifter: {fileID: 4377658587688228129}
   trapper: {fileID: 1655547893240518412}
+  flashlight: {fileID: 5721236003213993890}
   globalClassSelected: 
   photonView: {fileID: 0}
   playerUI: {fileID: 8581594370321421631, guid: 7235abd213ab72c4cb8dc5f31e64a380, type: 3}

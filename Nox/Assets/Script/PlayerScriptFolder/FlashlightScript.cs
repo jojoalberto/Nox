@@ -13,6 +13,7 @@ public class FlashlightScript : MonoBehaviourPun
 
     [SerializeField] private PhotonView photonView;
     private HashSet<MonsterTrapAlert> trapsInView = new();
+    public PlayerHealth playerHealth;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class FlashlightScript : MonoBehaviourPun
 
     private void HandleFlashlightToggle()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && !playerHealth.isDead)
         {
             bool newState = !flashlight.activeSelf;
             flashlight.SetActive(newState);
