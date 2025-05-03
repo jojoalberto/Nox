@@ -83,9 +83,10 @@ public class DemonTargetAI1 : MonoBehaviour
     [SerializeField] private float spawnWaitTime = 30f;
     [SerializeField] SkinnedMeshRenderer[] meshRenderer;
 
-    private int lastAttackID = -1; // Tracks the last attack seen on each client
-    private int attackCounter = 0; // Only used by the master/client who controls the demon
+    private int lastAttackID = -1; 
+    private int attackCounter = 0; 
 
+    
 
     void Start()
     {
@@ -536,7 +537,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         // Play animation and sound for all clients immediately
         photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
-        photonView.RPC("RPC_PlayAttackAnimation", RpcTarget.All, currentAttackID);
+        
 
         // Apply damage
         if (currentTarget != null)
@@ -564,11 +565,11 @@ public class DemonTargetAI1 : MonoBehaviour
 
         damageAmount = 0;
 
+        photonView.RPC("RPC_PlayAttackAnimation", RpcTarget.All, currentAttackID);
         yield return new WaitForSeconds(2.8f);
+        animator.SetBool("IsAttacking", false);
 
-        //photonView.RPC("RPC_PlayPostAttackAnimation", RpcTarget.AllBuffered, currentAttackID);
-
-        yield return new WaitForSeconds(2.33f);
+        yield return new WaitForSeconds(2.10f);
 
         isAttacking = false;
         UpdateNavMeshSpeed();
@@ -605,23 +606,9 @@ public class DemonTargetAI1 : MonoBehaviour
 
         lastAttackID = attackID;
 
-        // Force to idle or default state if needed
-        animator.ResetTrigger("Attack");
-
-        animator.SetTrigger("Attack");
+        animator.Play("Move", 0); // force sync
+        animator.SetBool("IsAttacking", true);
         Debug.Log($"[AttackAnimation] Triggered on {PhotonNetwork.LocalPlayer.ActorNumber}");
-    }
-
-    [PunRPC]
-    void RPC_PlayPostAttackAnimation(int attackID)
-    {
-        if (attackID != lastAttackID)
-        {
-            Debug.Log($"[PostAttack] Ignored for mismatched ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
-            return;
-        }
-
-        animator.SetTrigger("PostAttack");
     }
 
     public void BindDemon(float duration)
