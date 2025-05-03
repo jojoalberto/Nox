@@ -82,7 +82,10 @@ public class DemonTargetAI1 : MonoBehaviour
     public bool isSpawnWaiting = true;
     [SerializeField] private float spawnWaitTime = 30f;
     [SerializeField] SkinnedMeshRenderer[] meshRenderer;
-    
+
+    private int lastAttackID = -1; // Tracks the last attack seen on each client
+    private int attackCounter = 0; // Only used by the master/client who controls the demon
+
 
     void Start()
     {
@@ -514,10 +517,8 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
-        if (isSpawnWaiting)
-        { yield break; }
-
-        if (isFrozen || isBound) yield break;
+        if (isSpawnWaiting || isFrozen || isBound)
+            yield break;
 
         isAttacking = true;
 
@@ -530,6 +531,14 @@ public class DemonTargetAI1 : MonoBehaviour
         UpdateNavMeshSpeed();
         int originalDamage = damageAmount;
 
+        // Create a unique attack ID
+        int currentAttackID = attackCounter++; // Only increases on the attacker (master client)
+
+        // Play animation and sound for all clients immediately
+        photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
+        photonView.RPC("RPC_PlayAttackAnimation", RpcTarget.All, currentAttackID);
+
+        // Apply damage
         if (currentTarget != null)
         {
             PlayerHealth playerHealth = currentTarget.GetComponent<PlayerHealth>();
@@ -544,6 +553,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
                 playerHealth.TakeDamage(damageAmount);
                 playerHealth.PlayStaggerAnimation();
+
                 if (playerHealth.currentHealth <= 0)
                 {
                     players.Remove(currentTarget);
@@ -554,22 +564,19 @@ public class DemonTargetAI1 : MonoBehaviour
 
         damageAmount = 0;
 
-        photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
-        photonView.RPC("PlayAttackAnimation", RpcTarget.All);
         yield return new WaitForSeconds(2.8f);
 
-        photonView.RPC("PlayPostAttackAnimation", RpcTarget.All);
+        photonView.RPC("RPC_PlayPostAttackAnimation", RpcTarget.All, currentAttackID);
+
         yield return new WaitForSeconds(2.33f);
 
-
         isAttacking = false;
-
         UpdateNavMeshSpeed();
         damageAmount = originalDamage;
 
+        // Resume chasing or idle
         if (currentTarget != null && !currentTarget.GetComponent<PlayerHealth>().isDead)
         {
-            
             currentSpeedState = SpeedState.ChasingTired;
             isChasingPlayer = true;
 
@@ -587,20 +594,33 @@ public class DemonTargetAI1 : MonoBehaviour
 
             PickNewTarget();
         }
+
         UpdateNavMeshSpeed();
-
-
     }
 
     [PunRPC]
-    void PlayAttackAnimation()
+    void RPC_PlayAttackAnimation(int attackID)
     {
+        if (attackID <= lastAttackID)
+        {
+            Debug.Log($"[AttackAnimation] Skipping duplicate ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
+            return;
+        }
+
+        lastAttackID = attackID;
+        Debug.Log($"[AttackAnimation] Playing attack ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
         animator.SetTrigger("Attack");
     }
 
     [PunRPC]
-    void PlayPostAttackAnimation()
+    void RPC_PlayPostAttackAnimation(int attackID)
     {
+        if (attackID != lastAttackID)
+        {
+            Debug.Log($"[PostAttack] Ignored for mismatched ID {attackID} on {PhotonNetwork.LocalPlayer.ActorNumber}");
+            return;
+        }
+
         animator.SetTrigger("PostAttack");
     }
 

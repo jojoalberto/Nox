@@ -215,6 +215,12 @@ public class PlayerHealth : MonoBehaviourPun
 
     public void PlayStaggerAnimation()
     {
+        photonView.RPC("RPC_PlayStaggerAnimation", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_PlayStaggerAnimation()
+    {
         animator.SetTrigger("Stagger");
     }
 
