@@ -2540,7 +2540,8 @@ MonoBehaviour:
     Survivalist character                  Tileable Bricks Wall\nTool Icons and Blood
     Sprites        Weapon Box                             Worn Bookshelf\nWorn wooden
     crate                   \u0421eltic Cross                             Yughues
-    Free Concrete Materials\n\n"
+    Free Concrete Materials   \nShed, Tools, Bridge and Fences    Stylized Grass
+    Texture                GamePad and Keyboard Input Sprites for TextMesh Pro\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
   m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
@@ -17497,7 +17498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.263916, y: 746.16327}
+  m_AnchoredPosition: {x: -36, y: 746.16327}
   m_SizeDelta: {x: 360.5278, y: 47.6735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523150134
@@ -17520,12 +17521,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Github         DARK UI          HacknPlan
+  m_text: 'Github        DARK UI           HacknPlan
 
-    Sourcetree Visual Studio  
+    Sourcetree  Visual Studio   
     Audio-joiner
 
-    Discord       Darko Kreculj  Firebase (google.com)
+    Discord       Darko Kreculj    Firebase (google.com)
 
 
 '
@@ -21428,8 +21429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 1100}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 15, y: 1100}
+  m_SizeDelta: {x: 359.7209, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848411797
 MonoBehaviour:
@@ -21451,7 +21452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Developed with Unity
+  m_text: Made with Unity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
   m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
