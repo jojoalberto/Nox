@@ -536,7 +536,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         // Play animation and sound for all clients immediately
         photonView.RPC("RPC_PlayAudioClip", RpcTarget.All, 0);
-        photonView.RPC("RPC_PlayAttackAnimation", RpcTarget.All, currentAttackID);
+        photonView.RPC("RPC_PlayAttackAnimation", RpcTarget.AllBuffered, currentAttackID);
 
         // Apply damage
         if (currentTarget != null)
@@ -566,7 +566,7 @@ public class DemonTargetAI1 : MonoBehaviour
 
         yield return new WaitForSeconds(2.8f);
 
-        photonView.RPC("RPC_PlayPostAttackAnimation", RpcTarget.All, currentAttackID);
+        photonView.RPC("RPC_PlayPostAttackAnimation", RpcTarget.AllBuffered, currentAttackID);
 
         yield return new WaitForSeconds(2.33f);
 

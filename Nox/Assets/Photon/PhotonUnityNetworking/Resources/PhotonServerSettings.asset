@@ -147,6 +147,8 @@ MonoBehaviour:
   - CallVinylDeactivateObject
   - RPC_RPC_PlayAudioClip
   - RPC_PlayStaggerAnimation
+  - RPC_PlayAttackAnimation
+  - RPC_PlayPostAttackAnimation
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
