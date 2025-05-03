@@ -5489,6 +5489,7 @@ MonoBehaviour:
   isDead: 0
   virtualCam: {fileID: 6282848611391418736}
   audioManager: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &9036687969454709197
 MonoBehaviour:
   m_ObjectHideFlags: 0

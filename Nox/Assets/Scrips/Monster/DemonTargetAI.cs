@@ -543,6 +543,7 @@ public class DemonTargetAI1 : MonoBehaviour
                 }
 
                 playerHealth.TakeDamage(damageAmount);
+                playerHealth.PlayStaggerAnimation();
                 if (playerHealth.currentHealth <= 0)
                 {
                     players.Remove(currentTarget);
