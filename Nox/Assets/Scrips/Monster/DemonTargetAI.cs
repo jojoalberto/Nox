@@ -115,20 +115,24 @@ public class DemonTargetAI1 : MonoBehaviour
 
     IEnumerator GhoulStartWait()
     {
-        foreach (SkinnedMeshRenderer mesh in meshRenderer)
-        {
-            mesh.enabled = false;
-        }
+        photonView.RPC("RPC_ToggleMesh", RpcTarget.All, false);
 
         WaitForSeconds wait = new WaitForSeconds(spawnWaitTime);
         yield return wait;
 
-        foreach(SkinnedMeshRenderer mesh in meshRenderer)
-        {
-            mesh.enabled = true;
-        }
+        photonView.RPC("RPC_ToggleMesh", RpcTarget.All, true);
+
         isSpawnWaiting = false;
         PickNewTarget();
+    }
+
+    [PunRPC]
+    public void RPC_ToggleMesh(bool state)
+    {
+        foreach (SkinnedMeshRenderer mesh in meshRenderer)
+        {
+            mesh.enabled = state;
+        }
     }
 
     IEnumerator Aggression()
