@@ -5754,7 +5754,7 @@ MonoBehaviour:
   drifterAbility2Name: Aethereus Vinculum
   drifterAbility2Description: Bind yourself and the enemy for a brief period
   drifterAbility2CD: 15
-  drifterAbility2Duration: 2
+  drifterAbility2Duration: 5
   Ability2Ready: 1
   playerScriptBehaviour: {fileID: 0}
   audioSource: {fileID: 3960943734243963001}
