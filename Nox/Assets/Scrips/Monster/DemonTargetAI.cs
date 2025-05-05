@@ -82,6 +82,7 @@ public class DemonTargetAI1 : MonoBehaviour
     public bool isSpawnWaiting = true;
     [SerializeField] private float spawnWaitTime = 30f;
     [SerializeField] SkinnedMeshRenderer[] meshRenderer;
+    public bool DiningUnlocked = false;
 
     private int lastAttackID = -1; 
     private int attackCounter = 0; 
@@ -119,6 +120,11 @@ public class DemonTargetAI1 : MonoBehaviour
 
         WaitForSeconds wait = new WaitForSeconds(spawnWaitTime);
         yield return wait;
+
+        while(!DiningUnlocked)
+        {
+            yield return new WaitForSeconds(1f);
+        }
 
         photonView.RPC("RPC_ToggleMesh", RpcTarget.All, true);
 
@@ -990,6 +996,17 @@ public class DemonTargetAI1 : MonoBehaviour
     public void RPC_PlayAudioClip(int clipIndex)
     {
         generalAudioSource.PlayOneShot(demonSfx[clipIndex]);
+    }
+
+    public void StartGhoul()
+    {
+        photonView.RPC("RPC_SetStartBool", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_SetStartBool()
+    {
+        DiningUnlocked = true;
     }
 
 }
