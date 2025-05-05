@@ -2937,8 +2937,8 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.6698113, g: 0.6540139, b: 0.6540139, a: 1}
-  m_Intensity: 500
-  m_Range: 100
+  m_Intensity: 10
+  m_Range: 20
   m_SpotAngle: 91.86139
   m_InnerSpotAngle: 18.255991
   m_CookieSize: 10
@@ -5319,7 +5319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a7af1738df9843bde0614e005257f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 8
+  interactDistance: 5.5
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2
@@ -5443,7 +5443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c296ff1cfd68b0b438fdd9e2e1d3b71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 8
+  interactDistance: 5.5
   playerCamera: {fileID: 6129125867121193388}
   interactableLayer:
     serializedVersion: 2
@@ -5607,7 +5607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd83abc47d8afc43a9735411fa7e667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 30
+  interactDistance: 5.5
   onDestroyObject:
     m_PersistentCalls:
       m_Calls: []
