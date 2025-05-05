@@ -68,13 +68,13 @@ public class BookshelvesManager : MonoBehaviourPun
         photonView.RPC("IncorrectChoiceRPC", RpcTarget.All);
     }
     [PunRPC]
-    public void RepeatQuizRPC()
-    {
-        if (repeatQuizCoroutine == null)
-        {
-            repeatQuizCoroutine = StartCoroutine(RepeatWrongAnswerDialogue());
-        }
-    }
+    //public void RepeatQuizRPC()
+    //{
+    //    if (repeatQuizCoroutine == null)
+    //    {
+    //        repeatQuizCoroutine = StartCoroutine(RepeatWrongAnswerDialogue());
+    //    }
+    //}
     public void RegisterInteraction(string bookshelfID)
     {
         if (!interactedBookshelves.Contains(bookshelfID))
@@ -98,7 +98,7 @@ public class BookshelvesManager : MonoBehaviourPun
     {
         Debug.Log("triggering final Quiz part");
         onFinalQuest.Invoke();
-        StartCoroutine(StartQuiz());
+        //StartCoroutine(StartQuiz());
     }
     private IEnumerator StartQuiz()
     {
@@ -107,17 +107,17 @@ public class BookshelvesManager : MonoBehaviourPun
         QuizUI.SetActive(true);
     }
 
-    private IEnumerator RepeatWrongAnswerDialogue()
-    {
-        while (!puzzleSolved)
-        {
-            yield return new WaitForSeconds(10);
+    //private IEnumerator RepeatWrongAnswerDialogue()
+    //{
+    //    while (!puzzleSolved)
+    //    {
+    //        yield return new WaitForSeconds(10);
 
-            if (!puzzleSolved)
-            {
-                onQuizRepeat.Invoke();
-                QuizUI.SetActive(true);
-            }
-        }
-    }
+    //        if (!puzzleSolved)
+    //        {
+    //            onQuizRepeat.Invoke();
+    //            QuizUI.SetActive(true);
+    //        }
+    //    }
+    //}
 }

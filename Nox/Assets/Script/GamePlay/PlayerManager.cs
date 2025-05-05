@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviourPunCallbacks
 {
+    
     PlayerHealth[] allPlayers;
     public void DealDamageToAll(int damageAmount)
     {
@@ -17,7 +18,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks
         }
     }
 
-
+    private void Start()
+    {
+        DisableCursor();
+    }
     [PunRPC]
     public void ListAllPlayerRPC()
     {
