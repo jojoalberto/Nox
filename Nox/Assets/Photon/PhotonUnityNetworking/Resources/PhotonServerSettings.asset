@@ -153,6 +153,7 @@ MonoBehaviour:
   - RPC_ToggleMesh
   - SetStartBool
   - RPC_SetStartBool
+  - RegisterInteraction
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
