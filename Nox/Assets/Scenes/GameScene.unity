@@ -5869,6 +5869,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   requiredVinylID: 12
+  audioSource: {fileID: 103533353}
   sfxAudioClips:
   - {fileID: 8300000, guid: 9cd9081585d51bc4180fe8cac2680a0c, type: 3}
   - {fileID: 8300000, guid: f4177b77e7747824ba77e0e944b377ed, type: 3}

@@ -13,6 +13,8 @@ public class PunPlayerSpawner : MonoBehaviourPunCallbacks
     {
         GameObject playerObj = PhotonNetwork.Instantiate(player.name, playerSpawnsLocation.transform.GetChild(PhotonNetwork.LocalPlayer.ActorNumber - 1).transform.position + new Vector3(-0.0875f, 2.979f, -8.35f), Quaternion.identity, 0);
         PhotonNetwork.LocalPlayer.TagObject = playerObj;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

@@ -17,7 +17,7 @@ public class GramophoneScript : InteractableObject
     private int tempCount;
 
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     public List<AudioClip> sfxAudioClips = new List<AudioClip>();
 
     private 
