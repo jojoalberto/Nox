@@ -312730,7 +312730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
   disableObject:
-  - {fileID: 0}
+  - {fileID: 1857963653376758805}
   - {fileID: 1740817940}
   enableObject:
   - {fileID: 1387611217}
