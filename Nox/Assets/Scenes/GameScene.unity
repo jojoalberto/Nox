@@ -12779,9 +12779,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -31345,9 +31353,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -57295,9 +57311,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -78301,9 +78325,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -100451,9 +100483,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -139629,9 +139669,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -202515,9 +202563,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -218964,9 +219020,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -235305,9 +235369,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
@@ -244194,9 +244266,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 701028501}
     m_Modifications:
     - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 588212675}
+    - target: {fileID: 2718509983295208758, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
+      propertyPath: onSoundTrapTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RPCPlayAudioByIndex
+      objectReference: {fileID: 0}
     - target: {fileID: 4417144834456828092, guid: c979cf6b90747ea40b8817cecc90c9e8, type: 3}
       propertyPath: m_Icon
       value: 
