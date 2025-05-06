@@ -18678,6 +18678,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1804015590}
+  - {fileID: 1696153375}
   m_Father: {fileID: 1436355292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &150024974
@@ -128007,7 +128008,6 @@ MonoBehaviour:
   - {fileID: 1042093147}
   - {fileID: 1658294507}
   - {fileID: 672984505}
-  - {fileID: 78653171}
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -183896,7 +183896,6 @@ Transform:
   m_Children:
   - {fileID: 1957584867}
   - {fileID: 1871289350}
-  - {fileID: 1696153375}
   m_Father: {fileID: 1804015590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525194821
@@ -201964,7 +201963,7 @@ Transform:
   m_GameObject: {fileID: 1696153374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.788, y: -0.744, z: -9.993004}
+  m_LocalPosition: {x: -14.1, y: 0, z: -74.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -201976,7 +201975,7 @@ Transform:
   - {fileID: 890249100}
   - {fileID: 1065167289}
   - {fileID: 1267749486}
-  m_Father: {fileID: 1524888805}
+  m_Father: {fileID: 147769003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698646866
 GameObject:
@@ -312731,7 +312730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 7858985}
   disableObject:
-  - {fileID: 1857963653376758805}
+  - {fileID: 0}
   - {fileID: 1740817940}
   enableObject:
   - {fileID: 1387611217}
