@@ -701,7 +701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 541, y: -393}
+  m_AnchoredPosition: {x: 541, y: -448}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57134804
@@ -2352,7 +2352,7 @@ RectTransform:
   m_GameObject: {fileID: 179724882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 932854574}
@@ -2373,7 +2373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134, y: -619}
+  m_AnchoredPosition: {x: -21, y: 1043}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &179724884
@@ -2532,16 +2532,16 @@ MonoBehaviour:
     Old Wooden Bench PBR             Old Wooden Cabinet\nPadlock with password              
     Particle Pack                            PBR - Hospital Horror Pack. Free\nQuick
     Outline                            Rigged Stethoscope                  Retro
-    PSX Horror Healing Item Pack (Icon+LowPoly)\nRigged Stethoscope                  
-    Rock and Boulders 2                  Rust Key\nRusty Pack Models                    
-    Sand Clock                              Sci-fi Grenade\nShelves01 Pack                         
-    Simple Water Shader URP          Simple Wood Barrel\nSmall Pack Furniture                  
-    Sockets and Fuse Box Pack        Stylized Wood Textures\nSurvival Game Tools                  
-    Survivalist character                  Tileable Bricks Wall\nTool Icons and Blood
-    Sprites        Weapon Box                             Worn Bookshelf\nWorn wooden
-    crate                   \u0421eltic Cross                             Yughues
-    Free Concrete Materials   \nShed, Tools, Bridge and Fences    Stylized Grass
-    Texture                GamePad and Keyboard Input Sprites for TextMesh Pro\n\n"
+    PSX Horror Healing Item Pack\nRigged Stethoscope                   Rock and Boulders
+    2                  Rust Key\nRusty Pack Models                     Sand Clock                             
+    Sci-fi Grenade\nShelves01 Pack                          Simple Water Shader URP         
+    Simple Wood Barrel\nSmall Pack Furniture                   Sockets and Fuse Box
+    Pack        Stylized Wood Textures\nSurvival Game Tools                   Survivalist
+    character                  Tileable Bricks Wall\nTool Icons and Blood Sprites       
+    Weapon Box                             Worn Bookshelf\nWorn wooden crate                  
+    \u0421eltic Cross                             Yughues Free Concrete Materials  
+    \nShed, Tools, Bridge and Fences    Stylized Grass Texture                \nGamePad
+    and Keyboard Input Sprites for TextMesh Pro\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
   m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
@@ -6400,7 +6400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: -2103}
+  m_AnchoredPosition: {x: 73, y: -2126}
   m_SizeDelta: {x: 640, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518648462
@@ -7707,7 +7707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 582, y: -280}
+  m_AnchoredPosition: {x: 582, y: -335}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &668268019
@@ -10851,7 +10851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -356, y: -280}
+  m_AnchoredPosition: {x: -356, y: -335}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932854575
@@ -12217,7 +12217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -25123,7 +25123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -351, y: -393}
+  m_AnchoredPosition: {x: -351, y: -448}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078980259
