@@ -7,7 +7,7 @@ public class PlayerData : ScriptableObject
     public string userId;
     public string nickname;
     public string classSelected;
-    public bool hasFlashlight;
+    public bool hasFlashlight = false;
 
     public float totalHealth = 100;
     public float totalStamina = 100;

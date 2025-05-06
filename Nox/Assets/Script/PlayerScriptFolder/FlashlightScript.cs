@@ -18,6 +18,7 @@ public class FlashlightScript : MonoBehaviourPun
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
+        playerData.hasFlashlight = false;
         if (!playerData.hasFlashlight)
             flashlight.SetActive(false);
     }
@@ -33,7 +34,7 @@ public class FlashlightScript : MonoBehaviourPun
 
     private void HandleFlashlightToggle()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !playerHealth.isDead)
+        if (Input.GetKeyDown(KeyCode.F) && !playerHealth.isDead && playerData.hasFlashlight)
         {
             bool newState = !flashlight.activeSelf;
             flashlight.SetActive(newState);

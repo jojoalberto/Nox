@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userId: fwnCgS9kO0gd9IMTuvMuVvJIqWs2
   nickname: testerJ
-  classSelected: Drifter
-  hasFlashlight: 1
-  totalHealth: 4
-  totalStamina: 100
+  classSelected: Protector
+  hasFlashlight: 0
+  totalHealth: 150
+  totalStamina: 150
   staminaRegen: 2.5
   staminaDelay: 2.5
